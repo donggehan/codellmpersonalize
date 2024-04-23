@@ -1,0 +1,1970 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to corridor 0 step 2: go to kitchen 0 step 3: go to living room 0 step 4: go to pantry room 0 step 5: go to utility room 0 step 6: go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 20,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "router 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 chair 12",
+                        "kitchen 0 counter 48",
+                        "corridor 0 table 0",
+                        "kitchen 0 counter 49",
+                        "living room 0 coffee table 4",
+                        "kitchen 0 oven 46"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 20,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 60,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "lamp 1",
+                        "dispensing closure 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 chair 9",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 oven 21",
+                        "kitchen 0 plant 5",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 table 6",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 oven 22",
+                        "bathroom 0 sink 62",
+                        "kitchen 0 chair 7",
+                        "kitchen 0 chair 10",
+                        "pantry room 0 fridge 50",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 counter 31"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 60,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 130,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "peppermint 1",
+                        "candy bar 1",
+                        "pepsi can pack 1"
+                    ],
+                    "recs_discovered": [
+                        "utility room 0 sink 58",
+                        "kitchen 0 counter 41",
+                        "living room 0 chair 2",
+                        "living room 0 chair 1",
+                        "living room 0 coffee table 3"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 130,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 205,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 63"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 205,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 247,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "water bottle 1"
+                    ],
+                    "recs_discovered": [
+                        "utility room 0 dryer 57",
+                        "utility room 0 washer 56"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 247,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-mirror_63_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 311,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "candy bar 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "router 1": [
+                "pantry room 0 counter 53"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 20",
+                "pantry room 0 fridge 50"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "kitchen 0 table 6"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "candy bar 1": "kitchen 0 fridge 20",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "kitchen 0 fridge 20",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "candy bar 1": "kitchen 0 fridge 20",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "candy bar 1": "kitchen 0 fridge 20",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "candy bar 1",
+                "dispensing closure 1",
+                "router 1",
+                "peppermint 1",
+                "water bottle 1",
+                "lamp 1",
+                "pepsi can pack 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 fridge 20",
+                "kitchen 0 chair 9",
+                "kitchen 0 counter 48",
+                "kitchen 0 oven 21",
+                "kitchen 0 plant 5",
+                "kitchen 0 counter 49",
+                "kitchen 0 oven 46",
+                "kitchen 0 table 6",
+                "kitchen 0 carpet 34",
+                "kitchen 0 cooktop 64",
+                "kitchen 0 chair 8",
+                "kitchen 0 oven 22",
+                "bathroom 0 sink 62",
+                "corridor 0 table 0",
+                "utility room 0 dryer 57",
+                "living room 0 coffee table 4",
+                "kitchen 0 chair 10",
+                "pantry room 0 fridge 50",
+                "kitchen 0 counter 33",
+                "kitchen 0 microwave 23",
+                "utility room 0 washer 56",
+                "kitchen 0 chair 11",
+                "kitchen 0 chair 12",
+                "utility room 0 sink 58",
+                "kitchen 0 chair 7",
+                "bathroom 0 mirror 63",
+                "kitchen 0 counter 41",
+                "living room 0 chair 2",
+                "living room 0 chair 1",
+                "pantry room 0 counter 53",
+                "living room 0 coffee table 3",
+                "kitchen 0 counter 31"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 311
+    },
+    {
+        "mode": "single",
+        "start": 311,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. Object router 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 7, kitchen 0 chair 9, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 table 6, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 11, kitchen 0 chair 10, kitchen 0 counter 41. Object candy bar 1 found on kitchen 0 fridge 20. Object pepsi can pack 1 found on kitchen 0 fridge 20. Object lamp 1 found on kitchen 0 table 6. Object dispensing closure 1 found on kitchen 0 chair 10 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 chair 2. Object peppermint 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object water bottle 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to candy bar 1 step 2: look at candy bar 1 step 3: pick up candy bar 1 step 4: go to pantry room 0 fridge 50 step 5: look at pantry room 0 fridge 50 step 6: place candy bar 1 on pantry room 0 fridge 50"
+        },
+        "logs": [
+            {
+                "start": 311,
+                "step_raw": "go to candy bar 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candy_bar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 378,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 378,
+                "step_raw": "look at candy bar 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candy_bar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 378,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 378,
+                "step_raw": "pick up candy bar 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_bar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "kitchen 0 fridge 20",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "agent",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 379,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "candy bar 1": [
+                            "kitchen 0 fridge 20",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 379,
+                "step_raw": "go to pantry room 0 fridge 50",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-fridge_50_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "agent",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "agent",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 426,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "herring fillets 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 426,
+                "step_raw": "look at pantry room 0 fridge 50",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-fridge_50_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "agent",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "agent",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 430,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 430,
+                "step_raw": "place candy bar 1 on pantry room 0 fridge 50",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_bar_1",
+                    "target_receptacle": "pantry_room_0-fridge_50_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "agent",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 431,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "candy bar 1": [
+                            "agent",
+                            "pantry room 0 fridge 50"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "candy bar 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "router 1": [
+                "pantry room 0 counter 53"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 20",
+                "pantry room 0 fridge 50"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "kitchen 0 table 6"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "candy bar 1": "kitchen 0 fridge 20",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "candy bar 1": "kitchen 0 fridge 20",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "herring fillets 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {
+                "candy bar 1": [
+                    "kitchen 0 fridge 20",
+                    "pantry room 0 fridge 50"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 431
+    },
+    {
+        "mode": "single",
+        "start": 431,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. Object router 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 7, kitchen 0 chair 9, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 table 6, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 11, kitchen 0 chair 10, kitchen 0 counter 41. Object pepsi can pack 1 found on kitchen 0 fridge 20. Object dispensing closure 1 found on kitchen 0 chair 10. Object lamp 1 found on kitchen 0 table 6 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 chair 2. Object peppermint 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object herring fillets 1 found on pantry room 0 fridge 50. Object water bottle 1 found on pantry room 0 fridge 50. Object candy bar 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to router 1 step 2: look at router 1 step 3: pick up router 1 step 4: go to pantry room 0 counter 53 step 5: look at pantry room 0 counter 53 step 6: place router 1 on pantry room 0 counter 53"
+        },
+        "logs": [
+            {
+                "start": 431,
+                "step_raw": "go to router 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "router_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 506,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 506,
+                "step_raw": "look at router 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "router_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 512,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 512,
+                "step_raw": "pick up router 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "router_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "corridor 0 table 0",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "agent",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 513,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "router 1": [
+                            "corridor 0 table 0",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 513,
+                "step_raw": "go to pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "agent",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "agent",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 579,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 579,
+                "step_raw": "look at pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "agent",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "agent",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 582,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 582,
+                "step_raw": "place router 1 on pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "router_1",
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "agent",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 583,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "router 1": [
+                            "agent",
+                            "pantry room 0 counter 53"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "candy bar 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "router 1": [
+                "pantry room 0 counter 53"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 20",
+                "pantry room 0 fridge 50"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "kitchen 0 table 6"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "router 1": "corridor 0 table 0",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "router 1": [
+                    "corridor 0 table 0",
+                    "pantry room 0 counter 53"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 583
+    },
+    {
+        "mode": "single",
+        "start": 583,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 7, kitchen 0 chair 9, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 table 6, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 11, kitchen 0 chair 10, kitchen 0 counter 41. Object pepsi can pack 1 found on kitchen 0 fridge 20. Object dispensing closure 1 found on kitchen 0 chair 10. Object lamp 1 found on kitchen 0 table 6 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 chair 2. Object peppermint 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object candy bar 1 found on pantry room 0 fridge 50. Object herring fillets 1 found on pantry room 0 fridge 50. Object water bottle 1 found on pantry room 0 fridge 50. Object router 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to dispensing closure 1 step 2: look at dispensing closure 1 step 3: pick up dispensing closure 1 step 4: go to living room 0 coffee table 3 step 5: look at living room 0 coffee table 3 step 6: place dispensing closure 1 on living room 0 coffee table 3"
+        },
+        "logs": [
+            {
+                "start": 583,
+                "step_raw": "go to dispensing closure 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 632,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 632,
+                "step_raw": "look at dispensing closure 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 645,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 645,
+                "step_raw": "pick up dispensing closure 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "kitchen 0 chair 10",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "agent",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 646,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "kitchen 0 chair 10",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 646,
+                "step_raw": "go to living room 0 coffee table 3",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "agent",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "agent",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 704,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 704,
+                "step_raw": "look at living room 0 coffee table 3",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "agent",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "agent",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 716,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 716,
+                "step_raw": "place dispensing closure 1 on living room 0 coffee table 3",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": "living_room_0-coffee_table_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "agent",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "living room 0 coffee table 3",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 717,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "agent",
+                            "living room 0 coffee table 3"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "candy bar 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "router 1": [
+                "pantry room 0 counter 53"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 20",
+                "pantry room 0 fridge 50"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "kitchen 0 table 6"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "living room 0 coffee table 3",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "living room 0 coffee table 3",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 chair 10",
+                "candle holder 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "candle holder 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "dispensing closure 1": [
+                    "kitchen 0 chair 10",
+                    "living room 0 coffee table 3"
+                ]
+            },
+            "count_correct": {
+                "start": 7,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 717
+    },
+    {
+        "mode": "single",
+        "start": 717,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 7, kitchen 0 chair 9, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 table 6, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 11, kitchen 0 chair 10, kitchen 0 counter 41. Object lamp 1 found on kitchen 0 table 6. Object pepsi can pack 1 found on kitchen 0 fridge 20 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 chair 2. Object peppermint 1 found on living room 0 coffee table 3. Object dispensing closure 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object herring fillets 1 found on pantry room 0 fridge 50. Object candy bar 1 found on pantry room 0 fridge 50. Object router 1 found on pantry room 0 counter 53. Object water bottle 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 717,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "living room 0 coffee table 3",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    },
+                    "end": {
+                        "candy bar 1": "pantry room 0 fridge 50",
+                        "router 1": "pantry room 0 counter 53",
+                        "dispensing closure 1": "living room 0 coffee table 3",
+                        "candle holder 1": "bathroom 0 toilet 61",
+                        "herring fillets 1": "pantry room 0 fridge 50",
+                        "peppermint 1": "living room 0 coffee table 3",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6",
+                        "pepsi can pack 1": "kitchen 0 fridge 20"
+                    }
+                },
+                "end": 717,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "candy bar 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "router 1": [
+                "pantry room 0 counter 53"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 20",
+                "pantry room 0 fridge 50"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "kitchen 0 table 6"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "living room 0 coffee table 3",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "living room 0 coffee table 3",
+                "candle holder 1": "bathroom 0 toilet 61",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "living room 0 coffee table 3",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "candy bar 1": "pantry room 0 fridge 50",
+                "router 1": "pantry room 0 counter 53",
+                "dispensing closure 1": "living room 0 coffee table 3",
+                "herring fillets 1": "pantry room 0 fridge 50",
+                "peppermint 1": "living room 0 coffee table 3",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6",
+                "pepsi can pack 1": "kitchen 0 fridge 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "candle holder 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "candle holder 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 8,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 1
+            }
+        },
+        "end": 717
+    }
+]

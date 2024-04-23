@@ -1,0 +1,3963 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20. \nIn kitchen 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at living room 0 carpet 62\nstep 3: pick up living room 0 carpet 62\nstep 4: go to bedroom 0\nstep 5: look at bedroom 0\nstep 6: place living room 0 carpet 62 in bedroom 0\n\nstep 7: go to living room 0 coffee table 27\nstep 8: look at living room 0 coffee table 27\nstep 9: pick up living room 0 coffee table 27\nstep 10: go to dining room 0 table 20\nstep 11: look at dining room 0 table 20\nstep 12: place living room 0 coffee table 27 on dining room 0 table 20\n\nstep 13: go to living room 0 floor lamp 33\nstep 14: look at living room 0 floor lamp 33\nstep 15: pick up living room 0 floor lamp 33\nstep 16: go to bathroom 0\nstep 17: look at bathroom 0\nstep 18: place living room 0 floor lamp in bathroom\n\nstep 19: go to living room sofa chair"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 19,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "living room 0 towel rack 66",
+                        "living room 0 bottom cabinet 30",
+                        "living room 0 floor lamp 31"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 19,
+                "step_raw": "look at living room 0 carpet 62",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_62_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 24,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 24,
+                "step_raw": "pick up living room 0 carpet 62",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_62_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 24,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 24,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 92,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "incontinence pads 1",
+                        "sponge 1",
+                        "soap dispenser 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 basket 15",
+                        "bedroom 0 bottom cabinet 8",
+                        "bedroom 0 bottom cabinet 9",
+                        "bedroom 0 basket 14",
+                        "childs room 0 bottom cabinet 6",
+                        "childs room 0 bottom cabinet 2",
+                        "childs room 0 bed 1",
+                        "childs room 0 stool 5",
+                        "childs room 0 carpet 0",
+                        "bedroom 0 bottom cabinet 13",
+                        "bedroom 0 bottom cabinet 12",
+                        "bedroom 0 bed 7",
+                        "childs room 0 sofa chair 4"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 92,
+                "step_raw": "look at bedroom 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 97,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 97,
+                "step_raw": "place living room 0 carpet 62 in bedroom 0",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 97,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 97,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 162,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "diaper pack 1",
+                        "electric toothbrush 1",
+                        "tampons 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 toilet 69",
+                        "living room 0 carpet 28",
+                        "bathroom 0 trash can 34",
+                        "bathroom 0 bathtub 71",
+                        "bathroom 0 top cabinet 70"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 162,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 162,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 162,
+                "step_raw": "pick up living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 162,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 162,
+                "step_raw": "go to dining room 0 table 20",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-table_20_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 241,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "towel 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 trash can 18",
+                        "kitchen 0 top cabinet 54",
+                        "dining room 0 chair 24",
+                        "kitchen 0 fridge 57",
+                        "dining room 0 chair 23",
+                        "dining room 0 plant 29",
+                        "kitchen 0 sink 53",
+                        "kitchen 0 bottom cabinet 49",
+                        "kitchen 0 range hood 60",
+                        "dining room 0 chair 22",
+                        "kitchen 0 bottom cabinet 51",
+                        "kitchen 0 stove 59",
+                        "kitchen 0 top cabinet 55",
+                        "kitchen 0 shelf 61",
+                        "kitchen 0 bottom cabinet 50",
+                        "kitchen 0 dishwasher 52",
+                        "kitchen 0 shelf 58"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "incontinence pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "can opener 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "wipe warmer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "soap dispenser 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 sink 53"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "sponge 1": "bedroom 0 bottom cabinet 12",
+                "diaper pack 1": "bathroom 0 top cabinet 70",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "sponge 1": "bedroom 0 bottom cabinet 12",
+                "diaper pack 1": "bathroom 0 top cabinet 70",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bedroom 0 bottom cabinet 12",
+                "diaper pack 1": "bathroom 0 top cabinet 70",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "sponge 1": "bedroom 0 bottom cabinet 12",
+                "diaper pack 1": "bathroom 0 top cabinet 70",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "diaper pack 1",
+                "incontinence pads 1",
+                "electric toothbrush 1",
+                "sponge 1",
+                "tampons 1",
+                "soap dispenser 1",
+                "towel 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 top cabinet 54",
+                "dining room 0 chair 24",
+                "bedroom 0 bottom cabinet 8",
+                "bathroom 0 trash can 34",
+                "kitchen 0 fridge 57",
+                "kitchen 0 sink 53",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 range hood 60",
+                "bedroom 0 bottom cabinet 12",
+                "bathroom 0 top cabinet 70",
+                "dining room 0 chair 22",
+                "bedroom 0 basket 15",
+                "living room 0 carpet 28",
+                "bedroom 0 bottom cabinet 9",
+                "bedroom 0 basket 14",
+                "living room 0 bottom cabinet 30",
+                "childs room 0 bottom cabinet 6",
+                "childs room 0 bed 1",
+                "childs room 0 stool 5",
+                "childs room 0 carpet 0",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 dishwasher 52",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bed 7",
+                "childs room 0 sofa chair 4",
+                "kitchen 0 trash can 18",
+                "kitchen 0 shelf 58",
+                "bathroom 0 bathtub 71",
+                "childs room 0 bottom cabinet 2",
+                "bathroom 0 toilet 69",
+                "dining room 0 chair 23",
+                "dining room 0 plant 29",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 stove 59",
+                "kitchen 0 top cabinet 55",
+                "living room 0 floor lamp 31",
+                "kitchen 0 shelf 61",
+                "living room 0 towel rack 66"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 241
+    },
+    {
+        "mode": "single",
+        "start": 241,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 bottom cabinet 8. Object sponge 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69. Object diaper pack 1 found on bathroom 0 top cabinet 70. Object tampons 1 found on bathroom 0 top cabinet 70. Object electric toothbrush 1 found on bathroom 0 toilet 69 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object incontinence pads 1 found on childs room 0 stool 5. Object soap dispenser 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 24, dining room 0 chair 22, dining room 0 chair 23, dining room 0 plant 29. \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 dishwasher 52, kitchen 0 fridge 57, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object towel 1 found on kitchen 0 bottom cabinet 49. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: look at sponge 1\nstep 3: pick up sponge 1\nstep 4: go to bedroom 0 bottom cabinet 9\nstep 5: look at bedroom 0 bottom cabinet 9\nstep 6: place sponge 1 on bedroom 0 bottom cabinet 9\nstep 7: go to bathroom 0\nstep 8: look at diaper pack 1\nstep 9: pick up diaper pack 1\nstep 10: go to bathroom 0 top cabinet 70\nstep 11: look at bathroom 0 top cabinet 70\nstep 12: place diaper pack 1 on bathroom 0 top cabinet 70\nstep 13: go to bathroom 0\nstep 14: look at tampons 1\nstep 15: pick up tampons 1\nstep 16: go to bathroom 0 top cabinet 70\nstep 17: look at bathroom 0 top cabinet 70\nstep 18: place tampons 1 on bathroom 0 top cabinet 70\nstep 19: go to childs room 0\nstep 20: look at incontinence pads 1\nstep 21: pick"
+        },
+        "logs": [
+            {
+                "start": 241,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 317,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 sink 72"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 317,
+                "step_raw": "look at sponge 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 328,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 328,
+                "step_raw": "pick up sponge 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 12",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "agent",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 329,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sponge 1": [
+                            "bedroom 0 bottom cabinet 12",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 329,
+                "step_raw": "go to bedroom 0 bottom cabinet 9",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "agent",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "agent",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 361,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 361,
+                "step_raw": "look at bedroom 0 bottom cabinet 9",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "agent",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "agent",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 366,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 366,
+                "step_raw": "place sponge 1 on bedroom 0 bottom cabinet 9",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "agent",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 367,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sponge 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 9"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 367,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 427,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "can opener 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 73"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 427,
+                "step_raw": "look at diaper pack 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "diaper_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 434,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 434,
+                "step_raw": "pick up diaper pack 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "diaper_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bathroom 0 top cabinet 70",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 435,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "diaper pack 1": [
+                            "bathroom 0 top cabinet 70",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 435,
+                "step_raw": "go to bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 447,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "incontinence pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "can opener 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "wipe warmer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "soap dispenser 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 sink 53"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "sponge 1": "bedroom 0 bottom cabinet 12",
+                "diaper pack 1": "bathroom 0 top cabinet 70",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "agent",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bedroom 0 bottom cabinet 12",
+                "diaper pack 1": "bathroom 0 top cabinet 70",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "diaper pack 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "can opener 1"
+            ],
+            "recs_discovered": [
+                "bathroom 0 mirror 73",
+                "bathroom 0 sink 72"
+            ],
+            "objects_moved": {
+                "sponge 1": [
+                    "bedroom 0 bottom cabinet 12",
+                    "bedroom 0 bottom cabinet 9"
+                ],
+                "diaper pack 1": [
+                    "bathroom 0 top cabinet 70",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 5
+            }
+        },
+        "end": 447
+    },
+    {
+        "mode": "single",
+        "start": 447,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding diaper pack 1.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 bottom cabinet 8. Object sponge 1 found on bedroom 0 bottom cabinet 9 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object electric toothbrush 1 found on bathroom 0 toilet 69. Object can opener 1 found on bathroom 0 toilet 69. Object tampons 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object incontinence pads 1 found on childs room 0 stool 5. Object soap dispenser 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 24, dining room 0 chair 22, dining room 0 chair 23, dining room 0 plant 29. \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 dishwasher 52, kitchen 0 fridge 57, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object towel 1 found on kitchen 0 bottom cabinet 49. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: go to sponge 1\nstep 3: look at sponge 1\nstep 4: pick up sponge 1\nstep 5: go to bedroom 0 bottom cabinet 9\nstep 6: look at bedroom 0 bottom cabinet 9\nstep 7: place sponge 1 on bedroom 0 bottom cabinet 9"
+        },
+        "logs": [
+            {
+                "start": 447,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 484,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 484,
+                "step_raw": "go to sponge 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 520,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 520,
+                "step_raw": "look at sponge 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 525,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 525,
+                "step_raw": "pick up sponge 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 526,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 526,
+                "step_raw": "go to bedroom 0 bottom cabinet 9",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 526,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 526,
+                "step_raw": "look at bedroom 0 bottom cabinet 9",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 526,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 526,
+                "step_raw": "place sponge 1 on bedroom 0 bottom cabinet 9",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 527,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "incontinence pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "can opener 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "wipe warmer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "soap dispenser 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 sink 53"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "agent",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "agent",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "diaper pack 1": "agent"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "diaper pack 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 527
+    },
+    {
+        "mode": "single",
+        "start": 527,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding diaper pack 1.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 bottom cabinet 8. Object sponge 1 found on bedroom 0 bottom cabinet 9 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object electric toothbrush 1 found on bathroom 0 toilet 69. Object can opener 1 found on bathroom 0 toilet 69. Object tampons 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object incontinence pads 1 found on childs room 0 stool 5. Object soap dispenser 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 24, dining room 0 chair 22, dining room 0 chair 23, dining room 0 plant 29. \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 dishwasher 52, kitchen 0 fridge 57, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object towel 1 found on kitchen 0 bottom cabinet 49. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: look at sponge 1\nstep 3: pick up sponge 1\nstep 4: go to bedroom 0 bottom cabinet 13\nstep 5: look at bedroom 0 bottom cabinet 13\nstep 6: place sponge 1 on bedroom 0 bottom cabinet 13\nstep 7: go to bathroom 0\nstep 8: look at electric toothbrush 1\nstep 9: pick up electric toothbrush 1\nstep 10: go to bathroom 0 top cabinet 70\nstep 11: look at bathroom 0 top cabinet 70\nstep 12: place electric toothbrush 1 on bathroom 0 top cabinet 70\nstep 13: go to bathroom 0 toilet 69\nstep 14: look at can opener 1\nstep 15: pick up can opener 1\nstep 16: look at tampons 1\nstep 17: pick up tampons 1\nstep 18: place can opener 1 on bathroom 0 top cabinet 70\nstep 19: place tampons 1 on bathroom 0 top cabinet 70\nstep 20: go to childs room 0 stool"
+        },
+        "logs": [
+            {
+                "start": 527,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 562,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 562,
+                "step_raw": "look at sponge 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 573,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 573,
+                "step_raw": "pick up sponge 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 574,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 574,
+                "step_raw": "go to bedroom 0 bottom cabinet 13",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 591,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 591,
+                "step_raw": "look at bedroom 0 bottom cabinet 13",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 600,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 600,
+                "step_raw": "place sponge 1 on bedroom 0 bottom cabinet 13",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 601,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "diaper pack 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 13"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 601,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 646,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 646,
+                "step_raw": "look at electric toothbrush 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "electric_toothbrush_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 649,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 649,
+                "step_raw": "pick up electric toothbrush 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "electric_toothbrush_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bathroom 0 toilet 69",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 650,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "electric toothbrush 1": [
+                            "bathroom 0 toilet 69",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 650,
+                "step_raw": "go to bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 668,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "incontinence pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "can opener 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "wipe warmer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "soap dispenser 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 sink 53"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "agent",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "agent",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bathroom 0 toilet 69",
+                "diaper pack 1": "agent"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "agent",
+                "diaper pack 1": "bedroom 0 bottom cabinet 13"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "diaper pack 1": [
+                    "agent",
+                    "bedroom 0 bottom cabinet 13"
+                ],
+                "electric toothbrush 1": [
+                    "bathroom 0 toilet 69",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 668
+    },
+    {
+        "mode": "single",
+        "start": 668,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding electric toothbrush 1.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 bottom cabinet 8. Object sponge 1 found on bedroom 0 bottom cabinet 9. Object diaper pack 1 found on bedroom 0 bottom cabinet 13 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object can opener 1 found on bathroom 0 toilet 69. Object tampons 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object incontinence pads 1 found on childs room 0 stool 5. Object soap dispenser 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 24, dining room 0 chair 22, dining room 0 chair 23, dining room 0 plant 29. \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 dishwasher 52, kitchen 0 fridge 57, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object towel 1 found on kitchen 0 bottom cabinet 49. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: go to sponge 1\nstep 3: look at sponge 1\nstep 4: pick up sponge 1\nstep 5: go to bedroom 0 bottom cabinet 8\nstep 6: look at bedroom 0 bottom cabinet 8\nstep 7: place sponge 1 on bedroom 0 bottom cabinet 8\nstep 8: go to diaper pack 1\nstep 9: look at diaper pack 1\nstep 10: pick up diaper pack 1\nstep 11: go to bedroom 0 bottom cabinet 12\nstep 12: look at bedroom 0 bottom cabinet 12\nstep 13: place diaper pack 1 on bedroom 0 bottom cabinet 12\nstep 14: mission complete"
+        },
+        "logs": [
+            {
+                "start": 668,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 705,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 705,
+                "step_raw": "go to sponge 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 741,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 741,
+                "step_raw": "look at sponge 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 746,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 746,
+                "step_raw": "pick up sponge 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 747,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 747,
+                "step_raw": "go to bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 794,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 794,
+                "step_raw": "look at bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 795,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 795,
+                "step_raw": "place sponge 1 on bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "agent",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 796,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "electric toothbrush 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 8"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 796,
+                "step_raw": "go to diaper pack 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "diaper_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 831,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 831,
+                "step_raw": "look at diaper pack 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "diaper_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 836,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 836,
+                "step_raw": "pick up diaper pack 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "diaper_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 837,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "diaper pack 1": [
+                            "bedroom 0 bottom cabinet 13",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "incontinence pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "can opener 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "wipe warmer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "soap dispenser 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 sink 53"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "agent",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "bedroom 0 bottom cabinet 13",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "agent",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "agent",
+                "diaper pack 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                "diaper pack 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "electric toothbrush 1": [
+                    "agent",
+                    "bedroom 0 bottom cabinet 8"
+                ],
+                "diaper pack 1": [
+                    "bedroom 0 bottom cabinet 13",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 837
+    },
+    {
+        "mode": "single",
+        "start": 837,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding diaper pack 1.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 bottom cabinet 8. Object electric toothbrush 1 found on bedroom 0 bottom cabinet 8. Object sponge 1 found on bedroom 0 bottom cabinet 9 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object can opener 1 found on bathroom 0 toilet 69. Object tampons 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object incontinence pads 1 found on childs room 0 stool 5. Object soap dispenser 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 24, dining room 0 chair 22, dining room 0 chair 23, dining room 0 plant 29. \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 dishwasher 52, kitchen 0 fridge 57, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object towel 1 found on kitchen 0 bottom cabinet 49. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: go to electric toothbrush 1\nstep 3: look at electric toothbrush 1\nstep 4: pick up electric toothbrush 1\nstep 5: go to bedroom 0 bottom cabinet 8\nstep 6: look at bedroom 0 bottom cabinet 8\nstep 7: place electric toothbrush 1 on bedroom 0 bottom cabinet 8\nstep 8: go to sponge 1\nstep 9: look at sponge 1\nstep 10: pick up sponge 1\nstep 11: go to bedroom 0 bottom cabinet 9\nstep 12: look at bedroom 0 bottom cabinet 9\nstep 13: place sponge 1 on bedroom 0 bottom cabinet 9\nstep 14: go to bathroom 0 toilet 69\nstep 15: look at bathroom 0 toilet 69\nstep 16: pick up can opener 1\nstep 17: go to kitchen 0 bottom cabinet 51\nstep 18: look at kitchen 0 bottom cabinet 51\nstep 19: place can opener 1 on kitchen 0 bottom cabinet 51\nstep20: go to bathroom o top cabinet"
+        },
+        "logs": [
+            {
+                "start": 837,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 854,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 854,
+                "step_raw": "go to electric toothbrush 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "electric_toothbrush_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 872,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 872,
+                "step_raw": "look at electric toothbrush 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "electric_toothbrush_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 873,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 873,
+                "step_raw": "pick up electric toothbrush 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "electric_toothbrush_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 874,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 874,
+                "step_raw": "go to bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 874,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 874,
+                "step_raw": "look at bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 874,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 874,
+                "step_raw": "place electric toothbrush 1 on bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "electric_toothbrush_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 875,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 875,
+                "step_raw": "go to sponge 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 928,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 928,
+                "step_raw": "look at sponge 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 934,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 934,
+                "step_raw": "pick up sponge 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "incontinence pads 1": "childs room 0 stool 5",
+                        "can opener 1": "bathroom 0 toilet 69",
+                        "wipe warmer 1": "childs room 0 bed 1",
+                        "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                        "sponge 1": "bedroom 0 bottom cabinet 9",
+                        "diaper pack 1": "agent",
+                        "tampons 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "kitchen 0 bottom cabinet 49",
+                        "soap dispenser 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 935,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "incontinence pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "can opener 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "wipe warmer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "soap dispenser 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 sink 53"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "agent",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "diaper pack 1": "agent",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "sponge 1": "bedroom 0 bottom cabinet 9",
+                "tampons 1": "bathroom 0 top cabinet 70",
+                "towel 1": "kitchen 0 bottom cabinet 49",
+                "soap dispenser 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                "diaper pack 1": "agent"
+            },
+            "end": {
+                "incontinence pads 1": "childs room 0 stool 5",
+                "can opener 1": "bathroom 0 toilet 69",
+                "wipe warmer 1": "childs room 0 bed 1",
+                "electric toothbrush 1": "bedroom 0 bottom cabinet 8",
+                "diaper pack 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 935
+    }
+]

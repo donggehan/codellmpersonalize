@@ -1,0 +1,3324 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: go to bathroom 0\nstep 3: go to child's room 0\nstep 4: go to living room 0\nstep 5: go to dining room 0\nstep 6: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 63,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "pepsi can pack 1",
+                        "chocolate box 1"
+                    ],
+                    "recs_discovered": [
+                        "childs room 0 sofa chair 4",
+                        "childs room 0 bed 1",
+                        "living room 0 mirror 68",
+                        "bedroom 0 basket 14",
+                        "living room 0 coffee table 27",
+                        "living room 0 sofa chair 26",
+                        "bedroom 0 bed 7",
+                        "childs room 0 carpet 0",
+                        "childs room 0 stool 5",
+                        "living room 0 carpet 62",
+                        "bedroom 0 basket 15",
+                        "living room 0 floor lamp 33"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 63,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 127,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "candle holder 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 trash can 34",
+                        "living room 0 carpet 28",
+                        "bathroom 0 bathtub 71",
+                        "bathroom 0 toilet 69",
+                        "bathroom 0 mirror 73",
+                        "living room 0 towel rack 66",
+                        "bathroom 0 sink 72"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 127,
+                "step_raw": "go to child's room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 191,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 trash can 18"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 191,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 270,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "table lamp 1",
+                        "plant 1",
+                        "lamp 1",
+                        "coffeemaker 1",
+                        "dispensing closure 1"
+                    ],
+                    "recs_discovered": [
+                        "dining room 0 plant 29",
+                        "dining room 0 chair 24",
+                        "living room 0 floor lamp 31",
+                        "dining room 0 chair 22",
+                        "kitchen 0 fridge 57"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 270,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 294,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 294,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_52_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 320,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "bedroom 0 bed 7",
+                "pepsi can pack 1": "bedroom 0 basket 14",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "bedroom 0 bed 7",
+                "pepsi can pack 1": "bedroom 0 basket 14",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "bedroom 0 bed 7",
+                "pepsi can pack 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "bedroom 0 bed 7",
+                "pepsi can pack 1": "bedroom 0 basket 14"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "table lamp 1",
+                "dispensing closure 1",
+                "pepsi can pack 1",
+                "chocolate box 1",
+                "lamp 1",
+                "candle holder 1",
+                "coffeemaker 1",
+                "plant 1"
+            ],
+            "recs_discovered": [
+                "childs room 0 bed 1",
+                "dining room 0 plant 29",
+                "living room 0 mirror 68",
+                "kitchen 0 trash can 18",
+                "bathroom 0 bathtub 71",
+                "living room 0 floor lamp 31",
+                "living room 0 coffee table 27",
+                "dining room 0 chair 22",
+                "bedroom 0 bed 7",
+                "living room 0 carpet 28",
+                "living room 0 towel rack 66",
+                "bathroom 0 trash can 34",
+                "bedroom 0 basket 15",
+                "kitchen 0 fridge 57",
+                "childs room 0 sofa chair 4",
+                "bathroom 0 toilet 69",
+                "bedroom 0 basket 14",
+                "living room 0 sofa chair 26",
+                "dining room 0 chair 24",
+                "bathroom 0 sink 72",
+                "childs room 0 carpet 0",
+                "childs room 0 stool 5",
+                "bathroom 0 mirror 73",
+                "living room 0 carpet 62",
+                "living room 0 floor lamp 33"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 320
+    },
+    {
+        "mode": "single",
+        "start": 320,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. Object pepsi can pack 1 found on bedroom 0 basket 14. Object candle holder 1 found on bedroom 0 bed 7. Object chocolate box 1 found on bedroom 0 basket 14 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 carpet 28, living room 0 floor lamp 31. Object lamp 1 found on living room 0 coffee table 27. Object plant 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object coffeemaker 1 found on dining room 0 table 20. Object table lamp 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 trash can 18, kitchen 0 fridge 57. Object dispensing closure 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to candle holder 1\nstep 2: look at candle holder 1\nstep 3: pick up candle holder 1\nstep 4: go to living room 0 coffee table 27\nstep 5: look at living room 0 coffee table 27\nstep 6: place candle holder 1 on living room 0 coffee table 27"
+        },
+        "logs": [
+            {
+                "start": 320,
+                "step_raw": "go to candle holder 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 382,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 382,
+                "step_raw": "look at candle holder 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 394,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 394,
+                "step_raw": "pick up candle holder 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "bedroom 0 bed 7",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "agent",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 395,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "candle holder 1": [
+                            "bedroom 0 bed 7",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 395,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "agent",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "agent",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 462,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 462,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "agent",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "agent",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 464,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 464,
+                "step_raw": "place candle holder 1 on living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "agent",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 465,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "candle holder 1": [
+                            "agent",
+                            "living room 0 coffee table 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "bedroom 0 bed 7",
+                "pepsi can pack 1": "bedroom 0 basket 14",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "bedroom 0 basket 14",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "bedroom 0 bed 7",
+                "pepsi can pack 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "pepsi can pack 1": "bedroom 0 basket 14"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "candle holder 1": [
+                    "bedroom 0 bed 7",
+                    "living room 0 coffee table 27"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 465
+    },
+    {
+        "mode": "single",
+        "start": 465,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. Object pepsi can pack 1 found on bedroom 0 basket 14. Object chocolate box 1 found on bedroom 0 basket 14 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 carpet 28, living room 0 floor lamp 31. Object lamp 1 found on living room 0 coffee table 27. Object plant 1 found on living room 0 coffee table 27. Object candle holder 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object coffeemaker 1 found on dining room 0 table 20. Object table lamp 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 trash can 18, kitchen 0 fridge 57. Object dispensing closure 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to pepsi can pack 1\nstep 2: look at pepsi can pack 1\nstep 3: pick up pepsi can pack 1\nstep 4: go to living room 0 coffee table 27\nstep 5: look at living room 0 coffee table 27\nstep 6: place pepsi can pack 1 on living room 0 coffee table 27"
+        },
+        "logs": [
+            {
+                "start": 465,
+                "step_raw": "go to pepsi can pack 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "pepsi_can_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 537,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 537,
+                "step_raw": "look at pepsi can pack 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "pepsi_can_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 549,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 549,
+                "step_raw": "pick up pepsi can pack 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "pepsi_can_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "bedroom 0 basket 14",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "agent",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 550,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "pepsi can pack 1": [
+                            "bedroom 0 basket 14",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 550,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "agent",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "agent",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 607,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 607,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "agent",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "agent",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 609,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 609,
+                "step_raw": "place pepsi can pack 1 on living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "pepsi_can_pack_1",
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "agent",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 610,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "pepsi can pack 1": [
+                            "agent",
+                            "living room 0 coffee table 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "bedroom 0 basket 14",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "pepsi can pack 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "pepsi can pack 1": "living room 0 coffee table 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "pepsi can pack 1": [
+                    "bedroom 0 basket 14",
+                    "living room 0 coffee table 27"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 610
+    },
+    {
+        "mode": "single",
+        "start": 610,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. Object chocolate box 1 found on bedroom 0 basket 14 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 carpet 28, living room 0 floor lamp 31. Object candle holder 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27. Object plant 1 found on living room 0 coffee table 27. Object pepsi can pack 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object coffeemaker 1 found on dining room 0 table 20. Object table lamp 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 trash can 18, kitchen 0 fridge 57. Object dispensing closure 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to chocolate box 1\nstep 2: look at chocolate box 1\nstep 3: pick up chocolate box 1\nstep 4: go to living room 0 coffee table 27\nstep 5: look at living room 0 coffee table 27\nstep 6: place chocolate box 1 on living room 0 coffee table 27"
+        },
+        "logs": [
+            {
+                "start": 610,
+                "step_raw": "go to chocolate box 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "chocolate_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 682,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 682,
+                "step_raw": "look at chocolate box 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "chocolate_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 694,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 694,
+                "step_raw": "pick up chocolate box 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "chocolate_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "bedroom 0 basket 14",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "agent",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 695,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "chocolate box 1": [
+                            "bedroom 0 basket 14",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 695,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "agent",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "agent",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 752,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 752,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "agent",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "agent",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 754,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 754,
+                "step_raw": "place chocolate box 1 on living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "chocolate_box_1",
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "agent",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 755,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "chocolate box 1": [
+                            "agent",
+                            "living room 0 coffee table 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "bedroom 0 basket 14",
+                "pepsi can pack 1": "living room 0 coffee table 27"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "chocolate box 1": [
+                    "bedroom 0 basket 14",
+                    "living room 0 coffee table 27"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 755
+    },
+    {
+        "mode": "single",
+        "start": 755,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 carpet 28, living room 0 floor lamp 31. Object candle holder 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27. Object pepsi can pack 1 found on living room 0 coffee table 27. Object plant 1 found on living room 0 coffee table 27. Object chocolate box 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object coffeemaker 1 found on dining room 0 table 20. Object table lamp 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 trash can 18, kitchen 0 fridge 57. Object dispensing closure 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to dispensing closure 1\nstep 2: look at dispensing closure 1\nstep 3: pick up dispensing closure 1\nstep 4: go to living room 0 coffee table 27\nstep 5: look at living room 0 coffee table 27\nstep 6: place dispensing closure 1 on living room 0 coffee table 27"
+        },
+        "logs": [
+            {
+                "start": 755,
+                "step_raw": "go to dispensing closure 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 809,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 809,
+                "step_raw": "look at dispensing closure 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 809,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 809,
+                "step_raw": "pick up dispensing closure 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 fridge 57",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "agent",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 810,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "kitchen 0 fridge 57",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 810,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "agent",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "agent",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 866,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 866,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "agent",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "agent",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 868,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 868,
+                "step_raw": "place dispensing closure 1 on living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "agent",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 869,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "agent",
+                            "living room 0 coffee table 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 fridge 57",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27"
+            },
+            "end": {
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "dispensing closure 1": [
+                    "kitchen 0 fridge 57",
+                    "living room 0 coffee table 27"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 869
+    },
+    {
+        "mode": "single",
+        "start": 869,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 carpet 28, living room 0 floor lamp 31. Object chocolate box 1 found on living room 0 coffee table 27. Object candle holder 1 found on living room 0 coffee table 27. Object pepsi can pack 1 found on living room 0 coffee table 27. Object plant 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27. Object dispensing closure 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object coffeemaker 1 found on dining room 0 table 20. Object table lamp 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 trash can 18, kitchen 0 fridge 57.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to coffeemaker 1\nstep 2: look at coffeemaker 1\nstep 3: pick up coffeemaker 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place coffeemaker 1 on kitchen 0 counter 18"
+        },
+        "logs": [
+            {
+                "start": 869,
+                "step_raw": "go to coffeemaker 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "coffeemaker_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 902,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 902,
+                "step_raw": "look at coffeemaker 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "coffeemaker_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 902,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 902,
+                "step_raw": "pick up coffeemaker 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "coffeemaker_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "dining room 0 table 20",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 903,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "coffeemaker 1": [
+                            "dining room 0 table 20",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 903,
+                "step_raw": "go to kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 903,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 903,
+                "step_raw": "look at kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "kitchen 0 counter 18",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 903,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 903,
+                "step_raw": "place coffeemaker 1 on kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "kitchen 0 counter 18",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 903,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "agent",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "dining room 0 table 20",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27"
+            },
+            "end": {
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "coffeemaker 1": [
+                    "dining room 0 table 20",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 3
+            }
+        },
+        "end": 903
+    },
+    {
+        "mode": "single",
+        "start": 903,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding coffeemaker 1.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 carpet 28, living room 0 floor lamp 31. Object chocolate box 1 found on living room 0 coffee table 27. Object candle holder 1 found on living room 0 coffee table 27. Object pepsi can pack 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27. Object dispensing closure 1 found on living room 0 coffee table 27. Object plant 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object table lamp 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 trash can 18, kitchen 0 fridge 57.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to coffeemaker 1\nstep 2: look at coffeemaker 1\nstep 3: pick up coffeemaker 1\nstep 4: go to living room 0 coffee table 27\nstep 5: look at living room 0 coffee table 27\nstep 6: place coffeemaker 1 on living room 0 coffee table 27"
+        },
+        "logs": [
+            {
+                "start": 903,
+                "step_raw": "go to coffeemaker 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "coffeemaker_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 903,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 903,
+                "step_raw": "look at coffeemaker 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "coffeemaker_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 903,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 903,
+                "step_raw": "pick up coffeemaker 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "coffeemaker_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 903,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 903,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 938,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 938,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 940,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 940,
+                "step_raw": "place coffeemaker 1 on living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "coffeemaker_1",
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "agent",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 941,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "coffeemaker 1": [
+                            "agent",
+                            "living room 0 coffee table 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "agent",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "agent"
+            },
+            "end": {
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "living room 0 coffee table 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "coffeemaker 1": [
+                    "agent",
+                    "living room 0 coffee table 27"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 941
+    },
+    {
+        "mode": "single",
+        "start": 941,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 carpet 28, living room 0 floor lamp 31. Object chocolate box 1 found on living room 0 coffee table 27. Object candle holder 1 found on living room 0 coffee table 27. Object dispensing closure 1 found on living room 0 coffee table 27. Object pepsi can pack 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27. Object plant 1 found on living room 0 coffee table 27. Object coffeemaker 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object table lamp 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 trash can 18, kitchen 0 fridge 57.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to plant 1\nstep 2: look at plant 1\nstep 3: pick up plant 1\nstep 4: go to living room 0 coffee table 27\nstep 5: look at living room 0 coffee table 27\nstep 6: place plant 1 on living room 0 coffee table 27"
+        },
+        "logs": [
+            {
+                "start": 941,
+                "step_raw": "go to plant 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "plant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 941,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 941,
+                "step_raw": "look at plant 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "plant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 941,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 941,
+                "step_raw": "pick up plant 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "plant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "agent",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 942,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "plant 1": [
+                            "living room 0 coffee table 27",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 942,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "agent",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "agent",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 942,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 942,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "agent",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "agent",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 944,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 944,
+                "step_raw": "place plant 1 on living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "plant_1",
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "agent",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    },
+                    "end": {
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "chocolate box 1": "living room 0 coffee table 27",
+                        "candle holder 1": "living room 0 coffee table 27",
+                        "pepsi can pack 1": "living room 0 coffee table 27",
+                        "plant 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "coffeemaker 1": "living room 0 coffee table 27",
+                        "table lamp 1": "dining room 0 table 20"
+                    }
+                },
+                "end": 945,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "plant 1": [
+                            "agent",
+                            "living room 0 coffee table 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "chocolate box 1": [
+                "dining room 0 table 20"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 27"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "coffeemaker 1": [
+                "dining room 0 table 20"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "chocolate box 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "candle holder 1": "living room 0 coffee table 27",
+                "plant 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "table lamp 1": "dining room 0 table 20"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "living room 0 coffee table 27"
+            },
+            "end": {
+                "chocolate box 1": "living room 0 coffee table 27",
+                "pepsi can pack 1": "living room 0 coffee table 27",
+                "coffeemaker 1": "living room 0 coffee table 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "plant 1": [
+                    "living room 0 coffee table 27",
+                    "living room 0 coffee table 27"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 945
+    }
+]

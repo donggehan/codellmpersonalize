@@ -1,0 +1,41 @@
+hf:
+  model: "gpt2-large"
+  sampling_params:
+    max_tokens: 10
+    temperature: 0.1
+    top_p: 0.9
+    num_return_sequences: 10
+    repetition_penalty: 1.2
+    use_cache: True
+    output_scores: True
+    return_dict_in_generate: True
+    do_sample: True
+openai:
+  model: "babbage-002"
+  sampling_params:
+    max_tokens: 10
+    temperature: 0.6
+    top_p: 0.9
+    n: 10
+    logprobs: 1
+    presence_penalty: 0.5
+    frequency_penalty: 0.3
+    stop: '\n'
+llama:
+  model: "Llama-2-7b-chat-hf"
+  model_path: ""
+  max_memory: 
+    0: "8GIB"
+    1: "8GIB"
+    2: "8GIB"
+  sampling_params:
+    max_tokens: 10
+    temperature: 0.1
+    top_p: 0.9
+    num_return_sequences: 10
+    repetition_penalty: 1.2
+    use_cache: True
+    output_scores: True
+    return_dict_in_generate: True
+    do_sample: True
+

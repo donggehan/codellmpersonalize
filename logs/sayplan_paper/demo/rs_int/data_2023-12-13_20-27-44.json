@@ -1,0 +1,568 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: go to fondant 1\nstep 3: look at fondant 1\nstep 4: pick up fondant 1\nstep 5: go to kitchen 0 bottom cabinet 41\nstep 6: look at kitchen 0 bottom cabinet 41\nstep 7: place fondant 1 on kitchen 0 bottom cabinet 41\nstep 8: mission complete"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "living room 0 bottom cabinet 0",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "living room 0 bottom cabinet 0",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 25,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "handbag 1",
+                        "ramekin 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 chair 12",
+                        "living room 0 table 9",
+                        "living room 0 bottom cabinet 13",
+                        "living room 0 stool 4",
+                        "living room 0 office chair 17",
+                        "living room 0 loudspeaker 16",
+                        "living room 0 chair 11",
+                        "living room 0 shelf 21",
+                        "living room 0 standing tv 15",
+                        "living room 0 table 18",
+                        "living room 0 shelf 19"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "go to fondant 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "fondant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "living room 0 bottom cabinet 0",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "living room 0 bottom cabinet 0",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 61,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "string lights 1",
+                        "chocolate milk pods 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 shower 31",
+                        "kitchen 0 fridge 40",
+                        "living room 0 chair 10",
+                        "kitchen 0 top cabinet 48",
+                        "bedroom 0 bottom cabinet 8",
+                        "lobby 0 bottom cabinet 39"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 61,
+                "step_raw": "look at fondant 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "fondant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "living room 0 bottom cabinet 0",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "living room 0 bottom cabinet 0",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 61,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 61,
+                "step_raw": "pick up fondant 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "fondant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "living room 0 bottom cabinet 0",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "agent",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 62,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "fondant 1": [
+                            "living room 0 bottom cabinet 0",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 62,
+                "step_raw": "go to kitchen 0 bottom cabinet 41",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "agent",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "agent",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 110,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 110,
+                "step_raw": "look at kitchen 0 bottom cabinet 41",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "agent",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "agent",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 110,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 110,
+                "step_raw": "place fondant 1 on kitchen 0 bottom cabinet 41",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "fondant_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "agent",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "kitchen 0 bottom cabinet 41",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 111,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "fondant 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 41"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 111,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "kitchen 0 bottom cabinet 41",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    },
+                    "end": {
+                        "handbag 1": "living room 0 table 18",
+                        "vase 1": "bathroom 0 toilet 30",
+                        "ramekin 1": "living room 0 office chair 17",
+                        "condiment 1": "bathroom 0 toilet 30",
+                        "fondant 1": "kitchen 0 bottom cabinet 41",
+                        "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                        "string lights 1": "lobby 0 bottom cabinet 39"
+                    }
+                },
+                "end": 111,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "handbag 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "vase 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "ramekin 1": [
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "condiment 1": [
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "fondant 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "chocolate milk pods 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "handbag 1": "living room 0 table 18",
+                "vase 1": "bathroom 0 toilet 30",
+                "ramekin 1": "living room 0 office chair 17",
+                "condiment 1": "bathroom 0 toilet 30",
+                "fondant 1": "living room 0 bottom cabinet 0",
+                "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                "string lights 1": "lobby 0 bottom cabinet 39"
+            },
+            "end": {
+                "handbag 1": "living room 0 table 18",
+                "vase 1": "bathroom 0 toilet 30",
+                "ramekin 1": "living room 0 office chair 17",
+                "condiment 1": "bathroom 0 toilet 30",
+                "fondant 1": "kitchen 0 bottom cabinet 41",
+                "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                "string lights 1": "lobby 0 bottom cabinet 39"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "fondant 1": "living room 0 bottom cabinet 0",
+                "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                "string lights 1": "lobby 0 bottom cabinet 39"
+            },
+            "end": {
+                "fondant 1": "kitchen 0 bottom cabinet 41",
+                "chocolate milk pods 1": "lobby 0 bottom cabinet 39",
+                "string lights 1": "lobby 0 bottom cabinet 39"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "handbag 1": "living room 0 table 18",
+                "vase 1": "bathroom 0 toilet 30",
+                "ramekin 1": "living room 0 office chair 17",
+                "condiment 1": "bathroom 0 toilet 30"
+            },
+            "end": {
+                "handbag 1": "living room 0 table 18",
+                "vase 1": "bathroom 0 toilet 30",
+                "ramekin 1": "living room 0 office chair 17",
+                "condiment 1": "bathroom 0 toilet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "handbag 1",
+                "string lights 1",
+                "chocolate milk pods 1",
+                "ramekin 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 fridge 40",
+                "living room 0 chair 12",
+                "living room 0 chair 10",
+                "living room 0 table 9",
+                "living room 0 bottom cabinet 13",
+                "living room 0 office chair 17",
+                "living room 0 stool 4",
+                "living room 0 loudspeaker 16",
+                "living room 0 chair 11",
+                "bathroom 0 shower 31",
+                "living room 0 shelf 21",
+                "living room 0 standing tv 15",
+                "living room 0 table 18",
+                "kitchen 0 top cabinet 48",
+                "living room 0 shelf 19",
+                "bedroom 0 bottom cabinet 8",
+                "lobby 0 bottom cabinet 39"
+            ],
+            "objects_moved": {
+                "fondant 1": [
+                    "living room 0 bottom cabinet 0",
+                    "kitchen 0 bottom cabinet 41"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 111
+    }
+]

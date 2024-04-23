@@ -1,0 +1,3654 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21. Object cereal 1 found on living room 0 office chair 17 \nIn bathroom 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet. \nIn lobby 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to bedroom 0 step 2: go to living room 0 step 3: go to bathroom 0 step 4: go to kitchen 0 step 5: go to lobby 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bed_28_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 34,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "electric heater 1",
+                        "candle holder 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 46",
+                        "kitchen 0 top cabinet 49",
+                        "bedroom 0 bed 28",
+                        "kitchen 0 top cabinet 51",
+                        "kitchen 0 oven 45",
+                        "living room 0 bottom cabinet 0",
+                        "bathroom 0 shower 31",
+                        "living room 0 floor lamp 3",
+                        "kitchen 0 top cabinet 50",
+                        "living room 0 chair 23",
+                        "bedroom 0 bottom cabinet 8",
+                        "living room 0 chair 24"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 34,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 87,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "baseball 1",
+                        "string lights 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 36",
+                        "bathroom 0 sink 35",
+                        "kitchen 0 top cabinet 48",
+                        "lobby 0 bottom cabinet 39",
+                        "kitchen 0 fridge 40",
+                        "bathroom 0 towel rack 32",
+                        "kitchen 0 sink 42",
+                        "living room 0 chair 10"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 87,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 137,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "racquetball 1",
+                        "potted meat can 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 microwave 43",
+                        "kitchen 0 dishwasher 44",
+                        "kitchen 0 top cabinet 47",
+                        "kitchen 0 bottom cabinet 41",
+                        "bathroom 0 towel rack 33",
+                        "bathroom 0 carpet 34"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 137,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_44_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 210,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 trash can 25"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 210,
+                "step_raw": "go to lobby 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "lobby_0-bottom_cabinet_39_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 237,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bathroom 0 carpet 34",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bathroom 0 carpet 34",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "racquetball 1": "bathroom 0 carpet 34",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "racquetball 1": "bathroom 0 carpet 34",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "baseball 1",
+                "string lights 1",
+                "candle holder 1",
+                "racquetball 1",
+                "electric heater 1",
+                "potted meat can 1"
+            ],
+            "recs_discovered": [
+                "bathroom 0 mirror 36",
+                "bedroom 0 bed 28",
+                "bathroom 0 towel rack 33",
+                "kitchen 0 fridge 40",
+                "bathroom 0 shower 31",
+                "bathroom 0 carpet 34",
+                "bathroom 0 sink 35",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 chair 24",
+                "kitchen 0 sink 42",
+                "living room 0 chair 10",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 bottom cabinet 46",
+                "kitchen 0 microwave 43",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 51",
+                "kitchen 0 oven 45",
+                "kitchen 0 trash can 25",
+                "kitchen 0 top cabinet 47",
+                "living room 0 bottom cabinet 0",
+                "living room 0 floor lamp 3",
+                "kitchen 0 top cabinet 50",
+                "living room 0 chair 23",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 dishwasher 44",
+                "bathroom 0 towel rack 32",
+                "kitchen 0 bottom cabinet 41"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 237
+    },
+    {
+        "mode": "single",
+        "start": 237,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. Object candle holder 1 found on bedroom 0 bed 28 \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21, living room 0 bottom cabinet 0, living room 0 chair 23, living room 0 floor lamp 3, living room 0 chair 24, living room 0 chair 10. Object cereal 1 found on living room 0 office chair 17 \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 mirror 36, bathroom 0 sink 35, bathroom 0 towel rack 32, bathroom 0 carpet 34, bathroom 0 towel rack 33. Object racquetball 1 found on bathroom 0 carpet 34 \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 49, kitchen 0 top cabinet 51, kitchen 0 oven 45, kitchen 0 top cabinet 50, kitchen 0 fridge 40, kitchen 0 top cabinet 48, kitchen 0 sink 42, kitchen 0 top cabinet 47, kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 bottom cabinet 41, kitchen 0 trash can 25. Object electric heater 1 found on kitchen 0 oven 45. Object potted meat can 1 found on kitchen 0 microwave 43 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object baseball 1 found on lobby 0 bottom cabinet 39. Object string lights 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to racquetball 1 step 2: look at racquetball 1 step 3: pick up racquetball 1 step 4: go to bedroom 0 bottom cabinet 8 step 5: look at bedroom 0 bottom cabinet 8 step 6: place racquetball 1 on bedroom 0 bottom cabinet 8"
+        },
+        "logs": [
+            {
+                "start": 237,
+                "step_raw": "go to racquetball 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 299,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 299,
+                "step_raw": "look at racquetball 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 300,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 toilet 30"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 300,
+                "step_raw": "pick up racquetball 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bathroom 0 carpet 34",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "agent",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 301,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "bathroom 0 carpet 34",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 301,
+                "step_raw": "go to bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "agent",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "agent",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 331,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 331,
+                "step_raw": "look at bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "agent",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "agent",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 331,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 331,
+                "step_raw": "place racquetball 1 on bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "agent",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 332,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 8"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bathroom 0 carpet 34",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "racquetball 1": "bathroom 0 carpet 34",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "bathroom 0 toilet 30"
+            ],
+            "objects_moved": {
+                "racquetball 1": [
+                    "bathroom 0 carpet 34",
+                    "bedroom 0 bottom cabinet 8"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 4
+            }
+        },
+        "end": 332
+    },
+    {
+        "mode": "single",
+        "start": 332,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. Object candle holder 1 found on bedroom 0 bed 28. Object racquetball 1 found on bedroom 0 bottom cabinet 8 \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21, living room 0 bottom cabinet 0, living room 0 chair 23, living room 0 floor lamp 3, living room 0 chair 24, living room 0 chair 10. Object cereal 1 found on living room 0 office chair 17 \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 mirror 36, bathroom 0 sink 35, bathroom 0 towel rack 32, bathroom 0 carpet 34, bathroom 0 towel rack 33, bathroom 0 toilet 30. \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 49, kitchen 0 top cabinet 51, kitchen 0 oven 45, kitchen 0 top cabinet 50, kitchen 0 fridge 40, kitchen 0 top cabinet 48, kitchen 0 sink 42, kitchen 0 top cabinet 47, kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 bottom cabinet 41, kitchen 0 trash can 25. Object potted meat can 1 found on kitchen 0 microwave 43. Object electric heater 1 found on kitchen 0 oven 45 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object baseball 1 found on lobby 0 bottom cabinet 39. Object string lights 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to potted meat can 1 step 2: look at potted meat can 1 step 3: pick up potted meat can 1 step 4: go to bedroom 0 bottom cabinet 8 step 5: look at bedroom 0 bottom cabinet 8 step 6: place potted meat can 1 on bedroom 0 bottom cabinet 8"
+        },
+        "logs": [
+            {
+                "start": 332,
+                "step_raw": "go to potted meat can 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "potted_meat_can_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 394,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 394,
+                "step_raw": "look at potted meat can 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "potted_meat_can_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 394,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 394,
+                "step_raw": "pick up potted meat can 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "potted_meat_can_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "kitchen 0 microwave 43",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "agent",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 395,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "potted meat can 1": [
+                            "kitchen 0 microwave 43",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 395,
+                "step_raw": "go to bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "agent",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "agent",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 465,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 465,
+                "step_raw": "look at bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "agent",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "agent",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 465,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 465,
+                "step_raw": "place potted meat can 1 on bedroom 0 bottom cabinet 8",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "potted_meat_can_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "agent",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 466,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "potted meat can 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 8"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "potted meat can 1": "kitchen 0 microwave 43",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "potted meat can 1": [
+                    "kitchen 0 microwave 43",
+                    "bedroom 0 bottom cabinet 8"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 466
+    },
+    {
+        "mode": "single",
+        "start": 466,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. Object candle holder 1 found on bedroom 0 bed 28. Object racquetball 1 found on bedroom 0 bottom cabinet 8. Object potted meat can 1 found on bedroom 0 bottom cabinet 8 \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21, living room 0 bottom cabinet 0, living room 0 chair 23, living room 0 floor lamp 3, living room 0 chair 24, living room 0 chair 10. Object cereal 1 found on living room 0 office chair 17 \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 mirror 36, bathroom 0 sink 35, bathroom 0 towel rack 32, bathroom 0 carpet 34, bathroom 0 towel rack 33, bathroom 0 toilet 30. \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 49, kitchen 0 top cabinet 51, kitchen 0 oven 45, kitchen 0 top cabinet 50, kitchen 0 fridge 40, kitchen 0 top cabinet 48, kitchen 0 sink 42, kitchen 0 top cabinet 47, kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 bottom cabinet 41, kitchen 0 trash can 25. Object electric heater 1 found on kitchen 0 oven 45 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object string lights 1 found on lobby 0 bottom cabinet 39. Object baseball 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to cereal 1 step 2: look at cereal 1 step 3: pick up cereal 1 step 4: go to kitchen 0 bottom cabinet 46 step 5: look at kitchen 0 bottom cabinet 46 step 6: place cereal 1 on kitchen 0 bottom cabinet 46"
+        },
+        "logs": [
+            {
+                "start": 466,
+                "step_raw": "go to cereal 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 516,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 516,
+                "step_raw": "look at cereal 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 517,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 517,
+                "step_raw": "pick up cereal 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "living room 0 office chair 17",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 518,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "cereal 1": [
+                            "living room 0 office chair 17",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 518,
+                "step_raw": "go to kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 560,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 560,
+                "step_raw": "look at kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 581,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 581,
+                "step_raw": "place cereal 1 on kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cereal_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 582,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cereal 1": "living room 0 office chair 17",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "cereal 1": [
+                    "living room 0 office chair 17",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 582
+    },
+    {
+        "mode": "single",
+        "start": 582,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding cereal 1.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. Object candle holder 1 found on bedroom 0 bed 28. Object racquetball 1 found on bedroom 0 bottom cabinet 8. Object potted meat can 1 found on bedroom 0 bottom cabinet 8 \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21, living room 0 bottom cabinet 0, living room 0 chair 23, living room 0 floor lamp 3, living room 0 chair 24, living room 0 chair 10. \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 mirror 36, bathroom 0 sink 35, bathroom 0 towel rack 32, bathroom 0 carpet 34, bathroom 0 towel rack 33, bathroom 0 toilet 30. \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 49, kitchen 0 top cabinet 51, kitchen 0 oven 45, kitchen 0 top cabinet 50, kitchen 0 fridge 40, kitchen 0 top cabinet 48, kitchen 0 sink 42, kitchen 0 top cabinet 47, kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 bottom cabinet 41, kitchen 0 trash can 25. Object electric heater 1 found on kitchen 0 oven 45 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object baseball 1 found on lobby 0 bottom cabinet 39. Object string lights 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to candle holder 1 step 2: look at candle holder 1 step 3: pick up candle holder 1 step 4: go to kitchen 0 top cabinet 49 step 5: look at kitchen 0 top cabinet 49 step 6: place candle holder 1 on kitchen 0 top cabinet 49"
+        },
+        "logs": [
+            {
+                "start": 582,
+                "step_raw": "go to candle holder 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 602,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "plate 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 602,
+                "step_raw": "look at candle holder 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 602,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 602,
+                "step_raw": "pick up candle holder 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 603,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 603,
+                "step_raw": "go to kitchen 0 top cabinet 49",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 668,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 668,
+                "step_raw": "look at kitchen 0 top cabinet 49",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 668,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 668,
+                "step_raw": "place candle holder 1 on kitchen 0 top cabinet 49",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": "kitchen_0-top_cabinet_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 49",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 669,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "cereal 1": [
+                            "agent",
+                            "kitchen 0 top cabinet 49"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "kitchen 0 top cabinet 49",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "cereal 1": "kitchen 0 top cabinet 49",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "plate 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {
+                "cereal 1": [
+                    "agent",
+                    "kitchen 0 top cabinet 49"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 669
+    },
+    {
+        "mode": "single",
+        "start": 669,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. Object racquetball 1 found on bedroom 0 bottom cabinet 8. Object potted meat can 1 found on bedroom 0 bottom cabinet 8. Object candle holder 1 found on bedroom 0 bed 28 \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21, living room 0 bottom cabinet 0, living room 0 chair 23, living room 0 floor lamp 3, living room 0 chair 24, living room 0 chair 10. \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 mirror 36, bathroom 0 sink 35, bathroom 0 towel rack 32, bathroom 0 carpet 34, bathroom 0 towel rack 33, bathroom 0 toilet 30. \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 49, kitchen 0 top cabinet 51, kitchen 0 oven 45, kitchen 0 top cabinet 50, kitchen 0 fridge 40, kitchen 0 top cabinet 48, kitchen 0 sink 42, kitchen 0 top cabinet 47, kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 bottom cabinet 41, kitchen 0 trash can 25. Object plate 1 found on kitchen 0 top cabinet 47. Object electric heater 1 found on kitchen 0 oven 45. Object cereal 1 found on kitchen 0 top cabinet 49 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object baseball 1 found on lobby 0 bottom cabinet 39. Object string lights 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to cereal 1 step 2: look at cereal 1 step 3: pick up cereal 1 step 4: go to kitchen 0 bottom cabinet 46 step 5: look at kitchen 0 bottom cabinet 46 step 6: place cereal 1 on kitchen 0 bottom cabinet 46"
+        },
+        "logs": [
+            {
+                "start": 669,
+                "step_raw": "go to cereal 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 49",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 49",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 669,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 669,
+                "step_raw": "look at cereal 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 49",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 49",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 669,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 669,
+                "step_raw": "pick up cereal 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 49",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 670,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "cereal 1": [
+                            "kitchen 0 top cabinet 49",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 670,
+                "step_raw": "go to kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 726,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 726,
+                "step_raw": "look at kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 747,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 747,
+                "step_raw": "place cereal 1 on kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cereal_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 748,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "kitchen 0 top cabinet 49",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cereal 1": "kitchen 0 top cabinet 49",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "cereal 1": [
+                    "kitchen 0 top cabinet 49",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 748
+    },
+    {
+        "mode": "single",
+        "start": 748,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding cereal 1.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. Object candle holder 1 found on bedroom 0 bed 28. Object racquetball 1 found on bedroom 0 bottom cabinet 8. Object potted meat can 1 found on bedroom 0 bottom cabinet 8 \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21, living room 0 bottom cabinet 0, living room 0 chair 23, living room 0 floor lamp 3, living room 0 chair 24, living room 0 chair 10. \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 mirror 36, bathroom 0 sink 35, bathroom 0 towel rack 32, bathroom 0 carpet 34, bathroom 0 towel rack 33, bathroom 0 toilet 30. \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 49, kitchen 0 top cabinet 51, kitchen 0 oven 45, kitchen 0 top cabinet 50, kitchen 0 fridge 40, kitchen 0 top cabinet 48, kitchen 0 sink 42, kitchen 0 top cabinet 47, kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 bottom cabinet 41, kitchen 0 trash can 25. Object plate 1 found on kitchen 0 top cabinet 47. Object electric heater 1 found on kitchen 0 oven 45 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object string lights 1 found on lobby 0 bottom cabinet 39. Object baseball 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to candle holder 1 step 2: look at candle holder 1 step 3: pick up candle holder 1 step 4: go to kitchen 0 top cabinet 48 step 5: look at kitchen 0 top cabinet 48 step 6: place candle holder 1 on kitchen 0 top cabinet 48"
+        },
+        "logs": [
+            {
+                "start": 748,
+                "step_raw": "go to candle holder 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 770,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 770,
+                "step_raw": "look at candle holder 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 770,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 770,
+                "step_raw": "pick up candle holder 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 771,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 771,
+                "step_raw": "go to kitchen 0 top cabinet 48",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 835,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 835,
+                "step_raw": "look at kitchen 0 top cabinet 48",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 835,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 835,
+                "step_raw": "place candle holder 1 on kitchen 0 top cabinet 48",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": "kitchen_0-top_cabinet_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 48",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 836,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "cereal 1": [
+                            "agent",
+                            "kitchen 0 top cabinet 48"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "kitchen 0 top cabinet 48",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "cereal 1": "kitchen 0 top cabinet 48",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "cereal 1": [
+                    "agent",
+                    "kitchen 0 top cabinet 48"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 836
+    },
+    {
+        "mode": "single",
+        "start": 836,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. Object racquetball 1 found on bedroom 0 bottom cabinet 8. Object potted meat can 1 found on bedroom 0 bottom cabinet 8. Object candle holder 1 found on bedroom 0 bed 28 \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 11, living room 0 chair 12, living room 0 coffee table 5, living room 0 loudspeaker 16, living room 0 office chair 17, living room 0 sofa 2, living room 0 standing tv 15, living room 0 stool 4, living room 0 table 18, living room 0 table 9, living room 0 bottom cabinet 13, living room 0 shelf 19, living room 0 shelf 20, living room 0 shelf 21, living room 0 bottom cabinet 0, living room 0 chair 23, living room 0 floor lamp 3, living room 0 chair 24, living room 0 chair 10. \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 mirror 36, bathroom 0 sink 35, bathroom 0 towel rack 32, bathroom 0 carpet 34, bathroom 0 towel rack 33, bathroom 0 toilet 30. \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 49, kitchen 0 top cabinet 51, kitchen 0 oven 45, kitchen 0 top cabinet 50, kitchen 0 fridge 40, kitchen 0 top cabinet 48, kitchen 0 sink 42, kitchen 0 top cabinet 47, kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 bottom cabinet 41, kitchen 0 trash can 25. Object plate 1 found on kitchen 0 top cabinet 47. Object electric heater 1 found on kitchen 0 oven 45. Object cereal 1 found on kitchen 0 top cabinet 48 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object baseball 1 found on lobby 0 bottom cabinet 39. Object string lights 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to cereal 1 step 2: look at cereal 1 step 3: pick up cereal 1 step 4: go to kitchen 0 bottom cabinet 46 step 5: look at kitchen 0 bottom cabinet 46 step 6: place cereal 1 on kitchen 0 bottom cabinet 46"
+        },
+        "logs": [
+            {
+                "start": 836,
+                "step_raw": "go to cereal 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 48",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 48",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 836,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 836,
+                "step_raw": "look at cereal 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 48",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 48",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 836,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 836,
+                "step_raw": "pick up cereal 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cereal_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "kitchen 0 top cabinet 48",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 837,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "cereal 1": [
+                            "kitchen 0 top cabinet 48",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 837,
+                "step_raw": "go to kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 889,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 889,
+                "step_raw": "look at kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 910,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 910,
+                "step_raw": "place cereal 1 on kitchen 0 bottom cabinet 46",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cereal_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "racquetball 1": "bedroom 0 bottom cabinet 8",
+                        "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                        "cereal 1": "agent",
+                        "candle holder 1": "bedroom 0 bed 28",
+                        "electric heater 1": "kitchen 0 oven 45",
+                        "string lights 1": "lobby 0 bottom cabinet 39",
+                        "baseball 1": "lobby 0 bottom cabinet 39",
+                        "plate 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 911,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cereal 1": [
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46"
+            ],
+            "candle holder 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "living room 0 table 18",
+                "living room 0 table 9",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "electric heater 1": [
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "string lights 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "bedroom 0 bottom cabinet 8"
+            ],
+            "baseball 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "plate 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "kitchen 0 top cabinet 48",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 8",
+                "potted meat can 1": "bedroom 0 bottom cabinet 8",
+                "string lights 1": "lobby 0 bottom cabinet 39",
+                "baseball 1": "lobby 0 bottom cabinet 39",
+                "plate 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cereal 1": "kitchen 0 top cabinet 48",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            },
+            "end": {
+                "cereal 1": "agent",
+                "candle holder 1": "bedroom 0 bed 28",
+                "electric heater 1": "kitchen 0 oven 45"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "cereal 1": [
+                    "kitchen 0 top cabinet 48",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 911
+    }
+]

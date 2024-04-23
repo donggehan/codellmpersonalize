@@ -1,0 +1,1596 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: go to bathroom 0\nstep 3: go to child's room 0\nstep 4: go to living room 0\nstep 5: go to dining room 0\nstep 6: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 57,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "toothbrush pack 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 floor lamp 33",
+                        "childs room 0 carpet 0",
+                        "bedroom 0 bottom cabinet 13",
+                        "bedroom 0 bottom cabinet 8",
+                        "childs room 0 stool 5",
+                        "bedroom 0 basket 15",
+                        "living room 0 coffee table 27",
+                        "childs room 0 bottom cabinet 2",
+                        "bedroom 0 bottom cabinet 12",
+                        "childs room 0 sofa chair 4",
+                        "bedroom 0 basket 14",
+                        "childs room 0 bottom cabinet 6",
+                        "childs room 0 bed 1",
+                        "bedroom 0 bed 7"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 57,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 118,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "spoon rest 1",
+                        "bleach cleanser 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 sink 72",
+                        "bathroom 0 toilet 69",
+                        "living room 0 carpet 28",
+                        "bathroom 0 trash can 34",
+                        "bathroom 0 mirror 73",
+                        "living room 0 bottom cabinet 30",
+                        "bedroom 0 bottom cabinet 9",
+                        "bathroom 0 top cabinet 70",
+                        "bathroom 0 bathtub 71",
+                        "living room 0 towel rack 66"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 118,
+                "step_raw": "go to child's room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 176,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 trash can 18"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 176,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 252,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "lime squeezer 1",
+                        "tampons 1",
+                        "utensil holder 1",
+                        "electric toothbrush 1",
+                        "sanitary pads 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 floor lamp 31",
+                        "dining room 0 chair 24",
+                        "kitchen 0 fridge 57",
+                        "dining room 0 chair 22",
+                        "dining room 0 plant 29"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 252,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 271,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 top cabinet 55",
+                        "kitchen 0 bottom cabinet 49",
+                        "kitchen 0 bottom cabinet 50"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 271,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_52_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 333,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sanitary pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "utensil holder 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toothbrush pack 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 sofa chair 26"
+            ],
+            "bleach cleanser 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "lime squeezer 1": [
+                "living room 0 carpet 28",
+                "living room 0 carpet 62",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "lime squeezer 1",
+                "toothbrush pack 1",
+                "tampons 1",
+                "utensil holder 1",
+                "electric toothbrush 1",
+                "bleach cleanser 1",
+                "spoon rest 1",
+                "sanitary pads 1"
+            ],
+            "recs_discovered": [
+                "living room 0 floor lamp 33",
+                "childs room 0 carpet 0",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "childs room 0 stool 5",
+                "bedroom 0 basket 15",
+                "living room 0 coffee table 27",
+                "bathroom 0 sink 72",
+                "living room 0 floor lamp 31",
+                "living room 0 carpet 28",
+                "bedroom 0 bottom cabinet 12",
+                "bathroom 0 trash can 34",
+                "kitchen 0 trash can 18",
+                "bedroom 0 basket 14",
+                "bathroom 0 top cabinet 70",
+                "kitchen 0 fridge 57",
+                "bathroom 0 bathtub 71",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 towel rack 66",
+                "kitchen 0 bottom cabinet 49",
+                "bedroom 0 bed 7",
+                "kitchen 0 top cabinet 55",
+                "kitchen 0 bottom cabinet 50",
+                "bathroom 0 toilet 69",
+                "dining room 0 plant 29",
+                "childs room 0 bottom cabinet 2",
+                "bathroom 0 mirror 73",
+                "childs room 0 sofa chair 4",
+                "living room 0 bottom cabinet 30",
+                "dining room 0 chair 24",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 chair 22",
+                "childs room 0 bed 1"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 333
+    },
+    {
+        "mode": "single",
+        "start": 333,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object bleach cleanser 1 found on bathroom 0 top cabinet 70. Object spoon rest 1 found on bathroom 0 bathtub 71 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object toothbrush pack 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object lime squeezer 1 found on living room 0 carpet 28. Object tampons 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object electric toothbrush 1 found on dining room 0 table 20. Object sanitary pads 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50. Object utensil holder 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bleach cleanser 1\nstep 2: look at bleach cleanser 1\nstep 3: pick up bleach cleanser 1\nstep 4: go to kitchen 0 top cabinet 54\nstep 5: look at kitchen 0 top cabinet 54\nstep 6: place bleach cleanser 1 on kitchen 0 top cabinet 54"
+        },
+        "logs": [
+            {
+                "start": 333,
+                "step_raw": "go to bleach cleanser 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "bleach_cleanser_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 379,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 379,
+                "step_raw": "look at bleach cleanser 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "bleach_cleanser_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 379,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 379,
+                "step_raw": "pick up bleach cleanser 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "bleach_cleanser_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "agent",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 380,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "bleach cleanser 1": [
+                            "bathroom 0 top cabinet 70",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 6
+                    }
+                }
+            },
+            {
+                "start": 380,
+                "step_raw": "go to kitchen 0 top cabinet 54",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_54_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "agent",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "agent",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 425,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 6,
+                        "end": 6
+                    }
+                }
+            },
+            {
+                "start": 425,
+                "step_raw": "look at kitchen 0 top cabinet 54",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_54_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "agent",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "agent",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 425,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 6,
+                        "end": 6
+                    }
+                }
+            },
+            {
+                "start": 425,
+                "step_raw": "place bleach cleanser 1 on kitchen 0 top cabinet 54",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "bleach_cleanser_1",
+                    "target_receptacle": "kitchen_0-top_cabinet_54_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "agent",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 426,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "bleach cleanser 1": [
+                            "agent",
+                            "kitchen 0 top cabinet 54"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 6,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sanitary pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "utensil holder 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toothbrush pack 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 sofa chair 26"
+            ],
+            "bleach cleanser 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "lime squeezer 1": [
+                "living room 0 carpet 28",
+                "living room 0 carpet 62",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "bathroom 0 top cabinet 70",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "bleach cleanser 1": [
+                    "bathroom 0 top cabinet 70",
+                    "kitchen 0 top cabinet 54"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 426
+    },
+    {
+        "mode": "single",
+        "start": 426,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object spoon rest 1 found on bathroom 0 bathtub 71 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object toothbrush pack 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object lime squeezer 1 found on living room 0 carpet 28. Object tampons 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object electric toothbrush 1 found on dining room 0 table 20. Object sanitary pads 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50. Object utensil holder 1 found on kitchen 0 fridge 57. Object bleach cleanser 1 found on kitchen 0 top cabinet 54. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to toothbrush pack 1\nstep 2: look at toothbrush pack 1\nstep 3: pick up toothbrush pack 1\nstep 4: go to childs room 0 bottom cabinet 6\nstep 5: look at childs room 0 bottom cabinet 6\nstep 6: place toothbrush pack 1 on childs room 0 bottom cabinet 6"
+        },
+        "logs": [
+            {
+                "start": 426,
+                "step_raw": "go to toothbrush pack 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "toothbrush_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 482,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 482,
+                "step_raw": "look at toothbrush pack 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "toothbrush_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 482,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 482,
+                "step_raw": "pick up toothbrush pack 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toothbrush_pack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "agent",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 483,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toothbrush pack 1": [
+                            "childs room 0 bottom cabinet 2",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 6
+                    }
+                }
+            },
+            {
+                "start": 483,
+                "step_raw": "go to childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "agent",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "agent",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 507,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 6,
+                        "end": 6
+                    }
+                }
+            },
+            {
+                "start": 507,
+                "step_raw": "look at childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "agent",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "agent",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 507,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 6,
+                        "end": 6
+                    }
+                }
+            },
+            {
+                "start": 507,
+                "step_raw": "place toothbrush pack 1 on childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toothbrush_pack_1",
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "agent",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 508,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toothbrush pack 1": [
+                            "agent",
+                            "childs room 0 bottom cabinet 6"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 6,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sanitary pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "utensil holder 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toothbrush pack 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 sofa chair 26"
+            ],
+            "bleach cleanser 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "lime squeezer 1": [
+                "living room 0 carpet 28",
+                "living room 0 carpet 62",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 2",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "toothbrush pack 1": [
+                    "childs room 0 bottom cabinet 2",
+                    "childs room 0 bottom cabinet 6"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 508
+    },
+    {
+        "mode": "single",
+        "start": 508,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object spoon rest 1 found on bathroom 0 bathtub 71 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object toothbrush pack 1 found on childs room 0 bottom cabinet 6 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object lime squeezer 1 found on living room 0 carpet 28. Object tampons 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29. Object electric toothbrush 1 found on dining room 0 table 20. Object sanitary pads 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50. Object utensil holder 1 found on kitchen 0 fridge 57. Object bleach cleanser 1 found on kitchen 0 top cabinet 54. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 508,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    },
+                    "end": {
+                        "spoon rest 1": "bathroom 0 bathtub 71",
+                        "electric toothbrush 1": "dining room 0 table 20",
+                        "sanitary pads 1": "dining room 0 table 20",
+                        "utensil holder 1": "kitchen 0 fridge 57",
+                        "tampons 1": "living room 0 bottom cabinet 30",
+                        "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                        "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                        "lime squeezer 1": "living room 0 carpet 28"
+                    }
+                },
+                "end": 508,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "electric toothbrush 1": [
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sanitary pads 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "utensil holder 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "tampons 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toothbrush pack 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 sofa chair 26"
+            ],
+            "bleach cleanser 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "lime squeezer 1": [
+                "living room 0 carpet 28",
+                "living room 0 carpet 62",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30",
+                "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "toothbrush pack 1": "childs room 0 bottom cabinet 6",
+                "bleach cleanser 1": "kitchen 0 top cabinet 54",
+                "lime squeezer 1": "living room 0 carpet 28"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "spoon rest 1": "bathroom 0 bathtub 71",
+                "electric toothbrush 1": "dining room 0 table 20",
+                "sanitary pads 1": "dining room 0 table 20",
+                "utensil holder 1": "kitchen 0 fridge 57",
+                "tampons 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 508
+    }
+]

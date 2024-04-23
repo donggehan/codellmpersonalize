@@ -1,0 +1,4211 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13. \nIn kitchen 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to pantry room 0\nstep 2: go to object\nstep 3: look at object\nstep 4: pick up object\nstep 5: go to kitchen 0\nstep 6: look at kitchen 0\nstep 7: go to receptacle\nstep 8: look at receptacle\nstep 9: place object on receptacle\nstep 10: go to corridor 0 carpet 13\nstep 11: go to object\nstep 12: look at object\nstep 13: pick up object\nstep 14: go to living room 0\nstep 15: look at living room 0\nstep 16: go to receptacle\nstep 17: look at receptacle\nstep 18: place object on receptacle\nstep 19: mission complete"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 47,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "shredder 1",
+                        "stand mixer 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 counter 40",
+                        "kitchen 0 carpet 34",
+                        "pantry room 0 fridge 50",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 counter 41",
+                        "kitchen 0 sink 37",
+                        "kitchen 0 dishwasher 36",
+                        "kitchen 0 counter 31",
+                        "pantry room 0 counter 53",
+                        "bathroom 0 mirror 63",
+                        "bathroom 0 sink 62"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 47,
+                "step_raw": "go to object",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 47,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 47,
+                "step_raw": "look at object",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "object",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 47,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 47,
+                "step_raw": "pick up object",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "object",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 47,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 47,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 99,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "toaster 1",
+                        "knife block 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 chair 9",
+                        "kitchen 0 plant 5",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 oven 21",
+                        "kitchen 0 chair 12",
+                        "kitchen 0 chair 10",
+                        "kitchen 0 oven 22",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 counter 48",
+                        "utility room 0 sink 58",
+                        "corridor 0 table 0",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 table 6",
+                        "kitchen 0 chair 7",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 chair 11",
+                        "living room 0 chair 1"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 99,
+                "step_raw": "look at kitchen 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 102,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 102,
+                "step_raw": "go to receptacle",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 102,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 102,
+                "step_raw": "look at receptacle",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "receptacle",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 102,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 102,
+                "step_raw": "place object on receptacle",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "receptacle",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 102,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 102,
+                "step_raw": "go to corridor 0 carpet 13",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 148,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "mustard bottle 1",
+                        "donut 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 chair 2",
+                        "kitchen 0 fridge 20",
+                        "living room 0 coffee table 4",
+                        "living room 0 coffee table 3"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "toaster 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "knife block 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "pantry room 0 counter 53"
+            ],
+            "sugar box 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "mustard bottle 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "stand mixer 1": [
+                "pantry room 0 counter 53"
+            ],
+            "lantern 1": [
+                "bathroom 0 sink 62"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "shredder 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 cooktop 64",
+                "knife block 1": "corridor 0 table 0",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 cooktop 64",
+                "knife block 1": "corridor 0 table 0",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 cooktop 64",
+                "knife block 1": "corridor 0 table 0"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 cooktop 64",
+                "knife block 1": "corridor 0 table 0"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "mustard bottle 1",
+                "toaster 1",
+                "knife block 1",
+                "donut 1",
+                "stand mixer 1",
+                "shredder 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 counter 40",
+                "pantry room 0 fridge 50",
+                "kitchen 0 chair 9",
+                "kitchen 0 plant 5",
+                "kitchen 0 chair 8",
+                "kitchen 0 fridge 20",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 33",
+                "kitchen 0 sink 37",
+                "kitchen 0 dishwasher 36",
+                "kitchen 0 oven 21",
+                "kitchen 0 chair 12",
+                "kitchen 0 chair 10",
+                "kitchen 0 carpet 34",
+                "kitchen 0 oven 22",
+                "kitchen 0 oven 46",
+                "living room 0 coffee table 4",
+                "kitchen 0 counter 48",
+                "utility room 0 sink 58",
+                "kitchen 0 counter 31",
+                "corridor 0 table 0",
+                "kitchen 0 microwave 23",
+                "living room 0 chair 2",
+                "pantry room 0 counter 53",
+                "bathroom 0 mirror 63",
+                "living room 0 coffee table 3",
+                "kitchen 0 table 6",
+                "kitchen 0 chair 7",
+                "kitchen 0 counter 49",
+                "bathroom 0 sink 62",
+                "kitchen 0 cooktop 64",
+                "kitchen 0 chair 11",
+                "living room 0 chair 1"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 148
+    },
+    {
+        "mode": "single",
+        "start": 148,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. Object donut 1 found on corridor 0 table 0. Object knife block 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 carpet 34, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 9, kitchen 0 counter 49, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 plant 5, kitchen 0 fridge 20. Object shredder 1 found on kitchen 0 counter 31. Object toaster 1 found on kitchen 0 cooktop 64 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2. Object mustard bottle 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object stand mixer 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 sink 58. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to toaster 1\nstep 3: look at toaster 1\nstep 4: pick up toaster 1\nstep 5: go to kitchen 0 counter 41\nstep 6: look at kitchen 0 counter 41\nstep 7: place toaster 1 on kitchen 0 counter 41\nstep 8: go to corridor 0\nstep 9: go to donut 1\nstep 10: look at donut 1\nstep 11: pick up donut 1\nstep 12: go to kitchen 0 counter 33\nstep 13: look at kitchen 0 counter 33\nstep 14: place donut 1 on kitchen 0 counter 33\nstep 15: go to pantry room 0\nstep 16: go to stand mixer 1\nstep 17: look at stand mixer 1\nstep 18: pick up stand mixer 1\nstep 19: go to pantry room 0 fridge 50\nstep 20: look at pantry room 0 fridge 50\nstep 21: place stand mixer on pantry room 0 fridge 50\nmission complete"
+        },
+        "logs": [
+            {
+                "start": 148,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "sugar box 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "go to toaster 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 226,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 226,
+                "step_raw": "look at toaster 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 229,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 229,
+                "step_raw": "pick up toaster 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 cooktop 64",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 230,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toaster 1": [
+                            "kitchen 0 cooktop 64",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 230,
+                "step_raw": "go to kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 246,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 246,
+                "step_raw": "look at kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 256,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 256,
+                "step_raw": "place toaster 1 on kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 257,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 257,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 305,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "water bottle 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 305,
+                "step_raw": "go to donut 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 319,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 319,
+                "step_raw": "look at donut 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 322,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "toaster 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "knife block 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "pantry room 0 counter 53"
+            ],
+            "sugar box 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "mustard bottle 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "stand mixer 1": [
+                "pantry room 0 counter 53"
+            ],
+            "lantern 1": [
+                "bathroom 0 sink 62"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "shredder 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 cooktop 64",
+                "knife block 1": "corridor 0 table 0",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "agent",
+                "knife block 1": "corridor 0 table 0",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 cooktop 64",
+                "knife block 1": "corridor 0 table 0"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "agent",
+                "knife block 1": "corridor 0 table 0"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "water bottle 1",
+                "sugar box 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {
+                "toaster 1": [
+                    "kitchen 0 cooktop 64",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 322
+    },
+    {
+        "mode": "single",
+        "start": 322,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding toaster 1.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. Object donut 1 found on corridor 0 table 0. Object knife block 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 carpet 34, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 9, kitchen 0 counter 49, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 plant 5, kitchen 0 fridge 20. Object sugar box 1 found on kitchen 0 counter 31. Object shredder 1 found on kitchen 0 counter 31 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2. Object mustard bottle 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object stand mixer 1 found on pantry room 0 counter 53. Object water bottle 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0\nstep 2: go to donut 1\nstep 3: look at donut 1\nstep 4: pick up donut 1\nstep 5: go to kitchen 0 counter 40\nstep 6: look at kitchen 0 counter 40\nstep 7: place donut 1 on kitchen 0 counter 40\nstep 8: go to knife block 1\nstep 9: look at knife block 1\nstep 10: pick up knife block 1\nstep 11: go to kitchen 0 counter 41\nstep 12: look at kitchen 0 counter 41\nstep 13: place knife block 1 on kitchen 0 counter 41\nstep 14: go to sugar box 1\nstep 15: look at sugar box 1\nstep 16: pick up sugar box 1\nstep 17: go to pantry room 0 counter 53\nstep 18: look at pantry room 0 counter 53\nstep 19: place sugar box 1 on pantry room 0 counter 53\nstep 20: go to shredder 1\nstep 21: look at shredder"
+        },
+        "logs": [
+            {
+                "start": 322,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 347,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "lantern 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 347,
+                "step_raw": "go to donut 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 372,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 372,
+                "step_raw": "look at donut 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 375,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 375,
+                "step_raw": "pick up donut 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 376,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 376,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 431,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 431,
+                "step_raw": "look at kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 442,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 442,
+                "step_raw": "place donut 1 on kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "agent",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 443,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toaster 1": [
+                            "agent",
+                            "kitchen 0 counter 40"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 443,
+                "step_raw": "go to knife block 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "knife_block_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 486,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 486,
+                "step_raw": "look at knife block 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "knife_block_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 489,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 489,
+                "step_raw": "pick up knife block 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "knife_block_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "corridor 0 table 0",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 490,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "knife block 1": [
+                            "corridor 0 table 0",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "toaster 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "knife block 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "pantry room 0 counter 53"
+            ],
+            "sugar box 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "mustard bottle 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "stand mixer 1": [
+                "pantry room 0 counter 53"
+            ],
+            "lantern 1": [
+                "bathroom 0 sink 62"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "shredder 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "agent",
+                "knife block 1": "corridor 0 table 0",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "agent",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "toaster 1": "kitchen 0 counter 40",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "agent",
+                "knife block 1": "corridor 0 table 0"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "knife block 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "lantern 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {
+                "toaster 1": [
+                    "agent",
+                    "kitchen 0 counter 40"
+                ],
+                "knife block 1": [
+                    "corridor 0 table 0",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 490
+    },
+    {
+        "mode": "single",
+        "start": 490,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding knife block 1.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. Object donut 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 carpet 34, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 9, kitchen 0 counter 49, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 plant 5, kitchen 0 fridge 20. Object shredder 1 found on kitchen 0 counter 31. Object sugar box 1 found on kitchen 0 counter 31. Object toaster 1 found on kitchen 0 counter 40 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2. Object mustard bottle 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object stand mixer 1 found on pantry room 0 counter 53. Object water bottle 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62. Object lantern 1 found on bathroom 0 sink 62. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to sugar box 1\nstep 3: look at sugar box 1\nstep 4: pick up sugar box 1\nstep 5: go to kitchen 0 counter 48\nstep 6: look at kitchen 0 counter 48\nstep 7: place sugar box 1 on kitchen 0 counter 48"
+        },
+        "logs": [
+            {
+                "start": 490,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 550,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 550,
+                "step_raw": "go to sugar box 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 564,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 564,
+                "step_raw": "look at sugar box 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 566,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 566,
+                "step_raw": "pick up sugar box 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 567,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 567,
+                "step_raw": "go to kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 596,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 596,
+                "step_raw": "look at kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 601,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 601,
+                "step_raw": "place sugar box 1 on kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "agent",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 602,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "knife block 1": [
+                            "agent",
+                            "kitchen 0 counter 48"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "toaster 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "knife block 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "pantry room 0 counter 53"
+            ],
+            "sugar box 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "mustard bottle 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "stand mixer 1": [
+                "pantry room 0 counter 53"
+            ],
+            "lantern 1": [
+                "bathroom 0 sink 62"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "shredder 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "agent",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toaster 1": "kitchen 0 counter 40",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "knife block 1": "agent"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "knife block 1": [
+                    "agent",
+                    "kitchen 0 counter 48"
+                ]
+            },
+            "count_correct": {
+                "start": 7,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 602
+    },
+    {
+        "mode": "single",
+        "start": 602,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. Object donut 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 carpet 34, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 9, kitchen 0 counter 49, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 plant 5, kitchen 0 fridge 20. Object sugar box 1 found on kitchen 0 counter 31. Object shredder 1 found on kitchen 0 counter 31. Object toaster 1 found on kitchen 0 counter 40. Object knife block 1 found on kitchen 0 counter 48 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2. Object mustard bottle 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object water bottle 1 found on pantry room 0 fridge 50. Object stand mixer 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 sink 58. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62. Object lantern 1 found on bathroom 0 sink 62. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0\nstep 2: go to donut 1\nstep 3: pick up donut 1\nstep 4: go to kitchen 0 counter 41\nstep 5: look at kitchen 0 counter 41\nstep 6: place donut 1 on kitchen 0 counter 41"
+        },
+        "logs": [
+            {
+                "start": 602,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 633,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 633,
+                "step_raw": "go to donut 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 646,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 646,
+                "step_raw": "pick up donut 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 647,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 647,
+                "step_raw": "go to kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 701,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 701,
+                "step_raw": "look at kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 703,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 703,
+                "step_raw": "place donut 1 on kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 703,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "toaster 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "knife block 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "pantry room 0 counter 53"
+            ],
+            "sugar box 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "mustard bottle 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "stand mixer 1": [
+                "pantry room 0 counter 53"
+            ],
+            "lantern 1": [
+                "bathroom 0 sink 62"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "shredder 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "corridor 0 table 0"
+            },
+            "end": {
+                "donut 1": "corridor 0 table 0"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 8,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 1
+            }
+        },
+        "end": 703
+    },
+    {
+        "mode": "single",
+        "start": 703,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. Object donut 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 carpet 34, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 9, kitchen 0 counter 49, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 plant 5, kitchen 0 fridge 20. Object sugar box 1 found on kitchen 0 counter 31. Object shredder 1 found on kitchen 0 counter 31. Object toaster 1 found on kitchen 0 counter 40. Object knife block 1 found on kitchen 0 counter 48 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2. Object mustard bottle 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object water bottle 1 found on pantry room 0 fridge 50. Object stand mixer 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 sink 58. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62. Object lantern 1 found on bathroom 0 sink 62. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0\nstep 2: go to corridor 0 table 0\nstep 3: look at corridor 0 table 0\nstep 4: pick up donut 1\nstep 5: go to kitchen 0 counter 41\nstep 6: look at kitchen 0 counter 41\nstep 7: place donut 1 on kitchen 0 counter 41\nstep 8: go to kitchen 0 counter 31\nstep 9: look at kitchen 0 counter 31\nstep 10: pick up sugar box 1\nstep 11: go to kitchen 0 counter 48\nstep 12: look at kitchen 0 counter 48\nstep 13: place sugar box 1 on kitchen 0 counter 48\nstep 14: go to kitchen 0 counter 31\nstep 15: look at kitchen 0 counter 31\nstep 16: pick up shredder 1\nstep 17: go to kitchen 0 counter 48\nstep 18: look at kitchen 0 counter 48\nstep 19: place shredder 1 on kitchen 0 counter 48\nstep 20: go to kitchen room\nstep"
+        },
+        "logs": [
+            {
+                "start": 703,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 746,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 746,
+                "step_raw": "go to corridor 0 table 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-table_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 760,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 760,
+                "step_raw": "look at corridor 0 table 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-table_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 763,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 763,
+                "step_raw": "pick up donut 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "corridor 0 table 0",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 764,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "donut 1": [
+                            "corridor 0 table 0",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 764,
+                "step_raw": "go to kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 817,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 817,
+                "step_raw": "look at kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 818,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 818,
+                "step_raw": "place donut 1 on kitchen 0 counter 41",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": "kitchen_0-counter_41_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 819,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 819,
+                "step_raw": "go to kitchen 0 counter 31",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_31_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 855,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 855,
+                "step_raw": "look at kitchen 0 counter 31",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_31_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 863,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 863,
+                "step_raw": "pick up sugar box 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 864,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "toaster 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "knife block 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "pantry room 0 counter 53"
+            ],
+            "sugar box 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "mustard bottle 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "stand mixer 1": [
+                "pantry room 0 counter 53"
+            ],
+            "lantern 1": [
+                "bathroom 0 sink 62"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "shredder 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "donut 1": "corridor 0 table 0",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "donut 1": "agent",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "corridor 0 table 0"
+            },
+            "end": {
+                "donut 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "donut 1": [
+                    "corridor 0 table 0",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 8,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 1
+            }
+        },
+        "end": 864
+    },
+    {
+        "mode": "single",
+        "start": 864,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding donut 1.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 carpet 34, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 9, kitchen 0 counter 49, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 plant 5, kitchen 0 fridge 20. Object toaster 1 found on kitchen 0 counter 40. Object knife block 1 found on kitchen 0 counter 48. Object sugar box 1 found on kitchen 0 counter 31. Object shredder 1 found on kitchen 0 counter 31 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2. Object mustard bottle 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 fridge 50. Object stand mixer 1 found on pantry room 0 counter 53. Object water bottle 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62. Object lantern 1 found on bathroom 0 sink 62. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to toaster 1\nstep 3: go to kitchen 0 counter 40\nstep 4: look at toaster 1\nstep 5: pick up toaster 1\nstep 6: go to kitchen 0 counter 40\nstep 7: look at kitchen 0 counter 40\nstep 8: place toaster 1 on kitchen 0 counter 40\nstep 9: go to knife block 1\nstep 10: go to kitchen 0 counter 48\nstep 11: look at knife block 1\nstep 12: pick up knife block 1\nstep 13: go to kitchen 0 counter 48\nstep 14: look at kitchen 0 counter 48\nstep 15: place knife block 1 on kitchen 0 counter 48\nstep 16: go to sugar box 1\nstep 17: go to kitchen 0 counter 31\nstep 18: look at sugar box 1\nstep 19: pick up sugar box 1\nstep 20: go to kitchen 0 counter 31\nstep 21: look at kitchen 0 counter 31\nstep 22:"
+        },
+        "logs": [
+            {
+                "start": 864,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 889,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 889,
+                "step_raw": "go to toaster 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 919,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 919,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 919,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 919,
+                "step_raw": "look at toaster 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 924,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 924,
+                "step_raw": "pick up toaster 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 925,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 925,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 925,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 925,
+                "step_raw": "look at kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 925,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 925,
+                "step_raw": "place toaster 1 on kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "agent",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "kitchen 0 counter 40",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 926,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "donut 1": [
+                            "agent",
+                            "kitchen 0 counter 40"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 926,
+                "step_raw": "go to knife block 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "knife_block_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "kitchen 0 counter 40",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "kitchen 0 counter 40",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 949,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 949,
+                "step_raw": "go to kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "donut 1": "kitchen 0 counter 40",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    },
+                    "end": {
+                        "donut 1": "kitchen 0 counter 40",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "knife block 1": "kitchen 0 counter 48",
+                        "sugar box 1": "kitchen 0 counter 31",
+                        "mustard bottle 1": "living room 0 coffee table 3",
+                        "stand mixer 1": "pantry room 0 counter 53",
+                        "lantern 1": "bathroom 0 sink 62",
+                        "water bottle 1": "pantry room 0 fridge 50",
+                        "shredder 1": "kitchen 0 counter 31"
+                    }
+                },
+                "end": 949,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "toaster 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "knife block 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "pantry room 0 counter 53"
+            ],
+            "sugar box 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ],
+            "mustard bottle 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4"
+            ],
+            "stand mixer 1": [
+                "pantry room 0 counter 53"
+            ],
+            "lantern 1": [
+                "bathroom 0 sink 62"
+            ],
+            "water bottle 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "shredder 1": [
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "donut 1": "agent",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "donut 1": "kitchen 0 counter 40",
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            },
+            "end": {
+                "toaster 1": "kitchen 0 counter 40",
+                "knife block 1": "kitchen 0 counter 48",
+                "sugar box 1": "kitchen 0 counter 31",
+                "mustard bottle 1": "living room 0 coffee table 3",
+                "stand mixer 1": "pantry room 0 counter 53",
+                "lantern 1": "bathroom 0 sink 62",
+                "water bottle 1": "pantry room 0 fridge 50",
+                "shredder 1": "kitchen 0 counter 31"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "agent"
+            },
+            "end": {
+                "donut 1": "kitchen 0 counter 40"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "donut 1": [
+                    "agent",
+                    "kitchen 0 counter 40"
+                ]
+            },
+            "count_correct": {
+                "start": 8,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 1
+            }
+        },
+        "end": 949
+    }
+]

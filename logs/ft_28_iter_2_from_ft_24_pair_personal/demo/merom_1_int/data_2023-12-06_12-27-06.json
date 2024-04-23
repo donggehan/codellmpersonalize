@@ -1,0 +1,3407 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: go to bathroom 0\nstep 3: go to childs room 0\nstep 4: go to living room 0\nstep 5: go to dining room 0\nstep 6: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 53,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "weight loss guide 1",
+                        "medicine 1",
+                        "picture frame 1"
+                    ],
+                    "recs_discovered": [
+                        "childs room 0 sofa chair 4",
+                        "bedroom 0 bottom cabinet 8",
+                        "living room 0 coffee table 27",
+                        "bedroom 0 bed 7",
+                        "childs room 0 bed 1",
+                        "bedroom 0 bottom cabinet 13",
+                        "bedroom 0 bottom cabinet 12",
+                        "bedroom 0 basket 15",
+                        "childs room 0 stool 5",
+                        "childs room 0 bottom cabinet 6",
+                        "bedroom 0 basket 14",
+                        "childs room 0 bottom cabinet 2",
+                        "childs room 0 carpet 0"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 53,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 119,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "living room 0 towel rack 66",
+                        "bathroom 0 trash can 34",
+                        "living room 0 carpet 28",
+                        "bathroom 0 top cabinet 70",
+                        "bathroom 0 sink 72",
+                        "bathroom 0 toilet 69",
+                        "bathroom 0 mirror 73",
+                        "bathroom 0 bathtub 71",
+                        "bedroom 0 bottom cabinet 9",
+                        "living room 0 bottom cabinet 30"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 119,
+                "step_raw": "go to childs room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 179,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 trash can 18",
+                        "kitchen 0 top cabinet 54"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 179,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 255,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "coffeemaker 1"
+                    ],
+                    "recs_discovered": [
+                        "dining room 0 chair 22",
+                        "dining room 0 plant 29",
+                        "living room 0 floor lamp 31",
+                        "kitchen 0 fridge 57"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 255,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 275,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "blender jar 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 49",
+                        "kitchen 0 sink 53",
+                        "kitchen 0 top cabinet 55",
+                        "dining room 0 chair 24"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 275,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_52_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 338,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 50"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bedroom 0 bottom cabinet 12",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bedroom 0 bottom cabinet 12",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bedroom 0 bottom cabinet 12",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bedroom 0 bottom cabinet 12",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "weight loss guide 1",
+                "medicine 1",
+                "blender jar 1",
+                "coffeemaker 1",
+                "picture frame 1"
+            ],
+            "recs_discovered": [
+                "living room 0 towel rack 66",
+                "bathroom 0 trash can 34",
+                "dining room 0 chair 24",
+                "living room 0 carpet 28",
+                "bedroom 0 bed 7",
+                "bedroom 0 bottom cabinet 13",
+                "bathroom 0 sink 72",
+                "kitchen 0 trash can 18",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 bottom cabinet 49",
+                "bedroom 0 basket 14",
+                "childs room 0 bottom cabinet 2",
+                "dining room 0 plant 29",
+                "kitchen 0 sink 53",
+                "kitchen 0 fridge 57",
+                "living room 0 bottom cabinet 30",
+                "living room 0 floor lamp 31",
+                "childs room 0 sofa chair 4",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 coffee table 27",
+                "childs room 0 bed 1",
+                "kitchen 0 top cabinet 55",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 top cabinet 54",
+                "dining room 0 chair 22",
+                "bathroom 0 top cabinet 70",
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 basket 15",
+                "childs room 0 stool 5",
+                "bathroom 0 toilet 69",
+                "bathroom 0 mirror 73",
+                "bathroom 0 bathtub 71",
+                "bedroom 0 bottom cabinet 9",
+                "childs room 0 carpet 0"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 338
+    },
+    {
+        "mode": "single",
+        "start": 338,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object medicine 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object weight loss guide 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object picture frame 1 found on living room 0 sofa chair 26 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50. Object coffeemaker 1 found on kitchen 0 fridge 57. Object blender jar 1 found on kitchen 0 dishwasher 52. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to medicine 1\nstep 2: look at medicine 1\nstep 3: pick up medicine 1\nstep 4: go to bathroom 0 top cabinet 70\nstep 5: look at bathroom 0 top cabinet 70\nstep 6: place medicine 1 on bathroom 0 top cabinet 70"
+        },
+        "logs": [
+            {
+                "start": 338,
+                "step_raw": "go to medicine 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "medicine_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 386,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 shelf 58",
+                        "kitchen 0 stove 59",
+                        "kitchen 0 range hood 60",
+                        "kitchen 0 shelf 61"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 386,
+                "step_raw": "look at medicine 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "medicine_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 386,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 386,
+                "step_raw": "pick up medicine 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "medicine_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bedroom 0 bottom cabinet 12",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "agent",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 387,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "medicine 1": [
+                            "bedroom 0 bottom cabinet 12",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 387,
+                "step_raw": "go to bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "agent",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "agent",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 421,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 421,
+                "step_raw": "look at bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "agent",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "agent",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 421,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 421,
+                "step_raw": "place medicine 1 on bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "medicine_1",
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "agent",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 422,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "medicine 1": [
+                            "agent",
+                            "bathroom 0 top cabinet 70"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bedroom 0 bottom cabinet 12",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bedroom 0 bottom cabinet 12",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 stove 59",
+                "kitchen 0 range hood 60",
+                "kitchen 0 shelf 61"
+            ],
+            "objects_moved": {
+                "medicine 1": [
+                    "bedroom 0 bottom cabinet 12",
+                    "bathroom 0 top cabinet 70"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 422
+    },
+    {
+        "mode": "single",
+        "start": 422,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object medicine 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object weight loss guide 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object picture frame 1 found on living room 0 sofa chair 26 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object blender jar 1 found on kitchen 0 dishwasher 52. Object coffeemaker 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to weight loss guide 1\nstep 2: look at weight loss guide 1\nstep 3: pick up weight loss guide 1\nstep 4: go to bedroom 0 bottom cabinet 12\nstep 5: look at bedroom 0 bottom cabinet 12\nstep 6: place weight loss guide 1 on bedroom 0 bottom cabinet 12"
+        },
+        "logs": [
+            {
+                "start": 422,
+                "step_raw": "go to weight loss guide 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "weight_loss_guide_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 469,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 469,
+                "step_raw": "look at weight loss guide 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "weight_loss_guide_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    }
+                },
+                "end": 469,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 469,
+                "step_raw": "pick up weight loss guide 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "weight_loss_guide_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "childs room 0 bottom cabinet 2"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "agent"
+                    }
+                },
+                "end": 470,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "weight loss guide 1": [
+                            "childs room 0 bottom cabinet 2",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 470,
+                "step_raw": "go to bedroom 0 bottom cabinet 12",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "agent"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "agent"
+                    }
+                },
+                "end": 535,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 535,
+                "step_raw": "look at bedroom 0 bottom cabinet 12",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "agent"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "agent"
+                    }
+                },
+                "end": 535,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 535,
+                "step_raw": "place weight loss guide 1 on bedroom 0 bottom cabinet 12",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "weight_loss_guide_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "agent"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 536,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "weight loss guide 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 12"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "childs room 0 bottom cabinet 2"
+            },
+            "end": {
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "weight loss guide 1": [
+                    "childs room 0 bottom cabinet 2",
+                    "bedroom 0 bottom cabinet 12"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 5
+            }
+        },
+        "end": 536
+    },
+    {
+        "mode": "single",
+        "start": 536,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object weight loss guide 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object medicine 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object picture frame 1 found on living room 0 sofa chair 26 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object blender jar 1 found on kitchen 0 dishwasher 52. Object coffeemaker 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to blender jar 1\nstep 2: look at blender jar 1\nstep 3: pick up blender jar 1\nstep 4: go to kitchen 0 top cabinet 55\nstep 5: look at kitchen 0 top cabinet 55\nstep 6: place blender jar 1 on kitchen 0 top cabinet 55"
+        },
+        "logs": [
+            {
+                "start": 536,
+                "step_raw": "go to blender jar 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 584,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "ramekin 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 584,
+                "step_raw": "look at blender jar 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 584,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 584,
+                "step_raw": "pick up blender jar 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 dishwasher 52",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 585,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "blender jar 1": [
+                            "kitchen 0 dishwasher 52",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 585,
+                "step_raw": "go to kitchen 0 top cabinet 55",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_55_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 602,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 602,
+                "step_raw": "look at kitchen 0 top cabinet 55",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_55_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 602,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 602,
+                "step_raw": "place blender jar 1 on kitchen 0 top cabinet 55",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": "kitchen_0-top_cabinet_55_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 603,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "blender jar 1": [
+                            "agent",
+                            "kitchen 0 top cabinet 55"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 dishwasher 52",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "ramekin 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {
+                "blender jar 1": [
+                    "kitchen 0 dishwasher 52",
+                    "kitchen 0 top cabinet 55"
+                ]
+            },
+            "count_correct": {
+                "start": 2,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 4
+            }
+        },
+        "end": 603
+    },
+    {
+        "mode": "single",
+        "start": 603,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object weight loss guide 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object medicine 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object picture frame 1 found on living room 0 sofa chair 26 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object ramekin 1 found on kitchen 0 top cabinet 54. Object coffeemaker 1 found on kitchen 0 fridge 57. Object blender jar 1 found on kitchen 0 top cabinet 55. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to picture frame 1\nstep 2: look at picture frame 1\nstep 3: pick up picture frame 1\nstep 4: go to living room 0 bottom cabinet 30\nstep 5: look at living room 0 bottom cabinet 30\nstep 6: place picture frame 1 on living room 0 bottom cabinet 30"
+        },
+        "logs": [
+            {
+                "start": 603,
+                "step_raw": "go to picture frame 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "picture_frame_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 715,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "baseball 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 715,
+                "step_raw": "look at picture frame 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "picture_frame_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 715,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 715,
+                "step_raw": "pick up picture frame 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "picture_frame_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 sofa chair 26",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "agent",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 716,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "picture frame 1": [
+                            "living room 0 sofa chair 26",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 716,
+                "step_raw": "go to living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "agent",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "agent",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 764,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 764,
+                "step_raw": "look at living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "agent",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "agent",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 769,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 769,
+                "step_raw": "place picture frame 1 on living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "picture_frame_1",
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "agent",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 770,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "picture frame 1": [
+                            "agent",
+                            "living room 0 bottom cabinet 30"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 sofa chair 26",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "baseball 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {
+                "picture frame 1": [
+                    "living room 0 sofa chair 26",
+                    "living room 0 bottom cabinet 30"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 770
+    },
+    {
+        "mode": "single",
+        "start": 770,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object weight loss guide 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object medicine 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object picture frame 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object blender jar 1 found on kitchen 0 top cabinet 55. Object baseball 1 found on kitchen 0 top cabinet 54. Object ramekin 1 found on kitchen 0 top cabinet 54. Object coffeemaker 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to blender jar 1\nstep 2: look at blender jar 1\nstep 3: pick up blender jar 1\nstep 4: go to kitchen 0 top cabinet 55\nstep 5: look at kitchen 0 top cabinet 55\nstep 6: place blender jar 1 on kitchen 0 top cabinet 55"
+        },
+        "logs": [
+            {
+                "start": 770,
+                "step_raw": "go to blender jar 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 854,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 854,
+                "step_raw": "look at blender jar 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 854,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 854,
+                "step_raw": "pick up blender jar 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 855,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "blender jar 1": [
+                            "kitchen 0 top cabinet 55",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 855,
+                "step_raw": "go to kitchen 0 top cabinet 55",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_55_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 855,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 855,
+                "step_raw": "look at kitchen 0 top cabinet 55",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_55_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 855,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 855,
+                "step_raw": "place blender jar 1 on kitchen 0 top cabinet 55",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": "kitchen_0-top_cabinet_55_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 856,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "blender jar 1": [
+                            "agent",
+                            "kitchen 0 top cabinet 55"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "blender jar 1": [
+                    "kitchen 0 top cabinet 55",
+                    "kitchen 0 top cabinet 55"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 856
+    },
+    {
+        "mode": "single",
+        "start": 856,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object weight loss guide 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object medicine 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object picture frame 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object baseball 1 found on kitchen 0 top cabinet 54. Object ramekin 1 found on kitchen 0 top cabinet 54. Object coffeemaker 1 found on kitchen 0 fridge 57. Object blender jar 1 found on kitchen 0 top cabinet 55. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to baseball 1\nstep 2: look at baseball 1\nstep 3: pick up baseball 1\nstep 4: go to childs room 0 bottom cabinet 6\nstep 5: look at childs room 0 bottom cabinet 6\nstep 6: place baseball 1 on childs room 0 bottom cabinet 6"
+        },
+        "logs": [
+            {
+                "start": 856,
+                "step_raw": "go to baseball 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "baseball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 888,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 888,
+                "step_raw": "look at baseball 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "baseball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 889,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 889,
+                "step_raw": "pick up baseball 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "baseball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "kitchen 0 top cabinet 54",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "agent",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 890,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "baseball 1": [
+                            "kitchen 0 top cabinet 54",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 890,
+                "step_raw": "go to childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "agent",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "agent",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 932,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 932,
+                "step_raw": "look at childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "agent",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "agent",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 934,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 934,
+                "step_raw": "place baseball 1 on childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "baseball_1",
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "agent",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 935,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "baseball 1": [
+                            "agent",
+                            "childs room 0 bottom cabinet 6"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "childs room 0 bottom cabinet 6",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "baseball 1": "childs room 0 bottom cabinet 6",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "kitchen 0 top cabinet 54",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "baseball 1": [
+                    "kitchen 0 top cabinet 54",
+                    "childs room 0 bottom cabinet 6"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 935
+    },
+    {
+        "mode": "single",
+        "start": 935,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object weight loss guide 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object medicine 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object baseball 1 found on childs room 0 bottom cabinet 6 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object picture frame 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object blender jar 1 found on kitchen 0 top cabinet 55. Object ramekin 1 found on kitchen 0 top cabinet 54. Object coffeemaker 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to baseball 1\nstep 2: look at baseball 1\nstep 3: pick up baseball 1\nstep 4: go to living room 0 bottom cabinet 30\nstep 5: look at living room 0 bottom cabinet 30\nstep 6: place baseball 1 on living room 0 bottom cabinet 30"
+        },
+        "logs": [
+            {
+                "start": 935,
+                "step_raw": "go to baseball 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "baseball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 935,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 935,
+                "step_raw": "look at baseball 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "baseball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 935,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 935,
+                "step_raw": "pick up baseball 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "baseball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 936,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 936,
+                "step_raw": "go to living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 998,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 998,
+                "step_raw": "look at living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 999,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 999,
+                "step_raw": "place baseball 1 on living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "baseball_1",
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 top cabinet 55",
+                        "coffeemaker 1": "kitchen 0 fridge 57",
+                        "baseball 1": "childs room 0 bottom cabinet 6",
+                        "picture frame 1": "living room 0 bottom cabinet 30",
+                        "ramekin 1": "kitchen 0 top cabinet 54",
+                        "medicine 1": "bathroom 0 top cabinet 70",
+                        "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+                    }
+                },
+                "end": 999,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "coffeemaker 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20"
+            ],
+            "baseball 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ],
+            "ramekin 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "weight loss guide 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "childs room 0 bottom cabinet 6",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "baseball 1": "childs room 0 bottom cabinet 6",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "baseball 1": "childs room 0 bottom cabinet 6",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 top cabinet 55",
+                "baseball 1": "childs room 0 bottom cabinet 6",
+                "ramekin 1": "kitchen 0 top cabinet 54",
+                "medicine 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "coffeemaker 1": "kitchen 0 fridge 57",
+                "picture frame 1": "living room 0 bottom cabinet 30",
+                "weight loss guide 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 999
+    }
+]

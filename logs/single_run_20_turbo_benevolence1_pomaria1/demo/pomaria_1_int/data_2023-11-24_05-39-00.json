@@ -1,0 +1,3482 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: look at kitchen 0\nstep 3: go to object knife 4\nstep 4: look at object knife 4\nstep 5: pick up knife 4\nstep 6: go to receptacle utensil drawer 2\nstep 7: look at receptacle utensil drawer 2\nstep 8: place knife 4 on utensil drawer 2\nstep 9: go to utility room 0\nstep 10: look at utility room 0\nstep 11: go to object laundry basket 3\nstep 12: look at object laundry basket 3\nstep 13: pick up laundry basket 3\nstep 14: go to receptacle washing machine 1\nstep 15: look at receptacle washing machine 1\nstep 16: place laundry basket 3 on washing machine 1\nmission complete"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "peppermint 1",
+                        "clock 1",
+                        "blender jar 1",
+                        "dutch oven 1",
+                        "toaster 1"
+                    ],
+                    "recs_discovered": [
+                        "pantry room 0 bottom cabinet 51",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 top cabinet 42",
+                        "pantry room 0 top cabinet 55",
+                        "kitchen 0 counter 41",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 counter 48",
+                        "kitchen 0 dishwasher 36",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 chair 12",
+                        "bathroom 0 mirror 63",
+                        "corridor 0 shelf 14",
+                        "kitchen 0 counter 31",
+                        "kitchen 0 chair 7",
+                        "kitchen 0 bottom cabinet 44",
+                        "corridor 0 carpet 13",
+                        "kitchen 0 bottom cabinet 38",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 oven 46",
+                        "pantry room 0 fridge 50",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 chair 10",
+                        "kitchen 0 table 6",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 bottom cabinet 35",
+                        "kitchen 0 plant 5",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 sink 37",
+                        "kitchen 0 chair 11",
+                        "pantry room 0 top cabinet 54",
+                        "kitchen 0 chair 9",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 bottom cabinet 29",
+                        "bathroom 0 sink 62",
+                        "kitchen 0 counter 40",
+                        "kitchen 0 bottom cabinet 47"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "look at kitchen 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "go to object knife 4",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "look at object knife 4",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "object knife 4",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "pick up knife 4",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "knife 4",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "go to receptacle utensil drawer 2",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "look at receptacle utensil drawer 2",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "receptacle utensil drawer 2",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "place knife 4 on utensil drawer 2",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "utensil drawer 2",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 66,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 66,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 103,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "utility room 0 bottom cabinet 59",
+                        "utility room 0 sink 58",
+                        "utility room 0 top cabinet 60",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 oven 21",
+                        "kitchen 0 bottom cabinet 30",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 oven 22",
+                        "kitchen 0 top cabinet 25",
+                        "kitchen 0 top cabinet 27",
+                        "utility room 0 dryer 57",
+                        "utility room 0 washer 56"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 103,
+                "step_raw": "look at utility room 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 103,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "clock 1": [
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "pantry room 0 counter 53",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 table 6",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "blender jar 1": "pantry room 0 counter 53",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 table 6",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "pantry room 0 counter 53",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 table 6",
+                "sugar box 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "blender jar 1": "pantry room 0 counter 53",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 table 6",
+                "sugar box 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "clock 1",
+                "peppermint 1",
+                "blender jar 1",
+                "dutch oven 1",
+                "toaster 1"
+            ],
+            "recs_discovered": [
+                "pantry room 0 bottom cabinet 52",
+                "utility room 0 sink 58",
+                "kitchen 0 top cabinet 42",
+                "pantry room 0 top cabinet 55",
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 48",
+                "kitchen 0 top cabinet 25",
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 carpet 13",
+                "kitchen 0 bottom cabinet 38",
+                "pantry room 0 fridge 50",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 chair 10",
+                "kitchen 0 table 6",
+                "kitchen 0 cooktop 64",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 counter 40",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 sink 37",
+                "pantry room 0 top cabinet 54",
+                "kitchen 0 microwave 23",
+                "kitchen 0 chair 9",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 carpet 34",
+                "kitchen 0 chair 12",
+                "pantry room 0 bottom cabinet 51",
+                "utility room 0 top cabinet 60",
+                "kitchen 0 oven 21",
+                "kitchen 0 counter 41",
+                "kitchen 0 dishwasher 36",
+                "kitchen 0 counter 49",
+                "utility room 0 dryer 57",
+                "utility room 0 washer 56",
+                "bathroom 0 mirror 63",
+                "corridor 0 shelf 14",
+                "kitchen 0 counter 31",
+                "kitchen 0 chair 7",
+                "kitchen 0 chair 8",
+                "kitchen 0 oven 46",
+                "pantry room 0 counter 53",
+                "kitchen 0 plant 5",
+                "kitchen 0 chair 11",
+                "kitchen 0 oven 22",
+                "kitchen 0 bottom cabinet 29",
+                "bathroom 0 sink 62",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 103
+    },
+    {
+        "mode": "single",
+        "start": 103,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14. Object clock 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 bottom cabinet 35, kitchen 0 dishwasher 36, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 38, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 32, kitchen 0 carpet 34, kitchen 0 chair 7, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 counter 49, kitchen 0 oven 46, kitchen 0 bottom cabinet 47, kitchen 0 bottom cabinet 44, kitchen 0 bottom cabinet 30, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 27, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 25. Object toaster 1 found on kitchen 0 table 6 \nIn living room 0, no receptacles found yet. \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object blender jar 1 found on pantry room 0 counter 53. Object peppermint 1 found on pantry room 0 top cabinet 54. Object dutch oven 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0 table 6\nstep 2: look at toaster 1\nstep 3: pick up toaster 1\nstep 4: go to kitchen 0 counter 40\nstep 5: look at kitchen 0 counter 40\nstep 6: place toaster 1 on kitchen 0 counter 40\nstep 7: go to pantry room 0 counter 53\nstep 8: look at blender jar 1\nstep 9: pick up blender jar 1\nstep 10: go to utility room 0 top cabinet 60\nstep 11: look at utility room 0 top cabinet 60\nstep 12: place blender jar 1 on utility room 0 top cabinet 60\nstep 13: go to pantry room 0 top cabinet 54\nstep 14: look at peppermint 1\nstep 15: pick up peppermint 1\nstep 16: go to kitchen 0 counter 41\nstep 17: look at kitchen 0 counter 41\nstep 18: place peppermint 1 on kitchen 0 counter 41\nstep 19: go to pantry room 0 bottom cabinet 52\nstep 20: look"
+        },
+        "logs": [
+            {
+                "start": 103,
+                "step_raw": "go to kitchen 0 table 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-table_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 149,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 top cabinet 43",
+                        "kitchen 0 bottom cabinet 39"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 149,
+                "step_raw": "look at toaster 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 149,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 149,
+                "step_raw": "pick up toaster 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 table 6",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 150,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toaster 1": [
+                            "kitchen 0 table 6",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 150,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 198,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "sugar box 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 coffee table 3",
+                        "living room 0 chair 1",
+                        "kitchen 0 fridge 20",
+                        "living room 0 chair 2",
+                        "living room 0 shelf 16",
+                        "living room 0 shelf 15",
+                        "living room 0 coffee table 4",
+                        "kitchen 0 top cabinet 24"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 198,
+                "step_raw": "look at kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 198,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 198,
+                "step_raw": "place toaster 1 on kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toaster 1": [
+                            "agent",
+                            "kitchen 0 counter 40"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "go to pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 252,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 252,
+                "step_raw": "look at blender jar 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 252,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 252,
+                "step_raw": "pick up blender jar 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "pantry room 0 counter 53",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 253,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "blender jar 1": [
+                            "pantry room 0 counter 53",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 253,
+                "step_raw": "go to utility room 0 top cabinet 60",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-top_cabinet_60_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 286,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "clock 1": [
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "pantry room 0 counter 53",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 table 6",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "blender jar 1": "agent",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 counter 40",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "toaster 1": "kitchen 0 counter 40",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "pantry room 0 counter 53",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 table 6",
+                "sugar box 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "blender jar 1": "agent",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "sugar box 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "sugar box 1"
+            ],
+            "recs_discovered": [
+                "living room 0 coffee table 3",
+                "living room 0 chair 1",
+                "kitchen 0 fridge 20",
+                "living room 0 chair 2",
+                "living room 0 shelf 16",
+                "living room 0 shelf 15",
+                "living room 0 coffee table 4",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 43"
+            ],
+            "objects_moved": {
+                "toaster 1": [
+                    "kitchen 0 table 6",
+                    "kitchen 0 counter 40"
+                ],
+                "blender jar 1": [
+                    "pantry room 0 counter 53",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 286
+    },
+    {
+        "mode": "single",
+        "start": 286,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding blender jar 1.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14. Object clock 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 bottom cabinet 35, kitchen 0 dishwasher 36, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 38, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 32, kitchen 0 carpet 34, kitchen 0 chair 7, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 counter 49, kitchen 0 oven 46, kitchen 0 bottom cabinet 47, kitchen 0 bottom cabinet 44, kitchen 0 bottom cabinet 30, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 27, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 fridge 20, kitchen 0 top cabinet 24. Object toaster 1 found on kitchen 0 counter 40 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object sugar box 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object dutch oven 1 found on pantry room 0 counter 53. Object peppermint 1 found on pantry room 0 top cabinet 54 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to toaster 1\nstep 3: look at toaster 1\nstep 4: pick up toaster 1\nstep 5: go to kitchen 0 counter 40\nstep 6: look at kitchen 0 counter 40\nstep 7: place toaster 1 on kitchen 0 counter 40\nstep 8: go to living room 0\nstep 9: go to sugar box 1\nstep 10: look at sugar box 1\nstep 11: pick up sugar box 1\nstep 12: go to living room 0 shelf 15\nstep 13: look at living room 0 shelf 15\nstep 14: place sugar box 1 on living room 0 shelf 15\nstep 15: go to pantry room 0\nstep 16: go to dutch oven 1\nstep 17: look at dutch oven 1\nstep 18: pick up dutch oven 1\nstep 19: go to pantry room 0 counter 53\nstep 20: look at pantry room 0 counter 53\nstep 21: place dutch oven 1 on pantry room"
+        },
+        "logs": [
+            {
+                "start": 286,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 321,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 321,
+                "step_raw": "go to toaster 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 364,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 364,
+                "step_raw": "look at toaster 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 364,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 364,
+                "step_raw": "pick up toaster 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 365,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 365,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 365,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 365,
+                "step_raw": "look at kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 365,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 365,
+                "step_raw": "place toaster 1 on kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 366,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "blender jar 1": [
+                            "agent",
+                            "kitchen 0 counter 40"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 366,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 423,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "corridor 0 table 0"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 423,
+                "step_raw": "go to sugar box 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 449,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 449,
+                "step_raw": "look at sugar box 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 449,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "clock 1": [
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "agent",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 counter 40",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 counter 40",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toaster 1": "kitchen 0 counter 40",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "toaster 1": "kitchen 0 counter 40",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "agent",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "sugar box 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "sugar box 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "corridor 0 table 0"
+            ],
+            "objects_moved": {
+                "blender jar 1": [
+                    "agent",
+                    "kitchen 0 counter 40"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 449
+    },
+    {
+        "mode": "single",
+        "start": 449,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object clock 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 bottom cabinet 35, kitchen 0 dishwasher 36, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 38, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 32, kitchen 0 carpet 34, kitchen 0 chair 7, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 counter 49, kitchen 0 oven 46, kitchen 0 bottom cabinet 47, kitchen 0 bottom cabinet 44, kitchen 0 bottom cabinet 30, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 27, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 fridge 20, kitchen 0 top cabinet 24. Object toaster 1 found on kitchen 0 counter 40. Object blender jar 1 found on kitchen 0 counter 40 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object sugar box 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object dutch oven 1 found on pantry room 0 counter 53. Object peppermint 1 found on pantry room 0 top cabinet 54 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at sugar box 1\nstep 3: pick up sugar box 1\nstep 4: go to pantry room 0 counter 53\nstep 5: look at pantry room 0 counter 53\nstep 6: place sugar box 1 on pantry room 0 counter 53\nstep 7: go to kitchen 0 counter 40\nstep 8: look at toaster 1\nstep 9: pick up toaster 1\nstep 10: go to pantry room 0 top cabinet 54\nstep 11: look at pantry room 0 top cabinet 54\nstep 12: place toaster 1 on pantry room 0 top cabinet 54\nstep 13: go to kitchen 0 counter 40\nstep 14: look at blender jar 1\nstep 15: pick up blender jar 1\nstep 16: go to kitchen 0 counter 48\nstep 17: look at kitchen 0 counter 48\nstep 18: place blender jar 1 on kitchen 0 counter 48\nmission complete"
+        },
+        "logs": [
+            {
+                "start": 449,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 494,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 494,
+                "step_raw": "look at sugar box 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 501,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 501,
+                "step_raw": "pick up sugar box 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 502,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 502,
+                "step_raw": "go to pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 568,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 568,
+                "step_raw": "look at pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 568,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 568,
+                "step_raw": "place sugar box 1 on pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sugar_box_1",
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 568,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 568,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 620,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 620,
+                "step_raw": "look at toaster 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 620,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 620,
+                "step_raw": "pick up toaster 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "toaster_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "kitchen 0 counter 40",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 621,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toaster 1": [
+                            "kitchen 0 counter 40",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 621,
+                "step_raw": "go to pantry room 0 top cabinet 54",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-top_cabinet_54_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 674,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "clock 1": [
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "kitchen 0 counter 40",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "agent",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "toaster 1": "kitchen 0 counter 40",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "sugar box 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "agent",
+                "sugar box 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "toaster 1": [
+                    "kitchen 0 counter 40",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 4
+            }
+        },
+        "end": 674
+    },
+    {
+        "mode": "single",
+        "start": 674,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding toaster 1.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object clock 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 bottom cabinet 35, kitchen 0 dishwasher 36, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 38, kitchen 0 counter 41, kitchen 0 counter 31, kitchen 0 counter 33, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 32, kitchen 0 carpet 34, kitchen 0 chair 7, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 chair 12, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 counter 49, kitchen 0 oven 46, kitchen 0 bottom cabinet 47, kitchen 0 bottom cabinet 44, kitchen 0 bottom cabinet 30, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 27, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 fridge 20, kitchen 0 top cabinet 24. Object blender jar 1 found on kitchen 0 counter 40 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object sugar box 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object dutch oven 1 found on pantry room 0 counter 53. Object peppermint 1 found on pantry room 0 top cabinet 54 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0\nstep 2: go to clock 1\nstep 3: pick up clock 1\nstep 4: go to corridor 0 shelf 14\nstep 5: look at corridor 0 shelf 14\nstep 6: place clock 1 on corridor 0 shelf 14\nstep 7: go to kitchen 0\nstep 8: go to blender jar 1\nstep 9: pick up blender jar 1\nstep 10: go to kitchen 0 counter 40\nstep 11: look at kitchen 0 counter 40\nstep 12: place blender jar 1 on kitchen 0 counter 40\nstep 13: go to living room 0\nstep 14: go to sugar box 1\nstep 15: pick up sugar box 1\nstep 16: go to living room 0 shelf 15\nstep 17: look at living room 0 shelf 15\nstep 18: place sugar box 1 on living room 0 shelf 15\nstep 19: go to pantry room 0\nstep 20: go to dutch oven 1\nstep 21: pick up dutch oven 1"
+        },
+        "logs": [
+            {
+                "start": 674,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 734,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 734,
+                "step_raw": "go to clock 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "clock_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 747,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 747,
+                "step_raw": "pick up clock 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "clock_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 748,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 748,
+                "step_raw": "go to corridor 0 shelf 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-shelf_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 748,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 748,
+                "step_raw": "look at corridor 0 shelf 14",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-shelf_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 748,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 748,
+                "step_raw": "place clock 1 on corridor 0 shelf 14",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "clock_1",
+                    "target_receptacle": "corridor_0-shelf_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "agent",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 749,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "toaster 1": [
+                            "agent",
+                            "corridor 0 shelf 14"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 749,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 808,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 808,
+                "step_raw": "go to blender jar 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 856,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 856,
+                "step_raw": "pick up blender jar 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "blender_jar_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "kitchen 0 counter 40",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 857,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "blender jar 1": [
+                            "kitchen 0 counter 40",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 857,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    },
+                    "end": {
+                        "blender jar 1": "agent",
+                        "dutch oven 1": "pantry room 0 counter 53",
+                        "toaster 1": "corridor 0 shelf 14",
+                        "sugar box 1": "living room 0 shelf 15",
+                        "sparkling water 1": "kitchen 0 fridge 20",
+                        "peppermint 1": "pantry room 0 top cabinet 54",
+                        "clock 1": "corridor 0 shelf 14"
+                    }
+                },
+                "end": 857,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "blender jar 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "clock 1": [
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "agent",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "blender jar 1": "agent",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "corridor 0 shelf 14",
+                "sugar box 1": "living room 0 shelf 15",
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 20",
+                "peppermint 1": "pantry room 0 top cabinet 54",
+                "clock 1": "corridor 0 shelf 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "blender jar 1": "kitchen 0 counter 40",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "agent",
+                "sugar box 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "blender jar 1": "agent",
+                "dutch oven 1": "pantry room 0 counter 53",
+                "toaster 1": "corridor 0 shelf 14",
+                "sugar box 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "toaster 1": [
+                    "agent",
+                    "corridor 0 shelf 14"
+                ],
+                "blender jar 1": [
+                    "kitchen 0 counter 40",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 857
+    }
+]

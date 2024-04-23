@@ -1,0 +1,2246 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to corridor 0 step 2: go to kitchen 0 step 3: go to living room 0 step 4: go to pantry room 0 step 5: go to utility room 0 step 6: go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 22,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 sink 37",
+                        "kitchen 0 counter 48",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 chair 12",
+                        "corridor 0 table 0",
+                        "kitchen 0 bottom cabinet 44"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 22,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 61,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 chair 9",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 oven 21",
+                        "pantry room 0 top cabinet 55",
+                        "kitchen 0 plant 5",
+                        "pantry room 0 top cabinet 54",
+                        "kitchen 0 top cabinet 25",
+                        "kitchen 0 table 6",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 oven 22",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 chair 10",
+                        "pantry room 0 fridge 50",
+                        "kitchen 0 bottom cabinet 30",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 top cabinet 24",
+                        "kitchen 0 bottom cabinet 29",
+                        "pantry room 0 bottom cabinet 51",
+                        "kitchen 0 chair 7",
+                        "kitchen 0 bottom cabinet 47",
+                        "kitchen 0 top cabinet 27",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 counter 31"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 61,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 139,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "dumbbell 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 coffee table 4",
+                        "kitchen 0 bottom cabinet 39",
+                        "utility room 0 bottom cabinet 59",
+                        "utility room 0 washer 56",
+                        "kitchen 0 top cabinet 43",
+                        "utility room 0 sink 58",
+                        "living room 0 shelf 16",
+                        "utility room 0 dryer 57",
+                        "living room 0 shelf 15",
+                        "living room 0 chair 1",
+                        "living room 0 chair 2",
+                        "living room 0 coffee table 3"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 139,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 206,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "plate 1",
+                        "heavy duty gloves 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 63",
+                        "bathroom 0 sink 62"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 206,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 239,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "tomato soup can 1"
+                    ],
+                    "recs_discovered": [
+                        "utility room 0 top cabinet 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 239,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-mirror_63_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 285,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "surface saver ring 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tomato soup can 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "surface saver ring 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "plate 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "set-top box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "heavy duty gloves 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tomato soup can 1": "utility room 0 sink 58",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "utility room 0 sink 58",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "tomato soup can 1": "utility room 0 sink 58",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "tomato soup can 1": "utility room 0 sink 58",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "plate 1",
+                "heavy duty gloves 1",
+                "surface saver ring 1",
+                "dumbbell 1",
+                "tomato soup can 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 sink 37",
+                "kitchen 0 chair 9",
+                "kitchen 0 counter 48",
+                "kitchen 0 oven 21",
+                "kitchen 0 oven 46",
+                "kitchen 0 table 6",
+                "kitchen 0 chair 8",
+                "bathroom 0 sink 62",
+                "living room 0 shelf 16",
+                "kitchen 0 bottom cabinet 32",
+                "pantry room 0 fridge 50",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 counter 33",
+                "kitchen 0 microwave 23",
+                "utility room 0 washer 56",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 bottom cabinet 29",
+                "pantry room 0 bottom cabinet 51",
+                "kitchen 0 chair 12",
+                "utility room 0 sink 58",
+                "kitchen 0 chair 7",
+                "bathroom 0 mirror 63",
+                "utility room 0 top cabinet 60",
+                "living room 0 chair 1",
+                "kitchen 0 top cabinet 27",
+                "living room 0 coffee table 3",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 fridge 20",
+                "pantry room 0 top cabinet 55",
+                "kitchen 0 plant 5",
+                "pantry room 0 top cabinet 54",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 43",
+                "kitchen 0 counter 49",
+                "kitchen 0 oven 22",
+                "kitchen 0 carpet 34",
+                "kitchen 0 cooktop 64",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 bottom cabinet 26",
+                "corridor 0 table 0",
+                "kitchen 0 chair 10",
+                "living room 0 shelf 15",
+                "living room 0 coffee table 4",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 chair 11",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 chair 2",
+                "utility room 0 dryer 57",
+                "pantry room 0 counter 53",
+                "kitchen 0 counter 31"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 285
+    },
+    {
+        "mode": "single",
+        "start": 285,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 26, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 top cabinet 27, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 24, kitchen 0 top cabinet 25, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43. Object surface saver ring 1 found on kitchen 0 chair 10 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 shelf 16, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object plate 1 found on pantry room 0 top cabinet 54. Object heavy duty gloves 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. Object dumbbell 1 found on utility room 0 washer 56. Object tomato soup can 1 found on utility room 0 sink 58 \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to tomato soup can 1 step 2: look at tomato soup can 1 step 3: pick up tomato soup can 1 step 4: go to corridor 0 shelf 14 step 5: look at corridor 0 shelf 14 step 6: place tomato soup can 1 on corridor 0 shelf 14"
+        },
+        "logs": [
+            {
+                "start": 285,
+                "step_raw": "go to tomato soup can 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "tomato_soup_can_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 338,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 338,
+                "step_raw": "look at tomato soup can 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tomato_soup_can_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 341,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 341,
+                "step_raw": "pick up tomato soup can 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tomato_soup_can_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "utility room 0 sink 58",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "agent",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 342,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tomato soup can 1": [
+                            "utility room 0 sink 58",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 342,
+                "step_raw": "go to corridor 0 shelf 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-shelf_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "agent",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "agent",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 417,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 counter 41",
+                        "kitchen 0 bottom cabinet 38"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 417,
+                "step_raw": "look at corridor 0 shelf 14",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-shelf_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "agent",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "agent",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 417,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 417,
+                "step_raw": "place tomato soup can 1 on corridor 0 shelf 14",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tomato_soup_can_1",
+                    "target_receptacle": "corridor_0-shelf_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "agent",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 418,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tomato soup can 1": [
+                            "agent",
+                            "corridor 0 shelf 14"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tomato soup can 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "surface saver ring 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "plate 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "set-top box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "heavy duty gloves 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tomato soup can 1": "utility room 0 sink 58",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "tomato soup can 1": "utility room 0 sink 58",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 counter 41",
+                "kitchen 0 bottom cabinet 38"
+            ],
+            "objects_moved": {
+                "tomato soup can 1": [
+                    "utility room 0 sink 58",
+                    "corridor 0 shelf 14"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 418
+    },
+    {
+        "mode": "single",
+        "start": 418,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object tomato soup can 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 26, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 top cabinet 27, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 24, kitchen 0 top cabinet 25, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 counter 41, kitchen 0 bottom cabinet 38. Object surface saver ring 1 found on kitchen 0 chair 10 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 shelf 16, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object plate 1 found on pantry room 0 top cabinet 54. Object heavy duty gloves 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. Object dumbbell 1 found on utility room 0 washer 56 \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to dumbbell 1 step 2: look at dumbbell 1 step 3: pick up dumbbell 1 step 4: go to living room 0 shelf 15 step 5: look at living room 0 shelf 15 step 6: place dumbbell 1 on living room 0 shelf 15"
+        },
+        "logs": [
+            {
+                "start": 418,
+                "step_raw": "go to dumbbell 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "dumbbell_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 489,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 489,
+                "step_raw": "look at dumbbell 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "dumbbell_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 489,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 489,
+                "step_raw": "pick up dumbbell 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dumbbell_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "utility room 0 washer 56",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "agent",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 490,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dumbbell 1": [
+                            "utility room 0 washer 56",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 490,
+                "step_raw": "go to living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "agent",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "agent",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 584,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 584,
+                "step_raw": "look at living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "agent",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "agent",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 584,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 584,
+                "step_raw": "place dumbbell 1 on living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dumbbell_1",
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "agent",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 585,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dumbbell 1": [
+                            "agent",
+                            "living room 0 shelf 15"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tomato soup can 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "surface saver ring 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "plate 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "set-top box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "heavy duty gloves 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 chair 10",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "dumbbell 1": "living room 0 shelf 15",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "utility room 0 washer 56",
+                "surface saver ring 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "sugar box 1": "kitchen 0 microwave 23",
+                "surface saver ring 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "dumbbell 1": [
+                    "utility room 0 washer 56",
+                    "living room 0 shelf 15"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 585
+    },
+    {
+        "mode": "single",
+        "start": 585,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object tomato soup can 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 26, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 top cabinet 27, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 24, kitchen 0 top cabinet 25, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 counter 41, kitchen 0 bottom cabinet 38. Object surface saver ring 1 found on kitchen 0 chair 10 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 shelf 16, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. Object dumbbell 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object plate 1 found on pantry room 0 top cabinet 54. Object heavy duty gloves 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to surface saver ring 1 step 2: look at surface saver ring 1 step 3: pick up surface saver ring 1 step 4: go to kitchen 0 bottom cabinet 44 step 5: look at kitchen 0 bottom cabinet 44 step 6: place surface saver ring 1 on kitchen 0 bottom cabinet 44"
+        },
+        "logs": [
+            {
+                "start": 585,
+                "step_raw": "go to surface saver ring 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "surface_saver_ring_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 661,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 661,
+                "step_raw": "look at surface saver ring 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "surface_saver_ring_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 663,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 663,
+                "step_raw": "pick up surface saver ring 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "surface_saver_ring_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 chair 10",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "agent",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 664,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "surface saver ring 1": [
+                            "kitchen 0 chair 10",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 664,
+                "step_raw": "go to kitchen 0 bottom cabinet 44",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_44_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "agent",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "agent",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 714,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 714,
+                "step_raw": "look at kitchen 0 bottom cabinet 44",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_44_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "agent",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "agent",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 714,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 714,
+                "step_raw": "place surface saver ring 1 on kitchen 0 bottom cabinet 44",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "surface_saver_ring_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_44_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "agent",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 715,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "surface saver ring 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 44"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tomato soup can 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "surface saver ring 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "plate 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "set-top box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "heavy duty gloves 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 chair 10",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "dumbbell 1": "living room 0 shelf 15",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sugar box 1": "kitchen 0 microwave 23",
+                "surface saver ring 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "sugar box 1": "kitchen 0 microwave 23"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "surface saver ring 1": [
+                    "kitchen 0 chair 10",
+                    "kitchen 0 bottom cabinet 44"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 715
+    },
+    {
+        "mode": "single",
+        "start": 715,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object tomato soup can 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 26, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 top cabinet 27, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 24, kitchen 0 top cabinet 25, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 counter 41, kitchen 0 bottom cabinet 38. Object surface saver ring 1 found on kitchen 0 bottom cabinet 44 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 shelf 16, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. Object dumbbell 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object plate 1 found on pantry room 0 top cabinet 54. Object heavy duty gloves 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 715,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "tomato soup can 1": "corridor 0 shelf 14",
+                        "sugar box 1": "kitchen 0 microwave 23",
+                        "dumbbell 1": "living room 0 shelf 15",
+                        "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                        "plate 1": "pantry room 0 top cabinet 54",
+                        "set-top box 1": "pantry room 0 top cabinet 54",
+                        "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 715,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tomato soup can 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sugar box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "surface saver ring 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "plate 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "set-top box 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "heavy duty gloves 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "sugar box 1": "kitchen 0 microwave 23",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "tomato soup can 1": "corridor 0 shelf 14",
+                "dumbbell 1": "living room 0 shelf 15",
+                "surface saver ring 1": "kitchen 0 bottom cabinet 44",
+                "plate 1": "pantry room 0 top cabinet 54",
+                "set-top box 1": "pantry room 0 top cabinet 54",
+                "heavy duty gloves 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sugar box 1": "kitchen 0 microwave 23"
+            },
+            "end": {
+                "sugar box 1": "kitchen 0 microwave 23"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 1
+            }
+        },
+        "end": 715
+    }
+]

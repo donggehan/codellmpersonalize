@@ -1,0 +1,3716 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 41,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 top cabinet 42",
+                        "living room 0 chair 1",
+                        "kitchen 0 counter 40",
+                        "living room 0 shelf 15",
+                        "kitchen 0 bottom cabinet 44",
+                        "corridor 0 carpet 13",
+                        "kitchen 0 sink 37",
+                        "corridor 0 table 0",
+                        "living room 0 shelf 16",
+                        "kitchen 0 counter 48",
+                        "living room 0 coffee table 4",
+                        "living room 0 coffee table 3",
+                        "kitchen 0 counter 49",
+                        "living room 0 chair 2",
+                        "kitchen 0 bottom cabinet 35",
+                        "corridor 0 shelf 14",
+                        "kitchen 0 dishwasher 36"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "candy 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hair straightener 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "racquetball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 top cabinet 42",
+                "living room 0 shelf 15",
+                "kitchen 0 bottom cabinet 44",
+                "living room 0 coffee table 3",
+                "kitchen 0 counter 48",
+                "living room 0 coffee table 4",
+                "living room 0 chair 2",
+                "corridor 0 shelf 14",
+                "living room 0 chair 1",
+                "kitchen 0 counter 40",
+                "corridor 0 carpet 13",
+                "kitchen 0 sink 37",
+                "corridor 0 table 0",
+                "living room 0 shelf 16",
+                "kitchen 0 counter 49",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 dishwasher 36"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 41
+    },
+    {
+        "mode": "single",
+        "start": 41,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48. \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15, living room 0 coffee table 3, living room 0 chair 1, living room 0 shelf 16. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0"
+        },
+        "logs": [
+            {
+                "start": 41,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 81,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "skillet 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 cooktop 64",
+                        "pantry room 0 bottom cabinet 51",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 top cabinet 25",
+                        "bathroom 0 mirror 63",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 oven 22",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 bottom cabinet 30",
+                        "pantry room 0 counter 53",
+                        "bathroom 0 sink 62",
+                        "kitchen 0 bottom cabinet 29",
+                        "kitchen 0 counter 31",
+                        "kitchen 0 top cabinet 24",
+                        "kitchen 0 chair 7",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 table 6",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 carpet 34",
+                        "pantry room 0 top cabinet 54",
+                        "kitchen 0 bottom cabinet 47",
+                        "kitchen 0 oven 21",
+                        "kitchen 0 top cabinet 27"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "candy 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hair straightener 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "racquetball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "skillet 1"
+            ],
+            "recs_discovered": [
+                "bathroom 0 mirror 63",
+                "pantry room 0 bottom cabinet 51",
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 cooktop 64",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 oven 22",
+                "kitchen 0 oven 46",
+                "kitchen 0 bottom cabinet 30",
+                "pantry room 0 counter 53",
+                "bathroom 0 sink 62",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 counter 31",
+                "kitchen 0 chair 7",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 table 6",
+                "kitchen 0 fridge 20",
+                "kitchen 0 counter 33",
+                "kitchen 0 microwave 23",
+                "kitchen 0 carpet 34",
+                "pantry room 0 top cabinet 54",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 oven 21",
+                "kitchen 0 top cabinet 27"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 81
+    },
+    {
+        "mode": "single",
+        "start": 81,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 chair 7, kitchen 0 carpet 34, kitchen 0 bottom cabinet 32, kitchen 0 fridge 20, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 microwave 23, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 oven 21, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 24. Object skillet 1 found on kitchen 0 table 6 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15, living room 0 coffee table 3, living room 0 chair 1, living room 0 shelf 16. \nIn pantry room 0, found receptacles: pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 counter 53, pantry room 0 bottom cabinet 52. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to skillet 1\nstep 3: look at skillet 1\nstep 4: pick up skillet 1\nstep 5: go to kitchen 0 counter 49\nstep 6: look at kitchen 0 counter 49\nstep 7: place skillet 1 on kitchen 0 counter 49\nstep 8: go to kitchen 0 table 6\nstep 9: look at kitchen 0 table 6\nstep 10: pick up saucer 1\nstep 11: go to kitchen 0 counter 40\nstep 12: look at kitchen 0 counter 40\nstep 13: place saucer 1 on kitchen 0 counter 40\nstep 14: go to pantry room 0 top cabinet 54\nstep 15: look at pantry room 0 top cabinet 54\nstep 16: pick up saucer 1\nstep 17: go to pantry room 0 bottom cabinet 51\nstep 18: look at pantry room 0 bottom cabinet 51\nstep 19: place saucer 1 on pantry room 0 bottom cabinet 51\nstep 20: mission complete"
+        },
+        "logs": [
+            {
+                "start": 81,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 120,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "hair straightener 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 chair 12",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 plant 5",
+                        "kitchen 0 chair 10",
+                        "pantry room 0 fridge 50",
+                        "pantry room 0 top cabinet 55",
+                        "kitchen 0 chair 9"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 120,
+                "step_raw": "go to skillet 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 136,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 136,
+                "step_raw": "look at skillet 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 139,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 139,
+                "step_raw": "pick up skillet 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 table 6",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 140,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "skillet 1": [
+                            "kitchen 0 table 6",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 140,
+                "step_raw": "go to kitchen 0 counter 49",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 189,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "candy 1"
+                    ],
+                    "recs_discovered": [
+                        "utility room 0 top cabinet 60",
+                        "kitchen 0 bottom cabinet 39",
+                        "utility room 0 washer 56",
+                        "utility room 0 bottom cabinet 59",
+                        "utility room 0 sink 58",
+                        "kitchen 0 top cabinet 43",
+                        "kitchen 0 bottom cabinet 38",
+                        "kitchen 0 counter 41",
+                        "utility room 0 dryer 57"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 189,
+                "step_raw": "look at kitchen 0 counter 49",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 189,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 189,
+                "step_raw": "place skillet 1 on kitchen 0 counter 49",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "skillet_1",
+                    "target_receptacle": "kitchen_0-counter_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 190,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "skillet 1": [
+                            "agent",
+                            "kitchen 0 counter 49"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 190,
+                "step_raw": "go to kitchen 0 table 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-table_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 243,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "racquetball 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 243,
+                "step_raw": "look at kitchen 0 table 6",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-table_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 243,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 243,
+                "step_raw": "pick up saucer 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "saucer 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 243,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "candy 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hair straightener 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "racquetball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 49",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "skillet 1": "kitchen 0 table 6",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 49",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "hair straightener 1",
+                "racquetball 1",
+                "candy 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 chair 12",
+                "kitchen 0 chair 11",
+                "kitchen 0 plant 5",
+                "utility room 0 top cabinet 60",
+                "kitchen 0 bottom cabinet 39",
+                "utility room 0 bottom cabinet 59",
+                "utility room 0 washer 56",
+                "utility room 0 dryer 57",
+                "kitchen 0 chair 8",
+                "kitchen 0 chair 9",
+                "utility room 0 sink 58",
+                "kitchen 0 top cabinet 43",
+                "kitchen 0 chair 10",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 counter 41",
+                "pantry room 0 fridge 50",
+                "pantry room 0 top cabinet 55"
+            ],
+            "objects_moved": {
+                "skillet 1": [
+                    "kitchen 0 table 6",
+                    "kitchen 0 counter 49"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 243
+    },
+    {
+        "mode": "single",
+        "start": 243,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 chair 7, kitchen 0 carpet 34, kitchen 0 bottom cabinet 32, kitchen 0 fridge 20, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 microwave 23, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 oven 21, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 12, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. Object skillet 1 found on kitchen 0 counter 49. Object candy 1 found on kitchen 0 bottom cabinet 26 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15, living room 0 coffee table 3, living room 0 chair 1, living room 0 shelf 16. \nIn pantry room 0, found receptacles: pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 counter 53, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object hair straightener 1 found on pantry room 0 counter 53. Object racquetball 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 bottom cabinet 59, utility room 0 top cabinet 60, utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0 counter 49\nstep 2: look at skillet 1\nstep 3: pick up skillet 1\nstep 4: go to kitchen 0 counter 48\nstep 5: look at kitchen 0 counter 48\nstep 6: place skillet 1 on kitchen 0 counter 48\nstep 7: go to pantry room 0 fridge 50\nstep 8: look at racquetball 1\nstep 9: pick up racquetball 1\nstep 10: go to pantry room 0 bottom cabinet 51\nstep 11: look at pantry room 0 bottom cabinet 51\nstep 12: place racquetball 1 on pantry room 0 bottom cabinet 51\nstep 13: go to kitchen 0 bottom cabinet 26\nstep 14: look at candy 1\nstep 15: pick up candy 1\nstep 16: go to living room 0 coffee table 4\nstep 17: look at living room 0 coffee table 4\nstep 18: place candy 1 on living room 0 coffee table 4\nstep 19: go to pantry room 0 counter 53\nstep"
+        },
+        "logs": [
+            {
+                "start": 243,
+                "step_raw": "go to kitchen 0 counter 49",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 292,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 292,
+                "step_raw": "look at skillet 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 292,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 292,
+                "step_raw": "pick up skillet 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 49",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 293,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "skillet 1": [
+                            "kitchen 0 counter 49",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 293,
+                "step_raw": "go to kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 293,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 293,
+                "step_raw": "look at kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 293,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 293,
+                "step_raw": "place skillet 1 on kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "skillet_1",
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "agent",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 294,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "skillet 1": [
+                            "agent",
+                            "kitchen 0 counter 48"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 294,
+                "step_raw": "go to pantry room 0 fridge 50",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-fridge_50_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 363,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 363,
+                "step_raw": "look at racquetball 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 363,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 363,
+                "step_raw": "pick up racquetball 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "pantry room 0 fridge 50",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 364,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "pantry room 0 fridge 50",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 364,
+                "step_raw": "go to pantry room 0 bottom cabinet 51",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-bottom_cabinet_no_top_51_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 403,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "candy 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hair straightener 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "racquetball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 49",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 49",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "pantry room 0 fridge 50"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "skillet 1": [
+                    "kitchen 0 counter 49",
+                    "kitchen 0 counter 48"
+                ],
+                "racquetball 1": [
+                    "pantry room 0 fridge 50",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 403
+    },
+    {
+        "mode": "single",
+        "start": 403,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding racquetball 1.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 chair 7, kitchen 0 carpet 34, kitchen 0 bottom cabinet 32, kitchen 0 fridge 20, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 microwave 23, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 oven 21, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 12, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. Object candy 1 found on kitchen 0 bottom cabinet 26. Object skillet 1 found on kitchen 0 counter 48 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15, living room 0 coffee table 3, living room 0 chair 1, living room 0 shelf 16. \nIn pantry room 0, found receptacles: pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 counter 53, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object hair straightener 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 bottom cabinet 59, utility room 0 top cabinet 60, utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to candy 1\nstep 3: look at candy 1\nstep 4: pick up candy 1\nstep 5: go to kitchen 0 bottom cabinet 26\nstep 6: look at kitchen 0 bottom cabinet 26\nstep 7: place candy 1 on kitchen 0 bottom cabinet 26\nstep 8: go to kitchen 0 counter 48\nstep 9: look at skillet 1\nstep 10: pick up skillet 1\nstep 11: go to kitchen 0 cooktop 64\nstep 12: look at kitchen 0 cooktop 64\nstep 13: place skillet 1 on kitchen 0 cooktop 64\nstep 14: go to pantry room 0\nstep 15: go to hair straightener 1\nstep 16: look at hair straightener 1\nstep 17: pick up hair straightener 1\nstep 18: go to pantry room 0 counter 53\nstep 19: look at pantry room 0 counter 53\nstep 20: place hair straightener on pantry room counter"
+        },
+        "logs": [
+            {
+                "start": 403,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 440,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 440,
+                "step_raw": "go to candy 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 465,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 465,
+                "step_raw": "look at candy 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 466,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 466,
+                "step_raw": "pick up candy 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 467,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 467,
+                "step_raw": "go to kitchen 0 bottom cabinet 26",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_26_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 467,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 467,
+                "step_raw": "look at kitchen 0 bottom cabinet 26",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_26_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 467,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 467,
+                "step_raw": "place candy 1 on kitchen 0 bottom cabinet 26",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_26_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 468,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 468,
+                "step_raw": "go to kitchen 0 counter 48",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 488,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 488,
+                "step_raw": "look at skillet 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 488,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 488,
+                "step_raw": "pick up skillet 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 489,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "candy 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hair straightener 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "racquetball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 489
+    },
+    {
+        "mode": "single",
+        "start": 489,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding racquetball 1.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 chair 7, kitchen 0 carpet 34, kitchen 0 bottom cabinet 32, kitchen 0 fridge 20, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 microwave 23, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 oven 21, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 12, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. Object candy 1 found on kitchen 0 bottom cabinet 26. Object skillet 1 found on kitchen 0 counter 48 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15, living room 0 coffee table 3, living room 0 chair 1, living room 0 shelf 16. \nIn pantry room 0, found receptacles: pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 counter 53, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object hair straightener 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 bottom cabinet 59, utility room 0 top cabinet 60, utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to candy 1\nstep 3: look at candy 1\nstep 4: pick up candy 1\nstep 5: go to kitchen 0 bottom cabinet 32\nstep 6: look at kitchen 0 bottom cabinet 32\nstep 7: place candy 1 on kitchen 0 bottom cabinet 32\nstep 8: go to kitchen 0\nstep 9: go to skillet 1\nstep 10: look at skillet 1\nstep 11: pick up skillet 1\nstep 12: go to kitchen 0 counter 40\nstep 13: look at kitchen 0 counter 40\nstep 14: place skillet 1 on kitchen 0 counter 40\nstep 15: mission complete"
+        },
+        "logs": [
+            {
+                "start": 489,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 537,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 537,
+                "step_raw": "go to candy 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 567,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 567,
+                "step_raw": "look at candy 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 569,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 569,
+                "step_raw": "pick up candy 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 570,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 570,
+                "step_raw": "go to kitchen 0 bottom cabinet 32",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 597,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 597,
+                "step_raw": "look at kitchen 0 bottom cabinet 32",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 599,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 599,
+                "step_raw": "place candy 1 on kitchen 0 bottom cabinet 32",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 600,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 32"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 600,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 617,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 617,
+                "step_raw": "go to skillet 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 656,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 656,
+                "step_raw": "look at skillet 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "skillet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 656,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "candy 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hair straightener 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "racquetball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "kitchen 0 bottom cabinet 32",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "agent"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "kitchen 0 bottom cabinet 32"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "racquetball 1": [
+                    "agent",
+                    "kitchen 0 bottom cabinet 32"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 656
+    },
+    {
+        "mode": "single",
+        "start": 656,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 chair 7, kitchen 0 carpet 34, kitchen 0 bottom cabinet 32, kitchen 0 fridge 20, kitchen 0 counter 33, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 microwave 23, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 oven 21, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 12, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. Object racquetball 1 found on kitchen 0 bottom cabinet 32. Object candy 1 found on kitchen 0 bottom cabinet 26. Object skillet 1 found on kitchen 0 counter 48 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15, living room 0 coffee table 3, living room 0 chair 1, living room 0 shelf 16. \nIn pantry room 0, found receptacles: pantry room 0 bottom cabinet 51, pantry room 0 top cabinet 54, pantry room 0 counter 53, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 55. Object hair straightener 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 bottom cabinet 59, utility room 0 top cabinet 60, utility room 0 sink 58, utility room 0 washer 56, utility room 0 dryer 57. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0 bottom cabinet 32\nstep 2: look at racquetball 1\nstep 3: pick up racquetball 1\nstep 4: go to kitchen 0 top cabinet 27\nstep 5: look at kitchen 0 top cabinet 27\nstep 6: place racquetball 1 on kitchen 0 top cabinet 27\nstep 7: go to kitchen 0 bottom cabinet 26\nstep 8: look at candy 1\nstep 9: pick up candy 1\nstep 10: go to living room 0 coffee table 3\nstep 11: look at living room 0 coffee table 3\nstep 12: place candy 1 on living room 0 coffee table 3\nstep 13: go to kitchen 0 counter 48\nstep 14: look at skillet 1\nstep 15: pick up skillet 1\nstep 16: go to pantry room 0 counter 53\nstep 17: look at pantry room 0 counter 53\nstep 18: place skillet 1 on pantry room 0 counter 53\n\nmission complete."
+        },
+        "logs": [
+            {
+                "start": 656,
+                "step_raw": "go to kitchen 0 bottom cabinet 32",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 705,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 705,
+                "step_raw": "look at racquetball 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 706,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 706,
+                "step_raw": "pick up racquetball 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 bottom cabinet 32",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 707,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "kitchen 0 bottom cabinet 32",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 707,
+                "step_raw": "go to kitchen 0 top cabinet 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 735,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 735,
+                "step_raw": "look at kitchen 0 top cabinet 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 735,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 735,
+                "step_raw": "place racquetball 1 on kitchen 0 top cabinet 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": "kitchen_0-top_cabinet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "agent",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 736,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "agent",
+                            "kitchen 0 top cabinet 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 736,
+                "step_raw": "go to kitchen 0 bottom cabinet 26",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_26_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 736,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 736,
+                "step_raw": "look at candy 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 739,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 739,
+                "step_raw": "pick up candy 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "kitchen 0 bottom cabinet 26",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "agent",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 740,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "candy 1": [
+                            "kitchen 0 bottom cabinet 26",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 740,
+                "step_raw": "go to living room 0 coffee table 3",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "agent",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "skillet 1": "kitchen 0 counter 48",
+                        "candy 1": "agent",
+                        "hair straightener 1": "pantry room 0 counter 53",
+                        "racquetball 1": "kitchen 0 top cabinet 27",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                        "cloth 1": "pantry room 0 top cabinet 54",
+                        "umbrella 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 792,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "candy 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hair straightener 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "racquetball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "kitchen 0 bottom cabinet 32",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "agent",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "kitchen 0 top cabinet 27",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "dumbbell rack 1": "pantry room 0 top cabinet 54",
+                "cloth 1": "pantry room 0 top cabinet 54",
+                "umbrella 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "kitchen 0 bottom cabinet 26",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "kitchen 0 bottom cabinet 32"
+            },
+            "end": {
+                "skillet 1": "kitchen 0 counter 48",
+                "candy 1": "agent",
+                "hair straightener 1": "pantry room 0 counter 53",
+                "racquetball 1": "kitchen 0 top cabinet 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "racquetball 1": [
+                    "kitchen 0 bottom cabinet 32",
+                    "kitchen 0 top cabinet 27"
+                ],
+                "candy 1": [
+                    "kitchen 0 bottom cabinet 26",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 792
+    }
+]

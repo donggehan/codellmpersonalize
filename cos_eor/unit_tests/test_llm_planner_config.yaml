@@ -1,0 +1,48 @@
+name: "$plan_type"
+high_level:
+  mode: "once" # "once" or "autoregressive"
+  prompt:
+    prefix: "1."
+  llm_model: 
+    platform: "hf"
+    hf:
+      model: "gpt2-large"
+      sampling_params:
+        max_tokens: 100
+        temperature: 0.1
+        top_p: 0.9
+        num_return_sequences: 1
+        repetition_penalty: 1.2
+        use_cache: True
+        output_scores: True
+        return_dict_in_generate: True
+        do_sample: True
+    openai:
+      model: "text-davinci-002" #"babbage-002"
+      sampling_params:
+        max_tokens: 100
+        temperature: 0.6
+        top_p: 0.9
+        n: 1
+        logprobs: 1
+        presence_penalty: 0.5
+        frequency_penalty: 0.3
+        stop: '\n'
+    llama:
+      model: "Llama-2-7b-chat-hf"
+      model_path: ""
+      max_memory: 
+        0: "8GIB"
+        1: "8GIB"
+        2: "8GIB"
+      sampling_params:
+        max_tokens: 100
+        temperature: 0.1
+        top_p: 0.9
+        num_return_sequences: 1
+        repetition_penalty: 1.2
+        use_cache: True
+        output_scores: True
+        return_dict_in_generate: True
+        do_sample: True
+

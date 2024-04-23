@@ -1,0 +1,2414 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to bedroom 0 step 2: go to bathroom 0 step 3: go to childs room 0 step 4: go to living room 0 step 5: go to dining room 0 step 6: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 53,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "flashlight 1",
+                        "portable speaker 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 bed 7",
+                        "bedroom 0 bottom cabinet 12",
+                        "bedroom 0 basket 14",
+                        "childs room 0 sofa chair 4",
+                        "bedroom 0 bottom cabinet 8",
+                        "childs room 0 carpet 0",
+                        "childs room 0 stool 5",
+                        "bedroom 0 bottom cabinet 13",
+                        "bedroom 0 basket 15",
+                        "childs room 0 bed 1",
+                        "living room 0 coffee table 27",
+                        "childs room 0 bottom cabinet 2",
+                        "childs room 0 bottom cabinet 6"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 53,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 119,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "living room 0 carpet 28",
+                        "living room 0 towel rack 66",
+                        "bathroom 0 top cabinet 70",
+                        "bathroom 0 toilet 69",
+                        "bathroom 0 trash can 34",
+                        "living room 0 bottom cabinet 30",
+                        "bedroom 0 bottom cabinet 9",
+                        "bathroom 0 mirror 73",
+                        "bathroom 0 bathtub 71",
+                        "bathroom 0 sink 72"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 119,
+                "step_raw": "go to childs room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 179,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "electric heater 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 top cabinet 54",
+                        "kitchen 0 trash can 18"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 179,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 255,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "condiment 1",
+                        "tennis ball 1",
+                        "salt shaker 1",
+                        "candle holder 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 floor lamp 31",
+                        "kitchen 0 fridge 57",
+                        "dining room 0 chair 22",
+                        "dining room 0 plant 29"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 255,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 275,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 sink 53",
+                        "kitchen 0 bottom cabinet 49",
+                        "dining room 0 chair 24",
+                        "kitchen 0 top cabinet 55"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 275,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_52_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 338,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "chocolate 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 50"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "electric heater 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "condiment 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tennis ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "salt shaker 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "cake mix 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "candle holder 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ],
+            "golf ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "electric heater 1": "childs room 0 bed 1",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "childs room 0 bed 1",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "electric heater 1": "childs room 0 bed 1",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "electric heater 1": "childs room 0 bed 1",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "chocolate 1",
+                "portable speaker 1",
+                "salt shaker 1",
+                "candle holder 1",
+                "condiment 1",
+                "flashlight 1",
+                "electric heater 1",
+                "tennis ball 1"
+            ],
+            "recs_discovered": [
+                "living room 0 carpet 28",
+                "bedroom 0 bottom cabinet 12",
+                "bathroom 0 top cabinet 70",
+                "bathroom 0 toilet 69",
+                "childs room 0 stool 5",
+                "kitchen 0 trash can 18",
+                "living room 0 floor lamp 31",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 trash can 34",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 bottom cabinet 49",
+                "bedroom 0 basket 15",
+                "childs room 0 bed 1",
+                "living room 0 coffee table 27",
+                "kitchen 0 fridge 57",
+                "bedroom 0 bed 7",
+                "living room 0 towel rack 66",
+                "bedroom 0 basket 14",
+                "childs room 0 sofa chair 4",
+                "bedroom 0 bottom cabinet 8",
+                "childs room 0 carpet 0",
+                "living room 0 bottom cabinet 30",
+                "dining room 0 plant 29",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 top cabinet 54",
+                "bedroom 0 bottom cabinet 13",
+                "dining room 0 chair 24",
+                "dining room 0 chair 22",
+                "kitchen 0 sink 53",
+                "childs room 0 bottom cabinet 2",
+                "bathroom 0 mirror 73",
+                "bathroom 0 bathtub 71",
+                "bathroom 0 sink 72",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 7,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 338
+    },
+    {
+        "mode": "single",
+        "start": 338,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object flashlight 1 found on bedroom 0 basket 14. Object portable speaker 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object electric heater 1 found on childs room 0 bed 1 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object condiment 1 found on living room 0 carpet 28. Object tennis ball 1 found on living room 0 bottom cabinet 30. Object salt shaker 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. Object candle holder 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50. Object chocolate 1 found on kitchen 0 top cabinet 54. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to electric heater 1 step 2: look at electric heater 1 step 3: pick up electric heater 1 step 4: go to bedroom 0 bottom cabinet 13 step 5: look at bedroom 0 bottom cabinet 13 step 6: place electric heater 1 on bedroom 0 bottom cabinet 13"
+        },
+        "logs": [
+            {
+                "start": 338,
+                "step_raw": "go to electric heater 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "electric_heater_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 398,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 shelf 58",
+                        "kitchen 0 stove 59",
+                        "kitchen 0 shelf 61",
+                        "kitchen 0 range hood 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 398,
+                "step_raw": "look at electric heater 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "electric_heater_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 398,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 398,
+                "step_raw": "pick up electric heater 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "electric_heater_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "childs room 0 bed 1",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "agent",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 399,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "electric heater 1": [
+                            "childs room 0 bed 1",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 399,
+                "step_raw": "go to bedroom 0 bottom cabinet 13",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "agent",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "agent",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 462,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 462,
+                "step_raw": "look at bedroom 0 bottom cabinet 13",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "agent",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "agent",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 462,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 462,
+                "step_raw": "place electric heater 1 on bedroom 0 bottom cabinet 13",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "electric_heater_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "agent",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 463,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "electric heater 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 13"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "electric heater 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "condiment 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tennis ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "salt shaker 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "cake mix 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "candle holder 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ],
+            "golf ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "electric heater 1": "childs room 0 bed 1",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "electric heater 1": "childs room 0 bed 1",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 stove 59",
+                "kitchen 0 shelf 61",
+                "kitchen 0 range hood 60"
+            ],
+            "objects_moved": {
+                "electric heater 1": [
+                    "childs room 0 bed 1",
+                    "bedroom 0 bottom cabinet 13"
+                ]
+            },
+            "count_correct": {
+                "start": 7,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 463
+    },
+    {
+        "mode": "single",
+        "start": 463,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object flashlight 1 found on bedroom 0 basket 14. Object portable speaker 1 found on bedroom 0 bottom cabinet 12. Object electric heater 1 found on bedroom 0 bottom cabinet 13 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object condiment 1 found on living room 0 carpet 28. Object tennis ball 1 found on living room 0 bottom cabinet 30. Object salt shaker 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. Object candle holder 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object chocolate 1 found on kitchen 0 top cabinet 54. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to flashlight 1 step 2: look at flashlight 1 step 3: pick up flashlight 1 step 4: go to kitchen 0 bottom cabinet 49 step 5: look at kitchen 0 bottom cabinet 49 step 6: place flashlight 1 on kitchen 0 bottom cabinet 49"
+        },
+        "logs": [
+            {
+                "start": 463,
+                "step_raw": "go to flashlight 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 473,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 473,
+                "step_raw": "look at flashlight 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 478,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 478,
+                "step_raw": "pick up flashlight 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "bedroom 0 basket 14",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "agent",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 479,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "flashlight 1": [
+                            "bedroom 0 basket 14",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 479,
+                "step_raw": "go to kitchen 0 bottom cabinet 49",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "agent",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "agent",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 549,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 549,
+                "step_raw": "look at kitchen 0 bottom cabinet 49",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "agent",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "agent",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 553,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 553,
+                "step_raw": "place flashlight 1 on kitchen 0 bottom cabinet 49",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "agent",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 554,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "flashlight 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 49"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "electric heater 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "condiment 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tennis ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "salt shaker 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "cake mix 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "candle holder 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ],
+            "golf ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "living room 0 carpet 28",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "flashlight 1": "bedroom 0 basket 14",
+                "condiment 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "condiment 1": "living room 0 carpet 28"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "flashlight 1": [
+                    "bedroom 0 basket 14",
+                    "kitchen 0 bottom cabinet 49"
+                ]
+            },
+            "count_correct": {
+                "start": 8,
+                "end": 9
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 554
+    },
+    {
+        "mode": "single",
+        "start": 554,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object electric heater 1 found on bedroom 0 bottom cabinet 13. Object portable speaker 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object condiment 1 found on living room 0 carpet 28. Object tennis ball 1 found on living room 0 bottom cabinet 30. Object salt shaker 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. Object candle holder 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object chocolate 1 found on kitchen 0 top cabinet 54. Object flashlight 1 found on kitchen 0 bottom cabinet 49. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to condiment 1 step 2: look at condiment 1 step 3: pick up condiment 1 step 4: go to kitchen 0 shelf 61 step 5: look at kitchen 0 shelf 61 step 6: place condiment 1 on kitchen 0 shelf 61"
+        },
+        "logs": [
+            {
+                "start": 554,
+                "step_raw": "go to condiment 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "condiment_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 639,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "cake mix 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 639,
+                "step_raw": "look at condiment 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "condiment_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 643,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 643,
+                "step_raw": "pick up condiment 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "condiment_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "living room 0 carpet 28",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "agent",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 644,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "condiment 1": [
+                            "living room 0 carpet 28",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 644,
+                "step_raw": "go to kitchen 0 shelf 61",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-shelf_61_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "agent",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "agent",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 723,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 723,
+                "step_raw": "look at kitchen 0 shelf 61",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-shelf_61_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "agent",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "agent",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 723,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 723,
+                "step_raw": "place condiment 1 on kitchen 0 shelf 61",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "condiment_1",
+                    "target_receptacle": "kitchen_0-shelf_61_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "agent",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "kitchen 0 shelf 61",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 724,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "condiment 1": [
+                            "agent",
+                            "kitchen 0 shelf 61"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 9,
+                        "end": 10
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "electric heater 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "condiment 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tennis ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "salt shaker 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "cake mix 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "candle holder 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ],
+            "golf ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "living room 0 carpet 28",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "kitchen 0 shelf 61",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "kitchen 0 shelf 61",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "condiment 1": "living room 0 carpet 28"
+            },
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [
+                "cake mix 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {
+                "condiment 1": [
+                    "living room 0 carpet 28",
+                    "kitchen 0 shelf 61"
+                ]
+            },
+            "count_correct": {
+                "start": 9,
+                "end": 10
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 0
+            }
+        },
+        "end": 724
+    },
+    {
+        "mode": "single",
+        "start": 724,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object electric heater 1 found on bedroom 0 bottom cabinet 13. Object portable speaker 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 carpet 0, childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28, living room 0 floor lamp 31. Object tennis ball 1 found on living room 0 bottom cabinet 30. Object salt shaker 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 23, dining room 0 table 20, dining room 0 chair 22, dining room 0 plant 29, dining room 0 chair 24. Object candle holder 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 bottom cabinet 51, kitchen 0 trash can 18, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 sink 53, kitchen 0 bottom cabinet 50, kitchen 0 range hood 60, kitchen 0 stove 59, kitchen 0 shelf 58, kitchen 0 shelf 61. Object cake mix 1 found on kitchen 0 top cabinet 54. Object chocolate 1 found on kitchen 0 top cabinet 54. Object flashlight 1 found on kitchen 0 bottom cabinet 49. Object condiment 1 found on kitchen 0 shelf 61. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 724,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "kitchen 0 shelf 61",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    },
+                    "end": {
+                        "electric heater 1": "bedroom 0 bottom cabinet 13",
+                        "flashlight 1": "kitchen 0 bottom cabinet 49",
+                        "condiment 1": "kitchen 0 shelf 61",
+                        "tennis ball 1": "living room 0 bottom cabinet 30",
+                        "salt shaker 1": "living room 0 bottom cabinet 30",
+                        "cake mix 1": "kitchen 0 top cabinet 54",
+                        "chocolate 1": "kitchen 0 top cabinet 54",
+                        "candle holder 1": "dining room 0 table 20",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                        "golf ball 1": "bathroom 0 top cabinet 70"
+                    }
+                },
+                "end": 724,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 10,
+                        "end": 10
+                    },
+                    "count_wrong": {
+                        "start": 0,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "electric heater 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "condiment 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "tennis ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "salt shaker 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "cake mix 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "candle holder 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ],
+            "golf ball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "bathroom 0 top cabinet 70"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "kitchen 0 shelf 61",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "kitchen 0 shelf 61",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "kitchen 0 shelf 61",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            },
+            "end": {
+                "electric heater 1": "bedroom 0 bottom cabinet 13",
+                "flashlight 1": "kitchen 0 bottom cabinet 49",
+                "condiment 1": "kitchen 0 shelf 61",
+                "tennis ball 1": "living room 0 bottom cabinet 30",
+                "salt shaker 1": "living room 0 bottom cabinet 30",
+                "cake mix 1": "kitchen 0 top cabinet 54",
+                "chocolate 1": "kitchen 0 top cabinet 54",
+                "candle holder 1": "dining room 0 table 20",
+                "portable speaker 1": "bedroom 0 bottom cabinet 12",
+                "golf ball 1": "bathroom 0 top cabinet 70"
+            }
+        },
+        "wrong_objects": {
+            "start": {},
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 10,
+                "end": 10
+            },
+            "count_wrong": {
+                "start": 0,
+                "end": 0
+            }
+        },
+        "end": 724
+    }
+]

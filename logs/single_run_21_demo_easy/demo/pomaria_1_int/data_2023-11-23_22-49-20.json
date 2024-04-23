@@ -1,0 +1,1274 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to corridor 0 step 2: go to kitchen 0 step 3: go to living room 0 step 4: go to pantry room 0 step 5: go to utility room 0 step 6: go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 29,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 sink 37",
+                        "kitchen 0 counter 48",
+                        "kitchen 0 plant 5",
+                        "corridor 0 carpet 13",
+                        "corridor 0 shelf 14",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 table 6",
+                        "corridor 0 table 0",
+                        "kitchen 0 bottom cabinet 44",
+                        "kitchen 0 top cabinet 42",
+                        "kitchen 0 dishwasher 36",
+                        "kitchen 0 chair 12",
+                        "kitchen 0 counter 40",
+                        "kitchen 0 bottom cabinet 35"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 29,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 67,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "xylitol sweetener 1",
+                        "lamp 1",
+                        "donut 1",
+                        "tablet 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 chair 9",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 oven 21",
+                        "pantry room 0 top cabinet 55",
+                        "pantry room 0 top cabinet 54",
+                        "kitchen 0 top cabinet 25",
+                        "kitchen 0 oven 22",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 chair 10",
+                        "pantry room 0 fridge 50",
+                        "kitchen 0 bottom cabinet 30",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 top cabinet 24",
+                        "kitchen 0 bottom cabinet 29",
+                        "pantry room 0 bottom cabinet 51",
+                        "kitchen 0 chair 7",
+                        "kitchen 0 bottom cabinet 47",
+                        "kitchen 0 top cabinet 27",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 counter 31"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 67,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 137,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "living room 0 coffee table 4",
+                        "kitchen 0 bottom cabinet 39",
+                        "utility room 0 bottom cabinet 59",
+                        "living room 0 coffee table 3",
+                        "kitchen 0 top cabinet 43",
+                        "utility room 0 washer 56",
+                        "utility room 0 sink 58",
+                        "living room 0 shelf 16",
+                        "utility room 0 dryer 57",
+                        "kitchen 0 counter 41",
+                        "living room 0 shelf 15",
+                        "living room 0 chair 1",
+                        "living room 0 chair 2",
+                        "kitchen 0 bottom cabinet 38"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 137,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "butter dish 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 63",
+                        "bathroom 0 sink 62"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 230,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "utility room 0 top cabinet 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 230,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-mirror_63_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 278,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tablet 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "pressure cooker 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hat 1": [
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "butter dish 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tablet 1": "kitchen 0 table 6",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "tablet 1": "kitchen 0 table 6",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "tablet 1": "kitchen 0 table 6",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "tablet 1": "kitchen 0 table 6",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "xylitol sweetener 1",
+                "butter dish 1",
+                "tablet 1",
+                "lamp 1",
+                "donut 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 sink 37",
+                "kitchen 0 chair 9",
+                "kitchen 0 counter 48",
+                "kitchen 0 oven 21",
+                "corridor 0 shelf 14",
+                "kitchen 0 oven 46",
+                "kitchen 0 chair 8",
+                "kitchen 0 table 6",
+                "bathroom 0 sink 62",
+                "living room 0 shelf 16",
+                "kitchen 0 bottom cabinet 32",
+                "pantry room 0 fridge 50",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 counter 33",
+                "kitchen 0 microwave 23",
+                "utility room 0 washer 56",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 bottom cabinet 29",
+                "pantry room 0 bottom cabinet 51",
+                "kitchen 0 chair 12",
+                "utility room 0 sink 58",
+                "kitchen 0 chair 7",
+                "bathroom 0 mirror 63",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 40",
+                "living room 0 chair 1",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 bottom cabinet 35",
+                "utility room 0 top cabinet 60",
+                "living room 0 coffee table 3",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 fridge 20",
+                "pantry room 0 top cabinet 55",
+                "kitchen 0 plant 5",
+                "corridor 0 carpet 13",
+                "pantry room 0 top cabinet 54",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 43",
+                "kitchen 0 counter 49",
+                "kitchen 0 oven 22",
+                "kitchen 0 carpet 34",
+                "kitchen 0 cooktop 64",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 bottom cabinet 26",
+                "corridor 0 table 0",
+                "kitchen 0 chair 10",
+                "living room 0 shelf 15",
+                "living room 0 coffee table 4",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 dishwasher 36",
+                "kitchen 0 chair 11",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 chair 2",
+                "utility room 0 dryer 57",
+                "pantry room 0 counter 53",
+                "kitchen 0 counter 31"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 7,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 278
+    },
+    {
+        "mode": "single",
+        "start": 278,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 bottom cabinet 47, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 fridge 20, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 11, kitchen 0 chair 10, kitchen 0 top cabinet 43, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 bottom cabinet 39. Object tablet 1 found on kitchen 0 table 6. Object lamp 1 found on kitchen 0 table 6 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 4, living room 0 shelf 16, living room 0 chair 2, living room 0 coffee table 3, living room 0 shelf 15. \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object xylitol sweetener 1 found on pantry room 0 top cabinet 54. Object butter dish 1 found on pantry room 0 top cabinet 55. Object donut 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 washer 56, utility room 0 sink 58, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to tablet 1 step 2: look at tablet 1 step 3: pick up tablet 1 step 4: go to living room 0 shelf 15 step 5: look at living room 0 shelf 15 step 6: place tablet 1 on living room 0 shelf 15"
+        },
+        "logs": [
+            {
+                "start": 278,
+                "step_raw": "go to tablet 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "tablet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 333,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 333,
+                "step_raw": "look at tablet 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 334,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 334,
+                "step_raw": "pick up tablet 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "kitchen 0 table 6",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "agent",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 335,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tablet 1": [
+                            "kitchen 0 table 6",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 335,
+                "step_raw": "go to living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "agent",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "agent",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 414,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 414,
+                "step_raw": "look at living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "agent",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "agent",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 415,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 415,
+                "step_raw": "place tablet 1 on living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_1",
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "agent",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "living room 0 shelf 15",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 416,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tablet 1": [
+                            "agent",
+                            "living room 0 shelf 15"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tablet 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "pressure cooker 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hat 1": [
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "butter dish 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tablet 1": "kitchen 0 table 6",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "tablet 1": "living room 0 shelf 15",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "tablet 1": "living room 0 shelf 15",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "tablet 1": "kitchen 0 table 6",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "tablet 1": [
+                    "kitchen 0 table 6",
+                    "living room 0 shelf 15"
+                ]
+            },
+            "count_correct": {
+                "start": 7,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 416
+    },
+    {
+        "mode": "single",
+        "start": 416,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 bottom cabinet 47, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 fridge 20, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 11, kitchen 0 chair 10, kitchen 0 top cabinet 43, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 bottom cabinet 39. Object lamp 1 found on kitchen 0 table 6 \nIn living room 0, found receptacles: living room 0 chair 1, living room 0 coffee table 4, living room 0 shelf 16, living room 0 chair 2, living room 0 coffee table 3, living room 0 shelf 15. Object tablet 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object butter dish 1 found on pantry room 0 top cabinet 55. Object donut 1 found on pantry room 0 fridge 50. Object xylitol sweetener 1 found on pantry room 0 top cabinet 54 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 washer 56, utility room 0 sink 58, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 416,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "tablet 1": "living room 0 shelf 15",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "tablet 1": "living room 0 shelf 15",
+                        "pressure cooker 1": "kitchen 0 microwave 23",
+                        "hat 1": "kitchen 0 fridge 20",
+                        "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "dutch oven 1": "pantry room 0 top cabinet 54",
+                        "butter dish 1": "pantry room 0 top cabinet 55",
+                        "table lamp 1": "pantry room 0 top cabinet 55",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 416,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "tablet 1": [
+                "living room 0 shelf 15",
+                "living room 0 shelf 16"
+            ],
+            "pressure cooker 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "hat 1": [
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "dutch oven 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "butter dish 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "tablet 1": "living room 0 shelf 15",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "tablet 1": "living room 0 shelf 15",
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tablet 1": "living room 0 shelf 15",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "tablet 1": "living room 0 shelf 15",
+                "xylitol sweetener 1": "pantry room 0 top cabinet 54",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "dutch oven 1": "pantry room 0 top cabinet 54",
+                "butter dish 1": "pantry room 0 top cabinet 55",
+                "table lamp 1": "pantry room 0 top cabinet 55",
+                "donut 1": "pantry room 0 fridge 50",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20"
+            },
+            "end": {
+                "pressure cooker 1": "kitchen 0 microwave 23",
+                "hat 1": "kitchen 0 fridge 20"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 8,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 2
+            }
+        },
+        "end": 416
+    }
+]

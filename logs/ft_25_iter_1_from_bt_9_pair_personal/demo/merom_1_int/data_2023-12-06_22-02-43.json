@@ -1,0 +1,2780 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30. \nIn dining room 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bedroom 0\nstep 2: go to bathroom 0\nstep 3: go to child's room 0\nstep 4: go to living room 0\nstep 5: go to dining room 0\nstep 6: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 58,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "racquetball 1",
+                        "chocolate 1",
+                        "hair dryer 1",
+                        "pitcher base 1"
+                    ],
+                    "recs_discovered": [
+                        "childs room 0 stool 5",
+                        "bedroom 0 bed 7",
+                        "childs room 0 bed 1",
+                        "childs room 0 bottom cabinet 2",
+                        "living room 0 floor lamp 33",
+                        "bedroom 0 basket 14",
+                        "bedroom 0 bottom cabinet 12",
+                        "childs room 0 bottom cabinet 6",
+                        "living room 0 mirror 68",
+                        "living room 0 sofa chair 26",
+                        "bedroom 0 bottom cabinet 13",
+                        "bedroom 0 bottom cabinet 8",
+                        "childs room 0 carpet 0",
+                        "childs room 0 sofa chair 4",
+                        "bedroom 0 basket 15"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 58,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 125,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "tea pods 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 trash can 34",
+                        "bathroom 0 bathtub 71",
+                        "bathroom 0 top cabinet 70",
+                        "bathroom 0 sink 72",
+                        "bathroom 0 toilet 69",
+                        "living room 0 carpet 28",
+                        "bedroom 0 bottom cabinet 9",
+                        "bathroom 0 mirror 73"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 125,
+                "step_raw": "go to child's room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 181,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 51",
+                        "kitchen 0 top cabinet 54",
+                        "kitchen 0 trash can 18"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 181,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 255,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "peppermint 1"
+                    ],
+                    "recs_discovered": [
+                        "dining room 0 chair 22",
+                        "dining room 0 chair 23",
+                        "dining room 0 chair 21",
+                        "dining room 0 table 20",
+                        "dining room 0 chair 24",
+                        "dining room 0 plant 29",
+                        "kitchen 0 fridge 57"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 255,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 274,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 dishwasher 52",
+                        "kitchen 0 bottom cabinet 49",
+                        "kitchen 0 sink 53",
+                        "kitchen 0 top cabinet 55"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 274,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_52_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 336,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 50"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "tea pods 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51"
+            ],
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "hat 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "pitcher base 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "bathroom 0 sink 72",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "bathroom 0 sink 72",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "bathroom 0 sink 72"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "bathroom 0 sink 72"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "racquetball 1",
+                "hair dryer 1",
+                "pitcher base 1",
+                "chocolate 1",
+                "tea pods 1",
+                "peppermint 1"
+            ],
+            "recs_discovered": [
+                "childs room 0 stool 5",
+                "childs room 0 bed 1",
+                "dining room 0 chair 24",
+                "kitchen 0 dishwasher 52",
+                "living room 0 sofa chair 26",
+                "kitchen 0 top cabinet 55",
+                "bedroom 0 bottom cabinet 13",
+                "bathroom 0 bathtub 71",
+                "kitchen 0 top cabinet 54",
+                "dining room 0 chair 23",
+                "childs room 0 sofa chair 4",
+                "kitchen 0 bottom cabinet 49",
+                "dining room 0 chair 22",
+                "bedroom 0 basket 14",
+                "bedroom 0 bottom cabinet 12",
+                "childs room 0 bottom cabinet 6",
+                "dining room 0 table 20",
+                "kitchen 0 trash can 18",
+                "bathroom 0 top cabinet 70",
+                "dining room 0 chair 21",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 bottom cabinet 50",
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 fridge 57",
+                "bedroom 0 bed 7",
+                "living room 0 floor lamp 33",
+                "bathroom 0 sink 72",
+                "dining room 0 plant 29",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 mirror 68",
+                "bathroom 0 trash can 34",
+                "living room 0 carpet 28",
+                "kitchen 0 sink 53",
+                "bathroom 0 toilet 69",
+                "childs room 0 carpet 0",
+                "bathroom 0 mirror 73",
+                "bedroom 0 basket 15"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 336
+    },
+    {
+        "mode": "single",
+        "start": 336,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object racquetball 1 found on bedroom 0 bottom cabinet 12. Object chocolate 1 found on bedroom 0 bottom cabinet 12. Object hair dryer 1 found on bedroom 0 bottom cabinet 13 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. Object tea pods 1 found on bathroom 0 sink 72 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object pitcher base 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 mirror 68, living room 0 carpet 28. \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 22, dining room 0 table 20, dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29. Object peppermint 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to tea pods 1\nstep 2: look at tea pods 1\nstep 3: pick up tea pods 1\nstep 4: go to living room 0 bottom cabinet 30\nstep 5: look at living room 0 bottom cabinet 30\nstep 6: place tea pods 1 on living room 0 bottom cabinet 30"
+        },
+        "logs": [
+            {
+                "start": 336,
+                "step_raw": "go to tea pods 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "tea_pods_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 387,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 387,
+                "step_raw": "look at tea pods 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tea_pods_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 390,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 390,
+                "step_raw": "pick up tea pods 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tea_pods_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "bathroom 0 sink 72",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "agent",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 391,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tea pods 1": [
+                            "bathroom 0 sink 72",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 391,
+                "step_raw": "go to living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "agent",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "agent",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 453,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 453,
+                "step_raw": "look at living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "agent",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "agent",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 454,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 454,
+                "step_raw": "place tea pods 1 on living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tea_pods_1",
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "agent",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 455,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tea pods 1": [
+                            "agent",
+                            "living room 0 bottom cabinet 30"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "tea pods 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51"
+            ],
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "hat 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "pitcher base 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "bathroom 0 sink 72",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "bathroom 0 sink 72"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "tea pods 1": [
+                    "bathroom 0 sink 72",
+                    "living room 0 bottom cabinet 30"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 455
+    },
+    {
+        "mode": "single",
+        "start": 455,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object racquetball 1 found on bedroom 0 bottom cabinet 12. Object chocolate 1 found on bedroom 0 bottom cabinet 12. Object hair dryer 1 found on bedroom 0 bottom cabinet 13 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object pitcher base 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 mirror 68, living room 0 carpet 28. Object tea pods 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 22, dining room 0 table 20, dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29. Object peppermint 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to pitcher base 1\nstep 2: look at pitcher base 1\nstep 3: pick up pitcher base 1\nstep 4: go to living room 0 bottom cabinet 30\nstep 5: look at living room 0 bottom cabinet 30\nstep 6: place pitcher base 1 on living room 0 bottom cabinet 30"
+        },
+        "logs": [
+            {
+                "start": 455,
+                "step_raw": "go to pitcher base 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 541,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 541,
+                "step_raw": "look at pitcher base 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 542,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 542,
+                "step_raw": "pick up pitcher base 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "childs room 0 bottom cabinet 2",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "agent",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 543,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "pitcher base 1": [
+                            "childs room 0 bottom cabinet 2",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 543,
+                "step_raw": "go to living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "agent",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "agent",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 617,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 617,
+                "step_raw": "look at living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "agent",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "agent",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 618,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 618,
+                "step_raw": "place pitcher base 1 on living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "agent",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 619,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "pitcher base 1": [
+                            "agent",
+                            "living room 0 bottom cabinet 30"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "tea pods 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51"
+            ],
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "hat 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "pitcher base 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "childs room 0 bottom cabinet 2",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "pitcher base 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "pitcher base 1": [
+                    "childs room 0 bottom cabinet 2",
+                    "living room 0 bottom cabinet 30"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 3
+            }
+        },
+        "end": 619
+    },
+    {
+        "mode": "single",
+        "start": 619,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object chocolate 1 found on bedroom 0 bottom cabinet 12. Object racquetball 1 found on bedroom 0 bottom cabinet 12. Object hair dryer 1 found on bedroom 0 bottom cabinet 13 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 mirror 68, living room 0 carpet 28. Object tea pods 1 found on living room 0 bottom cabinet 30. Object pitcher base 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 22, dining room 0 table 20, dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29. Object peppermint 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to hair dryer 1\nstep 2: look at hair dryer 1\nstep 3: pick up hair dryer 1\nstep 4: go to living room 0 bottom cabinet 30\nstep 5: look at living room 0 bottom cabinet 30\nstep 6: place hair dryer 1 on living room 0 bottom cabinet 30"
+        },
+        "logs": [
+            {
+                "start": 619,
+                "step_raw": "go to hair dryer 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "hair_dryer_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 679,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 679,
+                "step_raw": "look at hair dryer 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "hair_dryer_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    }
+                },
+                "end": 679,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 679,
+                "step_raw": "pick up hair dryer 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "hair_dryer_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "bedroom 0 bottom cabinet 13"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "agent"
+                    }
+                },
+                "end": 680,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "hair dryer 1": [
+                            "bedroom 0 bottom cabinet 13",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 680,
+                "step_raw": "go to living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "agent"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "agent"
+                    }
+                },
+                "end": 742,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 742,
+                "step_raw": "look at living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "agent"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "agent"
+                    }
+                },
+                "end": 743,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 743,
+                "step_raw": "place hair dryer 1 on living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "hair_dryer_1",
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "agent"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 744,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "hair dryer 1": [
+                            "agent",
+                            "living room 0 bottom cabinet 30"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "tea pods 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51"
+            ],
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "hat 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "pitcher base 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "bedroom 0 bottom cabinet 13"
+            },
+            "end": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "toaster 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "pitcher base 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "hair dryer 1": [
+                    "bedroom 0 bottom cabinet 13",
+                    "living room 0 bottom cabinet 30"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 4
+            }
+        },
+        "end": 744
+    },
+    {
+        "mode": "single",
+        "start": 744,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object chocolate 1 found on bedroom 0 bottom cabinet 12. Object racquetball 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 mirror 68, living room 0 carpet 28. Object tea pods 1 found on living room 0 bottom cabinet 30. Object pitcher base 1 found on living room 0 bottom cabinet 30. Object hair dryer 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 22, dining room 0 table 20, dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29. Object peppermint 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to racquetball 1\nstep 2: look at racquetball 1\nstep 3: pick up racquetball 1\nstep 4: go to childs room 0 bottom cabinet 6\nstep 5: look at childs room 0 bottom cabinet 6\nstep 6: place racquetball 1 on childs room 0 bottom cabinet 6"
+        },
+        "logs": [
+            {
+                "start": 744,
+                "step_raw": "go to racquetball 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 804,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 804,
+                "step_raw": "look at racquetball 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 804,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 804,
+                "step_raw": "pick up racquetball 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "bedroom 0 bottom cabinet 12",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "agent",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 805,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "bedroom 0 bottom cabinet 12",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 805,
+                "step_raw": "go to childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "agent",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "agent",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 856,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 856,
+                "step_raw": "look at childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "agent",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "agent",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 858,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 858,
+                "step_raw": "place racquetball 1 on childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "racquetball_1",
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "agent",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 859,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "racquetball 1": [
+                            "agent",
+                            "childs room 0 bottom cabinet 6"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "tea pods 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51"
+            ],
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "hat 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "pitcher base 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "childs room 0 bottom cabinet 6",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "bedroom 0 bottom cabinet 12",
+                "hat 1": "kitchen 0 shelf 58",
+                "toaster 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "hat 1": "kitchen 0 shelf 58",
+                "toaster 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "racquetball 1": "childs room 0 bottom cabinet 6",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "racquetball 1": [
+                    "bedroom 0 bottom cabinet 12",
+                    "childs room 0 bottom cabinet 6"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 5
+            }
+        },
+        "end": 859
+    },
+    {
+        "mode": "single",
+        "start": 859,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. Object chocolate 1 found on bedroom 0 bottom cabinet 12 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object racquetball 1 found on childs room 0 bottom cabinet 6 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 mirror 68, living room 0 carpet 28. Object tea pods 1 found on living room 0 bottom cabinet 30. Object pitcher base 1 found on living room 0 bottom cabinet 30. Object hair dryer 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 chair 22, dining room 0 table 20, dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29. Object peppermint 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 top cabinet 55, kitchen 0 bottom cabinet 50.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to chocolate 1\nstep 2: look at chocolate 1\nstep 3: pick up chocolate 1\nstep 4: go to living room 0 bottom cabinet 30\nstep 5: look at living room 0 bottom cabinet 30\nstep 6: place chocolate 1 on living room 0 bottom cabinet 30"
+        },
+        "logs": [
+            {
+                "start": 859,
+                "step_raw": "go to chocolate 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "chocolate_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 910,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 910,
+                "step_raw": "look at chocolate 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "chocolate_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 910,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 910,
+                "step_raw": "pick up chocolate 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "chocolate_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "bedroom 0 bottom cabinet 12",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "agent",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 911,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "chocolate 1": [
+                            "bedroom 0 bottom cabinet 12",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 911,
+                "step_raw": "go to living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "agent",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "agent",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 973,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 973,
+                "step_raw": "look at living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "agent",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "agent",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 974,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 974,
+                "step_raw": "place chocolate 1 on living room 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "chocolate_1",
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "agent",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    },
+                    "end": {
+                        "peppermint 1": "dining room 0 table 20",
+                        "chocolate 1": "living room 0 bottom cabinet 30",
+                        "tea pods 1": "living room 0 bottom cabinet 30",
+                        "racquetball 1": "childs room 0 bottom cabinet 6",
+                        "hat 1": "kitchen 0 shelf 58",
+                        "pitcher base 1": "living room 0 bottom cabinet 30",
+                        "toaster 1": "kitchen 0 shelf 58",
+                        "hair dryer 1": "living room 0 bottom cabinet 30"
+                    }
+                },
+                "end": 975,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "chocolate 1": [
+                            "agent",
+                            "living room 0 bottom cabinet 30"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chocolate 1": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "tea pods 1": [
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51"
+            ],
+            "racquetball 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "hat 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "pitcher base 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "childs room 0 bottom cabinet 6",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "living room 0 bottom cabinet 30",
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "childs room 0 bottom cabinet 6",
+                "hat 1": "kitchen 0 shelf 58",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "toaster 1": "kitchen 0 shelf 58",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "hat 1": "kitchen 0 shelf 58",
+                "toaster 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "tea pods 1": "living room 0 bottom cabinet 30",
+                "hat 1": "kitchen 0 shelf 58",
+                "toaster 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "bedroom 0 bottom cabinet 12",
+                "racquetball 1": "childs room 0 bottom cabinet 6",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            },
+            "end": {
+                "peppermint 1": "dining room 0 table 20",
+                "chocolate 1": "living room 0 bottom cabinet 30",
+                "racquetball 1": "childs room 0 bottom cabinet 6",
+                "pitcher base 1": "living room 0 bottom cabinet 30",
+                "hair dryer 1": "living room 0 bottom cabinet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "chocolate 1": [
+                    "bedroom 0 bottom cabinet 12",
+                    "living room 0 bottom cabinet 30"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 975
+    }
+]

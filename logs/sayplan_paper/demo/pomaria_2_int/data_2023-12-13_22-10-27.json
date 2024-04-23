@@ -1,0 +1,3152 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "bathroom 0 carpet 15",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "bathroom 0 carpet 15",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 16,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "camera 1",
+                        "picture frame 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 table 7"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "bathroom 0 carpet 15",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "bathroom 0 carpet 15",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "bathroom 0 carpet 15",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "bathroom 0 carpet 15",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "camera 1",
+                "picture frame 1"
+            ],
+            "recs_discovered": [
+                "bathroom 0 table 7"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 16
+    },
+    {
+        "mode": "sayplan",
+        "start": 16,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: look at picture frame 1\nstep 3: pick up picture frame 1\nstep 4: go to bedroom 0\nstep 5: go to bedroom 0 table 7\nstep 6: look at bedroom 0 table 7\nstep 7: place picture frame 1 on bedroom 0 table 7\nstep 8: go to bathroom 0\nstep 9: look at camera 1\nstep 10: pick up camera 1"
+        },
+        "logs": [
+            {
+                "start": 16,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "bathroom 0 carpet 15",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "bathroom 0 carpet 15",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 16,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 16,
+                "step_raw": "look at picture frame 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "picture_frame_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "bathroom 0 carpet 15",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "bathroom 0 carpet 15",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 28,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 22",
+                        "bathroom 0 bottom cabinet 16",
+                        "bedroom 0 carpet 12",
+                        "bathroom 0 table 8"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 28,
+                "step_raw": "pick up picture frame 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "picture_frame_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "bathroom 0 carpet 15",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 29,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "picture frame 1": [
+                            "bathroom 0 carpet 15",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 29,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bed_11_3.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 68,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "hair dryer 1",
+                        "fork 1",
+                        "router 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 bed 11",
+                        "bedroom 0 shelf 9",
+                        "bedroom 0 shelf 13",
+                        "bedroom 0 sofa chair 2",
+                        "bedroom 0 bottom cabinet 10",
+                        "bedroom 0 chair 1"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 68,
+                "step_raw": "go to bedroom 0 table 7",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 68,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 68,
+                "step_raw": "look at bedroom 0 table 7",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "bedroom 0 table 7",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 68,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 68,
+                "step_raw": "place picture frame 1 on bedroom 0 table 7",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "bedroom 0 table 7",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 68,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 68,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 116,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "shoe 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 plant 5",
+                        "bedroom 0 standing tv 3",
+                        "bedroom 0 floor lamp 4",
+                        "bathroom 0 shower 24",
+                        "bedroom 0 plant 6"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 116,
+                "step_raw": "look at camera 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "camera_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 122,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 122,
+                "step_raw": "pick up camera 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "camera_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "bathroom 0 carpet 15",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "bathroom 0 carpet 15",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "fork 1",
+                "hair dryer 1",
+                "router 1",
+                "shoe 1"
+            ],
+            "recs_discovered": [
+                "bedroom 0 carpet 12",
+                "bedroom 0 plant 5",
+                "bedroom 0 floor lamp 4",
+                "bathroom 0 mirror 22",
+                "bedroom 0 sofa chair 2",
+                "bedroom 0 plant 6",
+                "bathroom 0 table 8",
+                "bedroom 0 chair 1",
+                "bathroom 0 bottom cabinet 16",
+                "bedroom 0 shelf 9",
+                "bedroom 0 shelf 13",
+                "bedroom 0 standing tv 3",
+                "bathroom 0 shower 24",
+                "bedroom 0 bed 11",
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "objects_moved": {
+                "picture frame 1": [
+                    "bathroom 0 carpet 15",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    },
+    {
+        "mode": "sayplan",
+        "start": 123,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding picture frame 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: go to object camera 1\nstep 3: look at object camera 1\nstep 4: pick up object camera 1\nstep 5: go to receptacle bathroom 0 table 7\nstep 6: look at receptacle bathroom 0 table 7\nstep 7: place object camera 1 on receptacle bathroom 0 table 7\nstep 8: mission complete"
+        },
+        "logs": [
+            {
+                "start": 123,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 123,
+                "step_raw": "go to object camera 1",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 123,
+                "step_raw": "look at object camera 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "object camera 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 123,
+                "step_raw": "pick up object camera 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "object camera 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 123,
+                "step_raw": "go to receptacle bathroom 0 table 7",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 123,
+                "step_raw": "look at receptacle bathroom 0 table 7",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "receptacle bathroom 0 table 7",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 123,
+                "step_raw": "place object camera 1 on receptacle bathroom 0 table 7",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "receptacle bathroom 0 table 7",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 123,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    },
+                    "end": {
+                        "picture frame 1": "agent",
+                        "fork 1": "bedroom 0 sofa chair 2",
+                        "hat 1": "bathroom 0 toilet 25",
+                        "hair dryer 1": "bedroom 0 sofa chair 2",
+                        "camera 1": "bathroom 0 table 7",
+                        "shoe 1": "bedroom 0 shelf 13",
+                        "router 1": "bedroom 0 bottom cabinet 10"
+                    }
+                },
+                "end": 123,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "hat 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "hair dryer 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "camera 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "router 1": [
+                "bedroom 0 bottom cabinet 10"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7",
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 shelf 13",
+                "router 1": "bedroom 0 bottom cabinet 10"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "picture frame 1": "agent",
+                "fork 1": "bedroom 0 sofa chair 2",
+                "hat 1": "bathroom 0 toilet 25",
+                "hair dryer 1": "bedroom 0 sofa chair 2",
+                "camera 1": "bathroom 0 table 7"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 123
+    }
+]

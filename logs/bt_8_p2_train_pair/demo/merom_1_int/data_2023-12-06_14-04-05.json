@@ -1,0 +1,2349 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 top cabinet 54. \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to dining room 0\nstep 3: go to bedroom 0\nstep 4: go to bathroom 0\nstep 5: go to childs room 0\nstep 6: go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_49_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 79,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "chopping board 1",
+                        "diaper pack 1",
+                        "parchment sheet 1",
+                        "spoon rest 1",
+                        "sponge dish 1",
+                        "dishtowel 1"
+                    ],
+                    "recs_discovered": [
+                        "childs room 0 bottom cabinet 2",
+                        "kitchen 0 shelf 58",
+                        "living room 0 carpet 28",
+                        "bedroom 0 bottom cabinet 13",
+                        "living room 0 mirror 68",
+                        "childs room 0 bed 1",
+                        "living room 0 bottom cabinet 30",
+                        "kitchen 0 bottom cabinet 50",
+                        "kitchen 0 top cabinet 55",
+                        "childs room 0 carpet 0",
+                        "dining room 0 chair 21",
+                        "living room 0 carpet 62",
+                        "living room 0 coffee table 27",
+                        "living room 0 sofa chair 26",
+                        "living room 0 floor lamp 33",
+                        "kitchen 0 shelf 61",
+                        "bedroom 0 basket 15",
+                        "living room 0 floor lamp 31",
+                        "kitchen 0 stove 59",
+                        "dining room 0 chair 22",
+                        "childs room 0 stool 5",
+                        "childs room 0 sofa chair 4",
+                        "bedroom 0 bottom cabinet 12",
+                        "kitchen 0 range hood 60",
+                        "kitchen 0 fridge 57",
+                        "living room 0 towel rack 66",
+                        "kitchen 0 trash can 18"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 79,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 162,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "towel 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 bottom cabinet 9",
+                        "bathroom 0 toilet 69",
+                        "bedroom 0 bed 7",
+                        "bathroom 0 sink 72",
+                        "bathroom 0 bathtub 71",
+                        "bathroom 0 top cabinet 70"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 162,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 228,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "sponge 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 bottom cabinet 8",
+                        "bedroom 0 basket 14",
+                        "childs room 0 bottom cabinet 6"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 228,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 297,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "washcloth 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 73",
+                        "bathroom 0 trash can 34"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 297,
+                "step_raw": "go to childs room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 355,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "bath sheet 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 355,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-bottom_cabinet_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 436,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "bath sheet 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "living room 0 bottom cabinet 30",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "parchment sheet 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "washcloth 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chopping board 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge dish 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "dishtowel 1": [
+                "childs room 0 carpet 0",
+                "childs room 0 sofa chair 4",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bedroom 0 bed 7",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bedroom 0 bed 7",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bedroom 0 bed 7",
+                "towel 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bedroom 0 bed 7",
+                "towel 1": "living room 0 carpet 28"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "sponge 1",
+                "chopping board 1",
+                "towel 1",
+                "diaper pack 1",
+                "parchment sheet 1",
+                "washcloth 1",
+                "bath sheet 1",
+                "spoon rest 1",
+                "sponge dish 1",
+                "dishtowel 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 shelf 58",
+                "living room 0 carpet 28",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 mirror 68",
+                "childs room 0 bed 1",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 sink 72",
+                "bedroom 0 bed 7",
+                "living room 0 coffee table 27",
+                "bathroom 0 mirror 73",
+                "kitchen 0 shelf 61",
+                "bedroom 0 basket 15",
+                "living room 0 floor lamp 31",
+                "dining room 0 chair 22",
+                "childs room 0 bottom cabinet 6",
+                "bedroom 0 bottom cabinet 8",
+                "kitchen 0 range hood 60",
+                "kitchen 0 fridge 57",
+                "living room 0 towel rack 66",
+                "bathroom 0 bathtub 71",
+                "childs room 0 bottom cabinet 2",
+                "bathroom 0 toilet 69",
+                "bedroom 0 bottom cabinet 13",
+                "bathroom 0 top cabinet 70",
+                "kitchen 0 bottom cabinet 50",
+                "dining room 0 chair 21",
+                "childs room 0 carpet 0",
+                "living room 0 carpet 62",
+                "living room 0 floor lamp 33",
+                "living room 0 sofa chair 26",
+                "kitchen 0 stove 59",
+                "childs room 0 stool 5",
+                "childs room 0 sofa chair 4",
+                "bedroom 0 bottom cabinet 12",
+                "bathroom 0 trash can 34",
+                "bedroom 0 basket 14",
+                "kitchen 0 trash can 18"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 436
+    },
+    {
+        "mode": "single",
+        "start": 436,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 basket 14, bedroom 0 bottom cabinet 8. Object sponge 1 found on bedroom 0 bed 7 \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 sink 72, bathroom 0 toilet 69, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 mirror 73. Object washcloth 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object bath sheet 1 found on childs room 0 bed 1. Object spoon rest 1 found on childs room 0 bottom cabinet 2. Object parchment sheet 1 found on childs room 0 bottom cabinet 2. Object diaper pack 1 found on childs room 0 sofa chair 4 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. Object towel 1 found on living room 0 carpet 28 \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59, kitchen 0 range hood 60, kitchen 0 shelf 58, kitchen 0 shelf 61. Object dishtowel 1 found on kitchen 0 top cabinet 54. Object chopping board 1 found on kitchen 0 bottom cabinet 49. Object sponge dish 1 found on kitchen 0 bottom cabinet 49 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to sponge 1\nstep 2: look at sponge 1\nstep 3: pick up sponge 1\nstep 4: go to bathroom 0 top cabinet 70\nstep 5: look at bathroom 0 top cabinet 70\nstep 6: place sponge 1 on bathroom 0 top cabinet 70"
+        },
+        "logs": [
+            {
+                "start": 436,
+                "step_raw": "go to sponge 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 511,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 511,
+                "step_raw": "look at sponge 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 511,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 511,
+                "step_raw": "pick up sponge 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bedroom 0 bed 7",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "agent",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 512,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sponge 1": [
+                            "bedroom 0 bed 7",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 512,
+                "step_raw": "go to bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "agent",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "agent",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 561,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 561,
+                "step_raw": "look at bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "agent",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "agent",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 561,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 561,
+                "step_raw": "place sponge 1 on bathroom 0 top cabinet 70",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sponge_1",
+                    "target_receptacle": "bathroom_0-top_cabinet_70_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "agent",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 562,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sponge 1": [
+                            "agent",
+                            "bathroom 0 top cabinet 70"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "bath sheet 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "living room 0 bottom cabinet 30",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "parchment sheet 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "washcloth 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chopping board 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge dish 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "dishtowel 1": [
+                "childs room 0 carpet 0",
+                "childs room 0 sofa chair 4",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bedroom 0 bed 7",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bedroom 0 bed 7",
+                "towel 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "towel 1": "living room 0 carpet 28"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "sponge 1": [
+                    "bedroom 0 bed 7",
+                    "bathroom 0 top cabinet 70"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 4
+            }
+        },
+        "end": 562
+    },
+    {
+        "mode": "single",
+        "start": 562,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 basket 14, bedroom 0 bottom cabinet 8. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 sink 72, bathroom 0 toilet 69, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 mirror 73. Object washcloth 1 found on bathroom 0 top cabinet 70. Object sponge 1 found on bathroom 0 top cabinet 70 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object bath sheet 1 found on childs room 0 bed 1. Object diaper pack 1 found on childs room 0 sofa chair 4. Object parchment sheet 1 found on childs room 0 bottom cabinet 2. Object spoon rest 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. Object towel 1 found on living room 0 carpet 28 \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59, kitchen 0 range hood 60, kitchen 0 shelf 58, kitchen 0 shelf 61. Object chopping board 1 found on kitchen 0 bottom cabinet 49. Object sponge dish 1 found on kitchen 0 bottom cabinet 49. Object dishtowel 1 found on kitchen 0 top cabinet 54 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to washcloth 1\nstep 2: look at washcloth 1\nstep 3: pick up washcloth 1\nstep 4: go to bathroom 0 bathtub 71\nstep 5: look at bathroom 0 bathtub 71\nstep 6: place washcloth 1 on bathroom 0 bathtub 71"
+        },
+        "logs": [
+            {
+                "start": 562,
+                "step_raw": "go to washcloth 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "washcloth_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 562,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 562,
+                "step_raw": "look at washcloth 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "washcloth_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 562,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 562,
+                "step_raw": "pick up washcloth 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "washcloth_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 top cabinet 70",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "agent",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 563,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "washcloth 1": [
+                            "bathroom 0 top cabinet 70",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 563,
+                "step_raw": "go to bathroom 0 bathtub 71",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "agent",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "agent",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 573,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 573,
+                "step_raw": "look at bathroom 0 bathtub 71",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "agent",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "agent",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 573,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 573,
+                "step_raw": "place washcloth 1 on bathroom 0 bathtub 71",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "washcloth_1",
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "agent",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 574,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "washcloth 1": [
+                            "agent",
+                            "bathroom 0 bathtub 71"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "bath sheet 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "living room 0 bottom cabinet 30",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "parchment sheet 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "washcloth 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chopping board 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge dish 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "dishtowel 1": [
+                "childs room 0 carpet 0",
+                "childs room 0 sofa chair 4",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 bathtub 71",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 top cabinet 70",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "towel 1": "living room 0 carpet 28"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "towel 1": "living room 0 carpet 28",
+                "washcloth 1": "bathroom 0 bathtub 71"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "washcloth 1": [
+                    "bathroom 0 top cabinet 70",
+                    "bathroom 0 bathtub 71"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 5
+            }
+        },
+        "end": 574
+    },
+    {
+        "mode": "single",
+        "start": 574,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 basket 14, bedroom 0 bottom cabinet 8. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 sink 72, bathroom 0 toilet 69, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 mirror 73. Object sponge 1 found on bathroom 0 top cabinet 70. Object washcloth 1 found on bathroom 0 bathtub 71 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object bath sheet 1 found on childs room 0 bed 1. Object diaper pack 1 found on childs room 0 sofa chair 4. Object parchment sheet 1 found on childs room 0 bottom cabinet 2. Object spoon rest 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. Object towel 1 found on living room 0 carpet 28 \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59, kitchen 0 range hood 60, kitchen 0 shelf 58, kitchen 0 shelf 61. Object chopping board 1 found on kitchen 0 bottom cabinet 49. Object sponge dish 1 found on kitchen 0 bottom cabinet 49. Object dishtowel 1 found on kitchen 0 top cabinet 54 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bath sheet 1\nstep 2: look at bath sheet 1\nstep 3: pick up bath sheet 1\nstep 4: go to childs room 0 bottom cabinet 6\nstep 5: look at childs room 0 bottom cabinet 6\nstep 6: place bath sheet 1 on childs room 0 bottom cabinet 6"
+        },
+        "logs": [
+            {
+                "start": 574,
+                "step_raw": "go to bath sheet 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "bath_sheet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 632,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 632,
+                "step_raw": "look at bath sheet 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "bath_sheet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 632,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 632,
+                "step_raw": "pick up bath sheet 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "bath_sheet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bed 1",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "agent",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 633,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "bath sheet 1": [
+                            "childs room 0 bed 1",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 633,
+                "step_raw": "go to childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "agent",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "agent",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 658,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 658,
+                "step_raw": "look at childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "agent",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "agent",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 658,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 658,
+                "step_raw": "place bath sheet 1 on childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "bath_sheet_1",
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "agent",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bottom cabinet 6",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 659,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "bath sheet 1": [
+                            "agent",
+                            "childs room 0 bottom cabinet 6"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "bath sheet 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "living room 0 bottom cabinet 30",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "parchment sheet 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "washcloth 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chopping board 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge dish 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "dishtowel 1": [
+                "childs room 0 carpet 0",
+                "childs room 0 sofa chair 4",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 bathtub 71",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bottom cabinet 6",
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 bathtub 71",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bed 1",
+                "towel 1": "living room 0 carpet 28",
+                "washcloth 1": "bathroom 0 bathtub 71"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bottom cabinet 6",
+                "towel 1": "living room 0 carpet 28",
+                "washcloth 1": "bathroom 0 bathtub 71"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "bath sheet 1": [
+                    "childs room 0 bed 1",
+                    "childs room 0 bottom cabinet 6"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 659
+    },
+    {
+        "mode": "single",
+        "start": 659,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 bed 7, bedroom 0 bottom cabinet 9, bedroom 0 basket 14, bedroom 0 bottom cabinet 8. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 sink 72, bathroom 0 toilet 69, bathroom 0 top cabinet 70, bathroom 0 trash can 34, bathroom 0 mirror 73. Object sponge 1 found on bathroom 0 top cabinet 70. Object washcloth 1 found on bathroom 0 bathtub 71 \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object spoon rest 1 found on childs room 0 bottom cabinet 2. Object parchment sheet 1 found on childs room 0 bottom cabinet 2. Object diaper pack 1 found on childs room 0 sofa chair 4. Object bath sheet 1 found on childs room 0 bottom cabinet 6 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 bottom cabinet 30, living room 0 towel rack 66, living room 0 carpet 28. Object towel 1 found on living room 0 carpet 28 \nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59, kitchen 0 range hood 60, kitchen 0 shelf 58, kitchen 0 shelf 61. Object chopping board 1 found on kitchen 0 bottom cabinet 49. Object sponge dish 1 found on kitchen 0 bottom cabinet 49. Object dishtowel 1 found on kitchen 0 top cabinet 54 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 659,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bottom cabinet 6",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    },
+                    "end": {
+                        "spoon rest 1": "childs room 0 bottom cabinet 2",
+                        "diaper pack 1": "childs room 0 sofa chair 4",
+                        "bath sheet 1": "childs room 0 bottom cabinet 6",
+                        "sponge 1": "bathroom 0 top cabinet 70",
+                        "towel 1": "living room 0 carpet 28",
+                        "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                        "washcloth 1": "bathroom 0 bathtub 71",
+                        "chopping board 1": "kitchen 0 bottom cabinet 49",
+                        "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                        "dishtowel 1": "kitchen 0 top cabinet 54"
+                    }
+                },
+                "end": 659,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "spoon rest 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "diaper pack 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "bath sheet 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "living room 0 bottom cabinet 30",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "bathroom 0 top cabinet 70"
+            ],
+            "sponge 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "towel 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "parchment sheet 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "washcloth 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "chopping board 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "sponge dish 1": [
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "dishtowel 1": [
+                "childs room 0 carpet 0",
+                "childs room 0 sofa chair 4",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bottom cabinet 6",
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 bathtub 71",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bottom cabinet 6",
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "towel 1": "living room 0 carpet 28",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "washcloth 1": "bathroom 0 bathtub 71",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            },
+            "end": {
+                "sponge 1": "bathroom 0 top cabinet 70",
+                "parchment sheet 1": "childs room 0 bottom cabinet 2",
+                "chopping board 1": "kitchen 0 bottom cabinet 49",
+                "sponge dish 1": "kitchen 0 bottom cabinet 49",
+                "dishtowel 1": "kitchen 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bottom cabinet 6",
+                "towel 1": "living room 0 carpet 28",
+                "washcloth 1": "bathroom 0 bathtub 71"
+            },
+            "end": {
+                "spoon rest 1": "childs room 0 bottom cabinet 2",
+                "diaper pack 1": "childs room 0 sofa chair 4",
+                "bath sheet 1": "childs room 0 bottom cabinet 6",
+                "towel 1": "living room 0 carpet 28",
+                "washcloth 1": "bathroom 0 bathtub 71"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 659
+    }
+]

@@ -1,0 +1,723 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 16,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 sink 18",
+                        "bathroom 0 mirror 23",
+                        "bathroom 0 bottom cabinet 20",
+                        "bathroom 0 sink 19",
+                        "bathroom 0 carpet 15"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "string lights 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "antidepressant 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "sparkling water 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "lamp 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "pepsi can pack 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "cracker box 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 table 7",
+                "medicine 1": "bedroom 0 chair 1",
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            },
+            "end": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 table 7",
+                "medicine 1": "bedroom 0 chair 1",
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            },
+            "end": {
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 table 7",
+                "medicine 1": "bedroom 0 chair 1"
+            },
+            "end": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 table 7",
+                "medicine 1": "bedroom 0 chair 1"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "bathroom 0 sink 18",
+                "bathroom 0 mirror 23",
+                "bathroom 0 bottom cabinet 20",
+                "bathroom 0 sink 19",
+                "bathroom 0 carpet 15"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 16
+    },
+    {
+        "mode": "sayplan",
+        "start": 16,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: go to shoe 1\nstep 3: look at shoe 1\nstep 4: pick up shoe 1\nstep 5: go to bathroom 0 bathtub 14\nstep 6: look at bathroom 0 bathtub 14\nstep 7: place shoe 1 on bathroom 0 bathtub 14\nmission complete"
+        },
+        "logs": [
+            {
+                "start": 16,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 16,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 16,
+                "step_raw": "go to shoe 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "shoe_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 32,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 32,
+                "step_raw": "look at shoe 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "shoe_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 33,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 33,
+                "step_raw": "pick up shoe 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "shoe_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 table 7",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "agent",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 34,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "shoe 1": [
+                            "bathroom 0 table 7",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 34,
+                "step_raw": "go to bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "agent",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "agent",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 53,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 53,
+                "step_raw": "look at bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "agent",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "agent",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 55,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 55,
+                "step_raw": "place shoe 1 on bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "shoe_1",
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "agent",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 bathtub 14",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 56,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "shoe 1": [
+                            "agent",
+                            "bathroom 0 bathtub 14"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 56,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 bathtub 14",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    },
+                    "end": {
+                        "string lights 1": "bathroom 0 toilet 25",
+                        "shoe 1": "bathroom 0 bathtub 14",
+                        "medicine 1": "bedroom 0 chair 1",
+                        "antidepressant 1": "bathroom 0 top cabinet 26",
+                        "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                        "lamp 1": "bedroom 0 shelf 13",
+                        "light bulb 1": "bathroom 0 top cabinet 26",
+                        "pepsi can pack 1": "bedroom 0 shelf 13",
+                        "cracker box 1": "bedroom 0 shelf 9"
+                    }
+                },
+                "end": 56,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "string lights 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "antidepressant 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "sparkling water 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "lamp 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "pepsi can pack 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "cracker box 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 table 7",
+                "medicine 1": "bedroom 0 chair 1",
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            },
+            "end": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 bathtub 14",
+                "medicine 1": "bedroom 0 chair 1",
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            },
+            "end": {
+                "antidepressant 1": "bathroom 0 top cabinet 26",
+                "sparkling water 1": "bedroom 0 bottom cabinet 10",
+                "lamp 1": "bedroom 0 shelf 13",
+                "light bulb 1": "bathroom 0 top cabinet 26",
+                "pepsi can pack 1": "bedroom 0 shelf 13",
+                "cracker box 1": "bedroom 0 shelf 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 table 7",
+                "medicine 1": "bedroom 0 chair 1"
+            },
+            "end": {
+                "string lights 1": "bathroom 0 toilet 25",
+                "shoe 1": "bathroom 0 bathtub 14",
+                "medicine 1": "bedroom 0 chair 1"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "shoe 1": [
+                    "bathroom 0 table 7",
+                    "bathroom 0 bathtub 14"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 56
+    }
+]

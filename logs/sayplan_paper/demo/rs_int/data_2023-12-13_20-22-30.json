@@ -1,0 +1,3317 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 19,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "candle holder 1",
+                        "vase 1",
+                        "plant 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 chair 12",
+                        "living room 0 table 18",
+                        "living room 0 stool 4",
+                        "living room 0 coffee table 5",
+                        "bathroom 0 shower 31",
+                        "living room 0 carpet 27",
+                        "living room 0 office chair 17"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "candle holder 1",
+                "vase 1",
+                "plant 1"
+            ],
+            "recs_discovered": [
+                "living room 0 chair 12",
+                "living room 0 table 18",
+                "living room 0 coffee table 5",
+                "bathroom 0 shower 31",
+                "living room 0 office chair 17",
+                "living room 0 carpet 27",
+                "living room 0 stool 4"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 19
+    },
+    {
+        "mode": "sayplan",
+        "start": 19,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: go to vase 1\nstep 3: look at vase 1\nstep 4: pick up vase 1\nstep 5: go to living room 0 table 18\nstep 6: look at living room 0 table 18\nstep 7: place vase 1 on living room 0 table 18\nstep 8: go to candle holder 1\nstep 9: look at candle holder 1\nstep 10: pick up candle holder 1"
+        },
+        "logs": [
+            {
+                "start": 19,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 19,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 19,
+                "step_raw": "go to vase 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "vase_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 50,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "dispensing closure 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 loudspeaker 16",
+                        "living room 0 chair 11",
+                        "living room 0 standing tv 15",
+                        "living room 0 table 9"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 50,
+                "step_raw": "look at vase 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "vase_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 55,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 55,
+                "step_raw": "pick up vase 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "vase_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 56,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "vase 1": [
+                            "living room 0 table 18",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 56,
+                "step_raw": "go to living room 0 table 18",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 56,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 56,
+                "step_raw": "look at living room 0 table 18",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 56,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 56,
+                "step_raw": "place vase 1 on living room 0 table 18",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "vase_1",
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 57,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 57,
+                "step_raw": "go to candle holder 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 57,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 57,
+                "step_raw": "look at candle holder 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 58,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 58,
+                "step_raw": "pick up candle holder 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 59,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "dispensing closure 1"
+            ],
+            "recs_discovered": [
+                "living room 0 loudspeaker 16",
+                "living room 0 chair 11",
+                "living room 0 standing tv 15",
+                "living room 0 table 9"
+            ],
+            "objects_moved": {
+                "vase 1": [
+                    "living room 0 table 18",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 59
+    },
+    {
+        "mode": "sayplan",
+        "start": 59,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding vase 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: go to dispensing closure 1\nstep 3: look at dispensing closure 1\nstep 4: pick up dispensing closure 1\nstep 5: go to living room 0 table 18\nstep 6: look at living room 0 table 18\nstep 7: place dispensing closure 1 on living room 0 table 18"
+        },
+        "logs": [
+            {
+                "start": 59,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 92,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "peppermint 1",
+                        "pepsi can pack 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 chair 10"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 92,
+                "step_raw": "go to dispensing closure 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 119,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 119,
+                "step_raw": "look at dispensing closure 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 120,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 120,
+                "step_raw": "pick up dispensing closure 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 121,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 121,
+                "step_raw": "go to living room 0 table 18",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 143,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 143,
+                "step_raw": "look at living room 0 table 18",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 146,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 146,
+                "step_raw": "place dispensing closure 1 on living room 0 table 18",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 147,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "vase 1": [
+                            "agent",
+                            "living room 0 table 18"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "peppermint 1",
+                "pepsi can pack 1"
+            ],
+            "recs_discovered": [
+                "living room 0 chair 10"
+            ],
+            "objects_moved": {
+                "vase 1": [
+                    "agent",
+                    "living room 0 table 18"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 147
+    },
+    {
+        "mode": "sayplan",
+        "start": 147,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 147,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 181,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 181
+    },
+    {
+        "mode": "sayplan",
+        "start": 181,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: go to vase 1\nstep 3: look at vase 1\nstep 4: pick up vase 1\nstep 5: go to living room 0 table 18\nstep 6: look at living room 0 table 18\nstep 7: place vase 1 on living room 0 table 18\nstep 8: go to candle holder 1\nstep 9: look at candle holder 1\nstep 10: pick up candle holder 1\nstep 11: go to living room 0 table 18\nstep 12: look at living room 0 table 18\nstep 13: place candle holder 1 on living room 0 table 18\nstep 14: mission complete"
+        },
+        "logs": [
+            {
+                "start": 181,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 181,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 181,
+                "step_raw": "go to vase 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "vase_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 219,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 219,
+                "step_raw": "look at vase 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "vase_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 225,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 225,
+                "step_raw": "pick up vase 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "vase_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 table 18",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 226,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "vase 1": [
+                            "living room 0 table 18",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 226,
+                "step_raw": "go to living room 0 table 18",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 226,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 226,
+                "step_raw": "look at living room 0 table 18",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 226,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 226,
+                "step_raw": "place vase 1 on living room 0 table 18",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "vase_1",
+                    "target_receptacle": "living_room_0-table_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 227,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 227,
+                "step_raw": "go to candle holder 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 227,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 227,
+                "step_raw": "look at candle holder 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 228,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 228,
+                "step_raw": "pick up candle holder 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candle_holder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 229,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 table 18",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "vase 1": [
+                    "living room 0 table 18",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 229
+    },
+    {
+        "mode": "sayplan",
+        "start": 229,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding vase 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: go to peppermint 1\nstep 3: look at peppermint 1\nstep 4: pick up peppermint 1\nstep 5: go to kitchen 0 counter 9\nstep 6: look at kitchen 0 counter 9\nstep 7: place peppermint 1 on kitchen 0 counter 9\nstep 8: go to living room 0 chair 11\nstep 9: look at living room 0 chair 11\nstep 10: pick up vase 1\nstep 11: go to kitchen 0 counter 18\nstep 12: look at kitchen 0 counter 18\nstep 13: place vase 1 on kitchen 0 counter 18\n\nmission complete."
+        },
+        "logs": [
+            {
+                "start": 229,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 263,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 263,
+                "step_raw": "go to peppermint 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 287,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 287,
+                "step_raw": "look at peppermint 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 290,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 290,
+                "step_raw": "pick up peppermint 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 291,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 291,
+                "step_raw": "go to kitchen 0 counter 9",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 291,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 291,
+                "step_raw": "look at kitchen 0 counter 9",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "kitchen 0 counter 9",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 291,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 291,
+                "step_raw": "place peppermint 1 on kitchen 0 counter 9",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "kitchen 0 counter 9",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 291,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 291,
+                "step_raw": "go to living room 0 chair 11",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_11_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 291,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 291,
+                "step_raw": "look at living room 0 chair 11",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_11_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 292,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 292,
+                "step_raw": "pick up vase 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "vase_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 292,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 292
+    },
+    {
+        "mode": "sayplan",
+        "start": 292,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding vase 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 292,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 318,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 318
+    },
+    {
+        "mode": "sayplan",
+        "start": 318,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding vase 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: go to peppermint 1\nstep 3: look at peppermint 1\nstep 4: pick up peppermint 1\nstep 5: go to living room 0 coffee table 5\nstep 6: look at living room 0 coffee table 5\nstep 7: place peppermint 1 on living room 0 coffee table 5\nstep 8: mission complete"
+        },
+        "logs": [
+            {
+                "start": 318,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 318,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 318,
+                "step_raw": "go to peppermint 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 350,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 350,
+                "step_raw": "look at peppermint 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 353,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 353,
+                "step_raw": "pick up peppermint 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 354,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 354,
+                "step_raw": "go to living room 0 coffee table 5",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_5_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 376,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 376,
+                "step_raw": "look at living room 0 coffee table 5",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_5_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 377,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 377,
+                "step_raw": "place peppermint 1 on living room 0 coffee table 5",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": "living_room_0-coffee_table_5_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "agent",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 coffee table 5",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 378,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "vase 1": [
+                            "agent",
+                            "living room 0 coffee table 5"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 378,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 coffee table 5",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    },
+                    "end": {
+                        "sparkling water 1": "bathroom 0 toilet 30",
+                        "vase 1": "living room 0 coffee table 5",
+                        "lamp 1": "bathroom 0 carpet 34",
+                        "dispensing closure 1": "living room 0 loudspeaker 16",
+                        "candle holder 1": "living room 0 table 18",
+                        "plant 1": "living room 0 coffee table 5",
+                        "pepsi can pack 1": "kitchen 0 fridge 40",
+                        "peppermint 1": "living room 0 table 9"
+                    }
+                },
+                "end": 378,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "vase 1": [
+                "living room 0 coffee table 5"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 5"
+            ],
+            "candle holder 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "plant 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "pepsi can pack 1": [
+                "kitchen 0 fridge 40",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 5",
+                "living room 0 table 18",
+                "living room 0 table 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "living room 0 coffee table 5",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            },
+            "end": {
+                "vase 1": "living room 0 coffee table 5",
+                "candle holder 1": "living room 0 table 18",
+                "plant 1": "living room 0 coffee table 5",
+                "pepsi can pack 1": "kitchen 0 fridge 40",
+                "peppermint 1": "living room 0 table 9"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "vase 1": "agent",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            },
+            "end": {
+                "sparkling water 1": "bathroom 0 toilet 30",
+                "lamp 1": "bathroom 0 carpet 34",
+                "dispensing closure 1": "living room 0 loudspeaker 16"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "vase 1": [
+                    "agent",
+                    "living room 0 coffee table 5"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 378
+    }
+]

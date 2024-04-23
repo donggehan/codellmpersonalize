@@ -1,0 +1,3611 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 16, kitchen 0 bottom cabinet 22, kitchen 0 counter 18, kitchen 0 counter 21, kitchen 0 counter 23, kitchen 0 dishwasher 20, kitchen 0 sink 19, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 top cabinet 35. \nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 shelf 0, living room 0 wall mounted tv 49. Object thermal laminator 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 2, dining room 0 chair 3, dining room 0 chair 4, dining room 0 counter 14, dining room 0 table 1. Object saucer 1 found on dining room 0 table 1. Object gloves 1 found on dining room 0 table 1 \nIn corridor 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "living room 0 chest 11",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "living room 0 chest 11",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 39,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "ramekin 1",
+                        "lamp 1",
+                        "mini soccer ball 1",
+                        "heavy master chef can 1"
+                    ],
+                    "recs_discovered": [
+                        "corridor 0 shelf 41",
+                        "corridor 0 floor lamp 8",
+                        "corridor 0 shelf 42",
+                        "living room 0 chest 11",
+                        "corridor 0 chest 12",
+                        "living room 0 stool 13",
+                        "corridor 0 shelf 7",
+                        "living room 0 sofa 10",
+                        "corridor 0 shelf 6"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "saucer 1": [
+                "living room 0 shelf 0"
+            ],
+            "softball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "gloves 1": [
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "heavy master chef can 1": [
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "mini soccer ball 1": [
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "lamp 1": [
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7"
+            ],
+            "ramekin 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "thermal laminator 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "living room 0 chest 11",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "living room 0 chest 11",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "living room 0 chest 11",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "living room 0 chest 11",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1"
+            },
+            "end": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "ramekin 1",
+                "lamp 1",
+                "mini soccer ball 1",
+                "heavy master chef can 1"
+            ],
+            "recs_discovered": [
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 floor lamp 8",
+                "corridor 0 chest 12",
+                "living room 0 chest 11",
+                "living room 0 stool 13",
+                "corridor 0 shelf 7",
+                "living room 0 sofa 10",
+                "corridor 0 shelf 6"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 39
+    },
+    {
+        "mode": "single",
+        "start": 39,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 16, kitchen 0 bottom cabinet 22, kitchen 0 counter 18, kitchen 0 counter 21, kitchen 0 counter 23, kitchen 0 dishwasher 20, kitchen 0 sink 19, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 top cabinet 35. \nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 shelf 0, living room 0 wall mounted tv 49, living room 0 stool 13, living room 0 chest 11, living room 0 sofa 10. Object thermal laminator 1 found on living room 0 shelf 0. Object ramekin 1 found on living room 0 chest 11 \nIn dining room 0, found receptacles: dining room 0 chair 2, dining room 0 chair 3, dining room 0 chair 4, dining room 0 counter 14, dining room 0 table 1. Object saucer 1 found on dining room 0 table 1. Object gloves 1 found on dining room 0 table 1 \nIn corridor 0, found receptacles: corridor 0 chest 12, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 6, corridor 0 floor lamp 8, corridor 0 shelf 7. Object heavy master chef can 1 found on corridor 0 shelf 41. Object lamp 1 found on corridor 0 shelf 41. Object mini soccer ball 1 found on corridor 0 chest 12. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at ramekin 1\nstep 3: pick up ramekin 1\nstep 4: go to dining room 0 table 1\nstep 5: look at dining room 0 table 1\nstep 6: place ramekin 1 on dining room 0 table 1\nstep 7: go to kitchen 0 top cabinet 32\nstep 8: look at thermal laminator 1\nstep 9: pick up thermal laminator 1\nstep 10: go to living room 0 shelf 0\nstep 11: look at living room 0 shelf 0\nstep 12: place thermal laminator 1 on living room 0 shelf 0\nstep 13: go to dining room 0 table 1\nstep 14: look at saucer 1\nstep 15: pick up saucer 1\nstep 16: go to kitchen 0 counter 18\nstep 17: look at kitchen 0 counter 18\nstep 18: place saucer 1 on kitchen 0 counter 18\nstep 19: go to dining room 0 table 1\n"
+        },
+        "logs": [
+            {
+                "start": 39,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "living room 0 chest 11",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "living room 0 chest 11",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 39,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 39,
+                "step_raw": "look at ramekin 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "ramekin_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "living room 0 chest 11",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "living room 0 chest 11",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 40,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 40,
+                "step_raw": "pick up ramekin 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "ramekin_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "living room 0 chest 11",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 41,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "ramekin 1": [
+                            "living room 0 chest 11",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 41,
+                "step_raw": "go to dining room 0 table 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-table_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 107,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 top cabinet 30",
+                        "kitchen 0 counter 26",
+                        "kitchen 0 bottom cabinet 25",
+                        "kitchen 0 top cabinet 31",
+                        "kitchen 0 oven 24",
+                        "kitchen 0 fridge 27",
+                        "kitchen 0 top cabinet 29",
+                        "kitchen 0 microwave 36",
+                        "corridor 0 shelf 47",
+                        "kitchen 0 top cabinet 28",
+                        "corridor 0 chair 5"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 107,
+                "step_raw": "look at dining room 0 table 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-table_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 108,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 108,
+                "step_raw": "place ramekin 1 on dining room 0 table 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "ramekin_1",
+                    "target_receptacle": "dining_room_0-table_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 109,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "ramekin 1": [
+                            "agent",
+                            "dining room 0 table 1"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 109,
+                "step_raw": "go to kitchen 0 top cabinet 32",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 145,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 145,
+                "step_raw": "look at thermal laminator 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 152,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 15",
+                        "kitchen 0 bottom cabinet 17"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 152,
+                "step_raw": "pick up thermal laminator 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 153,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 153,
+                "step_raw": "go to living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 201,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "corridor 0 console table 9"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "saucer 1": [
+                "living room 0 shelf 0"
+            ],
+            "softball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "gloves 1": [
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "heavy master chef can 1": [
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "mini soccer ball 1": [
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "lamp 1": [
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7"
+            ],
+            "ramekin 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "thermal laminator 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "living room 0 chest 11",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "dining room 0 table 1",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "living room 0 chest 11",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1"
+            },
+            "end": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "ramekin 1": "dining room 0 table 1"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 counter 26",
+                "kitchen 0 bottom cabinet 25",
+                "corridor 0 chair 5",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 oven 24",
+                "kitchen 0 fridge 27",
+                "kitchen 0 bottom cabinet 17",
+                "kitchen 0 top cabinet 29",
+                "corridor 0 console table 9",
+                "kitchen 0 microwave 36",
+                "kitchen 0 bottom cabinet 15",
+                "kitchen 0 top cabinet 28",
+                "corridor 0 shelf 47"
+            ],
+            "objects_moved": {
+                "ramekin 1": [
+                    "living room 0 chest 11",
+                    "dining room 0 table 1"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 4
+            }
+        },
+        "end": 201
+    },
+    {
+        "mode": "single",
+        "start": 201,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 16, kitchen 0 bottom cabinet 22, kitchen 0 counter 18, kitchen 0 counter 21, kitchen 0 counter 23, kitchen 0 dishwasher 20, kitchen 0 sink 19, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 top cabinet 35, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 30, kitchen 0 top cabinet 31, kitchen 0 fridge 27, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 counter 26, kitchen 0 bottom cabinet 25, kitchen 0 bottom cabinet 15, kitchen 0 bottom cabinet 17. \nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 shelf 0, living room 0 wall mounted tv 49, living room 0 stool 13, living room 0 chest 11, living room 0 sofa 10. Object thermal laminator 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 2, dining room 0 chair 3, dining room 0 chair 4, dining room 0 counter 14, dining room 0 table 1. Object ramekin 1 found on dining room 0 table 1. Object saucer 1 found on dining room 0 table 1. Object gloves 1 found on dining room 0 table 1 \nIn corridor 0, found receptacles: corridor 0 chest 12, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 6, corridor 0 floor lamp 8, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 shelf 47, corridor 0 console table 9. Object heavy master chef can 1 found on corridor 0 shelf 41. Object lamp 1 found on corridor 0 shelf 41. Object mini soccer ball 1 found on corridor 0 chest 12. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at thermal laminator 1\nstep 3: pick up thermal laminator 1\nstep 4: go to kitchen 0 counter 23\nstep 5: look at kitchen 0 counter 23\nstep 6: place thermal laminator 1 on kitchen 0 counter 23\nstep 7: go to dining room 0 table 1\nstep 8: look at ramekin 1\nstep 9: pick up ramekin 1\nstep 10: go to kitchen 0 counter 21\nstep 11: look at kitchen 0 counter 21\nstep 12: place ramekin 1 on kitchen 0 counter 21\nstep 13: go to dining room 0 table 1\nstep 14: look at saucer 1\nstep 15: pick up saucer 1\nstep 16: go to kitchen 0 counter 18\nstep 17: look at kitchen 0 counter 18\nstep 18: place saucer 1 on kitchen 0 counter 18\nstep19: go to dining room chair3\nstep20: look at gloves1\nstep21"
+        },
+        "logs": [
+            {
+                "start": 201,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 221,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 221,
+                "step_raw": "look at thermal laminator 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 234,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 234,
+                "step_raw": "pick up thermal laminator 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 235,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 235,
+                "step_raw": "go to kitchen 0 counter 23",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_23_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 286,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 286,
+                "step_raw": "look at kitchen 0 counter 23",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_23_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 286,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 286,
+                "step_raw": "place thermal laminator 1 on kitchen 0 counter 23",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": "kitchen_0-counter_23_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 286,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 286,
+                "step_raw": "go to dining room 0 table 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-table_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 333,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 333,
+                "step_raw": "look at ramekin 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "ramekin_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 333,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 333,
+                "step_raw": "pick up ramekin 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "ramekin_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "dining room 0 table 1",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 334,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "ramekin 1": [
+                            "dining room 0 table 1",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 334,
+                "step_raw": "go to kitchen 0 counter 21",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 381,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "saucer 1": [
+                "living room 0 shelf 0"
+            ],
+            "softball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "gloves 1": [
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "heavy master chef can 1": [
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "mini soccer ball 1": [
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "lamp 1": [
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7"
+            ],
+            "ramekin 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "thermal laminator 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "dining room 0 table 1",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "agent",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "ramekin 1": "dining room 0 table 1"
+            },
+            "end": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "ramekin 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "ramekin 1": [
+                    "dining room 0 table 1",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 381
+    },
+    {
+        "mode": "single",
+        "start": 381,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding ramekin 1.\nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 16, kitchen 0 bottom cabinet 22, kitchen 0 counter 18, kitchen 0 counter 21, kitchen 0 counter 23, kitchen 0 dishwasher 20, kitchen 0 sink 19, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 top cabinet 35, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 30, kitchen 0 top cabinet 31, kitchen 0 fridge 27, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 counter 26, kitchen 0 bottom cabinet 25, kitchen 0 bottom cabinet 15, kitchen 0 bottom cabinet 17. \nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 shelf 0, living room 0 wall mounted tv 49, living room 0 stool 13, living room 0 chest 11, living room 0 sofa 10. Object thermal laminator 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 2, dining room 0 chair 3, dining room 0 chair 4, dining room 0 counter 14, dining room 0 table 1. Object saucer 1 found on dining room 0 table 1. Object gloves 1 found on dining room 0 table 1 \nIn corridor 0, found receptacles: corridor 0 chest 12, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 6, corridor 0 floor lamp 8, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 shelf 47, corridor 0 console table 9. Object mini soccer ball 1 found on corridor 0 chest 12. Object heavy master chef can 1 found on corridor 0 shelf 41. Object lamp 1 found on corridor 0 shelf 41. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at thermal laminator 1\nstep 3: pick up thermal laminator 1\nstep 4: go to corridor 0 chest 12\nstep 5: look at corridor 0 chest 12\nstep 6: place thermal laminator 1 on corridor 0 chest 12\nstep 7: go to dining room 0\nstep 8: go to table 1\nstep 9: look at saucer 1\nstep 10: pick up saucer 1\nstep 11: go to kitchen 0 counter 18\nstep 12: look at kitchen 0 counter 18\nstep 13: place saucer 1 on kitchen 0 counter 18\nstep 14: go to table 1\nstep 15: look at gloves 1\nstep 16: pick up gloves 1\nstep 17: go to kitchen 0 top cabinet 34\nstep 18: look at kitchen 0 top cabinet 34\nstep 19: place gloves 1 on kitchen 0 top cabinet 34\nmission complete."
+        },
+        "logs": [
+            {
+                "start": 381,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 453,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 453,
+                "step_raw": "look at thermal laminator 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 464,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 464,
+                "step_raw": "pick up thermal laminator 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 465,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 465,
+                "step_raw": "go to corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 526,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 526,
+                "step_raw": "look at corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 537,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 537,
+                "step_raw": "place thermal laminator 1 on corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "agent",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 538,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "ramekin 1": [
+                            "agent",
+                            "corridor 0 chest 12"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 538,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_2_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 582,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 582,
+                "step_raw": "go to table 1",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 582,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 582,
+                "step_raw": "look at saucer 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "saucer_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 587,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 587,
+                "step_raw": "pick up saucer 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "saucer_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "dining room 0 table 1",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 588,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "saucer 1": [
+                            "dining room 0 table 1",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "saucer 1": [
+                "living room 0 shelf 0"
+            ],
+            "softball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "gloves 1": [
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "heavy master chef can 1": [
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "mini soccer ball 1": [
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "lamp 1": [
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7"
+            ],
+            "ramekin 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "thermal laminator 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "agent",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "saucer 1": "agent",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "corridor 0 chest 12",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "saucer 1": "dining room 0 table 1",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "ramekin 1": "agent"
+            },
+            "end": {
+                "saucer 1": "agent",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "ramekin 1": "corridor 0 chest 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "ramekin 1": [
+                    "agent",
+                    "corridor 0 chest 12"
+                ],
+                "saucer 1": [
+                    "dining room 0 table 1",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 588
+    },
+    {
+        "mode": "single",
+        "start": 588,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding saucer 1.\nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 16, kitchen 0 bottom cabinet 22, kitchen 0 counter 18, kitchen 0 counter 21, kitchen 0 counter 23, kitchen 0 dishwasher 20, kitchen 0 sink 19, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 top cabinet 35, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 30, kitchen 0 top cabinet 31, kitchen 0 fridge 27, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 counter 26, kitchen 0 bottom cabinet 25, kitchen 0 bottom cabinet 15, kitchen 0 bottom cabinet 17. \nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 shelf 0, living room 0 wall mounted tv 49, living room 0 stool 13, living room 0 chest 11, living room 0 sofa 10. Object thermal laminator 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 2, dining room 0 chair 3, dining room 0 chair 4, dining room 0 counter 14, dining room 0 table 1. Object gloves 1 found on dining room 0 table 1 \nIn corridor 0, found receptacles: corridor 0 chest 12, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 6, corridor 0 floor lamp 8, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 shelf 47, corridor 0 console table 9. Object mini soccer ball 1 found on corridor 0 chest 12. Object ramekin 1 found on corridor 0 chest 12. Object heavy master chef can 1 found on corridor 0 shelf 41. Object lamp 1 found on corridor 0 shelf 41. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: go to thermal laminator 1\nstep 3: look at thermal laminator 1\nstep 4: pick up thermal laminator 1\nstep 5: go to corridor 0 chest 12\nstep 6: look at corridor 0 chest 12\nstep 7: place thermal laminator 1 on corridor 0 chest 12\nstep 8: go to gloves 1\nstep 9: look at gloves 1\nstep 10: pick up gloves 1\nstep 11: go to dining room 0 table 1\nstep 12: look at dining room 0 table 1\nstep 13: place gloves 1 on dining room 0 table 1\nstep 14: go to mini soccer ball 1\nstep 15: look at mini soccer ball 1\nstep 16: pick up mini soccer ball 1\nstep 17: go to kitchen 0 bottom cabinet 25\nstep 18: look at kitchen 0 bottom cabinet 25\nstep 19: place mini soccer ball 1 on kitchen 0 bottom cabinet 25\nstep 20: go to ramekin 1"
+        },
+        "logs": [
+            {
+                "start": 588,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 631,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 631,
+                "step_raw": "go to thermal laminator 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 659,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 659,
+                "step_raw": "look at thermal laminator 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 659,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 659,
+                "step_raw": "pick up thermal laminator 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 660,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 660,
+                "step_raw": "go to corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 703,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 703,
+                "step_raw": "look at corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 714,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 714,
+                "step_raw": "place thermal laminator 1 on corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "agent",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 715,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "saucer 1": [
+                            "agent",
+                            "corridor 0 chest 12"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 715,
+                "step_raw": "go to gloves 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 754,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 754,
+                "step_raw": "look at gloves 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 755,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 755,
+                "step_raw": "pick up gloves 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "dining room 0 table 1",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 756,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "gloves 1": [
+                            "dining room 0 table 1",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "saucer 1": [
+                "living room 0 shelf 0"
+            ],
+            "softball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "gloves 1": [
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "heavy master chef can 1": [
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "mini soccer ball 1": [
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "lamp 1": [
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7"
+            ],
+            "ramekin 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "thermal laminator 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "saucer 1": "agent",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "corridor 0 chest 12",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "saucer 1": "corridor 0 chest 12",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "agent",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "corridor 0 chest 12",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "saucer 1": "agent",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "dining room 0 table 1",
+                "ramekin 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "saucer 1": "corridor 0 chest 12",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "agent",
+                "ramekin 1": "corridor 0 chest 12"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "saucer 1": [
+                    "agent",
+                    "corridor 0 chest 12"
+                ],
+                "gloves 1": [
+                    "dining room 0 table 1",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 756
+    },
+    {
+        "mode": "single",
+        "start": 756,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding gloves 1.\nIn kitchen 0, found receptacles: kitchen 0 bottom cabinet 16, kitchen 0 bottom cabinet 22, kitchen 0 counter 18, kitchen 0 counter 21, kitchen 0 counter 23, kitchen 0 dishwasher 20, kitchen 0 sink 19, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 top cabinet 35, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 30, kitchen 0 top cabinet 31, kitchen 0 fridge 27, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 counter 26, kitchen 0 bottom cabinet 25, kitchen 0 bottom cabinet 15, kitchen 0 bottom cabinet 17. \nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 shelf 0, living room 0 wall mounted tv 49, living room 0 stool 13, living room 0 chest 11, living room 0 sofa 10. Object thermal laminator 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 2, dining room 0 chair 3, dining room 0 chair 4, dining room 0 counter 14, dining room 0 table 1. \nIn corridor 0, found receptacles: corridor 0 chest 12, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 6, corridor 0 floor lamp 8, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 shelf 47, corridor 0 console table 9. Object mini soccer ball 1 found on corridor 0 chest 12. Object ramekin 1 found on corridor 0 chest 12. Object saucer 1 found on corridor 0 chest 12. Object heavy master chef can 1 found on corridor 0 shelf 41. Object lamp 1 found on corridor 0 shelf 41. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0 top cabinet 32\nstep 2: look at gloves 1\nstep 3: pick up gloves 1\nstep 4: go to kitchen 0 counter 23\nstep 5: look at kitchen 0 counter 23\nstep 6: place gloves 1 on kitchen 0 counter 23\nstep 7: go to living room 0 shelf 0\nstep 8: look at thermal laminator 1\nstep 9: pick up thermal laminator 1\nstep 10: go to dining room 0 counter 14\nstep 11: look at dining room 0 counter 14\nstep 12: place thermal laminator 1 on dining room 0 counter 14\nstep 13: go to corridor 0 chest 12\nstep 14: look at mini soccer ball 1\nstep 15: pick up mini soccer ball 1\nstep 16: go to living room 0 stool 13\nstep 17: look at living room 0 stool 13\nstep 18: place mini soccer ball 1 on living room 0 stool 13\nstep 19: go to corridor 0 chest 12\nstep "
+        },
+        "logs": [
+            {
+                "start": 756,
+                "step_raw": "go to kitchen 0 top cabinet 32",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 794,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 794,
+                "step_raw": "look at gloves 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 794,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 794,
+                "step_raw": "pick up gloves 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 794,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 794,
+                "step_raw": "go to kitchen 0 counter 23",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_23_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 794,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 794,
+                "step_raw": "look at kitchen 0 counter 23",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_23_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 794,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 794,
+                "step_raw": "place gloves 1 on kitchen 0 counter 23",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "gloves_1",
+                    "target_receptacle": "kitchen_0-counter_23_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "agent",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 795,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "gloves 1": [
+                            "agent",
+                            "kitchen 0 counter 23"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 795,
+                "step_raw": "go to living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 854,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 854,
+                "step_raw": "look at thermal laminator 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    }
+                },
+                "end": 855,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 855,
+                "step_raw": "pick up thermal laminator 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "thermal_laminator_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "living room 0 shelf 0"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "agent"
+                    }
+                },
+                "end": 856,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "thermal laminator 1": [
+                            "living room 0 shelf 0",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 856,
+                "step_raw": "go to dining room 0 counter 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-counter_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "agent"
+                    },
+                    "end": {
+                        "saucer 1": "corridor 0 chest 12",
+                        "softball 1": "living room 0 carpet 46",
+                        "gloves 1": "kitchen 0 counter 23",
+                        "heavy master chef can 1": "corridor 0 shelf 41",
+                        "mini soccer ball 1": "corridor 0 chest 12",
+                        "lamp 1": "corridor 0 shelf 41",
+                        "ramekin 1": "corridor 0 chest 12",
+                        "thermal laminator 1": "agent"
+                    }
+                },
+                "end": 899,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "saucer 1": [
+                "living room 0 shelf 0"
+            ],
+            "softball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "gloves 1": [
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "heavy master chef can 1": [
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "mini soccer ball 1": [
+                "corridor 0 chest 12",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "lamp 1": [
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7"
+            ],
+            "ramekin 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "thermal laminator 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "saucer 1": "corridor 0 chest 12",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "agent",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "corridor 0 chest 12",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "saucer 1": "corridor 0 chest 12",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "kitchen 0 counter 23",
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "ramekin 1": "corridor 0 chest 12",
+                "thermal laminator 1": "agent"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41",
+                "thermal laminator 1": "living room 0 shelf 0"
+            },
+            "end": {
+                "heavy master chef can 1": "corridor 0 shelf 41",
+                "mini soccer ball 1": "corridor 0 chest 12",
+                "lamp 1": "corridor 0 shelf 41"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "saucer 1": "corridor 0 chest 12",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "agent",
+                "ramekin 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "saucer 1": "corridor 0 chest 12",
+                "softball 1": "living room 0 carpet 46",
+                "gloves 1": "kitchen 0 counter 23",
+                "ramekin 1": "corridor 0 chest 12",
+                "thermal laminator 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "gloves 1": [
+                    "agent",
+                    "kitchen 0 counter 23"
+                ],
+                "thermal laminator 1": [
+                    "living room 0 shelf 0",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 5
+            }
+        },
+        "end": 899
+    }
+]

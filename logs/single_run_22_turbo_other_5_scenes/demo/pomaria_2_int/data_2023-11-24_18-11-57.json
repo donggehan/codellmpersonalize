@@ -1,0 +1,477 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 table 7. Object picture frame 1 found on bathroom 0 table 7 \nIn bedroom 0, no receptacles found yet. \nIn corridor 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: go to bathroom 0 table 7\nstep 3: look at object picture frame 1\nstep 4: pick up object picture frame 1\nstep 5: go to bathroom 0 bathtub 14\nstep 6: look at bathroom 0 bathtub 14\nstep 7: place object picture frame 1 on bathroom 0 bathtub 14\nstep 8: mission complete"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 13,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 sink 18",
+                        "bathroom 0 bottom cabinet 20",
+                        "bathroom 0 mirror 23",
+                        "bathroom 0 carpet 15",
+                        "bathroom 0 sink 19"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 13,
+                "step_raw": "go to bathroom 0 table 7",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-table_7_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 27,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 27,
+                "step_raw": "look at object picture frame 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "object picture frame 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 27,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 27,
+                "step_raw": "pick up object picture frame 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "object picture frame 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 27,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 27,
+                "step_raw": "go to bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 43,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 43,
+                "step_raw": "look at bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 43,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 43,
+                "step_raw": "place object picture frame 1 on bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "object picture frame 1",
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 43,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 43,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "shoe 1": "bedroom 0 chair 1",
+                        "helmet 1": "bathroom 0 toilet 25",
+                        "saucer 1": "bathroom 0 toilet 25",
+                        "picture frame 1": "bathroom 0 table 7",
+                        "table lamp 1": "bedroom 0 bed 11",
+                        "candle holder 1": "bedroom 0 shelf 13",
+                        "plant 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 43,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 2,
+                        "end": 2
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "shoe 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "helmet 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "saucer 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "picture frame 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "table lamp 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "candle holder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "plant 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "shoe 1": "bedroom 0 chair 1",
+                "helmet 1": "bathroom 0 toilet 25",
+                "saucer 1": "bathroom 0 toilet 25",
+                "picture frame 1": "bathroom 0 table 7",
+                "table lamp 1": "bedroom 0 bed 11",
+                "candle holder 1": "bedroom 0 shelf 13",
+                "plant 1": "bedroom 0 shelf 13"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 chair 1",
+                "helmet 1": "bathroom 0 toilet 25",
+                "saucer 1": "bathroom 0 toilet 25",
+                "picture frame 1": "bathroom 0 table 7",
+                "table lamp 1": "bedroom 0 bed 11",
+                "candle holder 1": "bedroom 0 shelf 13",
+                "plant 1": "bedroom 0 shelf 13"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "candle holder 1": "bedroom 0 shelf 13",
+                "plant 1": "bedroom 0 shelf 13"
+            },
+            "end": {
+                "candle holder 1": "bedroom 0 shelf 13",
+                "plant 1": "bedroom 0 shelf 13"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "shoe 1": "bedroom 0 chair 1",
+                "helmet 1": "bathroom 0 toilet 25",
+                "saucer 1": "bathroom 0 toilet 25",
+                "picture frame 1": "bathroom 0 table 7",
+                "table lamp 1": "bedroom 0 bed 11"
+            },
+            "end": {
+                "shoe 1": "bedroom 0 chair 1",
+                "helmet 1": "bathroom 0 toilet 25",
+                "saucer 1": "bathroom 0 toilet 25",
+                "picture frame 1": "bathroom 0 table 7",
+                "table lamp 1": "bedroom 0 bed 11"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "bathroom 0 sink 18",
+                "bathroom 0 bottom cabinet 20",
+                "bathroom 0 mirror 23",
+                "bathroom 0 carpet 15",
+                "bathroom 0 sink 19"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 2,
+                "end": 2
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 43
+    }
+]

@@ -1,0 +1,1227 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: look at bathroom 0 table 7\nstep 3: pick up antidepressant 1\nstep 4: go to bathroom 0 bathtub 14\nstep 5: look at bathroom 0 bathtub 14\nstep 6: place antidepressant 1 on bathroom 0 bathtub 14\nstep 7: go to bathroom 0 table 7\nstep 8: look at bathroom 0 table 7\nstep 9: pick up tomato soup can 1\nstep 10: go to correct receptacle (if known)\nstep 11: place tomato soup can 1 on correct receptacle (if known)"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 table 7",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 table 7",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 14,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 bottom cabinet 20",
+                        "bathroom 0 sink 18",
+                        "bathroom 0 sink 19",
+                        "bathroom 0 mirror 23"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 14,
+                "step_raw": "look at bathroom 0 table 7",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-table_7_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 table 7",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 table 7",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 22,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 22,
+                "step_raw": "pick up antidepressant 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "antidepressant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 table 7",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "agent",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 23,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "antidepressant 1": [
+                            "bathroom 0 table 7",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 23,
+                "step_raw": "go to bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "agent",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "agent",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 23,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 23,
+                "step_raw": "look at bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "agent",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "agent",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 23,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 23,
+                "step_raw": "place antidepressant 1 on bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "antidepressant_1",
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "agent",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 24,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "antidepressant 1": [
+                            "agent",
+                            "bathroom 0 bathtub 14"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 24,
+                "step_raw": "go to bathroom 0 table 7",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-table_7_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 35,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 35,
+                "step_raw": "look at bathroom 0 table 7",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-table_7_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 36,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 36,
+                "step_raw": "pick up tomato soup can 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tomato_soup_can_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "bathroom 0 bathtub 14",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 37,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tomato soup can 1": [
+                            "bathroom 0 bathtub 14",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 37,
+                "step_raw": "go to correct receptacle (if known)",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 37,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "plant 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "antidepressant 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "tomato soup can 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "mini soccer ball 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "skillet lid 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "lantern 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 sink 18",
+                "bathroom 0 sink 19"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 table 7",
+                "tomato soup can 1": "bathroom 0 bathtub 14",
+                "mini soccer ball 1": "bedroom 0 bed 11",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            },
+            "end": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 bathtub 14",
+                "tomato soup can 1": "agent",
+                "mini soccer ball 1": "bedroom 0 bed 11",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            },
+            "end": {
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 table 7",
+                "tomato soup can 1": "bathroom 0 bathtub 14",
+                "mini soccer ball 1": "bedroom 0 bed 11"
+            },
+            "end": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 bathtub 14",
+                "tomato soup can 1": "agent",
+                "mini soccer ball 1": "bedroom 0 bed 11"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "bathroom 0 bottom cabinet 20",
+                "bathroom 0 sink 18",
+                "bathroom 0 sink 19",
+                "bathroom 0 mirror 23"
+            ],
+            "objects_moved": {
+                "antidepressant 1": [
+                    "bathroom 0 table 7",
+                    "bathroom 0 bathtub 14"
+                ],
+                "tomato soup can 1": [
+                    "bathroom 0 bathtub 14",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 37
+    },
+    {
+        "mode": "sayplan",
+        "start": 37,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding tomato soup can 1. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: go to bathtub 14\nstep 3: look at bathtub 14\nstep 4: go to table 7\nstep 5: look at table 7\nstep 6: pick up antidepressant 1\nstep 7: go to bottom cabinet 20\nstep 8: look at bottom cabinet 20\nstep 9: place antidepressant 1 on bottom cabinet 20\nmission complete."
+        },
+        "logs": [
+            {
+                "start": 37,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 54,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 54,
+                "step_raw": "go to bathtub 14",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 54,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 54,
+                "step_raw": "look at bathtub 14",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "bathtub 14",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 54,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 54,
+                "step_raw": "go to table 7",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 54,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 54,
+                "step_raw": "look at table 7",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "table 7",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 54,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 54,
+                "step_raw": "pick up antidepressant 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "antidepressant_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 55,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 55,
+                "step_raw": "go to bottom cabinet 20",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 55,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 55,
+                "step_raw": "look at bottom cabinet 20",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "bottom cabinet 20",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 55,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 55,
+                "step_raw": "place antidepressant 1 on bottom cabinet 20",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "bottom cabinet 20",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 55,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 55,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    },
+                    "end": {
+                        "plant 1": "bedroom 0 carpet 12",
+                        "antidepressant 1": "bathroom 0 bathtub 14",
+                        "tomato soup can 1": "agent",
+                        "mini soccer ball 1": "bedroom 0 bed 11",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                        "skillet lid 1": "bedroom 0 shelf 13",
+                        "lantern 1": "bedroom 0 shelf 13"
+                    }
+                },
+                "end": 55,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "plant 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "antidepressant 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "tomato soup can 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "mini soccer ball 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "skillet lid 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "lantern 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 sink 18",
+                "bathroom 0 sink 19"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 bathtub 14",
+                "tomato soup can 1": "agent",
+                "mini soccer ball 1": "bedroom 0 bed 11",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            },
+            "end": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 bathtub 14",
+                "tomato soup can 1": "agent",
+                "mini soccer ball 1": "bedroom 0 bed 11",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            },
+            "end": {
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "portable speaker 1": "bedroom 0 bottom cabinet 10",
+                "skillet lid 1": "bedroom 0 shelf 13",
+                "lantern 1": "bedroom 0 shelf 13"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 bathtub 14",
+                "tomato soup can 1": "agent",
+                "mini soccer ball 1": "bedroom 0 bed 11"
+            },
+            "end": {
+                "plant 1": "bedroom 0 carpet 12",
+                "antidepressant 1": "bathroom 0 bathtub 14",
+                "tomato soup can 1": "agent",
+                "mini soccer ball 1": "bedroom 0 bed 11"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 55
+    }
+]

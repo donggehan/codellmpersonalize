@@ -1,0 +1,2245 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 39,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 plant 5",
+                        "corridor 0 table 0",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 bottom cabinet 35",
+                        "kitchen 0 top cabinet 42",
+                        "kitchen 0 counter 48",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 counter 40",
+                        "kitchen 0 chair 12",
+                        "kitchen 0 sink 37",
+                        "kitchen 0 dishwasher 36",
+                        "kitchen 0 chair 8",
+                        "corridor 0 carpet 13",
+                        "corridor 0 shelf 14",
+                        "kitchen 0 bottom cabinet 44",
+                        "kitchen 0 cooktop 64"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "softball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ],
+            "mini soccer ball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "coffeemaker 1": [
+                "corridor 0 shelf 14",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 plant 5",
+                "corridor 0 table 0",
+                "kitchen 0 counter 49",
+                "kitchen 0 oven 46",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 counter 48",
+                "kitchen 0 carpet 34",
+                "kitchen 0 counter 40",
+                "kitchen 0 chair 12",
+                "kitchen 0 sink 37",
+                "kitchen 0 dishwasher 36",
+                "kitchen 0 chair 8",
+                "corridor 0 carpet 13",
+                "corridor 0 shelf 14",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 cooktop 64"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 39
+    },
+    {
+        "mode": "sayplan",
+        "start": 39,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0"
+        },
+        "logs": [
+            {
+                "start": 39,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 39,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "softball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ],
+            "mini soccer ball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "coffeemaker 1": [
+                "corridor 0 shelf 14",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 39
+    },
+    {
+        "mode": "sayplan",
+        "start": 39,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to object saucer 1\nstep 3: look at saucer 1\nstep 4: pick up saucer 1\nstep 5: go to receptacle kitchen 0 counter 18\nstep 6: look at kitchen 0 counter 18\nstep 7: place saucer 1 on kitchen 0 counter 18"
+        },
+        "logs": [
+            {
+                "start": 39,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 75,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "cloth 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 chair 9",
+                        "kitchen 0 counter 33",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 oven 21",
+                        "kitchen 0 top cabinet 24",
+                        "kitchen 0 chair 10",
+                        "kitchen 0 top cabinet 25",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 top cabinet 27",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 table 6",
+                        "kitchen 0 bottom cabinet 29",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 bottom cabinet 30",
+                        "kitchen 0 counter 31",
+                        "kitchen 0 bottom cabinet 47",
+                        "pantry room 0 top cabinet 55",
+                        "pantry room 0 top cabinet 54",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 microwave 23",
+                        "pantry room 0 bottom cabinet 51",
+                        "kitchen 0 oven 22",
+                        "kitchen 0 chair 7",
+                        "pantry room 0 fridge 50"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 75,
+                "step_raw": "go to object saucer 1",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 75,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 75,
+                "step_raw": "look at saucer 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "saucer 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 75,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 75,
+                "step_raw": "pick up saucer 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "saucer 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 75,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 75,
+                "step_raw": "go to receptacle kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 75,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 75,
+                "step_raw": "look at kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "kitchen 0 counter 18",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 75,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 75,
+                "step_raw": "place saucer 1 on kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "kitchen 0 counter 18",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 75,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "softball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ],
+            "mini soccer ball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "coffeemaker 1": [
+                "corridor 0 shelf 14",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "cloth 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 chair 9",
+                "kitchen 0 counter 33",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 oven 21",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 chair 10",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 chair 11",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 table 6",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 fridge 20",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 counter 31",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 top cabinet 55",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 counter 53",
+                "kitchen 0 microwave 23",
+                "pantry room 0 bottom cabinet 51",
+                "kitchen 0 oven 22",
+                "kitchen 0 chair 7",
+                "pantry room 0 fridge 50"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 75
+    },
+    {
+        "mode": "sayplan",
+        "start": 75,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0\nstep 2: look at corridor 0 carpet 13\nstep 3: go to kitchen 0\nstep 4: look at kitchen 0 counter 40\nstep 5: go to kitchen 0 bottom cabinet 35\nstep 6: look at kitchen 0 bottom cabinet 35\nstep 7: go to kitchen 0 sink 37\nstep 8: look at kitchen 0 sink 37\nstep 9: go to kitchen 0 bottom cabinet 44\nstep 10: look at kitchen 0 bottom cabinet 44\nstep 11: go to pantry room 0\nstep 12: look at pantry room 0 counter 53\nstep 13: go to pantry room 0 fridge 50\nstep 14: look at pantry room 0 fridge 50\nstep 15: go to pantry room 0 top cabinet 54\nstep 16: look at pantry room 0 top cabinet 54\nstep 17: go to pantry room 0 top cabinet 55\nstep 18: look at pantry room 0 top cabinet 55\nmission complete."
+        },
+        "logs": [
+            {
+                "start": 75,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 126,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 39",
+                        "kitchen 0 top cabinet 43",
+                        "utility room 0 bottom cabinet 59",
+                        "living room 0 shelf 15",
+                        "utility room 0 dryer 57",
+                        "living room 0 coffee table 3",
+                        "living room 0 coffee table 4",
+                        "utility room 0 sink 58",
+                        "kitchen 0 bottom cabinet 38",
+                        "living room 0 chair 1",
+                        "kitchen 0 counter 41",
+                        "living room 0 shelf 16",
+                        "living room 0 chair 2",
+                        "utility room 0 washer 56"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 126,
+                "step_raw": "look at corridor 0 carpet 13",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 126,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 126,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 173,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 173,
+                "step_raw": "look at kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 178,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 178,
+                "step_raw": "go to kitchen 0 bottom cabinet 35",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_35_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 211,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 211,
+                "step_raw": "look at kitchen 0 bottom cabinet 35",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_35_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 211,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 211,
+                "step_raw": "go to kitchen 0 sink 37",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-sink_37_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 225,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 225,
+                "step_raw": "look at kitchen 0 sink 37",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-sink_37_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 226,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 226,
+                "step_raw": "go to kitchen 0 bottom cabinet 44",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_44_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 237,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 237,
+                "step_raw": "look at kitchen 0 bottom cabinet 44",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_44_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 238,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "softball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ],
+            "mini soccer ball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "coffeemaker 1": [
+                "corridor 0 shelf 14",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "utility room 0 dryer 57",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "utility room 0 sink 58",
+                "kitchen 0 bottom cabinet 38",
+                "living room 0 chair 1",
+                "kitchen 0 counter 41",
+                "living room 0 shelf 16",
+                "living room 0 chair 2",
+                "utility room 0 washer 56"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 238
+    },
+    {
+        "mode": "sayplan",
+        "start": 238,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to kitchen 0 counter 40\nstep 3: look at kitchen 0 counter 40\nstep 4: pick up cloth 1\nstep 5: go to pantry room 0\nstep 6: go to pantry room 0 counter 53\nstep 7: look at pantry room 0 counter 53\nstep 8: place cloth 1 on pantry room 0 counter 53\nstep 9: mission complete"
+        },
+        "logs": [
+            {
+                "start": 238,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 276,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 276,
+                "step_raw": "go to kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 320,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 320,
+                "step_raw": "look at kitchen 0 counter 40",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 320,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 320,
+                "step_raw": "pick up cloth 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cloth_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 321,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 321,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 377,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "dumbbell rack 1",
+                        "toaster 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 377,
+                "step_raw": "go to pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 377,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 377,
+                "step_raw": "look at pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 377,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 377,
+                "step_raw": "place cloth 1 on pantry room 0 counter 53",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cloth_1",
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 377,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 377,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    },
+                    "end": {
+                        "cloth 1": "pantry room 0 counter 53",
+                        "xylitol sweetener 1": "kitchen 0 oven 21",
+                        "softball 1": "kitchen 0 chair 10",
+                        "mini soccer ball 1": "utility room 0 top cabinet 60",
+                        "coffeemaker 1": "utility room 0 top cabinet 60",
+                        "toaster 1": "pantry room 0 top cabinet 54",
+                        "dumbbell rack 1": "pantry room 0 top cabinet 54"
+                    }
+                },
+                "end": 377,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "xylitol sweetener 1": [
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "softball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43"
+            ],
+            "mini soccer ball 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "coffeemaker 1": [
+                "corridor 0 shelf 14",
+                "utility room 0 top cabinet 60"
+            ],
+            "toaster 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dumbbell rack 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10",
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            },
+            "end": {
+                "mini soccer ball 1": "utility room 0 top cabinet 60",
+                "coffeemaker 1": "utility room 0 top cabinet 60",
+                "toaster 1": "pantry room 0 top cabinet 54",
+                "dumbbell rack 1": "pantry room 0 top cabinet 54"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            },
+            "end": {
+                "cloth 1": "pantry room 0 counter 53",
+                "xylitol sweetener 1": "kitchen 0 oven 21",
+                "softball 1": "kitchen 0 chair 10"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "dumbbell rack 1",
+                "toaster 1"
+            ],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 377
+    }
+]

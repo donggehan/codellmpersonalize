@@ -1,0 +1,1393 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0\nstep 2: go to kitchen 0\nstep 3: go to living room 0\nstep 4: go to pantry room 0\nstep 5: go to utility room 0\nstep 6: go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 20,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "cake pan 1",
+                        "cloth 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 counter 48",
+                        "kitchen 0 table 6",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 chair 12",
+                        "kitchen 0 plant 5",
+                        "living room 0 coffee table 4",
+                        "kitchen 0 bottom cabinet 44",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 oven 46",
+                        "corridor 0 table 0",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 sink 37",
+                        "kitchen 0 chair 8"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 20,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 58,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "hat 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 chair 7",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 top cabinet 24",
+                        "pantry room 0 fridge 50",
+                        "kitchen 0 bottom cabinet 30",
+                        "pantry room 0 bottom cabinet 51",
+                        "pantry room 0 top cabinet 55",
+                        "kitchen 0 oven 21",
+                        "kitchen 0 bottom cabinet 29",
+                        "kitchen 0 top cabinet 27",
+                        "kitchen 0 bottom cabinet 47",
+                        "kitchen 0 chair 10",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 oven 22",
+                        "kitchen 0 chair 9",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 counter 31",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 top cabinet 25",
+                        "pantry room 0 top cabinet 54",
+                        "pantry room 0 bottom cabinet 52"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 58,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 134,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "milk frother 1"
+                    ],
+                    "recs_discovered": [
+                        "utility room 0 dryer 57",
+                        "utility room 0 bottom cabinet 59",
+                        "living room 0 coffee table 3",
+                        "living room 0 shelf 16",
+                        "utility room 0 washer 56",
+                        "living room 0 shelf 15",
+                        "living room 0 chair 1",
+                        "living room 0 chair 2",
+                        "kitchen 0 counter 41",
+                        "kitchen 0 top cabinet 43",
+                        "utility room 0 sink 58",
+                        "kitchen 0 bottom cabinet 39"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 134,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "shredder 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 sink 62",
+                        "bathroom 0 mirror 63"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 232,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "utility room 0 top cabinet 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 232,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-mirror_63_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 283,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cake pan 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pan 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "milk frother 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "golf ball 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "utility room 0 top cabinet 60"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "baseball 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "utility room 0 top cabinet 60"
+            ],
+            "fork 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "hat 1": [
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "corridor 0 carpet 13",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61",
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "cloth 1": "corridor 0 carpet 13",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61",
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "corridor 0 carpet 13",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "cloth 1": "corridor 0 carpet 13",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "shredder 1",
+                "cloth 1",
+                "milk frother 1",
+                "cake pan 1",
+                "hat 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 chair 7",
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 carpet 34",
+                "pantry room 0 fridge 50",
+                "corridor 0 table 0",
+                "pantry room 0 bottom cabinet 51",
+                "utility room 0 top cabinet 60",
+                "kitchen 0 counter 49",
+                "living room 0 chair 1",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 43",
+                "kitchen 0 counter 41",
+                "kitchen 0 chair 10",
+                "utility room 0 sink 58",
+                "kitchen 0 bottom cabinet 39",
+                "bathroom 0 mirror 63",
+                "kitchen 0 cooktop 64",
+                "kitchen 0 fridge 20",
+                "kitchen 0 counter 31",
+                "kitchen 0 chair 11",
+                "utility room 0 bottom cabinet 59",
+                "bathroom 0 sink 62",
+                "kitchen 0 microwave 23",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 32",
+                "living room 0 shelf 15",
+                "kitchen 0 top cabinet 25",
+                "pantry room 0 top cabinet 54",
+                "kitchen 0 sink 37",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 counter 48",
+                "kitchen 0 table 6",
+                "kitchen 0 chair 12",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 plant 5",
+                "living room 0 coffee table 3",
+                "kitchen 0 oven 46",
+                "kitchen 0 bottom cabinet 30",
+                "pantry room 0 top cabinet 55",
+                "kitchen 0 oven 21",
+                "living room 0 chair 2",
+                "utility room 0 dryer 57",
+                "pantry room 0 counter 53",
+                "kitchen 0 oven 22",
+                "kitchen 0 chair 9",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 16",
+                "kitchen 0 counter 33",
+                "utility room 0 washer 56",
+                "kitchen 0 chair 8"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 283
+    },
+    {
+        "mode": "single",
+        "start": 283,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object cake pan 1 found on corridor 0 shelf 14. Object cloth 1 found on corridor 0 carpet 13 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 26, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 counter 41. \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 shelf 16, living room 0 chair 1, living room 0 coffee table 3, living room 0 chair 2, living room 0 shelf 15. Object milk frother 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object shredder 1 found on pantry room 0 top cabinet 54. Object hat 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to cloth 1\nstep 2: look at cloth 1\nstep 3: pick up cloth 1\nstep 4: go to kitchen 0 bottom cabinet 29\nstep 5: look at kitchen 0 bottom cabinet 29\nstep 6: place cloth 1 on kitchen 0 bottom cabinet 29"
+        },
+        "logs": [
+            {
+                "start": 283,
+                "step_raw": "go to cloth 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "cloth_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 329,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 38"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 329,
+                "step_raw": "look at cloth 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "cloth_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 329,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 329,
+                "step_raw": "pick up cloth 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cloth_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "corridor 0 carpet 13",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "agent",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 330,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "cloth 1": [
+                            "corridor 0 carpet 13",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 330,
+                "step_raw": "go to kitchen 0 bottom cabinet 29",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_29_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "agent",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "agent",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 366,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 366,
+                "step_raw": "look at kitchen 0 bottom cabinet 29",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_29_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "agent",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "agent",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 366,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 366,
+                "step_raw": "place cloth 1 on kitchen 0 bottom cabinet 29",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "cloth_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_29_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "agent",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "kitchen 0 bottom cabinet 29",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 367,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "cloth 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 29"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cake pan 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pan 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "milk frother 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "golf ball 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "utility room 0 top cabinet 60"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "baseball 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "utility room 0 top cabinet 60"
+            ],
+            "fork 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "hat 1": [
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "corridor 0 carpet 13",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61",
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "cloth 1": "kitchen 0 bottom cabinet 29",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61",
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "corridor 0 carpet 13",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "cloth 1": "kitchen 0 bottom cabinet 29",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 bottom cabinet 38"
+            ],
+            "objects_moved": {
+                "cloth 1": [
+                    "corridor 0 carpet 13",
+                    "kitchen 0 bottom cabinet 29"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 367
+    },
+    {
+        "mode": "single",
+        "start": 367,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object cake pan 1 found on corridor 0 shelf 14 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 chair 12, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 table 6, kitchen 0 chair 7, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 26, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 bottom cabinet 39, kitchen 0 top cabinet 43, kitchen 0 counter 41, kitchen 0 bottom cabinet 38. Object cloth 1 found on kitchen 0 bottom cabinet 29 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 shelf 16, living room 0 chair 1, living room 0 coffee table 3, living room 0 chair 2, living room 0 shelf 15. Object milk frother 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object hat 1 found on pantry room 0 top cabinet 55. Object shredder 1 found on pantry room 0 top cabinet 54 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 367,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "cloth 1": "kitchen 0 bottom cabinet 29",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    },
+                    "end": {
+                        "cloth 1": "kitchen 0 bottom cabinet 29",
+                        "cake pan 1": "corridor 0 shelf 14",
+                        "pan 1": "kitchen 0 microwave 23",
+                        "milk frother 1": "living room 0 coffee table 3",
+                        "golf ball 1": "bathroom 0 toilet 61",
+                        "shredder 1": "pantry room 0 top cabinet 54",
+                        "baseball 1": "utility room 0 top cabinet 60",
+                        "fork 1": "pantry room 0 top cabinet 54",
+                        "hat 1": "pantry room 0 top cabinet 55"
+                    }
+                },
+                "end": 367,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "cloth 1": [
+                "utility room 0 bottom cabinet 59",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "cake pan 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pan 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "milk frother 1": [
+                "utility room 0 bottom cabinet 59",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "golf ball 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "utility room 0 top cabinet 60"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "baseball 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "utility room 0 top cabinet 60"
+            ],
+            "fork 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "hat 1": [
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "cloth 1": "kitchen 0 bottom cabinet 29",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61",
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "cloth 1": "kitchen 0 bottom cabinet 29",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61",
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            },
+            "end": {
+                "shredder 1": "pantry room 0 top cabinet 54",
+                "baseball 1": "utility room 0 top cabinet 60",
+                "fork 1": "pantry room 0 top cabinet 54",
+                "hat 1": "pantry room 0 top cabinet 55"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "cloth 1": "kitchen 0 bottom cabinet 29",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61"
+            },
+            "end": {
+                "cloth 1": "kitchen 0 bottom cabinet 29",
+                "cake pan 1": "corridor 0 shelf 14",
+                "pan 1": "kitchen 0 microwave 23",
+                "milk frother 1": "living room 0 coffee table 3",
+                "golf ball 1": "bathroom 0 toilet 61"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 367
+    }
+]

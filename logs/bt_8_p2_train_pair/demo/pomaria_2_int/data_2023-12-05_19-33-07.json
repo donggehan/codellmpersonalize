@@ -1,0 +1,2957 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19. Object pitcher base 1 found on bathroom 0 bathtub 14. Object shredder 1 found on bathroom 0 bathtub 14 \nIn bedroom 0, no receptacles found yet. \nIn corridor 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: go to bedroom 0\nstep 3: go to corridor 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 12,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "flashlight 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 sink 18",
+                        "bathroom 0 table 7"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 12,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bed_11_3.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 60,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "medicine 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 carpet 12",
+                        "bedroom 0 sofa chair 2",
+                        "bedroom 0 chair 1",
+                        "bedroom 0 shelf 13",
+                        "bathroom 0 table 8",
+                        "bedroom 0 shelf 9",
+                        "bedroom 0 bottom cabinet 10",
+                        "bathroom 0 mirror 22",
+                        "corridor 0 plant 0",
+                        "bedroom 0 bed 11",
+                        "bathroom 0 bottom cabinet 16"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 60,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-plant_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 118,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "light bulb 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 standing tv 3"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bathroom 0 table 7",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bathroom 0 table 7",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bathroom 0 table 7",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bathroom 0 table 7",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "light bulb 1",
+                "flashlight 1",
+                "medicine 1"
+            ],
+            "recs_discovered": [
+                "bedroom 0 carpet 12",
+                "bathroom 0 sink 18",
+                "bedroom 0 sofa chair 2",
+                "bedroom 0 chair 1",
+                "bedroom 0 shelf 13",
+                "bedroom 0 standing tv 3",
+                "bathroom 0 table 8",
+                "bedroom 0 shelf 9",
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 table 7",
+                "bathroom 0 mirror 22",
+                "corridor 0 plant 0",
+                "bedroom 0 bed 11",
+                "bathroom 0 bottom cabinet 16"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 3,
+                "end": 3
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 118
+    },
+    {
+        "mode": "single",
+        "start": 118,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19, bathroom 0 table 7, bathroom 0 sink 18, bathroom 0 mirror 22, bathroom 0 bottom cabinet 16, bathroom 0 table 8. Object flashlight 1 found on bathroom 0 table 7. Object pitcher base 1 found on bathroom 0 bathtub 14. Object shredder 1 found on bathroom 0 bathtub 14. Object light bulb 1 found on bathroom 0 carpet 15 \nIn bedroom 0, found receptacles: bedroom 0 carpet 12, bedroom 0 shelf 9, bedroom 0 sofa chair 2, bedroom 0 chair 1, bedroom 0 bottom cabinet 10, bedroom 0 bed 11, bedroom 0 shelf 13, bedroom 0 standing tv 3. Object medicine 1 found on bedroom 0 bottom cabinet 10 \nIn corridor 0, found receptacles: corridor 0 plant 0.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to flashlight 1\nstep 2: look at flashlight 1\nstep 3: pick up flashlight 1\nstep 4: go to bedroom 0 shelf 9\nstep 5: look at bedroom 0 shelf 9\nstep 6: place flashlight 1 on bedroom 0 shelf 9"
+        },
+        "logs": [
+            {
+                "start": 118,
+                "step_raw": "go to flashlight 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 174,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bedroom 0 plant 6",
+                        "bedroom 0 plant 5",
+                        "bedroom 0 floor lamp 4"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 174,
+                "step_raw": "look at flashlight 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 176,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 176,
+                "step_raw": "pick up flashlight 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bathroom 0 table 7",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "agent",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 177,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "flashlight 1": [
+                            "bathroom 0 table 7",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 177,
+                "step_raw": "go to bedroom 0 shelf 9",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-shelf_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "agent",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "agent",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 222,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 222,
+                "step_raw": "look at bedroom 0 shelf 9",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-shelf_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "agent",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "agent",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 222,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 3,
+                        "end": 3
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 222,
+                "step_raw": "place flashlight 1 on bedroom 0 shelf 9",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "flashlight_1",
+                    "target_receptacle": "bedroom_0-shelf_9_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "agent",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 223,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "flashlight 1": [
+                            "agent",
+                            "bedroom 0 shelf 9"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 3,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bathroom 0 table 7",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bathroom 0 table 7",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "bedroom 0 plant 6",
+                "bedroom 0 plant 5",
+                "bedroom 0 floor lamp 4"
+            ],
+            "objects_moved": {
+                "flashlight 1": [
+                    "bathroom 0 table 7",
+                    "bedroom 0 shelf 9"
+                ]
+            },
+            "count_correct": {
+                "start": 3,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 4
+            }
+        },
+        "end": 223
+    },
+    {
+        "mode": "single",
+        "start": 223,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19, bathroom 0 table 7, bathroom 0 sink 18, bathroom 0 mirror 22, bathroom 0 bottom cabinet 16, bathroom 0 table 8. Object light bulb 1 found on bathroom 0 carpet 15. Object pitcher base 1 found on bathroom 0 bathtub 14. Object shredder 1 found on bathroom 0 bathtub 14 \nIn bedroom 0, found receptacles: bedroom 0 carpet 12, bedroom 0 shelf 9, bedroom 0 sofa chair 2, bedroom 0 chair 1, bedroom 0 bottom cabinet 10, bedroom 0 bed 11, bedroom 0 shelf 13, bedroom 0 standing tv 3, bedroom 0 floor lamp 4, bedroom 0 plant 5, bedroom 0 plant 6. Object medicine 1 found on bedroom 0 bottom cabinet 10. Object flashlight 1 found on bedroom 0 shelf 9 \nIn corridor 0, found receptacles: corridor 0 plant 0.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to pitcher base 1\nstep 2: look at pitcher base 1\nstep 3: pick up pitcher base 1\nstep 4: go to bedroom 0 shelf 13\nstep 5: look at bedroom 0 shelf 13\nstep 6: place pitcher base 1 on bedroom 0 shelf 13"
+        },
+        "logs": [
+            {
+                "start": 223,
+                "step_raw": "go to pitcher base 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 271,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 271,
+                "step_raw": "look at pitcher base 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 271,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 271,
+                "step_raw": "pick up pitcher base 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bathroom 0 bathtub 14",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "agent",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 272,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "pitcher base 1": [
+                            "bathroom 0 bathtub 14",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 272,
+                "step_raw": "go to bedroom 0 shelf 13",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-shelf_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "agent",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "agent",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 314,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 314,
+                "step_raw": "look at bedroom 0 shelf 13",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-shelf_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "agent",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "agent",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 314,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 314,
+                "step_raw": "place pitcher base 1 on bedroom 0 shelf 13",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "pitcher_base_1",
+                    "target_receptacle": "bedroom_0-shelf_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "agent",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 315,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "pitcher base 1": [
+                            "agent",
+                            "bedroom 0 shelf 13"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bathroom 0 bathtub 14",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "pitcher base 1": [
+                    "bathroom 0 bathtub 14",
+                    "bedroom 0 shelf 13"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 315
+    },
+    {
+        "mode": "single",
+        "start": 315,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19, bathroom 0 table 7, bathroom 0 sink 18, bathroom 0 mirror 22, bathroom 0 bottom cabinet 16, bathroom 0 table 8. Object light bulb 1 found on bathroom 0 carpet 15. Object shredder 1 found on bathroom 0 bathtub 14 \nIn bedroom 0, found receptacles: bedroom 0 carpet 12, bedroom 0 shelf 9, bedroom 0 sofa chair 2, bedroom 0 chair 1, bedroom 0 bottom cabinet 10, bedroom 0 bed 11, bedroom 0 shelf 13, bedroom 0 standing tv 3, bedroom 0 floor lamp 4, bedroom 0 plant 5, bedroom 0 plant 6. Object flashlight 1 found on bedroom 0 shelf 9. Object medicine 1 found on bedroom 0 bottom cabinet 10. Object pitcher base 1 found on bedroom 0 shelf 13 \nIn corridor 0, found receptacles: corridor 0 plant 0.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to light bulb 1\nstep 2: look at light bulb 1\nstep 3: pick up light bulb 1\nstep 4: go to bathroom 0 bottom cabinet 16\nstep 5: look at bathroom 0 bottom cabinet 16\nstep 6: place light bulb 1 on bathroom 0 bottom cabinet 16"
+        },
+        "logs": [
+            {
+                "start": 315,
+                "step_raw": "go to light bulb 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 345,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 shower 24"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 345,
+                "step_raw": "look at light bulb 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 345,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 345,
+                "step_raw": "pick up light bulb 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 carpet 15",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 346,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "bathroom 0 carpet 15",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 346,
+                "step_raw": "go to bathroom 0 bottom cabinet 16",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bottom_cabinet_no_top_16_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 361,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 361,
+                "step_raw": "look at bathroom 0 bottom cabinet 16",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bottom_cabinet_no_top_16_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 361,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 361,
+                "step_raw": "place light bulb 1 on bathroom 0 bottom cabinet 16",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": "bathroom_0-bottom_cabinet_no_top_16_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 362,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "agent",
+                            "bathroom 0 bottom cabinet 16"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 carpet 15",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "bathroom 0 shower 24"
+            ],
+            "objects_moved": {
+                "light bulb 1": [
+                    "bathroom 0 carpet 15",
+                    "bathroom 0 bottom cabinet 16"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 362
+    },
+    {
+        "mode": "single",
+        "start": 362,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19, bathroom 0 table 7, bathroom 0 sink 18, bathroom 0 mirror 22, bathroom 0 bottom cabinet 16, bathroom 0 table 8, bathroom 0 shower 24. Object shredder 1 found on bathroom 0 bathtub 14. Object light bulb 1 found on bathroom 0 bottom cabinet 16 \nIn bedroom 0, found receptacles: bedroom 0 carpet 12, bedroom 0 shelf 9, bedroom 0 sofa chair 2, bedroom 0 chair 1, bedroom 0 bottom cabinet 10, bedroom 0 bed 11, bedroom 0 shelf 13, bedroom 0 standing tv 3, bedroom 0 floor lamp 4, bedroom 0 plant 5, bedroom 0 plant 6. Object flashlight 1 found on bedroom 0 shelf 9. Object medicine 1 found on bedroom 0 bottom cabinet 10. Object pitcher base 1 found on bedroom 0 shelf 13 \nIn corridor 0, found receptacles: corridor 0 plant 0.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to shredder 1\nstep 2: look at shredder 1\nstep 3: pick up shredder 1\nstep 4: go to bedroom 0 bottom cabinet 10\nstep 5: look at bedroom 0 bottom cabinet 10\nstep 6: place shredder 1 on bedroom 0 bottom cabinet 10"
+        },
+        "logs": [
+            {
+                "start": 362,
+                "step_raw": "go to shredder 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "shredder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 378,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 378,
+                "step_raw": "look at shredder 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "shredder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 378,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 378,
+                "step_raw": "pick up shredder 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "shredder_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bathroom 0 bathtub 14",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "agent",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 379,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "shredder 1": [
+                            "bathroom 0 bathtub 14",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 379,
+                "step_raw": "go to bedroom 0 bottom cabinet 10",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_10_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "agent",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "agent",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 425,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 425,
+                "step_raw": "look at bedroom 0 bottom cabinet 10",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bottom_cabinet_10_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "agent",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "agent",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 426,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 426,
+                "step_raw": "place shredder 1 on bedroom 0 bottom cabinet 10",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "shredder_1",
+                    "target_receptacle": "bedroom_0-bottom_cabinet_10_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "agent",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 427,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "shredder 1": [
+                            "agent",
+                            "bedroom 0 bottom cabinet 10"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bathroom 0 bathtub 14",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "shredder 1": [
+                    "bathroom 0 bathtub 14",
+                    "bedroom 0 bottom cabinet 10"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 427
+    },
+    {
+        "mode": "single",
+        "start": 427,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19, bathroom 0 table 7, bathroom 0 sink 18, bathroom 0 mirror 22, bathroom 0 bottom cabinet 16, bathroom 0 table 8, bathroom 0 shower 24. Object light bulb 1 found on bathroom 0 bottom cabinet 16 \nIn bedroom 0, found receptacles: bedroom 0 carpet 12, bedroom 0 shelf 9, bedroom 0 sofa chair 2, bedroom 0 chair 1, bedroom 0 bottom cabinet 10, bedroom 0 bed 11, bedroom 0 shelf 13, bedroom 0 standing tv 3, bedroom 0 floor lamp 4, bedroom 0 plant 5, bedroom 0 plant 6. Object pitcher base 1 found on bedroom 0 shelf 13. Object flashlight 1 found on bedroom 0 shelf 9. Object medicine 1 found on bedroom 0 bottom cabinet 10. Object shredder 1 found on bedroom 0 bottom cabinet 10 \nIn corridor 0, found receptacles: corridor 0 plant 0.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to light bulb 1\nstep 2: look at light bulb 1\nstep 3: pick up light bulb 1\nstep 4: go to bathroom 0 table 8\nstep 5: look at bathroom 0 table 8\nstep 6: place light bulb 1 on bathroom 0 table 8"
+        },
+        "logs": [
+            {
+                "start": 427,
+                "step_raw": "go to light bulb 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 479,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 479,
+                "step_raw": "look at light bulb 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 479,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 479,
+                "step_raw": "pick up light bulb 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 bottom cabinet 16",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 480,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "bathroom 0 bottom cabinet 16",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 480,
+                "step_raw": "go to bathroom 0 table 8",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-table_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 499,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 499,
+                "step_raw": "look at bathroom 0 table 8",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-table_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 502,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 502,
+                "step_raw": "place light bulb 1 on bathroom 0 table 8",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": "bathroom_0-table_8_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 table 8",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 503,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "agent",
+                            "bathroom 0 table 8"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 table 8",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 bottom cabinet 16",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 table 8",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "light bulb 1": [
+                    "bathroom 0 bottom cabinet 16",
+                    "bathroom 0 table 8"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 503
+    },
+    {
+        "mode": "single",
+        "start": 503,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19, bathroom 0 table 7, bathroom 0 sink 18, bathroom 0 mirror 22, bathroom 0 bottom cabinet 16, bathroom 0 table 8, bathroom 0 shower 24. Object light bulb 1 found on bathroom 0 table 8 \nIn bedroom 0, found receptacles: bedroom 0 carpet 12, bedroom 0 shelf 9, bedroom 0 sofa chair 2, bedroom 0 chair 1, bedroom 0 bottom cabinet 10, bedroom 0 bed 11, bedroom 0 shelf 13, bedroom 0 standing tv 3, bedroom 0 floor lamp 4, bedroom 0 plant 5, bedroom 0 plant 6. Object medicine 1 found on bedroom 0 bottom cabinet 10. Object shredder 1 found on bedroom 0 bottom cabinet 10. Object pitcher base 1 found on bedroom 0 shelf 13. Object flashlight 1 found on bedroom 0 shelf 9 \nIn corridor 0, found receptacles: corridor 0 plant 0.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to light bulb 1\nstep 2: look at light bulb 1\nstep 3: pick up light bulb 1\nstep 4: go to bedroom 0 shelf 13\nstep 5: look at bedroom 0 shelf 13\nstep 6: place light bulb 1 on bedroom 0 shelf 13"
+        },
+        "logs": [
+            {
+                "start": 503,
+                "step_raw": "go to light bulb 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 table 8",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 table 8",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 503,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 503,
+                "step_raw": "look at light bulb 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 table 8",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 table 8",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 503,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 503,
+                "step_raw": "pick up light bulb 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bathroom 0 table 8",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 504,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "bathroom 0 table 8",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 504,
+                "step_raw": "go to bedroom 0 shelf 13",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-shelf_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 527,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 527,
+                "step_raw": "look at bedroom 0 shelf 13",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-shelf_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 529,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 529,
+                "step_raw": "place light bulb 1 on bedroom 0 shelf 13",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": "bedroom_0-shelf_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "agent",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bedroom 0 shelf 13",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 530,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "agent",
+                            "bedroom 0 shelf 13"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 table 8",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bedroom 0 shelf 13",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bathroom 0 table 8",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bedroom 0 shelf 13",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "light bulb 1": [
+                    "bathroom 0 table 8",
+                    "bedroom 0 shelf 13"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 530
+    },
+    {
+        "mode": "single",
+        "start": 530,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bathroom 0, found receptacles: bathroom 0 bathtub 14, bathroom 0 bottom cabinet 20, bathroom 0 carpet 15, bathroom 0 mirror 23, bathroom 0 sink 19, bathroom 0 table 7, bathroom 0 sink 18, bathroom 0 mirror 22, bathroom 0 bottom cabinet 16, bathroom 0 table 8, bathroom 0 shower 24. \nIn bedroom 0, found receptacles: bedroom 0 carpet 12, bedroom 0 shelf 9, bedroom 0 sofa chair 2, bedroom 0 chair 1, bedroom 0 bottom cabinet 10, bedroom 0 bed 11, bedroom 0 shelf 13, bedroom 0 standing tv 3, bedroom 0 floor lamp 4, bedroom 0 plant 5, bedroom 0 plant 6. Object pitcher base 1 found on bedroom 0 shelf 13. Object flashlight 1 found on bedroom 0 shelf 9. Object medicine 1 found on bedroom 0 bottom cabinet 10. Object shredder 1 found on bedroom 0 bottom cabinet 10. Object light bulb 1 found on bedroom 0 shelf 13 \nIn corridor 0, found receptacles: corridor 0 plant 0.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 530,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bedroom 0 shelf 13",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "pitcher base 1": "bedroom 0 shelf 13",
+                        "shredder 1": "bedroom 0 bottom cabinet 10",
+                        "light bulb 1": "bedroom 0 shelf 13",
+                        "flashlight 1": "bedroom 0 shelf 9",
+                        "coffee beans 1": "bathroom 0 toilet 25",
+                        "water bottle 1": "bathroom 0 top cabinet 26",
+                        "medicine 1": "bedroom 0 bottom cabinet 10",
+                        "thermal laminator 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 530,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "pitcher base 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "shredder 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "light bulb 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "flashlight 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "coffee beans 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "water bottle 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "medicine 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "thermal laminator 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bedroom 0 shelf 13",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bedroom 0 shelf 13",
+                "flashlight 1": "bedroom 0 shelf 9",
+                "coffee beans 1": "bathroom 0 toilet 25",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "flashlight 1": "bedroom 0 shelf 9",
+                "water bottle 1": "bathroom 0 top cabinet 26",
+                "medicine 1": "bedroom 0 bottom cabinet 10",
+                "thermal laminator 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bedroom 0 shelf 13",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            },
+            "end": {
+                "pitcher base 1": "bedroom 0 shelf 13",
+                "shredder 1": "bedroom 0 bottom cabinet 10",
+                "light bulb 1": "bedroom 0 shelf 13",
+                "coffee beans 1": "bathroom 0 toilet 25"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 530
+    }
+]

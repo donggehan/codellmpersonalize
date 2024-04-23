@@ -1,0 +1,612 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn living room 0, no receptacles found yet. \nIn dining room 0, no receptacles found yet. \nIn corridor 0, no receptacles found yet. \nIn kitchen 0, found receptacles: kitchen 0 counter 18.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to counter 18\nstep 3: look at counter 18\nstep 4: go to saucer 1\nstep 5: look at saucer 1\nstep 6: pick up saucer 1\nstep 7: go to kitchen 0 counter 18\nstep 8: look at kitchen 0 counter 18\nstep 9: place saucer 1 on kitchen 0 counter 18\nmission complete"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "pet food supplement 1",
+                        "tennis ball 1",
+                        "dispensing closure 1",
+                        "ramekin 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 dishwasher 20",
+                        "kitchen 0 counter 26",
+                        "dining room 0 chair 2",
+                        "kitchen 0 fridge 27",
+                        "dining room 0 counter 14",
+                        "kitchen 0 oven 24",
+                        "kitchen 0 microwave 36",
+                        "dining room 0 table 1",
+                        "kitchen 0 sink 19",
+                        "kitchen 0 counter 21",
+                        "kitchen 0 counter 23"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "go to counter 18",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "look at counter 18",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "counter 18",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "go to saucer 1",
+                "step_parsed": {
+                    "action": null,
+                    "target_object": null,
+                    "target_receptacle": null,
+                    "target_type": null
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "look at saucer 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "saucer 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "pick up saucer 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "saucer 1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "go to kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "look at kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "place saucer 1 on kitchen 0 counter 18",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "saucer 1",
+                    "target_receptacle": "kitchen_0-counter_18_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 25,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "ramekin 1": "kitchen 0 sink 19",
+                        "tennis ball 1": "dining room 0 table 1",
+                        "baseball 1": "corridor 0 console table 9",
+                        "light bulb 1": "living room 0 chest 11",
+                        "dispensing closure 1": "dining room 0 table 1",
+                        "pet food supplement 1": "dining room 0 counter 14",
+                        "golf ball 1": "living room 0 chest 11",
+                        "softball 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 25,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "ramekin 1": [
+                "living room 0 chest 11"
+            ],
+            "tennis ball 1": [
+                "living room 0 chest 11"
+            ],
+            "baseball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12"
+            ],
+            "light bulb 1": [
+                "living room 0 chest 11"
+            ],
+            "dispensing closure 1": [
+                "dining room 0 table 1"
+            ],
+            "pet food supplement 1": [
+                "dining room 0 counter 14"
+            ],
+            "golf ball 1": [
+                "living room 0 chest 11"
+            ],
+            "softball 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "ramekin 1": "kitchen 0 sink 19",
+                "tennis ball 1": "dining room 0 table 1",
+                "baseball 1": "corridor 0 console table 9",
+                "light bulb 1": "living room 0 chest 11",
+                "dispensing closure 1": "dining room 0 table 1",
+                "pet food supplement 1": "dining room 0 counter 14",
+                "golf ball 1": "living room 0 chest 11",
+                "softball 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "ramekin 1": "kitchen 0 sink 19",
+                "tennis ball 1": "dining room 0 table 1",
+                "baseball 1": "corridor 0 console table 9",
+                "light bulb 1": "living room 0 chest 11",
+                "dispensing closure 1": "dining room 0 table 1",
+                "pet food supplement 1": "dining room 0 counter 14",
+                "golf ball 1": "living room 0 chest 11",
+                "softball 1": "corridor 0 chest 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "light bulb 1": "living room 0 chest 11",
+                "dispensing closure 1": "dining room 0 table 1",
+                "pet food supplement 1": "dining room 0 counter 14",
+                "golf ball 1": "living room 0 chest 11",
+                "softball 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "light bulb 1": "living room 0 chest 11",
+                "dispensing closure 1": "dining room 0 table 1",
+                "pet food supplement 1": "dining room 0 counter 14",
+                "golf ball 1": "living room 0 chest 11",
+                "softball 1": "corridor 0 chest 12"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "ramekin 1": "kitchen 0 sink 19",
+                "tennis ball 1": "dining room 0 table 1",
+                "baseball 1": "corridor 0 console table 9"
+            },
+            "end": {
+                "ramekin 1": "kitchen 0 sink 19",
+                "tennis ball 1": "dining room 0 table 1",
+                "baseball 1": "corridor 0 console table 9"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "pet food supplement 1",
+                "tennis ball 1",
+                "dispensing closure 1",
+                "ramekin 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 counter 26",
+                "kitchen 0 dishwasher 20",
+                "dining room 0 chair 2",
+                "kitchen 0 fridge 27",
+                "dining room 0 counter 14",
+                "kitchen 0 oven 24",
+                "kitchen 0 microwave 36",
+                "dining room 0 table 1",
+                "kitchen 0 sink 19",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 25
+    }
+]

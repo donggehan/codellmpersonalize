@@ -1,0 +1,2036 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20. Object gloves 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54. Object dispensing closure 1 found on kitchen 0 dishwasher 52. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to bedroom 0 step 2: go to bathroom 0 step 3: go to childs room 0 step 4: go to living room 0 step 5: go to dining room 0 step 6: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 62,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "hair straightener 1",
+                        "peppermint 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 bottom cabinet 12",
+                        "kitchen 0 top cabinet 55",
+                        "childs room 0 stool 5",
+                        "living room 0 floor lamp 31",
+                        "bedroom 0 basket 15",
+                        "childs room 0 bed 1",
+                        "living room 0 coffee table 27",
+                        "bedroom 0 bed 7",
+                        "living room 0 mirror 68",
+                        "living room 0 carpet 62",
+                        "bedroom 0 basket 14",
+                        "childs room 0 carpet 0",
+                        "bedroom 0 bottom cabinet 8",
+                        "childs room 0 sofa chair 4",
+                        "living room 0 sofa chair 26",
+                        "dining room 0 chair 21",
+                        "bedroom 0 bottom cabinet 13",
+                        "childs room 0 bottom cabinet 2",
+                        "living room 0 floor lamp 33",
+                        "childs room 0 bottom cabinet 6"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 62,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 125,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "living room 0 carpet 28",
+                        "living room 0 towel rack 66",
+                        "bathroom 0 top cabinet 70",
+                        "bathroom 0 toilet 69",
+                        "bathroom 0 trash can 34",
+                        "living room 0 bottom cabinet 30",
+                        "bathroom 0 mirror 73",
+                        "bathroom 0 bathtub 71",
+                        "bathroom 0 sink 72"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 125,
+                "step_raw": "go to childs room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 185,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "water bottle 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 trash can 18"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 185,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 258,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "plant saucer 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 fridge 57",
+                        "dining room 0 chair 22"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 258,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 278,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 278,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_52_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 342,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 stove 59",
+                        "kitchen 0 bottom cabinet 50"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "water bottle 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "gloves 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "dispensing closure 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 coffee table 27",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "plant saucer 1": [
+                "living room 0 bottom cabinet 30"
+            ],
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "hair straightener 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "gelatin box 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "water bottle 1": "childs room 0 carpet 0",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 carpet 0",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "water bottle 1": "childs room 0 carpet 0",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 carpet 0",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "plant saucer 1",
+                "water bottle 1",
+                "hair straightener 1",
+                "peppermint 1"
+            ],
+            "recs_discovered": [
+                "living room 0 carpet 28",
+                "bedroom 0 bottom cabinet 12",
+                "bathroom 0 top cabinet 70",
+                "kitchen 0 top cabinet 55",
+                "childs room 0 stool 5",
+                "living room 0 floor lamp 31",
+                "bathroom 0 toilet 69",
+                "kitchen 0 trash can 18",
+                "bathroom 0 trash can 34",
+                "bedroom 0 basket 15",
+                "childs room 0 bed 1",
+                "living room 0 coffee table 27",
+                "kitchen 0 fridge 57",
+                "bedroom 0 bed 7",
+                "living room 0 mirror 68",
+                "living room 0 towel rack 66",
+                "kitchen 0 stove 59",
+                "living room 0 carpet 62",
+                "bedroom 0 basket 14",
+                "childs room 0 carpet 0",
+                "childs room 0 sofa chair 4",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 sofa chair 26",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 50",
+                "dining room 0 chair 21",
+                "bedroom 0 bottom cabinet 13",
+                "bathroom 0 bathtub 71",
+                "dining room 0 chair 22",
+                "childs room 0 bottom cabinet 2",
+                "bathroom 0 mirror 73",
+                "living room 0 floor lamp 33",
+                "bathroom 0 sink 72",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 342
+    },
+    {
+        "mode": "single",
+        "start": 342,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object water bottle 1 found on childs room 0 carpet 0. Object peppermint 1 found on childs room 0 bottom cabinet 2. Object hair straightener 1 found on childs room 0 bottom cabinet 2 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28. Object plant saucer 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22. Object gloves 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59. Object dispensing closure 1 found on kitchen 0 dishwasher 52. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to water bottle 1 step 2: look at water bottle 1 step 3: pick up water bottle 1 step 4: go to childs room 0 bottom cabinet 6 step 5: look at childs room 0 bottom cabinet 6 step 6: place water bottle 1 on childs room 0 bottom cabinet 6"
+        },
+        "logs": [
+            {
+                "start": 342,
+                "step_raw": "go to water bottle 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "water_bottle_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 399,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bedroom 0 bottom cabinet 9"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 399,
+                "step_raw": "look at water bottle 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "water_bottle_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 400,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 400,
+                "step_raw": "pick up water bottle 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "water_bottle_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 carpet 0",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "agent",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 401,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "water bottle 1": [
+                            "childs room 0 carpet 0",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 401,
+                "step_raw": "go to childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "agent",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "agent",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 419,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 419,
+                "step_raw": "look at childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "agent",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "agent",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 419,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 419,
+                "step_raw": "place water bottle 1 on childs room 0 bottom cabinet 6",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "water_bottle_1",
+                    "target_receptacle": "childs_room_0-bottom_cabinet_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "agent",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 420,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "water bottle 1": [
+                            "agent",
+                            "childs room 0 bottom cabinet 6"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "water bottle 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "gloves 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "dispensing closure 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 coffee table 27",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "plant saucer 1": [
+                "living room 0 bottom cabinet 30"
+            ],
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "hair straightener 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "gelatin box 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "water bottle 1": "childs room 0 carpet 0",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "water bottle 1": "childs room 0 carpet 0",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52"
+            },
+            "end": {
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "bedroom 0 bottom cabinet 9"
+            ],
+            "objects_moved": {
+                "water bottle 1": [
+                    "childs room 0 carpet 0",
+                    "childs room 0 bottom cabinet 6"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 420
+    },
+    {
+        "mode": "single",
+        "start": 420,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object hair straightener 1 found on childs room 0 bottom cabinet 2. Object peppermint 1 found on childs room 0 bottom cabinet 2. Object water bottle 1 found on childs room 0 bottom cabinet 6 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28. Object plant saucer 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22. Object gloves 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59. Object dispensing closure 1 found on kitchen 0 dishwasher 52. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to gloves 1 step 2: look at gloves 1 step 3: pick up gloves 1 step 4: go to kitchen 0 bottom cabinet 51 step 5: look at kitchen 0 bottom cabinet 51 step 6: place gloves 1 on kitchen 0 bottom cabinet 51"
+        },
+        "logs": [
+            {
+                "start": 420,
+                "step_raw": "go to gloves 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 474,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "gelatin box 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 shelf 58",
+                        "kitchen 0 shelf 61",
+                        "kitchen 0 range hood 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 474,
+                "step_raw": "look at gloves 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 474,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 474,
+                "step_raw": "pick up gloves 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "gloves_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "dining room 0 table 20",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "agent",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 475,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "gloves 1": [
+                            "dining room 0 table 20",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 475,
+                "step_raw": "go to kitchen 0 bottom cabinet 51",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_51_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "agent",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "agent",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 516,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 516,
+                "step_raw": "look at kitchen 0 bottom cabinet 51",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_51_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "agent",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "agent",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 520,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 520,
+                "step_raw": "place gloves 1 on kitchen 0 bottom cabinet 51",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "gloves_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_51_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "agent",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 521,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "gloves 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 51"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "water bottle 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "gloves 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "dispensing closure 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 coffee table 27",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "plant saucer 1": [
+                "living room 0 bottom cabinet 30"
+            ],
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "hair straightener 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "gelatin box 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 dishwasher 52",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "gloves 1": "dining room 0 table 20",
+                "dispensing closure 1": "kitchen 0 dishwasher 52"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 dishwasher 52"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "gelatin box 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 range hood 60"
+            ],
+            "objects_moved": {
+                "gloves 1": [
+                    "dining room 0 table 20",
+                    "kitchen 0 bottom cabinet 51"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 521
+    },
+    {
+        "mode": "single",
+        "start": 521,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object hair straightener 1 found on childs room 0 bottom cabinet 2. Object peppermint 1 found on childs room 0 bottom cabinet 2. Object water bottle 1 found on childs room 0 bottom cabinet 6 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28. Object plant saucer 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59, kitchen 0 range hood 60, kitchen 0 shelf 61, kitchen 0 shelf 58. Object gelatin box 1 found on kitchen 0 shelf 58. Object dispensing closure 1 found on kitchen 0 dishwasher 52. Object gloves 1 found on kitchen 0 bottom cabinet 51. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to dispensing closure 1 step 2: look at dispensing closure 1 step 3: pick up dispensing closure 1 step 4: go to kitchen 0 bottom cabinet 51 step 5: look at kitchen 0 bottom cabinet 51 step 6: place dispensing closure 1 on kitchen 0 bottom cabinet 51"
+        },
+        "logs": [
+            {
+                "start": 521,
+                "step_raw": "go to dispensing closure 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 539,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 539,
+                "step_raw": "look at dispensing closure 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 541,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 541,
+                "step_raw": "pick up dispensing closure 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 dishwasher 52",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "agent",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 542,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "kitchen 0 dishwasher 52",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 542,
+                "step_raw": "go to kitchen 0 bottom cabinet 51",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_51_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "agent",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "agent",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 568,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 568,
+                "step_raw": "look at kitchen 0 bottom cabinet 51",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_51_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "agent",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "agent",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 572,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 572,
+                "step_raw": "place dispensing closure 1 on kitchen 0 bottom cabinet 51",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_51_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "agent",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 573,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 51"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "water bottle 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "gloves 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "dispensing closure 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 coffee table 27",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "plant saucer 1": [
+                "living room 0 bottom cabinet 30"
+            ],
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "hair straightener 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "gelatin box 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 dishwasher 52",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 dishwasher 52"
+            },
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "dispensing closure 1": [
+                    "kitchen 0 dishwasher 52",
+                    "kitchen 0 bottom cabinet 51"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 0
+            }
+        },
+        "end": 573
+    },
+    {
+        "mode": "single",
+        "start": 573,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 12, bedroom 0 bottom cabinet 13, bedroom 0 basket 15, bedroom 0 basket 14, bedroom 0 bed 7, bedroom 0 bottom cabinet 8, bedroom 0 bottom cabinet 9. \nIn bathroom 0, found receptacles: bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 top cabinet 70, bathroom 0 toilet 69, bathroom 0 sink 72, bathroom 0 mirror 73. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bottom cabinet 2, childs room 0 bed 1, childs room 0 bottom cabinet 6. Object hair straightener 1 found on childs room 0 bottom cabinet 2. Object peppermint 1 found on childs room 0 bottom cabinet 2. Object water bottle 1 found on childs room 0 bottom cabinet 6 \nIn living room 0, found receptacles: living room 0 mirror 68, living room 0 carpet 62, living room 0 floor lamp 33, living room 0 sofa chair 26, living room 0 coffee table 27, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 bottom cabinet 30, living room 0 carpet 28. Object plant saucer 1 found on living room 0 bottom cabinet 30 \nIn dining room 0, found receptacles: dining room 0 chair 23, dining room 0 chair 24, dining room 0 plant 29, dining room 0 table 20, dining room 0 chair 21, dining room 0 chair 22. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 bottom cabinet 49, kitchen 0 bottom cabinet 51, kitchen 0 top cabinet 54, kitchen 0 top cabinet 55, kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 bottom cabinet 50, kitchen 0 stove 59, kitchen 0 range hood 60, kitchen 0 shelf 61, kitchen 0 shelf 58. Object gelatin box 1 found on kitchen 0 shelf 58. Object gloves 1 found on kitchen 0 bottom cabinet 51. Object dispensing closure 1 found on kitchen 0 bottom cabinet 51. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 573,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    },
+                    "end": {
+                        "water bottle 1": "childs room 0 bottom cabinet 6",
+                        "gloves 1": "kitchen 0 bottom cabinet 51",
+                        "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                        "plant saucer 1": "living room 0 bottom cabinet 30",
+                        "peppermint 1": "childs room 0 bottom cabinet 2",
+                        "hair straightener 1": "childs room 0 bottom cabinet 2",
+                        "gelatin box 1": "kitchen 0 shelf 58"
+                    }
+                },
+                "end": 573,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 0,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "water bottle 1": [
+                "childs room 0 bottom cabinet 2",
+                "living room 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "gloves 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ],
+            "dispensing closure 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "living room 0 coffee table 27",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "dining room 0 table 20",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "plant saucer 1": [
+                "living room 0 bottom cabinet 30"
+            ],
+            "peppermint 1": [
+                "childs room 0 bottom cabinet 2",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "childs room 0 bottom cabinet 6",
+                "living room 0 coffee table 27",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55",
+                "bathroom 0 top cabinet 70"
+            ],
+            "hair straightener 1": [
+                "childs room 0 bottom cabinet 2",
+                "childs room 0 bottom cabinet 6"
+            ],
+            "gelatin box 1": [
+                "bedroom 0 bottom cabinet 12",
+                "bedroom 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 49",
+                "kitchen 0 bottom cabinet 50",
+                "kitchen 0 bottom cabinet 51",
+                "bedroom 0 bottom cabinet 8",
+                "bedroom 0 bottom cabinet 9",
+                "kitchen 0 shelf 58",
+                "kitchen 0 shelf 61",
+                "kitchen 0 top cabinet 54",
+                "kitchen 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            },
+            "end": {
+                "water bottle 1": "childs room 0 bottom cabinet 6",
+                "gloves 1": "kitchen 0 bottom cabinet 51",
+                "dispensing closure 1": "kitchen 0 bottom cabinet 51",
+                "plant saucer 1": "living room 0 bottom cabinet 30",
+                "peppermint 1": "childs room 0 bottom cabinet 2",
+                "hair straightener 1": "childs room 0 bottom cabinet 2",
+                "gelatin box 1": "kitchen 0 shelf 58"
+            }
+        },
+        "wrong_objects": {
+            "start": {},
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 7,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 0,
+                "end": 0
+            }
+        },
+        "end": 573
+    }
+]

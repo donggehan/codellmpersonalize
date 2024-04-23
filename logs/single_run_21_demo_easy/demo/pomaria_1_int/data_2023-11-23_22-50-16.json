@@ -1,0 +1,3151 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to corridor 0 step 2: go to kitchen 0 step 3: go to living room 0 step 4: go to pantry room 0 step 5: go to utility room 0 step 6: go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 22,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 sink 37",
+                        "kitchen 0 counter 48",
+                        "kitchen 0 plant 5",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 chair 12",
+                        "corridor 0 table 0",
+                        "kitchen 0 bottom cabinet 44"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 22,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 62,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "table lamp 1",
+                        "donut 1",
+                        "dispensing closure 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 chair 9",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 oven 21",
+                        "pantry room 0 top cabinet 55",
+                        "pantry room 0 top cabinet 54",
+                        "kitchen 0 top cabinet 25",
+                        "kitchen 0 table 6",
+                        "kitchen 0 oven 22",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 chair 10",
+                        "pantry room 0 fridge 50",
+                        "kitchen 0 bottom cabinet 30",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 top cabinet 24",
+                        "kitchen 0 bottom cabinet 29",
+                        "pantry room 0 bottom cabinet 51",
+                        "kitchen 0 chair 7",
+                        "kitchen 0 bottom cabinet 47",
+                        "kitchen 0 top cabinet 27",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 counter 31"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 62,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 130,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "umbrella 1",
+                        "spatula 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 coffee table 4",
+                        "kitchen 0 bottom cabinet 39",
+                        "utility room 0 bottom cabinet 59",
+                        "living room 0 coffee table 3",
+                        "kitchen 0 top cabinet 43",
+                        "utility room 0 washer 56",
+                        "utility room 0 sink 58",
+                        "living room 0 shelf 16",
+                        "utility room 0 dryer 57",
+                        "kitchen 0 counter 41",
+                        "living room 0 shelf 15",
+                        "living room 0 chair 1",
+                        "living room 0 chair 2",
+                        "kitchen 0 bottom cabinet 38"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 130,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 190,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 63",
+                        "bathroom 0 sink 62"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 190,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 228,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "plant container 1",
+                        "master chef can 1"
+                    ],
+                    "recs_discovered": [
+                        "utility room 0 top cabinet 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 228,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-mirror_63_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 276,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "spatula 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fondant 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "master chef can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "plant container 1": [
+                "utility room 0 bottom cabinet 59"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "umbrella 1": "utility room 0 washer 56",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "utility room 0 washer 56",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "umbrella 1": "utility room 0 washer 56",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "umbrella 1": "utility room 0 washer 56",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "umbrella 1",
+                "plant container 1",
+                "table lamp 1",
+                "dispensing closure 1",
+                "master chef can 1",
+                "donut 1",
+                "spatula 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 sink 37",
+                "kitchen 0 chair 9",
+                "kitchen 0 counter 48",
+                "kitchen 0 oven 21",
+                "kitchen 0 oven 46",
+                "kitchen 0 chair 8",
+                "kitchen 0 table 6",
+                "bathroom 0 sink 62",
+                "living room 0 shelf 16",
+                "kitchen 0 bottom cabinet 32",
+                "pantry room 0 fridge 50",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 counter 33",
+                "kitchen 0 microwave 23",
+                "utility room 0 washer 56",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 bottom cabinet 29",
+                "pantry room 0 bottom cabinet 51",
+                "kitchen 0 chair 12",
+                "utility room 0 sink 58",
+                "kitchen 0 chair 7",
+                "bathroom 0 mirror 63",
+                "kitchen 0 counter 41",
+                "utility room 0 top cabinet 60",
+                "living room 0 chair 1",
+                "kitchen 0 top cabinet 27",
+                "living room 0 coffee table 3",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 fridge 20",
+                "pantry room 0 top cabinet 55",
+                "kitchen 0 plant 5",
+                "pantry room 0 top cabinet 54",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 43",
+                "kitchen 0 counter 49",
+                "kitchen 0 oven 22",
+                "kitchen 0 carpet 34",
+                "kitchen 0 cooktop 64",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 bottom cabinet 26",
+                "corridor 0 table 0",
+                "kitchen 0 chair 10",
+                "living room 0 shelf 15",
+                "living room 0 coffee table 4",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 chair 11",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 chair 2",
+                "utility room 0 dryer 57",
+                "pantry room 0 counter 53",
+                "kitchen 0 counter 31"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 4
+            }
+        },
+        "end": 276
+    },
+    {
+        "mode": "single",
+        "start": 276,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object spatula 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object donut 1 found on pantry room 0 counter 53. Object dispensing closure 1 found on pantry room 0 top cabinet 54. Object table lamp 1 found on pantry room 0 counter 53. Object master chef can 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 dryer 57, utility room 0 top cabinet 60. Object umbrella 1 found on utility room 0 washer 56. Object plant container 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to umbrella 1 step 2: look at umbrella 1 step 3: pick up umbrella 1 step 4: go to living room 0 shelf 15 step 5: look at living room 0 shelf 15 step 6: place umbrella 1 on living room 0 shelf 15"
+        },
+        "logs": [
+            {
+                "start": 276,
+                "step_raw": "go to umbrella 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "umbrella_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 324,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 324,
+                "step_raw": "look at umbrella 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "umbrella_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 324,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 324,
+                "step_raw": "pick up umbrella 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "umbrella_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "utility room 0 washer 56",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "agent",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 325,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "umbrella 1": [
+                            "utility room 0 washer 56",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 325,
+                "step_raw": "go to living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "agent",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "agent",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 413,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 413,
+                "step_raw": "look at living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "agent",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "agent",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 414,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 4
+                    }
+                }
+            },
+            {
+                "start": 414,
+                "step_raw": "place umbrella 1 on living room 0 shelf 15",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "umbrella_1",
+                    "target_receptacle": "living_room_0-shelf_15_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "agent",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 415,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "umbrella 1": [
+                            "agent",
+                            "living room 0 shelf 15"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 4,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "spatula 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fondant 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "master chef can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "plant container 1": [
+                "utility room 0 bottom cabinet 59"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "umbrella 1": "utility room 0 washer 56",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "umbrella 1": "utility room 0 washer 56",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "umbrella 1": [
+                    "utility room 0 washer 56",
+                    "living room 0 shelf 15"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 4,
+                "end": 3
+            }
+        },
+        "end": 415
+    },
+    {
+        "mode": "single",
+        "start": 415,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object spatula 1 found on living room 0 shelf 15. Object umbrella 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object dispensing closure 1 found on pantry room 0 top cabinet 54. Object table lamp 1 found on pantry room 0 counter 53. Object master chef can 1 found on pantry room 0 top cabinet 55. Object donut 1 found on pantry room 0 counter 53 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 dryer 57, utility room 0 top cabinet 60. Object plant container 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to table lamp 1 step 2: look at table lamp 1 step 3: pick up table lamp 1 step 4: go to living room 0 coffee table 3 step 5: look at living room 0 coffee table 3 step 6: place table lamp 1 on living room 0 coffee table 3"
+        },
+        "logs": [
+            {
+                "start": 415,
+                "step_raw": "go to table lamp 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "table_lamp_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 499,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 499,
+                "step_raw": "look at table lamp 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "table_lamp_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 499,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 499,
+                "step_raw": "pick up table lamp 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "table_lamp_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "pantry room 0 counter 53",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "agent",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 500,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "table lamp 1": [
+                            "pantry room 0 counter 53",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 500,
+                "step_raw": "go to living room 0 coffee table 3",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "agent",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "agent",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 572,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 572,
+                "step_raw": "look at living room 0 coffee table 3",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "agent",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "agent",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 579,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 579,
+                "step_raw": "place table lamp 1 on living room 0 coffee table 3",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "table_lamp_1",
+                    "target_receptacle": "living_room_0-coffee_table_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "agent",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 580,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "table lamp 1": [
+                            "agent",
+                            "living room 0 coffee table 3"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "spatula 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fondant 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "master chef can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "plant container 1": [
+                "utility room 0 bottom cabinet 59"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "table lamp 1": "pantry room 0 counter 53",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "table lamp 1": [
+                    "pantry room 0 counter 53",
+                    "living room 0 coffee table 3"
+                ]
+            },
+            "count_correct": {
+                "start": 7,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 580
+    },
+    {
+        "mode": "single",
+        "start": 580,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object umbrella 1 found on living room 0 shelf 15. Object spatula 1 found on living room 0 shelf 15. Object table lamp 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object master chef can 1 found on pantry room 0 top cabinet 55. Object donut 1 found on pantry room 0 counter 53. Object dispensing closure 1 found on pantry room 0 top cabinet 54 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 dryer 57, utility room 0 top cabinet 60. Object plant container 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to donut 1 step 2: look at donut 1 step 3: pick up donut 1 step 4: go to pantry room 0 fridge 50 step 5: look at pantry room 0 fridge 50 step 6: place donut 1 on pantry room 0 fridge 50"
+        },
+        "logs": [
+            {
+                "start": 580,
+                "step_raw": "go to donut 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 649,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 649,
+                "step_raw": "look at donut 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 649,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 649,
+                "step_raw": "pick up donut 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 counter 53",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "agent",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 650,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "donut 1": [
+                            "pantry room 0 counter 53",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 650,
+                "step_raw": "go to pantry room 0 fridge 50",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-fridge_50_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "agent",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "agent",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 678,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 678,
+                "step_raw": "look at pantry room 0 fridge 50",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-fridge_50_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "agent",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "agent",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 678,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 678,
+                "step_raw": "place donut 1 on pantry room 0 fridge 50",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "donut_1",
+                    "target_receptacle": "pantry_room_0-fridge_50_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "agent",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 679,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "donut 1": [
+                            "agent",
+                            "pantry room 0 fridge 50"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "spatula 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fondant 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "master chef can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "plant container 1": [
+                "utility room 0 bottom cabinet 59"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "donut 1": "pantry room 0 counter 53",
+                "spatula 1": "living room 0 shelf 15"
+            },
+            "end": {
+                "spatula 1": "living room 0 shelf 15"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "donut 1": [
+                    "pantry room 0 counter 53",
+                    "pantry room 0 fridge 50"
+                ]
+            },
+            "count_correct": {
+                "start": 8,
+                "end": 9
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 679
+    },
+    {
+        "mode": "single",
+        "start": 679,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object umbrella 1 found on living room 0 shelf 15. Object spatula 1 found on living room 0 shelf 15. Object table lamp 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object master chef can 1 found on pantry room 0 top cabinet 55. Object dispensing closure 1 found on pantry room 0 top cabinet 54. Object donut 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 dryer 57, utility room 0 top cabinet 60. Object plant container 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to spatula 1 step 2: look at spatula 1 step 3: pick up spatula 1 step 4: go to kitchen 0 bottom cabinet 32 step 5: look at kitchen 0 bottom cabinet 32 step 6: place spatula 1 on kitchen 0 bottom cabinet 32"
+        },
+        "logs": [
+            {
+                "start": 679,
+                "step_raw": "go to spatula 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "spatula_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 781,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 781,
+                "step_raw": "look at spatula 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "spatula_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 782,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 782,
+                "step_raw": "pick up spatula 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "spatula_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "living room 0 shelf 15",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "agent",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 783,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "spatula 1": [
+                            "living room 0 shelf 15",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 783,
+                "step_raw": "go to kitchen 0 bottom cabinet 32",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "agent",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "agent",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 861,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 861,
+                "step_raw": "look at kitchen 0 bottom cabinet 32",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "agent",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "agent",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 863,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 863,
+                "step_raw": "place spatula 1 on kitchen 0 bottom cabinet 32",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "spatula_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_32_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "agent",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "kitchen 0 bottom cabinet 32",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 864,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "spatula 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 32"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 9,
+                        "end": 10
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "spatula 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fondant 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "master chef can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "plant container 1": [
+                "utility room 0 bottom cabinet 59"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "living room 0 shelf 15",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "kitchen 0 bottom cabinet 32",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "kitchen 0 bottom cabinet 32",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "spatula 1": "living room 0 shelf 15"
+            },
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "spatula 1": [
+                    "living room 0 shelf 15",
+                    "kitchen 0 bottom cabinet 32"
+                ]
+            },
+            "count_correct": {
+                "start": 9,
+                "end": 10
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 0
+            }
+        },
+        "end": 864
+    },
+    {
+        "mode": "single",
+        "start": 864,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 sink 37, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 counter 41, kitchen 0 bottom cabinet 38, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. Object spatula 1 found on kitchen 0 bottom cabinet 32 \nIn living room 0, found receptacles: living room 0 coffee table 4, living room 0 chair 1, living room 0 coffee table 3, living room 0 shelf 16, living room 0 chair 2, living room 0 shelf 15. Object table lamp 1 found on living room 0 coffee table 3. Object umbrella 1 found on living room 0 shelf 15 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object master chef can 1 found on pantry room 0 top cabinet 55. Object dispensing closure 1 found on pantry room 0 top cabinet 54. Object donut 1 found on pantry room 0 fridge 50 \nIn utility room 0, found receptacles: utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 dryer 57, utility room 0 top cabinet 60. Object plant container 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 mirror 63, bathroom 0 sink 62.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 864,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "kitchen 0 bottom cabinet 32",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    },
+                    "end": {
+                        "umbrella 1": "living room 0 shelf 15",
+                        "table lamp 1": "living room 0 coffee table 3",
+                        "donut 1": "pantry room 0 fridge 50",
+                        "spatula 1": "kitchen 0 bottom cabinet 32",
+                        "dispensing closure 1": "pantry room 0 top cabinet 54",
+                        "fondant 1": "pantry room 0 top cabinet 54",
+                        "master chef can 1": "pantry room 0 top cabinet 55",
+                        "skillet 1": "pantry room 0 top cabinet 55",
+                        "plant container 1": "utility room 0 bottom cabinet 59",
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+                    }
+                },
+                "end": 864,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 10,
+                        "end": 10
+                    },
+                    "count_wrong": {
+                        "start": 0,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "umbrella 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "donut 1": [
+                "pantry room 0 fridge 50"
+            ],
+            "spatula 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "fondant 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "master chef can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "skillet 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "plant container 1": [
+                "utility room 0 bottom cabinet 59"
+            ],
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "kitchen 0 bottom cabinet 32",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "kitchen 0 bottom cabinet 32",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "kitchen 0 bottom cabinet 32",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            },
+            "end": {
+                "umbrella 1": "living room 0 shelf 15",
+                "table lamp 1": "living room 0 coffee table 3",
+                "donut 1": "pantry room 0 fridge 50",
+                "spatula 1": "kitchen 0 bottom cabinet 32",
+                "dispensing closure 1": "pantry room 0 top cabinet 54",
+                "fondant 1": "pantry room 0 top cabinet 54",
+                "master chef can 1": "pantry room 0 top cabinet 55",
+                "skillet 1": "pantry room 0 top cabinet 55",
+                "plant container 1": "utility room 0 bottom cabinet 59",
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60"
+            }
+        },
+        "wrong_objects": {
+            "start": {},
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 10,
+                "end": 10
+            },
+            "count_wrong": {
+                "start": 0,
+                "end": 0
+            }
+        },
+        "end": 864
+    }
+]

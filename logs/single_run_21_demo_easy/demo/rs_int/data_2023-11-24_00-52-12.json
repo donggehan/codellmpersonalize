@@ -1,0 +1,1508 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 23, living room 0 chair 24, living room 0 coffee table 5, living room 0 floor lamp 3, living room 0 sofa 2, living room 0 bottom cabinet 0. \nIn bathroom 0, no receptacles found yet. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 oven 45, kitchen 0 sink 42, kitchen 0 trash can 25, kitchen 0 bottom cabinet 41, kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 47, kitchen 0 top cabinet 49, kitchen 0 top cabinet 50, kitchen 0 top cabinet 51. Object dispensing closure 1 found on kitchen 0 microwave 43. Object dumbbell rack 1 found on kitchen 0 top cabinet 47 \nIn lobby 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to bedroom 0 step 2: go to living room 0 step 3: go to bathroom 0 step 4: go to kitchen 0 step 5: go to lobby 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-bed_28_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 30,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bedroom 0 bed 28",
+                        "living room 0 shelf 20",
+                        "living room 0 office chair 17",
+                        "bathroom 0 shower 31",
+                        "living room 0 table 18",
+                        "living room 0 chair 12",
+                        "living room 0 stool 4",
+                        "living room 0 shelf 21",
+                        "bedroom 0 bottom cabinet 8"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 30,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 80,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "lantern 1",
+                        "saute pan 1",
+                        "cloth 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 36",
+                        "living room 0 loudspeaker 16",
+                        "living room 0 chair 11",
+                        "living room 0 shelf 19",
+                        "kitchen 0 fridge 40",
+                        "living room 0 table 9",
+                        "living room 0 standing tv 15",
+                        "kitchen 0 top cabinet 48",
+                        "lobby 0 bottom cabinet 39",
+                        "bathroom 0 towel rack 32",
+                        "living room 0 bottom cabinet 13",
+                        "living room 0 chair 10"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 80,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 131,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "herring fillets 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 sink 35",
+                        "bathroom 0 towel rack 33",
+                        "bathroom 0 carpet 34"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 131,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_44_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 201,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 201,
+                "step_raw": "go to lobby 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "lobby_0-bottom_cabinet_39_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 232,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "ramekin 1": [
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "saute pan 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cloth 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "lantern 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "bathroom 0 sink 35"
+            ],
+            "dumbbell rack 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 microwave 43",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 microwave 43",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 microwave 43",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 microwave 43",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "lantern 1",
+                "saute pan 1",
+                "herring fillets 1",
+                "cloth 1"
+            ],
+            "recs_discovered": [
+                "bathroom 0 mirror 36",
+                "bedroom 0 bed 28",
+                "living room 0 chair 11",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 office chair 17",
+                "kitchen 0 fridge 40",
+                "bathroom 0 shower 31",
+                "bathroom 0 towel rack 33",
+                "bathroom 0 sink 35",
+                "living room 0 standing tv 15",
+                "bathroom 0 carpet 34",
+                "living room 0 chair 12",
+                "living room 0 stool 4",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 bottom cabinet 13",
+                "living room 0 chair 10",
+                "kitchen 0 top cabinet 48",
+                "living room 0 loudspeaker 16",
+                "living room 0 table 9",
+                "living room 0 table 18",
+                "living room 0 shelf 21",
+                "bedroom 0 bottom cabinet 8",
+                "bathroom 0 towel rack 32"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 232
+    },
+    {
+        "mode": "single",
+        "start": 232,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 23, living room 0 chair 24, living room 0 coffee table 5, living room 0 floor lamp 3, living room 0 sofa 2, living room 0 bottom cabinet 0, living room 0 stool 4, living room 0 shelf 20, living room 0 shelf 21, living room 0 table 18, living room 0 chair 12, living room 0 office chair 17, living room 0 chair 10, living room 0 table 9, living room 0 chair 11, living room 0 loudspeaker 16, living room 0 bottom cabinet 13, living room 0 standing tv 15, living room 0 shelf 19. Object cloth 1 found on living room 0 shelf 19. Object saute pan 1 found on living room 0 bottom cabinet 13 \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 towel rack 32, bathroom 0 mirror 36, bathroom 0 carpet 34, bathroom 0 sink 35, bathroom 0 towel rack 33. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 oven 45, kitchen 0 sink 42, kitchen 0 trash can 25, kitchen 0 bottom cabinet 41, kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 47, kitchen 0 top cabinet 49, kitchen 0 top cabinet 50, kitchen 0 top cabinet 51, kitchen 0 fridge 40, kitchen 0 top cabinet 48. Object herring fillets 1 found on kitchen 0 bottom cabinet 41. Object dispensing closure 1 found on kitchen 0 microwave 43. Object dumbbell rack 1 found on kitchen 0 top cabinet 47 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object lantern 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to dispensing closure 1 step 2: look at dispensing closure 1 step 3: pick up dispensing closure 1 step 4: go to kitchen 0 top cabinet 48 step 5: look at kitchen 0 top cabinet 48 step 6: place dispensing closure 1 on kitchen 0 top cabinet 48"
+        },
+        "logs": [
+            {
+                "start": 232,
+                "step_raw": "go to dispensing closure 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 262,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 262,
+                "step_raw": "look at dispensing closure 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 262,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 262,
+                "step_raw": "pick up dispensing closure 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 microwave 43",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "agent",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 263,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "kitchen 0 microwave 43",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 263,
+                "step_raw": "go to kitchen 0 top cabinet 48",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "agent",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "agent",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 263,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 263,
+                "step_raw": "look at kitchen 0 top cabinet 48",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-top_cabinet_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "agent",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "agent",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 267,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 267,
+                "step_raw": "place dispensing closure 1 on kitchen 0 top cabinet 48",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "dispensing_closure_1",
+                    "target_receptacle": "kitchen_0-top_cabinet_48_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "agent",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 268,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "dispensing closure 1": [
+                            "agent",
+                            "kitchen 0 top cabinet 48"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "ramekin 1": [
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "saute pan 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cloth 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "lantern 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "bathroom 0 sink 35"
+            ],
+            "dumbbell rack 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 microwave 43",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 microwave 43",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30"
+            },
+            "end": {
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "dispensing closure 1": [
+                    "kitchen 0 microwave 43",
+                    "kitchen 0 top cabinet 48"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 268
+    },
+    {
+        "mode": "single",
+        "start": 268,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 23, living room 0 chair 24, living room 0 coffee table 5, living room 0 floor lamp 3, living room 0 sofa 2, living room 0 bottom cabinet 0, living room 0 stool 4, living room 0 shelf 20, living room 0 shelf 21, living room 0 table 18, living room 0 chair 12, living room 0 office chair 17, living room 0 chair 10, living room 0 table 9, living room 0 chair 11, living room 0 loudspeaker 16, living room 0 bottom cabinet 13, living room 0 standing tv 15, living room 0 shelf 19. Object saute pan 1 found on living room 0 bottom cabinet 13. Object cloth 1 found on living room 0 shelf 19 \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 towel rack 32, bathroom 0 mirror 36, bathroom 0 carpet 34, bathroom 0 sink 35, bathroom 0 towel rack 33. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 oven 45, kitchen 0 sink 42, kitchen 0 trash can 25, kitchen 0 bottom cabinet 41, kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 47, kitchen 0 top cabinet 49, kitchen 0 top cabinet 50, kitchen 0 top cabinet 51, kitchen 0 fridge 40, kitchen 0 top cabinet 48. Object herring fillets 1 found on kitchen 0 bottom cabinet 41. Object dumbbell rack 1 found on kitchen 0 top cabinet 47. Object dispensing closure 1 found on kitchen 0 top cabinet 48 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object lantern 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to herring fillets 1 step 2: look at herring fillets 1 step 3: pick up herring fillets 1 step 4: go to kitchen 0 fridge 40 step 5: look at kitchen 0 fridge 40 step 6: place herring fillets 1 on kitchen 0 fridge 40"
+        },
+        "logs": [
+            {
+                "start": 268,
+                "step_raw": "go to herring fillets 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "herring_fillets_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 268,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 268,
+                "step_raw": "look at herring fillets 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "herring_fillets_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 268,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 268,
+                "step_raw": "pick up herring fillets 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "herring_fillets_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "agent",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 269,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "herring fillets 1": [
+                            "kitchen 0 bottom cabinet 41",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 269,
+                "step_raw": "go to kitchen 0 fridge 40",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-fridge_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "agent",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "agent",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 300,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 300,
+                "step_raw": "look at kitchen 0 fridge 40",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-fridge_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "agent",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "agent",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 300,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 300,
+                "step_raw": "place herring fillets 1 on kitchen 0 fridge 40",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "herring_fillets_1",
+                    "target_receptacle": "kitchen_0-fridge_40_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "agent",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 fridge 40",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 301,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "herring fillets 1": [
+                            "agent",
+                            "kitchen 0 fridge 40"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "ramekin 1": [
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "saute pan 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cloth 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "lantern 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "bathroom 0 sink 35"
+            ],
+            "dumbbell rack 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 fridge 40",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 fridge 40",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "herring fillets 1": "kitchen 0 bottom cabinet 41",
+                "ramekin 1": "bathroom 0 toilet 30"
+            },
+            "end": {
+                "ramekin 1": "bathroom 0 toilet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "herring fillets 1": [
+                    "kitchen 0 bottom cabinet 41",
+                    "kitchen 0 fridge 40"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 301
+    },
+    {
+        "mode": "single",
+        "start": 301,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 bottom cabinet 8, bedroom 0 bed 28. \nIn living room 0, found receptacles: living room 0 carpet 27, living room 0 chair 23, living room 0 chair 24, living room 0 coffee table 5, living room 0 floor lamp 3, living room 0 sofa 2, living room 0 bottom cabinet 0, living room 0 stool 4, living room 0 shelf 20, living room 0 shelf 21, living room 0 table 18, living room 0 chair 12, living room 0 office chair 17, living room 0 chair 10, living room 0 table 9, living room 0 chair 11, living room 0 loudspeaker 16, living room 0 bottom cabinet 13, living room 0 standing tv 15, living room 0 shelf 19. Object saute pan 1 found on living room 0 bottom cabinet 13. Object cloth 1 found on living room 0 shelf 19 \nIn bathroom 0, found receptacles: bathroom 0 shower 31, bathroom 0 towel rack 32, bathroom 0 mirror 36, bathroom 0 carpet 34, bathroom 0 sink 35, bathroom 0 towel rack 33. \nIn kitchen 0, found receptacles: kitchen 0 dishwasher 44, kitchen 0 microwave 43, kitchen 0 oven 45, kitchen 0 sink 42, kitchen 0 trash can 25, kitchen 0 bottom cabinet 41, kitchen 0 bottom cabinet 46, kitchen 0 top cabinet 47, kitchen 0 top cabinet 49, kitchen 0 top cabinet 50, kitchen 0 top cabinet 51, kitchen 0 fridge 40, kitchen 0 top cabinet 48. Object dispensing closure 1 found on kitchen 0 top cabinet 48. Object dumbbell rack 1 found on kitchen 0 top cabinet 47. Object herring fillets 1 found on kitchen 0 fridge 40 \nIn lobby 0, found receptacles: lobby 0 bottom cabinet 39. Object lantern 1 found on lobby 0 bottom cabinet 39. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 301,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 fridge 40",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    },
+                    "end": {
+                        "dispensing closure 1": "kitchen 0 top cabinet 48",
+                        "herring fillets 1": "kitchen 0 fridge 40",
+                        "ramekin 1": "bathroom 0 toilet 30",
+                        "saute pan 1": "living room 0 bottom cabinet 13",
+                        "cloth 1": "living room 0 shelf 19",
+                        "lantern 1": "lobby 0 bottom cabinet 39",
+                        "dumbbell rack 1": "kitchen 0 top cabinet 47"
+                    }
+                },
+                "end": 301,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "dispensing closure 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "bedroom 0 bottom cabinet 8",
+                "living room 0 coffee table 5",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "herring fillets 1": [
+                "kitchen 0 fridge 40"
+            ],
+            "ramekin 1": [
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "saute pan 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ],
+            "cloth 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "lobby 0 bottom cabinet 39",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21"
+            ],
+            "lantern 1": [
+                "lobby 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "bathroom 0 sink 35"
+            ],
+            "dumbbell rack 1": [
+                "living room 0 bottom cabinet 0",
+                "living room 0 bottom cabinet 13",
+                "kitchen 0 bottom cabinet 41",
+                "kitchen 0 bottom cabinet 46",
+                "living room 0 shelf 19",
+                "living room 0 shelf 20",
+                "living room 0 shelf 21",
+                "kitchen 0 top cabinet 47",
+                "kitchen 0 top cabinet 48",
+                "kitchen 0 top cabinet 49",
+                "kitchen 0 top cabinet 50",
+                "kitchen 0 top cabinet 51"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 fridge 40",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 fridge 40",
+                "ramekin 1": "bathroom 0 toilet 30",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 fridge 40",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            },
+            "end": {
+                "dispensing closure 1": "kitchen 0 top cabinet 48",
+                "herring fillets 1": "kitchen 0 fridge 40",
+                "saute pan 1": "living room 0 bottom cabinet 13",
+                "cloth 1": "living room 0 shelf 19",
+                "lantern 1": "lobby 0 bottom cabinet 39",
+                "dumbbell rack 1": "kitchen 0 top cabinet 47"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "ramekin 1": "bathroom 0 toilet 30"
+            },
+            "end": {
+                "ramekin 1": "bathroom 0 toilet 30"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 1
+            }
+        },
+        "end": 301
+    }
+]

@@ -1,0 +1,500 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to bathroom 0\nstep 2: look at bathroom 0 table 7\nstep 3: pick up candy 1\nstep 4: go to bathroom 0 bathtub 14\nstep 5: look at bathroom 0 bathtub 14\nstep 6: place candy 1 on bathroom 0 bathtub 14\nstep 7: mission complete"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 table 7",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 table 7",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 19,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "pan 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 bottom cabinet 20",
+                        "bathroom 0 sink 18",
+                        "bathroom 0 sink 19",
+                        "bathroom 0 mirror 23"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 19,
+                "step_raw": "look at bathroom 0 table 7",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-table_7_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 table 7",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 table 7",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 27,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 27,
+                "step_raw": "pick up candy 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 table 7",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "agent",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 28,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "candy 1": [
+                            "bathroom 0 table 7",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 28,
+                "step_raw": "go to bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "agent",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "agent",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 28,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 28,
+                "step_raw": "look at bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "agent",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "agent",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 28,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 28,
+                "step_raw": "place candy 1 on bathroom 0 bathtub 14",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "candy_1",
+                    "target_receptacle": "bathroom_0-bathtub_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "agent",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 bathtub 14",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 29,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "candy 1": [
+                            "agent",
+                            "bathroom 0 bathtub 14"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            },
+            {
+                "start": 29,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 bathtub 14",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    },
+                    "end": {
+                        "fork 1": "bathroom 0 toilet 25",
+                        "pan 1": "bathroom 0 sink 18",
+                        "mustard bottle 1": "bedroom 0 bed 11",
+                        "portable speaker 1": "bedroom 0 carpet 12",
+                        "candy 1": "bathroom 0 bathtub 14",
+                        "cracker box 1": "bedroom 0 shelf 13",
+                        "dietary supplement 1": "bathroom 0 top cabinet 26",
+                        "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                        "cloth 1": "bathroom 0 top cabinet 26"
+                    }
+                },
+                "end": 29,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 5,
+                        "end": 5
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "fork 1": [
+                "bathroom 0 top cabinet 26"
+            ],
+            "pan 1": [
+                "bedroom 0 bottom cabinet 10"
+            ],
+            "mustard bottle 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "portable speaker 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "candy 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "cracker box 1": [
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9"
+            ],
+            "dietary supplement 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bathroom 0 top cabinet 26"
+            ],
+            "tomato soup can 1": [
+                "bedroom 0 bottom cabinet 10",
+                "bedroom 0 shelf 13",
+                "bedroom 0 shelf 9",
+                "bathroom 0 top cabinet 26"
+            ],
+            "cloth 1": [
+                "bathroom 0 top cabinet 26"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "fork 1": "bathroom 0 toilet 25",
+                "pan 1": "bathroom 0 sink 18",
+                "mustard bottle 1": "bedroom 0 bed 11",
+                "portable speaker 1": "bedroom 0 carpet 12",
+                "candy 1": "bathroom 0 table 7",
+                "cracker box 1": "bedroom 0 shelf 13",
+                "dietary supplement 1": "bathroom 0 top cabinet 26",
+                "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                "cloth 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "fork 1": "bathroom 0 toilet 25",
+                "pan 1": "bathroom 0 sink 18",
+                "mustard bottle 1": "bedroom 0 bed 11",
+                "portable speaker 1": "bedroom 0 carpet 12",
+                "candy 1": "bathroom 0 bathtub 14",
+                "cracker box 1": "bedroom 0 shelf 13",
+                "dietary supplement 1": "bathroom 0 top cabinet 26",
+                "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                "cloth 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "cracker box 1": "bedroom 0 shelf 13",
+                "dietary supplement 1": "bathroom 0 top cabinet 26",
+                "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                "cloth 1": "bathroom 0 top cabinet 26"
+            },
+            "end": {
+                "cracker box 1": "bedroom 0 shelf 13",
+                "dietary supplement 1": "bathroom 0 top cabinet 26",
+                "tomato soup can 1": "bedroom 0 bottom cabinet 10",
+                "cloth 1": "bathroom 0 top cabinet 26"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "fork 1": "bathroom 0 toilet 25",
+                "pan 1": "bathroom 0 sink 18",
+                "mustard bottle 1": "bedroom 0 bed 11",
+                "portable speaker 1": "bedroom 0 carpet 12",
+                "candy 1": "bathroom 0 table 7"
+            },
+            "end": {
+                "fork 1": "bathroom 0 toilet 25",
+                "pan 1": "bathroom 0 sink 18",
+                "mustard bottle 1": "bedroom 0 bed 11",
+                "portable speaker 1": "bedroom 0 carpet 12",
+                "candy 1": "bathroom 0 bathtub 14"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "pan 1"
+            ],
+            "recs_discovered": [
+                "bathroom 0 bottom cabinet 20",
+                "bathroom 0 sink 18",
+                "bathroom 0 sink 19",
+                "bathroom 0 mirror 23"
+            ],
+            "objects_moved": {
+                "candy 1": [
+                    "bathroom 0 table 7",
+                    "bathroom 0 bathtub 14"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 5,
+                "end": 5
+            }
+        },
+        "end": 29
+    }
+]

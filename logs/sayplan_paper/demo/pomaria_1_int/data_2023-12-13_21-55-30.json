@@ -1,0 +1,3909 @@
+[
+    {
+        "mode": "sayplan",
+        "start": 0,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 22,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 plant 5",
+                        "corridor 0 table 0",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 table 6",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 counter 48",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 chair 12",
+                        "kitchen 0 sink 37",
+                        "kitchen 0 bottom cabinet 44",
+                        "kitchen 0 cooktop 64"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 plant 5",
+                "corridor 0 table 0",
+                "kitchen 0 counter 49",
+                "kitchen 0 oven 46",
+                "kitchen 0 table 6",
+                "kitchen 0 chair 8",
+                "kitchen 0 counter 48",
+                "kitchen 0 carpet 34",
+                "kitchen 0 chair 12",
+                "kitchen 0 sink 37",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 cooktop 64"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 22
+    },
+    {
+        "mode": "sayplan",
+        "start": 22,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to corridor 0"
+        },
+        "logs": [
+            {
+                "start": 22,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 22,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 22
+    },
+    {
+        "mode": "sayplan",
+        "start": 22,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to pantry room 0"
+        },
+        "logs": [
+            {
+                "start": 22,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 71,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "lantern 1",
+                        "candle holder 1",
+                        "table lamp 1",
+                        "pitcher base 1",
+                        "lamp 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 chair 9",
+                        "kitchen 0 counter 33",
+                        "utility room 0 sink 58",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 oven 21",
+                        "kitchen 0 top cabinet 24",
+                        "kitchen 0 top cabinet 25",
+                        "kitchen 0 bottom cabinet 26",
+                        "utility room 0 washer 56",
+                        "kitchen 0 top cabinet 27",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 bottom cabinet 29",
+                        "utility room 0 dryer 57",
+                        "kitchen 0 bottom cabinet 30",
+                        "kitchen 0 counter 31",
+                        "kitchen 0 bottom cabinet 47",
+                        "pantry room 0 top cabinet 55",
+                        "pantry room 0 top cabinet 54",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 microwave 23",
+                        "pantry room 0 bottom cabinet 51",
+                        "kitchen 0 oven 22",
+                        "kitchen 0 chair 7",
+                        "pantry room 0 fridge 50"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "lantern 1",
+                "table lamp 1",
+                "candle holder 1",
+                "pitcher base 1",
+                "lamp 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 chair 9",
+                "kitchen 0 counter 33",
+                "utility room 0 sink 58",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 oven 21",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 washer 56",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 fridge 20",
+                "kitchen 0 bottom cabinet 29",
+                "utility room 0 dryer 57",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 counter 31",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 top cabinet 55",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 counter 53",
+                "kitchen 0 microwave 23",
+                "pantry room 0 bottom cabinet 51",
+                "kitchen 0 oven 22",
+                "kitchen 0 chair 7",
+                "pantry room 0 fridge 50"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 71
+    },
+    {
+        "mode": "sayplan",
+        "start": 71,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 71,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 136,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "coffee beans 1",
+                        "knife 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 top cabinet 43",
+                        "utility room 0 bottom cabinet 59",
+                        "living room 0 shelf 15",
+                        "living room 0 coffee table 3",
+                        "living room 0 coffee table 4",
+                        "utility room 0 top cabinet 60",
+                        "living room 0 chair 1",
+                        "living room 0 shelf 16",
+                        "living room 0 chair 2"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "coffee beans 1",
+                "knife 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 top cabinet 43",
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "utility room 0 top cabinet 60",
+                "living room 0 chair 1",
+                "living room 0 shelf 16",
+                "living room 0 chair 2"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 136
+    },
+    {
+        "mode": "sayplan",
+        "start": 136,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 136,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 136,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 136
+    },
+    {
+        "mode": "sayplan",
+        "start": 136,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 136,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 136,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 136
+    },
+    {
+        "mode": "sayplan",
+        "start": 136,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 136,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 136,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 136
+    },
+    {
+        "mode": "sayplan",
+        "start": 136,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 136,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 136,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 136
+    },
+    {
+        "mode": "sayplan",
+        "start": 136,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 136,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 136,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 136
+    },
+    {
+        "mode": "sayplan",
+        "start": 136,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to kitchen 0\nstep 2: go to pantry room 0\nstep 3: go to utility room 0\nstep 4: go to bathroom 0\nstep 5: go to living room 0\nstep 6: go to corridor 0\nstep 7: go to kitchen 0\nstep 8: go to living room 0\nstep 9: go to pantry room 0\nstep 10: go to utility room 0\nstep 11: go to bathroom 0\nstep 12: go to corridor 0\nstep 13: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 136,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 212,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 63",
+                        "kitchen 0 chair 10",
+                        "kitchen 0 bottom cabinet 38",
+                        "bathroom 0 sink 62"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 212,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 252,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "peppermint 1"
+                    ],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 252,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 288,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 288,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-mirror_63_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 338,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 chair 11"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 338,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 392,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 392,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 435,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 435,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 472,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 472,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 545,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 39",
+                        "kitchen 0 counter 41"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 545,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 606,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 606,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 640,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "peppermint 1"
+            ],
+            "recs_discovered": [
+                "bathroom 0 mirror 63",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 chair 10",
+                "kitchen 0 counter 41",
+                "bathroom 0 sink 62",
+                "kitchen 0 chair 11",
+                "kitchen 0 bottom cabinet 38"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 640
+    },
+    {
+        "mode": "sayplan",
+        "start": 640,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 640,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 708,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 708
+    },
+    {
+        "mode": "sayplan",
+        "start": 708,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 708,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 708,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 708
+    },
+    {
+        "mode": "sayplan",
+        "start": 708,
+        "high_level": {
+            "prompt": {
+                "user": "Scene graph: graph_placeholder. memory_placeholder. Choose one of the three graph search commands: expand room, contract room, or done to stop searching. Example expand command: expand kitchen 0. Example contract command: contract kitchen 0.",
+                "system": "You are a one-handed household robot. There are objects misplaced on wrong receptacles and potentially in the wrong room. Given the scene graph of a household, you can explore the graph by expanding nodes to find the objects or receptacles of interest or contracting irrelevant nodes. A robot will then use the output graph to generate a step-by-step task plan to rearrange objects to correct receptacles."
+            },
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. Scene graph: graph_placeholder. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. \nYou are holding nothing. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. prev_steps_msg. \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. feedback_placeholder. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 708,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    },
+                    "end": {
+                        "coffee beans 1": "living room 0 coffee table 3",
+                        "peppermint 1": "utility room 0 washer 56",
+                        "candle holder 1": "utility room 0 washer 56",
+                        "lantern 1": "pantry room 0 top cabinet 54",
+                        "table lamp 1": "pantry room 0 top cabinet 54",
+                        "pitcher base 1": "pantry room 0 top cabinet 55",
+                        "helmet 1": "pantry room 0 top cabinet 55",
+                        "knife 1": "utility room 0 bottom cabinet 59",
+                        "lamp 1": "kitchen 0 table 6"
+                    }
+                },
+                "end": 708,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "coffee beans 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "peppermint 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "candle holder 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "utility room 0 top cabinet 60"
+            ],
+            "lantern 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "bathroom 0 sink 62",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "table lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 table 6",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "pitcher base 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "pantry room 0 fridge 50",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "helmet 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "knife 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "corridor 0 shelf 14",
+                "kitchen 0 table 6"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56",
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            },
+            "end": {
+                "lantern 1": "pantry room 0 top cabinet 54",
+                "table lamp 1": "pantry room 0 top cabinet 54",
+                "pitcher base 1": "pantry room 0 top cabinet 55",
+                "helmet 1": "pantry room 0 top cabinet 55",
+                "knife 1": "utility room 0 bottom cabinet 59",
+                "lamp 1": "kitchen 0 table 6"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            },
+            "end": {
+                "coffee beans 1": "living room 0 coffee table 3",
+                "peppermint 1": "utility room 0 washer 56",
+                "candle holder 1": "utility room 0 washer 56"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 708
+    }
+]

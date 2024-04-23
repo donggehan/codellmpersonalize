@@ -1,0 +1,2401 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet. \nIn living room 0, no receptacles found yet. \nIn pantry room 0, no receptacles found yet. \nIn utility room 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to corridor 0 step 2: go to kitchen 0 step 3: go to living room 0 step 4: go to pantry room 0 step 5: go to utility room 0 step 6: go to bathroom 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to corridor 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-carpet_13_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 29,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "sparkling water 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 sink 37",
+                        "kitchen 0 dishwasher 36",
+                        "kitchen 0 counter 48",
+                        "corridor 0 carpet 13",
+                        "corridor 0 shelf 14",
+                        "kitchen 0 counter 49",
+                        "kitchen 0 oven 46",
+                        "kitchen 0 carpet 34",
+                        "kitchen 0 cooktop 64",
+                        "kitchen 0 chair 12",
+                        "corridor 0 table 0",
+                        "kitchen 0 bottom cabinet 35",
+                        "kitchen 0 counter 40",
+                        "kitchen 0 bottom cabinet 44",
+                        "kitchen 0 top cabinet 42"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 29,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-carpet_34_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 65,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 chair 9",
+                        "kitchen 0 fridge 20",
+                        "kitchen 0 oven 21",
+                        "pantry room 0 top cabinet 55",
+                        "kitchen 0 plant 5",
+                        "pantry room 0 top cabinet 54",
+                        "kitchen 0 top cabinet 25",
+                        "kitchen 0 table 6",
+                        "kitchen 0 chair 8",
+                        "kitchen 0 oven 22",
+                        "pantry room 0 bottom cabinet 52",
+                        "kitchen 0 bottom cabinet 26",
+                        "kitchen 0 bottom cabinet 32",
+                        "kitchen 0 chair 10",
+                        "pantry room 0 fridge 50",
+                        "kitchen 0 bottom cabinet 30",
+                        "kitchen 0 counter 33",
+                        "kitchen 0 microwave 23",
+                        "kitchen 0 chair 11",
+                        "kitchen 0 top cabinet 24",
+                        "kitchen 0 bottom cabinet 29",
+                        "pantry room 0 bottom cabinet 51",
+                        "kitchen 0 chair 7",
+                        "kitchen 0 bottom cabinet 47",
+                        "kitchen 0 top cabinet 27",
+                        "pantry room 0 counter 53",
+                        "kitchen 0 counter 31"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 65,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-chair_1_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 137,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "light bulb 1",
+                        "fitness tracker wristband 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 coffee table 4",
+                        "kitchen 0 bottom cabinet 39",
+                        "utility room 0 bottom cabinet 59",
+                        "utility room 0 washer 56",
+                        "kitchen 0 top cabinet 43",
+                        "utility room 0 sink 58",
+                        "living room 0 shelf 16",
+                        "utility room 0 dryer 57",
+                        "living room 0 shelf 15",
+                        "living room 0 chair 1",
+                        "living room 0 chair 2",
+                        "living room 0 coffee table 3"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 137,
+                "step_raw": "go to pantry room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "pantry_room_0-counter_53_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "medicine 1",
+                        "condiment 1"
+                    ],
+                    "recs_discovered": [
+                        "bathroom 0 mirror 63",
+                        "bathroom 0 sink 62"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "go to utility room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-dryer_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 235,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "saucer 1",
+                        "potted meat can 1",
+                        "shredder 1"
+                    ],
+                    "recs_discovered": [
+                        "utility room 0 top cabinet 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 235,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-mirror_63_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 283,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "light bulb 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "medicine 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "condiment 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "saucer 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "fitness tracker wristband 1": "living room 0 coffee table 3",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "living room 0 coffee table 3",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "fitness tracker wristband 1": "living room 0 coffee table 3",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0"
+            },
+            "end": {
+                "fitness tracker wristband 1": "living room 0 coffee table 3",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "medicine 1",
+                "saucer 1",
+                "potted meat can 1",
+                "sparkling water 1",
+                "fitness tracker wristband 1",
+                "condiment 1",
+                "shredder 1",
+                "light bulb 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 sink 37",
+                "kitchen 0 chair 9",
+                "kitchen 0 counter 48",
+                "kitchen 0 oven 21",
+                "corridor 0 shelf 14",
+                "kitchen 0 oven 46",
+                "kitchen 0 table 6",
+                "kitchen 0 chair 8",
+                "bathroom 0 sink 62",
+                "living room 0 shelf 16",
+                "kitchen 0 bottom cabinet 32",
+                "pantry room 0 fridge 50",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 counter 33",
+                "kitchen 0 microwave 23",
+                "utility room 0 washer 56",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 bottom cabinet 29",
+                "pantry room 0 bottom cabinet 51",
+                "kitchen 0 chair 12",
+                "utility room 0 sink 58",
+                "kitchen 0 chair 7",
+                "bathroom 0 mirror 63",
+                "utility room 0 top cabinet 60",
+                "kitchen 0 counter 40",
+                "living room 0 chair 1",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 bottom cabinet 35",
+                "living room 0 coffee table 3",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 fridge 20",
+                "pantry room 0 top cabinet 55",
+                "kitchen 0 plant 5",
+                "corridor 0 carpet 13",
+                "pantry room 0 top cabinet 54",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 43",
+                "kitchen 0 counter 49",
+                "kitchen 0 oven 22",
+                "kitchen 0 carpet 34",
+                "kitchen 0 cooktop 64",
+                "pantry room 0 bottom cabinet 52",
+                "kitchen 0 bottom cabinet 26",
+                "corridor 0 table 0",
+                "kitchen 0 chair 10",
+                "living room 0 shelf 15",
+                "living room 0 coffee table 4",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 dishwasher 36",
+                "kitchen 0 chair 11",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 chair 2",
+                "utility room 0 dryer 57",
+                "pantry room 0 counter 53",
+                "kitchen 0 counter 31"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 6,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 283
+    },
+    {
+        "mode": "single",
+        "start": 283,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object sparkling water 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. Object light bulb 1 found on kitchen 0 bottom cabinet 26 \nIn living room 0, found receptacles: living room 0 shelf 16, living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. Object fitness tracker wristband 1 found on living room 0 coffee table 3 \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object medicine 1 found on pantry room 0 top cabinet 54. Object condiment 1 found on pantry room 0 top cabinet 54. Object shredder 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. Object saucer 1 found on utility room 0 bottom cabinet 59. Object potted meat can 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to fitness tracker wristband 1 step 2: look at fitness tracker wristband 1 step 3: pick up fitness tracker wristband 1 step 4: go to utility room 0 top cabinet 60 step 5: look at utility room 0 top cabinet 60 step 6: place fitness tracker wristband 1 on utility room 0 top cabinet 60"
+        },
+        "logs": [
+            {
+                "start": 283,
+                "step_raw": "go to fitness tracker wristband 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "fitness_tracker_wristband_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 352,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 352,
+                "step_raw": "look at fitness tracker wristband 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "fitness_tracker_wristband_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 359,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 359,
+                "step_raw": "pick up fitness tracker wristband 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "fitness_tracker_wristband_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "living room 0 coffee table 3",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "agent",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 360,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "fitness tracker wristband 1": [
+                            "living room 0 coffee table 3",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 360,
+                "step_raw": "go to utility room 0 top cabinet 60",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-top_cabinet_60_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "agent",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "agent",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 441,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 441,
+                "step_raw": "look at utility room 0 top cabinet 60",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-top_cabinet_60_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "agent",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "agent",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 442,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 442,
+                "step_raw": "place fitness tracker wristband 1 on utility room 0 top cabinet 60",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "fitness_tracker_wristband_1",
+                    "target_receptacle": "utility_room_0-top_cabinet_60_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "agent",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 443,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "fitness tracker wristband 1": [
+                            "agent",
+                            "utility room 0 top cabinet 60"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "light bulb 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "medicine 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "condiment 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "saucer 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "fitness tracker wristband 1": "living room 0 coffee table 3",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "fitness tracker wristband 1": "living room 0 coffee table 3",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0"
+            },
+            "end": {
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "fitness tracker wristband 1": [
+                    "living room 0 coffee table 3",
+                    "utility room 0 top cabinet 60"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 443
+    },
+    {
+        "mode": "single",
+        "start": 443,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object sparkling water 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39. Object light bulb 1 found on kitchen 0 bottom cabinet 26 \nIn living room 0, found receptacles: living room 0 shelf 16, living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object medicine 1 found on pantry room 0 top cabinet 54. Object condiment 1 found on pantry room 0 top cabinet 54. Object shredder 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. Object saucer 1 found on utility room 0 bottom cabinet 59. Object potted meat can 1 found on utility room 0 bottom cabinet 59. Object fitness tracker wristband 1 found on utility room 0 top cabinet 60 \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to light bulb 1 step 2: look at light bulb 1 step 3: pick up light bulb 1 step 4: go to utility room 0 bottom cabinet 59 step 5: look at utility room 0 bottom cabinet 59 step 6: place light bulb 1 on utility room 0 bottom cabinet 59"
+        },
+        "logs": [
+            {
+                "start": 443,
+                "step_raw": "go to light bulb 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 483,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 counter 41",
+                        "kitchen 0 bottom cabinet 38"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 483,
+                "step_raw": "look at light bulb 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 487,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 487,
+                "step_raw": "pick up light bulb 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "kitchen 0 bottom cabinet 26",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "agent",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 488,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "kitchen 0 bottom cabinet 26",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 488,
+                "step_raw": "go to utility room 0 bottom cabinet 59",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-bottom_cabinet_59_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "agent",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "agent",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 521,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 521,
+                "step_raw": "look at utility room 0 bottom cabinet 59",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "utility_room_0-bottom_cabinet_59_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "agent",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "agent",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 521,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 521,
+                "step_raw": "place light bulb 1 on utility room 0 bottom cabinet 59",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "light_bulb_1",
+                    "target_receptacle": "utility_room_0-bottom_cabinet_59_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "agent",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 522,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "light bulb 1": [
+                            "agent",
+                            "utility room 0 bottom cabinet 59"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 7,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "light bulb 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "medicine 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "condiment 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "saucer 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "corridor 0 table 0",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "light bulb 1": "kitchen 0 bottom cabinet 26",
+                "sparkling water 1": "corridor 0 table 0"
+            },
+            "end": {
+                "sparkling water 1": "corridor 0 table 0"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 counter 41",
+                "kitchen 0 bottom cabinet 38"
+            ],
+            "objects_moved": {
+                "light bulb 1": [
+                    "kitchen 0 bottom cabinet 26",
+                    "utility room 0 bottom cabinet 59"
+                ]
+            },
+            "count_correct": {
+                "start": 7,
+                "end": 8
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 522
+    },
+    {
+        "mode": "single",
+        "start": 522,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. Object sparkling water 1 found on corridor 0 table 0 \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39, kitchen 0 counter 41, kitchen 0 bottom cabinet 38. \nIn living room 0, found receptacles: living room 0 shelf 16, living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object condiment 1 found on pantry room 0 top cabinet 54. Object medicine 1 found on pantry room 0 top cabinet 54. Object shredder 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. Object fitness tracker wristband 1 found on utility room 0 top cabinet 60. Object potted meat can 1 found on utility room 0 bottom cabinet 59. Object saucer 1 found on utility room 0 bottom cabinet 59. Object light bulb 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to sparkling water 1 step 2: look at sparkling water 1 step 3: pick up sparkling water 1 step 4: go to kitchen 0 bottom cabinet 30 step 5: look at kitchen 0 bottom cabinet 30 step 6: place sparkling water 1 on kitchen 0 bottom cabinet 30"
+        },
+        "logs": [
+            {
+                "start": 522,
+                "step_raw": "go to sparkling water 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 569,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 569,
+                "step_raw": "look at sparkling water 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 570,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 570,
+                "step_raw": "pick up sparkling water 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "corridor 0 table 0",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "agent",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 571,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sparkling water 1": [
+                            "corridor 0 table 0",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 571,
+                "step_raw": "go to kitchen 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "agent",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "agent",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 630,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 630,
+                "step_raw": "look at kitchen 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "agent",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "agent",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 633,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 8,
+                        "end": 8
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 633,
+                "step_raw": "place sparkling water 1 on kitchen 0 bottom cabinet 30",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": "kitchen_0-bottom_cabinet_no_top_30_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "agent",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 634,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sparkling water 1": [
+                            "agent",
+                            "kitchen 0 bottom cabinet 30"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 8,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "light bulb 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "medicine 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "condiment 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "saucer 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "corridor 0 table 0",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "corridor 0 table 0"
+            },
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "sparkling water 1": [
+                    "corridor 0 table 0",
+                    "kitchen 0 bottom cabinet 30"
+                ]
+            },
+            "count_correct": {
+                "start": 8,
+                "end": 9
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 0
+            }
+        },
+        "end": 634
+    },
+    {
+        "mode": "single",
+        "start": 634,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn corridor 0, found receptacles: corridor 0 carpet 13, corridor 0 shelf 14, corridor 0 table 0. \nIn kitchen 0, found receptacles: kitchen 0 counter 40, kitchen 0 dishwasher 36, kitchen 0 sink 37, kitchen 0 bottom cabinet 35, kitchen 0 top cabinet 42, kitchen 0 bottom cabinet 44, kitchen 0 counter 49, kitchen 0 counter 48, kitchen 0 carpet 34, kitchen 0 cooktop 64, kitchen 0 oven 46, kitchen 0 chair 12, kitchen 0 chair 7, kitchen 0 table 6, kitchen 0 bottom cabinet 47, kitchen 0 counter 33, kitchen 0 bottom cabinet 32, kitchen 0 counter 31, kitchen 0 bottom cabinet 29, kitchen 0 bottom cabinet 30, kitchen 0 fridge 20, kitchen 0 microwave 23, kitchen 0 oven 21, kitchen 0 oven 22, kitchen 0 bottom cabinet 26, kitchen 0 top cabinet 25, kitchen 0 top cabinet 27, kitchen 0 top cabinet 24, kitchen 0 chair 8, kitchen 0 plant 5, kitchen 0 chair 9, kitchen 0 chair 10, kitchen 0 chair 11, kitchen 0 top cabinet 43, kitchen 0 bottom cabinet 39, kitchen 0 counter 41, kitchen 0 bottom cabinet 38. Object sparkling water 1 found on kitchen 0 bottom cabinet 30 \nIn living room 0, found receptacles: living room 0 shelf 16, living room 0 chair 1, living room 0 coffee table 3, living room 0 coffee table 4, living room 0 chair 2, living room 0 shelf 15. \nIn pantry room 0, found receptacles: pantry room 0 counter 53, pantry room 0 bottom cabinet 51, pantry room 0 bottom cabinet 52, pantry room 0 fridge 50, pantry room 0 top cabinet 54, pantry room 0 top cabinet 55. Object condiment 1 found on pantry room 0 top cabinet 54. Object medicine 1 found on pantry room 0 top cabinet 54. Object shredder 1 found on pantry room 0 top cabinet 55 \nIn utility room 0, found receptacles: utility room 0 dryer 57, utility room 0 sink 58, utility room 0 washer 56, utility room 0 bottom cabinet 59, utility room 0 top cabinet 60. Object fitness tracker wristband 1 found on utility room 0 top cabinet 60. Object potted meat can 1 found on utility room 0 bottom cabinet 59. Object saucer 1 found on utility room 0 bottom cabinet 59. Object light bulb 1 found on utility room 0 bottom cabinet 59 \nIn bathroom 0, found receptacles: bathroom 0 sink 62, bathroom 0 mirror 63.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 634,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    },
+                    "end": {
+                        "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                        "light bulb 1": "utility room 0 bottom cabinet 59",
+                        "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                        "medicine 1": "pantry room 0 top cabinet 54",
+                        "condiment 1": "pantry room 0 top cabinet 54",
+                        "shredder 1": "pantry room 0 top cabinet 55",
+                        "dispensing closure 1": "pantry room 0 top cabinet 55",
+                        "saucer 1": "utility room 0 bottom cabinet 59",
+                        "potted meat can 1": "utility room 0 bottom cabinet 59"
+                    }
+                },
+                "end": 634,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 9,
+                        "end": 9
+                    },
+                    "count_wrong": {
+                        "start": 0,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "fitness tracker wristband 1": [
+                "utility room 0 top cabinet 60"
+            ],
+            "light bulb 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "sparkling water 1": [
+                "kitchen 0 bottom cabinet 26",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "kitchen 0 fridge 20"
+            ],
+            "medicine 1": [
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "condiment 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "shredder 1": [
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 counter 31",
+                "kitchen 0 counter 33",
+                "kitchen 0 counter 40",
+                "kitchen 0 counter 41",
+                "kitchen 0 counter 48",
+                "kitchen 0 counter 49",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55",
+                "utility room 0 top cabinet 60"
+            ],
+            "dispensing closure 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "living room 0 coffee table 3",
+                "living room 0 coffee table 4",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "saucer 1": [
+                "utility room 0 bottom cabinet 59",
+                "living room 0 shelf 15",
+                "living room 0 shelf 16",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ],
+            "potted meat can 1": [
+                "kitchen 0 bottom cabinet 26",
+                "utility room 0 bottom cabinet 59",
+                "kitchen 0 bottom cabinet 29",
+                "kitchen 0 bottom cabinet 30",
+                "kitchen 0 bottom cabinet 32",
+                "kitchen 0 bottom cabinet 35",
+                "kitchen 0 bottom cabinet 38",
+                "kitchen 0 bottom cabinet 39",
+                "kitchen 0 bottom cabinet 44",
+                "kitchen 0 bottom cabinet 47",
+                "corridor 0 shelf 14",
+                "kitchen 0 top cabinet 24",
+                "kitchen 0 top cabinet 25",
+                "kitchen 0 top cabinet 27",
+                "kitchen 0 top cabinet 42",
+                "kitchen 0 top cabinet 43",
+                "pantry room 0 top cabinet 54",
+                "pantry room 0 top cabinet 55"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            },
+            "end": {
+                "fitness tracker wristband 1": "utility room 0 top cabinet 60",
+                "light bulb 1": "utility room 0 bottom cabinet 59",
+                "sparkling water 1": "kitchen 0 bottom cabinet 30",
+                "medicine 1": "pantry room 0 top cabinet 54",
+                "condiment 1": "pantry room 0 top cabinet 54",
+                "shredder 1": "pantry room 0 top cabinet 55",
+                "dispensing closure 1": "pantry room 0 top cabinet 55",
+                "saucer 1": "utility room 0 bottom cabinet 59",
+                "potted meat can 1": "utility room 0 bottom cabinet 59"
+            }
+        },
+        "wrong_objects": {
+            "start": {},
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 9,
+                "end": 9
+            },
+            "count_wrong": {
+                "start": 0,
+                "end": 0
+            }
+        },
+        "end": 634
+    }
+]

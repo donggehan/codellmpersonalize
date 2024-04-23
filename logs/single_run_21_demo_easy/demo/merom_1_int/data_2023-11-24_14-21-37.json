@@ -1,0 +1,1774 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, no receptacles found yet. \nIn bathroom 0, no receptacles found yet. \nIn childs room 0, no receptacles found yet. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 31, living room 0 towel rack 66. \nIn dining room 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to bedroom 0 step 2: go to bathroom 0 step 3: go to childs room 0 step 4: go to living room 0 step 5: go to dining room 0 step 6: go to kitchen 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to bedroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bedroom_0-basket_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 63,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "dispensing closure 1",
+                        "handbag 1",
+                        "lamp 1",
+                        "peppermint 1"
+                    ],
+                    "recs_discovered": [
+                        "bedroom 0 bed 7",
+                        "living room 0 mirror 68",
+                        "bedroom 0 basket 14",
+                        "childs room 0 carpet 0",
+                        "childs room 0 sofa chair 4",
+                        "childs room 0 stool 5",
+                        "living room 0 sofa chair 26",
+                        "dining room 0 chair 21",
+                        "bedroom 0 basket 15",
+                        "childs room 0 bed 1",
+                        "living room 0 coffee table 27",
+                        "bathroom 0 mirror 73",
+                        "living room 0 floor lamp 33"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 63,
+                "step_raw": "go to bathroom 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "bathroom_0-bathtub_71_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 125,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "living room 0 carpet 28",
+                        "bathroom 0 toilet 69",
+                        "bathroom 0 trash can 34",
+                        "bathroom 0 bathtub 71",
+                        "bathroom 0 sink 72"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 125,
+                "step_raw": "go to childs room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 189,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 trash can 18"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 189,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_28_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 270,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "tablet 1",
+                        "sparkling water 1"
+                    ],
+                    "recs_discovered": [
+                        "dining room 0 chair 24",
+                        "dining room 0 chair 22",
+                        "dining room 0 chair 23",
+                        "dining room 0 table 20",
+                        "dining room 0 plant 29",
+                        "kitchen 0 fridge 57"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 270,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_21_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 294,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 sink 53",
+                        "kitchen 0 dishwasher 52"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 294,
+                "step_raw": "go to kitchen 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-dishwasher_52_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 321,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 27"
+            ],
+            "tablet 1": [
+                "childs room 0 bed 1",
+                "childs room 0 stool 5"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "skillet 1": [
+                "kitchen 0 stove 59"
+            ],
+            "handbag 1": [
+                "bedroom 0 basket 14",
+                "bedroom 0 basket 15"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "dining room 0 table 20",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "dining room 0 table 20",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "dining room 0 table 20",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20"
+            },
+            "end": {
+                "sparkling water 1": "dining room 0 table 20",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "dispensing closure 1",
+                "handbag 1",
+                "lamp 1",
+                "peppermint 1",
+                "tablet 1",
+                "sparkling water 1"
+            ],
+            "recs_discovered": [
+                "living room 0 carpet 28",
+                "bathroom 0 toilet 69",
+                "childs room 0 stool 5",
+                "kitchen 0 trash can 18",
+                "bathroom 0 trash can 34",
+                "bedroom 0 basket 15",
+                "childs room 0 bed 1",
+                "living room 0 coffee table 27",
+                "dining room 0 table 20",
+                "living room 0 floor lamp 33",
+                "kitchen 0 fridge 57",
+                "bedroom 0 bed 7",
+                "living room 0 mirror 68",
+                "bedroom 0 basket 14",
+                "childs room 0 sofa chair 4",
+                "childs room 0 carpet 0",
+                "kitchen 0 dishwasher 52",
+                "living room 0 sofa chair 26",
+                "dining room 0 plant 29",
+                "dining room 0 chair 21",
+                "dining room 0 chair 24",
+                "dining room 0 chair 22",
+                "dining room 0 chair 23",
+                "kitchen 0 sink 53",
+                "bathroom 0 mirror 73",
+                "bathroom 0 bathtub 71",
+                "bathroom 0 sink 72"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 4,
+                "end": 4
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 321
+    },
+    {
+        "mode": "single",
+        "start": 321,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. Object peppermint 1 found on bedroom 0 bed 7. Object handbag 1 found on bedroom 0 basket 14 \nIn bathroom 0, found receptacles: bathroom 0 mirror 73, bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 coffee table 27, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 carpet 28. Object dispensing closure 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29, dining room 0 chair 23. Object sparkling water 1 found on dining room 0 table 20. Object tablet 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to sparkling water 1 step 2: look at sparkling water 1 step 3: pick up sparkling water 1 step 4: go to kitchen 0 fridge 57 step 5: look at kitchen 0 fridge 57 step 6: place sparkling water 1 on kitchen 0 fridge 57"
+        },
+        "logs": [
+            {
+                "start": 321,
+                "step_raw": "go to sparkling water 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 351,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "skillet 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 stove 59",
+                        "kitchen 0 range hood 60"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 351,
+                "step_raw": "look at sparkling water 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 351,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 351,
+                "step_raw": "pick up sparkling water 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "dining room 0 table 20",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "agent",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 352,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sparkling water 1": [
+                            "dining room 0 table 20",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 352,
+                "step_raw": "go to kitchen 0 fridge 57",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-fridge_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "agent",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "agent",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 380,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 380,
+                "step_raw": "look at kitchen 0 fridge 57",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-fridge_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "agent",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "agent",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 384,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 4,
+                        "end": 4
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 384,
+                "step_raw": "place sparkling water 1 on kitchen 0 fridge 57",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "sparkling_water_1",
+                    "target_receptacle": "kitchen_0-fridge_57_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "agent",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 385,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "sparkling water 1": [
+                            "agent",
+                            "kitchen 0 fridge 57"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 4,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 27"
+            ],
+            "tablet 1": [
+                "childs room 0 bed 1",
+                "childs room 0 stool 5"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "skillet 1": [
+                "kitchen 0 stove 59"
+            ],
+            "handbag 1": [
+                "bedroom 0 basket 14",
+                "bedroom 0 basket 15"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "dining room 0 table 20",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "sparkling water 1": "dining room 0 table 20",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20"
+            },
+            "end": {
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "skillet 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 stove 59",
+                "kitchen 0 range hood 60"
+            ],
+            "objects_moved": {
+                "sparkling water 1": [
+                    "dining room 0 table 20",
+                    "kitchen 0 fridge 57"
+                ]
+            },
+            "count_correct": {
+                "start": 4,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 2
+            }
+        },
+        "end": 385
+    },
+    {
+        "mode": "single",
+        "start": 385,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. Object peppermint 1 found on bedroom 0 bed 7. Object handbag 1 found on bedroom 0 basket 14 \nIn bathroom 0, found receptacles: bathroom 0 mirror 73, bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 coffee table 27, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 carpet 28. Object dispensing closure 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29, dining room 0 chair 23. Object tablet 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 range hood 60, kitchen 0 stove 59. Object skillet 1 found on kitchen 0 stove 59. Object sparkling water 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to peppermint 1 step 2: look at peppermint 1 step 3: pick up peppermint 1 step 4: go to living room 0 coffee table 27 step 5: look at living room 0 coffee table 27 step 6: place peppermint 1 on living room 0 coffee table 27"
+        },
+        "logs": [
+            {
+                "start": 385,
+                "step_raw": "go to peppermint 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 430,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 430,
+                "step_raw": "look at peppermint 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 441,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 441,
+                "step_raw": "pick up peppermint 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "bedroom 0 bed 7",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "agent",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 442,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "peppermint 1": [
+                            "bedroom 0 bed 7",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 442,
+                "step_raw": "go to living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "agent",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "agent",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 512,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 512,
+                "step_raw": "look at living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "agent",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "agent",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 513,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 513,
+                "step_raw": "place peppermint 1 on living room 0 coffee table 27",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "peppermint_1",
+                    "target_receptacle": "living_room_0-coffee_table_27_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "agent",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 514,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "peppermint 1": [
+                            "agent",
+                            "living room 0 coffee table 27"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 1
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 27"
+            ],
+            "tablet 1": [
+                "childs room 0 bed 1",
+                "childs room 0 stool 5"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "skillet 1": [
+                "kitchen 0 stove 59"
+            ],
+            "handbag 1": [
+                "bedroom 0 basket 14",
+                "bedroom 0 basket 15"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "dining room 0 table 20",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "peppermint 1": "bedroom 0 bed 7",
+                "tablet 1": "dining room 0 table 20"
+            },
+            "end": {
+                "tablet 1": "dining room 0 table 20"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "peppermint 1": [
+                    "bedroom 0 bed 7",
+                    "living room 0 coffee table 27"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 6
+            },
+            "count_wrong": {
+                "start": 2,
+                "end": 1
+            }
+        },
+        "end": 514
+    },
+    {
+        "mode": "single",
+        "start": 514,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. Object handbag 1 found on bedroom 0 basket 14 \nIn bathroom 0, found receptacles: bathroom 0 mirror 73, bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 coffee table 27, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 carpet 28. Object dispensing closure 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27. Object peppermint 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29, dining room 0 chair 23. Object tablet 1 found on dining room 0 table 20 \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 range hood 60, kitchen 0 stove 59. Object skillet 1 found on kitchen 0 stove 59. Object sparkling water 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "step 1: go to tablet 1 step 2: look at tablet 1 step 3: pick up tablet 1 step 4: go to childs room 0 bed 1 step 5: look at childs room 0 bed 1 step 6: place tablet 1 on childs room 0 bed 1"
+        },
+        "logs": [
+            {
+                "start": 514,
+                "step_raw": "go to tablet 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "tablet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 544,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 544,
+                "step_raw": "look at tablet 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 544,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 544,
+                "step_raw": "pick up tablet 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "dining room 0 table 20",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "agent",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 545,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tablet 1": [
+                            "dining room 0 table 20",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 545,
+                "step_raw": "go to childs room 0 bed 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "agent",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "agent",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 618,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 618,
+                "step_raw": "look at childs room 0 bed 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "agent",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "agent",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 628,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 1
+                    }
+                }
+            },
+            {
+                "start": 628,
+                "step_raw": "place tablet 1 on childs room 0 bed 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_1",
+                    "target_receptacle": "childs_room_0-bed_1_2.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "agent",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "childs room 0 bed 1",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 629,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "tablet 1": [
+                            "agent",
+                            "childs room 0 bed 1"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 1,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 27"
+            ],
+            "tablet 1": [
+                "childs room 0 bed 1",
+                "childs room 0 stool 5"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "skillet 1": [
+                "kitchen 0 stove 59"
+            ],
+            "handbag 1": [
+                "bedroom 0 basket 14",
+                "bedroom 0 basket 15"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "dining room 0 table 20",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "childs room 0 bed 1",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "childs room 0 bed 1",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "tablet 1": "dining room 0 table 20"
+            },
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "tablet 1": [
+                    "dining room 0 table 20",
+                    "childs room 0 bed 1"
+                ]
+            },
+            "count_correct": {
+                "start": 6,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 1,
+                "end": 0
+            }
+        },
+        "end": 629
+    },
+    {
+        "mode": "single",
+        "start": 629,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn bedroom 0, found receptacles: bedroom 0 basket 14, bedroom 0 basket 15, bedroom 0 bed 7. Object handbag 1 found on bedroom 0 basket 14 \nIn bathroom 0, found receptacles: bathroom 0 mirror 73, bathroom 0 bathtub 71, bathroom 0 trash can 34, bathroom 0 toilet 69, bathroom 0 sink 72. \nIn childs room 0, found receptacles: childs room 0 sofa chair 4, childs room 0 stool 5, childs room 0 carpet 0, childs room 0 bed 1. Object tablet 1 found on childs room 0 bed 1 \nIn living room 0, found receptacles: living room 0 carpet 62, living room 0 floor lamp 31, living room 0 towel rack 66, living room 0 coffee table 27, living room 0 sofa chair 26, living room 0 floor lamp 33, living room 0 mirror 68, living room 0 carpet 28. Object dispensing closure 1 found on living room 0 coffee table 27. Object peppermint 1 found on living room 0 coffee table 27. Object lamp 1 found on living room 0 coffee table 27 \nIn dining room 0, found receptacles: dining room 0 chair 21, dining room 0 table 20, dining room 0 chair 22, dining room 0 chair 24, dining room 0 plant 29, dining room 0 chair 23. \nIn kitchen 0, found receptacles: kitchen 0 trash can 18, kitchen 0 fridge 57, kitchen 0 dishwasher 52, kitchen 0 sink 53, kitchen 0 range hood 60, kitchen 0 stove 59. Object skillet 1 found on kitchen 0 stove 59. Object sparkling water 1 found on kitchen 0 fridge 57. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": ""
+            },
+            "response": "mission complete"
+        },
+        "logs": [
+            {
+                "start": 629,
+                "step_raw": "mission complete",
+                "step_parsed": {},
+                "current_mapping": {
+                    "start": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "childs room 0 bed 1",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    },
+                    "end": {
+                        "sparkling water 1": "kitchen 0 fridge 57",
+                        "peppermint 1": "living room 0 coffee table 27",
+                        "tablet 1": "childs room 0 bed 1",
+                        "dispensing closure 1": "living room 0 coffee table 27",
+                        "lamp 1": "living room 0 coffee table 27",
+                        "skillet 1": "kitchen 0 stove 59",
+                        "handbag 1": "bedroom 0 basket 14"
+                    }
+                },
+                "end": 629,
+                "flag": "skipped",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 7,
+                        "end": 7
+                    },
+                    "count_wrong": {
+                        "start": 0,
+                        "end": 0
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "sparkling water 1": [
+                "kitchen 0 fridge 57"
+            ],
+            "peppermint 1": [
+                "living room 0 coffee table 27"
+            ],
+            "tablet 1": [
+                "childs room 0 bed 1",
+                "childs room 0 stool 5"
+            ],
+            "dispensing closure 1": [
+                "living room 0 coffee table 27",
+                "dining room 0 table 20"
+            ],
+            "lamp 1": [
+                "living room 0 coffee table 27"
+            ],
+            "skillet 1": [
+                "kitchen 0 stove 59"
+            ],
+            "handbag 1": [
+                "bedroom 0 basket 14",
+                "bedroom 0 basket 15"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "childs room 0 bed 1",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "childs room 0 bed 1",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "childs room 0 bed 1",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            },
+            "end": {
+                "sparkling water 1": "kitchen 0 fridge 57",
+                "peppermint 1": "living room 0 coffee table 27",
+                "tablet 1": "childs room 0 bed 1",
+                "dispensing closure 1": "living room 0 coffee table 27",
+                "lamp 1": "living room 0 coffee table 27",
+                "skillet 1": "kitchen 0 stove 59",
+                "handbag 1": "bedroom 0 basket 14"
+            }
+        },
+        "wrong_objects": {
+            "start": {},
+            "end": {}
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 7,
+                "end": 7
+            },
+            "count_wrong": {
+                "start": 0,
+                "end": 0
+            }
+        },
+        "end": 629
+    }
+]

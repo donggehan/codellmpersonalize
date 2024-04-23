@@ -1,0 +1,4131 @@
+[
+    {
+        "mode": "single",
+        "start": 0,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn living room 0, no receptacles found yet. \nIn dining room 0, no receptacles found yet. \nIn corridor 0, no receptacles found yet. \nIn kitchen 0, no receptacles found yet.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0"
+        },
+        "logs": [
+            {
+                "start": 0,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 49,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "foam brick 1",
+                        "electronic adapter 1",
+                        "backpack 1",
+                        "tablet stand 1"
+                    ],
+                    "recs_discovered": [
+                        "living room 0 sofa 10",
+                        "living room 0 chest 11",
+                        "dining room 0 chair 2",
+                        "corridor 0 shelf 7",
+                        "living room 0 stool 13",
+                        "corridor 0 shelf 6",
+                        "living room 0 shelf 0",
+                        "dining room 0 counter 14",
+                        "corridor 0 floor lamp 8",
+                        "dining room 0 table 1",
+                        "dining room 0 chair 4",
+                        "kitchen 0 counter 21",
+                        "kitchen 0 top cabinet 35",
+                        "corridor 0 shelf 42",
+                        "corridor 0 shelf 41",
+                        "living room 0 carpet 46",
+                        "corridor 0 chest 12",
+                        "dining room 0 chair 3",
+                        "living room 0 wall mounted tv 49"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "foam brick 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "remote control 1": [
+                "dining room 0 counter 14",
+                "dining room 0 table 1"
+            ],
+            "multiport hub 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0"
+            ],
+            "banana 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "bookend 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "tablet stand 1": [
+                "living room 0 shelf 0"
+            ],
+            "electronic adapter 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "backpack 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "foam brick 1",
+                "electronic adapter 1",
+                "backpack 1",
+                "tablet stand 1"
+            ],
+            "recs_discovered": [
+                "living room 0 sofa 10",
+                "living room 0 chest 11",
+                "dining room 0 chair 2",
+                "corridor 0 shelf 7",
+                "living room 0 stool 13",
+                "corridor 0 shelf 6",
+                "living room 0 shelf 0",
+                "kitchen 0 counter 21",
+                "kitchen 0 top cabinet 35",
+                "dining room 0 counter 14",
+                "dining room 0 table 1",
+                "corridor 0 floor lamp 8",
+                "dining room 0 chair 4",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 41",
+                "living room 0 carpet 46",
+                "corridor 0 chest 12",
+                "dining room 0 chair 3",
+                "living room 0 wall mounted tv 49"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 49
+    },
+    {
+        "mode": "single",
+        "start": 49,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 stool 13, living room 0 wall mounted tv 49, living room 0 shelf 0, living room 0 chest 11, living room 0 sofa 10. Object tablet stand 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 3, dining room 0 chair 4, dining room 0 table 1, dining room 0 chair 2, dining room 0 counter 14. Object foam brick 1 found on dining room 0 counter 14 \nIn corridor 0, found receptacles: corridor 0 shelf 6, corridor 0 chest 12, corridor 0 floor lamp 8, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 7. Object electronic adapter 1 found on corridor 0 shelf 41. Object backpack 1 found on corridor 0 chest 12 \nIn kitchen 0, found receptacles: kitchen 0 counter 21, kitchen 0 top cabinet 35.. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at tablet stand 1\nstep 3: pick up tablet stand 1\nstep 4: go to living room 0 shelf 0\nstep 5: look at living room 0 shelf 0\nstep 6: place tablet stand 1 on living room 0 shelf 0\nstep 7: go to dining room 0\nstep 8: look at foam brick 1\nstep 9: pick up foam brick 1\nstep 10: go to dining room 0 counter 14\nstep 11: look at dining room 0 counter 14\nstep 12: place foam brick 1 on dining room 0 counter 14\nstep 13: go to corridor 0\nstep 14: look at electronic adapter 1\nstep 15: pick up electronic adapter 1\nstep 16: go to corridor 0 shelf 41\nstep 17: look at corridor 0 shelf 41\nstep 18: place electronic adapter 1 on corridor 0 shelf 41\nstep 19: go to corridor 0 chest 12\nstep 20: look at backpack 1\nstep 21:"
+        },
+        "logs": [
+            {
+                "start": 49,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 49,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 49,
+                "step_raw": "look at tablet stand 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 61,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 61,
+                "step_raw": "pick up tablet stand 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 62,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 62,
+                "step_raw": "go to living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 78,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "bookend 1",
+                        "banana 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 top cabinet 34",
+                        "kitchen 0 bottom cabinet 22",
+                        "kitchen 0 top cabinet 30",
+                        "kitchen 0 top cabinet 33",
+                        "kitchen 0 dishwasher 20",
+                        "kitchen 0 oven 24",
+                        "kitchen 0 counter 23",
+                        "kitchen 0 top cabinet 32",
+                        "kitchen 0 top cabinet 31",
+                        "kitchen 0 counter 18",
+                        "kitchen 0 microwave 36",
+                        "kitchen 0 top cabinet 29",
+                        "kitchen 0 fridge 27",
+                        "kitchen 0 counter 26",
+                        "kitchen 0 top cabinet 28",
+                        "corridor 0 chair 5",
+                        "kitchen 0 bottom cabinet 25"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 78,
+                "step_raw": "look at living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 78,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 78,
+                "step_raw": "place tablet stand 1 on living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 78,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 78,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_2_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 91,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [
+                        "remote control 1"
+                    ],
+                    "recs_discovered": [
+                        "kitchen 0 sink 19"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 91,
+                "step_raw": "look at foam brick 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 91,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 91,
+                "step_raw": "pick up foam brick 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 92,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 92,
+                "step_raw": "go to dining room 0 counter 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-counter_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 110,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 16"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "foam brick 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "remote control 1": [
+                "dining room 0 counter 14",
+                "dining room 0 table 1"
+            ],
+            "multiport hub 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0"
+            ],
+            "banana 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "bookend 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "tablet stand 1": [
+                "living room 0 shelf 0"
+            ],
+            "electronic adapter 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "backpack 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [
+                "remote control 1",
+                "bookend 1",
+                "banana 1"
+            ],
+            "recs_discovered": [
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 bottom cabinet 22",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 dishwasher 20",
+                "kitchen 0 oven 24",
+                "kitchen 0 counter 23",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 counter 18",
+                "kitchen 0 microwave 36",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 fridge 27",
+                "kitchen 0 counter 26",
+                "kitchen 0 sink 19",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 bottom cabinet 16",
+                "corridor 0 chair 5",
+                "kitchen 0 bottom cabinet 25"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 110
+    },
+    {
+        "mode": "single",
+        "start": 110,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 stool 13, living room 0 wall mounted tv 49, living room 0 shelf 0, living room 0 chest 11, living room 0 sofa 10. Object tablet stand 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 3, dining room 0 chair 4, dining room 0 table 1, dining room 0 chair 2, dining room 0 counter 14. Object foam brick 1 found on dining room 0 counter 14 \nIn corridor 0, found receptacles: corridor 0 shelf 6, corridor 0 chest 12, corridor 0 floor lamp 8, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 7, corridor 0 chair 5. Object backpack 1 found on corridor 0 chest 12. Object electronic adapter 1 found on corridor 0 shelf 41 \nIn kitchen 0, found receptacles: kitchen 0 counter 21, kitchen 0 top cabinet 35, kitchen 0 counter 18, kitchen 0 dishwasher 20, kitchen 0 top cabinet 31, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 counter 26, kitchen 0 fridge 27, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 top cabinet 30, kitchen 0 counter 23, kitchen 0 bottom cabinet 22, kitchen 0 bottom cabinet 25, kitchen 0 sink 19, kitchen 0 bottom cabinet 16. Object banana 1 found on kitchen 0 counter 18. Object remote control 1 found on kitchen 0 counter 18. Object bookend 1 found on kitchen 0 counter 21. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at tablet stand 1\nstep 3: pick up tablet stand 1\nstep 4: go to living room 0 shelf 0\nstep 5: look at living room 0 shelf 0\nstep 6: place tablet stand 1 on living room 0 shelf 0\nstep 7: go to dining room 0\nstep 8: look at foam brick 1\nstep 9: pick up foam brick 1\nstep 10: go to dining room 0 counter 14\nstep 11: look at dining room 0 counter 14\nstep 12: place foam brick 1 on dining room 0 counter 14\nstep 13: go to corridor 0\nstep 14: look at backpack 1\nstep 15: pick up backpack 1\nstep 16: go to corridor 0 chest 12\nstep 17: look at corridor 0 chest 12\nstep 18: place backpack 1 on corridor 0 chest 12\nstep 19: go to kitchen 0\nstep 20: look at banana 1\nstep 21: pick up banana 1\n"
+        },
+        "logs": [
+            {
+                "start": 110,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 170,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "corridor 0 console table 9",
+                        "corridor 0 shelf 47"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 170,
+                "step_raw": "look at tablet stand 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 183,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 183,
+                "step_raw": "pick up tablet stand 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 184,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 184,
+                "step_raw": "go to living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "look at living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "place tablet stand 1 on living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 199,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 199,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_2_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 213,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 213,
+                "step_raw": "look at foam brick 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 213,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 213,
+                "step_raw": "pick up foam brick 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 214,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 214,
+                "step_raw": "go to dining room 0 counter 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-counter_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 232,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "foam brick 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "remote control 1": [
+                "dining room 0 counter 14",
+                "dining room 0 table 1"
+            ],
+            "multiport hub 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0"
+            ],
+            "banana 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "bookend 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "tablet stand 1": [
+                "living room 0 shelf 0"
+            ],
+            "electronic adapter 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "backpack 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "corridor 0 console table 9",
+                "corridor 0 shelf 47"
+            ],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 232
+    },
+    {
+        "mode": "single",
+        "start": 232,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 stool 13, living room 0 wall mounted tv 49, living room 0 shelf 0, living room 0 chest 11, living room 0 sofa 10. Object tablet stand 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 3, dining room 0 chair 4, dining room 0 table 1, dining room 0 chair 2, dining room 0 counter 14. Object foam brick 1 found on dining room 0 counter 14 \nIn corridor 0, found receptacles: corridor 0 shelf 6, corridor 0 chest 12, corridor 0 floor lamp 8, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 console table 9, corridor 0 shelf 47. Object backpack 1 found on corridor 0 chest 12. Object electronic adapter 1 found on corridor 0 shelf 41 \nIn kitchen 0, found receptacles: kitchen 0 counter 21, kitchen 0 top cabinet 35, kitchen 0 counter 18, kitchen 0 dishwasher 20, kitchen 0 top cabinet 31, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 counter 26, kitchen 0 fridge 27, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 top cabinet 30, kitchen 0 counter 23, kitchen 0 bottom cabinet 22, kitchen 0 bottom cabinet 25, kitchen 0 sink 19, kitchen 0 bottom cabinet 16. Object banana 1 found on kitchen 0 counter 18. Object remote control 1 found on kitchen 0 counter 18. Object bookend 1 found on kitchen 0 counter 21. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at tablet stand 1\nstep 3: pick up tablet stand 1\nstep 4: go to living room 0 shelf 0\nstep 5: look at living room 0 shelf 0\nstep 6: place tablet stand 1 on living room 0 shelf 0\nstep 7: go to dining room 0\nstep 8: look at foam brick 1\nstep 9: pick up foam brick 1\nstep 10: go to dining room 0 counter 14\nstep 11: look at dining room 0 counter 14\nstep 12: place foam brick 1 on dining room 0 counter 14\nstep 13: go to corridor 0\nstep 14: look at backpack 1\nstep 15: pick up backpack 1\nstep 16: go to corridor 0 chest 12\nstep 17: look at corridor 0 chest 12\nstep 18: place backpack 1 on corridor 0 chest 12\nstep 19: go to corridor 0\nstep 20: look at electronic adapter 1\nstep 21: pick up electronic adapter "
+        },
+        "logs": [
+            {
+                "start": 232,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 292,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 292,
+                "step_raw": "look at tablet stand 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 305,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 305,
+                "step_raw": "pick up tablet stand 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 306,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 306,
+                "step_raw": "go to living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 321,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 321,
+                "step_raw": "look at living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 321,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 321,
+                "step_raw": "place tablet stand 1 on living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 321,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 321,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_2_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 335,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 335,
+                "step_raw": "look at foam brick 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 335,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 335,
+                "step_raw": "pick up foam brick 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 336,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 336,
+                "step_raw": "go to dining room 0 counter 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-counter_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 354,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "foam brick 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "remote control 1": [
+                "dining room 0 counter 14",
+                "dining room 0 table 1"
+            ],
+            "multiport hub 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0"
+            ],
+            "banana 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "bookend 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "tablet stand 1": [
+                "living room 0 shelf 0"
+            ],
+            "electronic adapter 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "backpack 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 354
+    },
+    {
+        "mode": "single",
+        "start": 354,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 stool 13, living room 0 wall mounted tv 49, living room 0 shelf 0, living room 0 chest 11, living room 0 sofa 10. Object tablet stand 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 3, dining room 0 chair 4, dining room 0 table 1, dining room 0 chair 2, dining room 0 counter 14. Object foam brick 1 found on dining room 0 counter 14 \nIn corridor 0, found receptacles: corridor 0 shelf 6, corridor 0 chest 12, corridor 0 floor lamp 8, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 console table 9, corridor 0 shelf 47. Object backpack 1 found on corridor 0 chest 12. Object electronic adapter 1 found on corridor 0 shelf 41 \nIn kitchen 0, found receptacles: kitchen 0 counter 21, kitchen 0 top cabinet 35, kitchen 0 counter 18, kitchen 0 dishwasher 20, kitchen 0 top cabinet 31, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 counter 26, kitchen 0 fridge 27, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 top cabinet 30, kitchen 0 counter 23, kitchen 0 bottom cabinet 22, kitchen 0 bottom cabinet 25, kitchen 0 sink 19, kitchen 0 bottom cabinet 16. Object banana 1 found on kitchen 0 counter 18. Object remote control 1 found on kitchen 0 counter 18. Object bookend 1 found on kitchen 0 counter 21. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at tablet stand 1\nstep 3: pick up tablet stand 1\nstep 4: go to living room 0 shelf 0\nstep 5: look at living room 0 shelf 0\nstep 6: place tablet stand 1 on living room 0 shelf 0\nstep 7: go to dining room 0\nstep 8: look at foam brick 1\nstep 9: pick up foam brick 1\nstep 10: go to dining room 0 counter 14\nstep 11: look at dining room 0 counter 14\nstep 12: place foam brick 1 on dining room 0 counter 14\nstep 13: go to corridor 0\nstep 14: look at backpack 1\nstep 15: pick up backpack 1\nstep 16: go to corridor 0 chest 12\nstep 17: look at corridor 0 chest 12\nstep 18: place backpack 1 on corridor 0 chest 12\nstep 19: go to kitchen 0\nstep 20: look at banana 1\nstep 21: pick up banana 1\n"
+        },
+        "logs": [
+            {
+                "start": 354,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 414,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 414,
+                "step_raw": "look at tablet stand 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 427,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 427,
+                "step_raw": "pick up tablet stand 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 428,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 428,
+                "step_raw": "go to living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 443,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 443,
+                "step_raw": "look at living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 443,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 443,
+                "step_raw": "place tablet stand 1 on living room 0 shelf 0",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": "living_room_0-shelf_0_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 443,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 443,
+                "step_raw": "go to dining room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_2_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 457,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 457,
+                "step_raw": "look at foam brick 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 457,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 457,
+                "step_raw": "pick up foam brick 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 458,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 458,
+                "step_raw": "go to dining room 0 counter 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-counter_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 476,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "foam brick 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "remote control 1": [
+                "dining room 0 counter 14",
+                "dining room 0 table 1"
+            ],
+            "multiport hub 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0"
+            ],
+            "banana 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "bookend 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "tablet stand 1": [
+                "living room 0 shelf 0"
+            ],
+            "electronic adapter 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "backpack 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            },
+            "end": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {},
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 476
+    },
+    {
+        "mode": "single",
+        "start": 476,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding nothing.\nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 stool 13, living room 0 wall mounted tv 49, living room 0 shelf 0, living room 0 chest 11, living room 0 sofa 10. Object tablet stand 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 3, dining room 0 chair 4, dining room 0 table 1, dining room 0 chair 2, dining room 0 counter 14. Object foam brick 1 found on dining room 0 counter 14 \nIn corridor 0, found receptacles: corridor 0 shelf 6, corridor 0 chest 12, corridor 0 floor lamp 8, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 console table 9, corridor 0 shelf 47. Object backpack 1 found on corridor 0 chest 12. Object electronic adapter 1 found on corridor 0 shelf 41 \nIn kitchen 0, found receptacles: kitchen 0 counter 21, kitchen 0 top cabinet 35, kitchen 0 counter 18, kitchen 0 dishwasher 20, kitchen 0 top cabinet 31, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 counter 26, kitchen 0 fridge 27, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 top cabinet 30, kitchen 0 counter 23, kitchen 0 bottom cabinet 22, kitchen 0 bottom cabinet 25, kitchen 0 sink 19, kitchen 0 bottom cabinet 16. Object banana 1 found on kitchen 0 counter 18. Object remote control 1 found on kitchen 0 counter 18. Object bookend 1 found on kitchen 0 counter 21. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at tablet stand 1\nstep 3: pick up tablet stand 1\nstep 4: go to corridor 0 chest 12\nstep 5: look at corridor 0 chest 12\nstep 6: place tablet stand 1 on corridor 0 chest 12\nstep 7: go to dining room 0 counter 14\nstep 8: look at foam brick 1\nstep 9: pick up foam brick 1\nstep 10: go to kitchen 0 counter 23\nstep 11: look at kitchen 0 counter 23\nstep 12: place foam brick 1 on kitchen 0 counter 23\nmission complete."
+        },
+        "logs": [
+            {
+                "start": 476,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 536,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 536,
+                "step_raw": "look at tablet stand 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 549,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 549,
+                "step_raw": "pick up tablet stand 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 550,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 550,
+                "step_raw": "go to corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 611,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 611,
+                "step_raw": "look at corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 622,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 622,
+                "step_raw": "place tablet stand 1 on corridor 0 chest 12",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": "corridor_0-chest_12_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 622,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 622,
+                "step_raw": "go to dining room 0 counter 14",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-counter_14_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 659,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 659,
+                "step_raw": "look at foam brick 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 659,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 659,
+                "step_raw": "pick up foam brick 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "foam_brick_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "dining room 0 counter 14",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 660,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "foam brick 1": [
+                            "dining room 0 counter 14",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 660,
+                "step_raw": "go to kitchen 0 counter 23",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "kitchen_0-counter_23_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 695,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [
+                        "kitchen 0 bottom cabinet 15",
+                        "kitchen 0 bottom cabinet 17"
+                    ],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "foam brick 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "remote control 1": [
+                "dining room 0 counter 14",
+                "dining room 0 table 1"
+            ],
+            "multiport hub 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0"
+            ],
+            "banana 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "bookend 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "tablet stand 1": [
+                "living room 0 shelf 0"
+            ],
+            "electronic adapter 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "backpack 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "agent",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "foam brick 1": "dining room 0 counter 14",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            },
+            "end": {
+                "foam brick 1": "agent",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [
+                "kitchen 0 bottom cabinet 15",
+                "kitchen 0 bottom cabinet 17"
+            ],
+            "objects_moved": {
+                "foam brick 1": [
+                    "dining room 0 counter 14",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 695
+    },
+    {
+        "mode": "single",
+        "start": 695,
+        "high_level": {
+            "prompt": "",
+            "response": "",
+            "step": ""
+        },
+        "low_level": {
+            "prompt": {
+                "user": "There are objects misplaced on wrong receptacles and potentially in the wrong room. \nYou are holding foam brick 1.\nIn living room 0, found receptacles: living room 0 carpet 46, living room 0 stool 13, living room 0 wall mounted tv 49, living room 0 shelf 0, living room 0 chest 11, living room 0 sofa 10. Object tablet stand 1 found on living room 0 shelf 0 \nIn dining room 0, found receptacles: dining room 0 chair 3, dining room 0 chair 4, dining room 0 table 1, dining room 0 chair 2, dining room 0 counter 14. \nIn corridor 0, found receptacles: corridor 0 shelf 6, corridor 0 chest 12, corridor 0 floor lamp 8, corridor 0 shelf 41, corridor 0 shelf 42, corridor 0 shelf 7, corridor 0 chair 5, corridor 0 console table 9, corridor 0 shelf 47. Object backpack 1 found on corridor 0 chest 12. Object electronic adapter 1 found on corridor 0 shelf 41 \nIn kitchen 0, found receptacles: kitchen 0 counter 21, kitchen 0 top cabinet 35, kitchen 0 counter 18, kitchen 0 dishwasher 20, kitchen 0 top cabinet 31, kitchen 0 top cabinet 32, kitchen 0 top cabinet 33, kitchen 0 top cabinet 34, kitchen 0 counter 26, kitchen 0 fridge 27, kitchen 0 microwave 36, kitchen 0 oven 24, kitchen 0 top cabinet 28, kitchen 0 top cabinet 29, kitchen 0 top cabinet 30, kitchen 0 counter 23, kitchen 0 bottom cabinet 22, kitchen 0 bottom cabinet 25, kitchen 0 sink 19, kitchen 0 bottom cabinet 16, kitchen 0 bottom cabinet 15, kitchen 0 bottom cabinet 17. Object bookend 1 found on kitchen 0 counter 21. Object remote control 1 found on kitchen 0 counter 18. Object banana 1 found on kitchen 0 counter 18. \nGive me the next steps to explore the house and place misplaced objects on correct receptacles. Use the following actions for each step and separate by new lines: go to room, go to object, go to receptacle, look at object, look at receptacle, pick up object, place object on receptacle. . \nExample steps to explore room living room 0:\nstep 1: go to living room 0\nExample steps to pick up saucer 1 and place on kitchen 0 counter 18:\nstep 1: go to saucer 1\nstep 2: look at saurcer 1\nstep 3: pick up saucer 1\nstep 4: go to kitchen 0 counter 18\nstep 5: look at kitchen 0 counter 18\nstep 6: place saurcer 1 on kitchen 0 counter 18\n. The next steps should only follow one of the above examples. If complete, print mission complete as the next step. Steps: ",
+                "system": "You are a one-handed household robot.",
+                "prefix": "step 1:"
+            },
+            "response": "go to living room 0\nstep 2: look at tablet stand 1\nstep 3: pick up tablet stand 1\nstep 4: go to corridor 0 shelf 6\nstep 5: look at corridor 0 shelf 6\nstep 6: place tablet stand 1 on corridor 0 shelf 6\nstep 7: go to backpack 1\nstep 8: look at backpack 1\nstep 9: pick up backpack 1\nstep 10: go to dining room 0 chair 3\nstep 11: look at dining room 0 chair 3\nstep 12: place backpack 1 on dining room 0 chair 3\nstep 13: go to electronic adapter 1\nstep 14: look at electronic adapter 1\nstep 15: pick up electronic adapter 1\nstep 16: go to kitchen 0 top cabinet 31\nstep 17: look at kitchen 0 top cabinet 31\nstep 18: place electronic adapter 1 on kitchen 0 top cabinet 31\nstep 19: go to bookend 1\nstep 20: look at bookend 1\nstep 21: pick up bookend"
+        },
+        "logs": [
+            {
+                "start": 695,
+                "step_raw": "go to living room 0",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "living_room_0-carpet_46_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 762,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 762,
+                "step_raw": "look at tablet stand 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 774,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 774,
+                "step_raw": "pick up tablet stand 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 775,
+                "flag": "failed",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 775,
+                "step_raw": "go to corridor 0 shelf 6",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-shelf_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 810,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 810,
+                "step_raw": "look at corridor 0 shelf 6",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": null,
+                    "target_receptacle": "corridor_0-shelf_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 810,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 810,
+                "step_raw": "place tablet stand 1 on corridor 0 shelf 6",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "tablet_stand_1",
+                    "target_receptacle": "corridor_0-shelf_6_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "agent",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 811,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "foam brick 1": [
+                            "agent",
+                            "corridor 0 shelf 6"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 5,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 811,
+                "step_raw": "go to backpack 1",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": "backpack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 853,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 853,
+                "step_raw": "look at backpack 1",
+                "step_parsed": {
+                    "action": "look-at",
+                    "target_object": "backpack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    }
+                },
+                "end": 866,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 6,
+                        "end": 6
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 2
+                    }
+                }
+            },
+            {
+                "start": 866,
+                "step_raw": "pick up backpack 1",
+                "step_parsed": {
+                    "action": "pick-place",
+                    "target_object": "backpack_1",
+                    "target_receptacle": null,
+                    "target_type": "object"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "corridor 0 chest 12"
+                    },
+                    "end": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "agent"
+                    }
+                },
+                "end": 867,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {
+                        "backpack 1": [
+                            "corridor 0 chest 12",
+                            "agent"
+                        ]
+                    },
+                    "count_correct": {
+                        "start": 6,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 2,
+                        "end": 3
+                    }
+                }
+            },
+            {
+                "start": 867,
+                "step_raw": "go to dining room 0 chair 3",
+                "step_parsed": {
+                    "action": "navigating",
+                    "target_object": null,
+                    "target_receptacle": "dining_room_0-chair_3_0.urdf",
+                    "target_type": "receptacle"
+                },
+                "current_mapping": {
+                    "start": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "agent"
+                    },
+                    "end": {
+                        "foam brick 1": "corridor 0 shelf 6",
+                        "remote control 1": "kitchen 0 counter 18",
+                        "multiport hub 1": "kitchen 0 fridge 27",
+                        "banana 1": "kitchen 0 counter 18",
+                        "bookend 1": "kitchen 0 counter 21",
+                        "tablet stand 1": "living room 0 shelf 0",
+                        "electronic adapter 1": "corridor 0 shelf 41",
+                        "backpack 1": "agent"
+                    }
+                },
+                "end": 896,
+                "flag": "succeeded",
+                "outcome": {
+                    "objects_discovered": [],
+                    "recs_discovered": [],
+                    "objects_moved": {},
+                    "count_correct": {
+                        "start": 5,
+                        "end": 5
+                    },
+                    "count_wrong": {
+                        "start": 3,
+                        "end": 3
+                    }
+                }
+            }
+        ],
+        "correct_mapping": {
+            "foam brick 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "remote control 1": [
+                "dining room 0 counter 14",
+                "dining room 0 table 1"
+            ],
+            "multiport hub 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0"
+            ],
+            "banana 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "bookend 1": [
+                "kitchen 0 counter 18",
+                "kitchen 0 counter 21",
+                "kitchen 0 counter 23",
+                "kitchen 0 counter 26"
+            ],
+            "tablet stand 1": [
+                "living room 0 shelf 0"
+            ],
+            "electronic adapter 1": [
+                "living room 0 chest 11",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ],
+            "backpack 1": [
+                "living room 0 chest 11",
+                "corridor 0 chest 12",
+                "living room 0 shelf 0",
+                "corridor 0 shelf 41",
+                "corridor 0 shelf 42",
+                "corridor 0 shelf 47",
+                "corridor 0 shelf 6",
+                "corridor 0 shelf 7",
+                "kitchen 0 top cabinet 28",
+                "kitchen 0 top cabinet 29",
+                "kitchen 0 top cabinet 30",
+                "kitchen 0 top cabinet 31",
+                "kitchen 0 top cabinet 32",
+                "kitchen 0 top cabinet 33",
+                "kitchen 0 top cabinet 34",
+                "kitchen 0 top cabinet 35"
+            ]
+        },
+        "current_mapping": {
+            "start": {
+                "foam brick 1": "agent",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "corridor 0 shelf 6",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "agent"
+            }
+        },
+        "correct_objects": {
+            "start": {
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41",
+                "backpack 1": "corridor 0 chest 12"
+            },
+            "end": {
+                "foam brick 1": "corridor 0 shelf 6",
+                "banana 1": "kitchen 0 counter 18",
+                "bookend 1": "kitchen 0 counter 21",
+                "tablet stand 1": "living room 0 shelf 0",
+                "electronic adapter 1": "corridor 0 shelf 41"
+            }
+        },
+        "wrong_objects": {
+            "start": {
+                "foam brick 1": "agent",
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27"
+            },
+            "end": {
+                "remote control 1": "kitchen 0 counter 18",
+                "multiport hub 1": "kitchen 0 fridge 27",
+                "backpack 1": "agent"
+            }
+        },
+        "outcome": {
+            "objects_discovered": [],
+            "recs_discovered": [],
+            "objects_moved": {
+                "foam brick 1": [
+                    "agent",
+                    "corridor 0 shelf 6"
+                ],
+                "backpack 1": [
+                    "corridor 0 chest 12",
+                    "agent"
+                ]
+            },
+            "count_correct": {
+                "start": 5,
+                "end": 5
+            },
+            "count_wrong": {
+                "start": 3,
+                "end": 3
+            }
+        },
+        "end": 896
+    }
+]
