@@ -28,14 +28,26 @@ And follow [installation guide](https://github.com/donggehan/habitatDockerBuilde
 ### Troubleshooting 
 
 #### Installation
-You may need to install additionally the following packages in the conda environment before habitat-lab setup if the setup code reports errors.
+1. [habitat-lab setup] You may need to install additionally the following packages in the conda environment before habitat-lab setup if the setup code reports errors.
 ```
 pip install cython
 pip install pkgconfig
-``` 
+```
+
+2. [libcublas and libcdnn] If you encounter the following errors: 
+
+```
+OSError: libcublas.so.11: cannot open shared object file: No such file or directory
+OSError: libcudnn.so.8: cannot open shared object file: No such file or directory
+```
+You may need to install cuda and cudnn by running the following commands.
+```
+conda install -c conda-forge cudatoolkit=11.0 -y
+conda install -c conda-forge cudnn=8.0 -y
+```
 
 #### Headless rendering
-This work runs the 3D habitat simulator on a headless GPU server. [Here](https://github.com/donggehan/eidf-epcc-cluster/blob/troubleshooting/troubleshooting-guides/headless_rendering_EGL_trouble_shoot.md) is an issue and its solution related to the installation. For more issues and troubleshoot guides please refer to the official [Habitat Simulator Repo](https://github.com/facebookresearch/habitat-sim).
+1. This work runs the 3D habitat simulator on a headless GPU server. [Here](https://github.com/donggehan/eidf-epcc-cluster/blob/troubleshooting/troubleshooting-guides/headless_rendering_EGL_trouble_shoot.md) is an issue and its solution related to the installation. For more issues and troubleshoot guides please refer to the official [Habitat Simulator Repo](https://github.com/facebookresearch/habitat-sim).
 
 ## Running the code
 
