@@ -46,6 +46,11 @@ conda install -c conda-forge cudatoolkit=11.0 -y
 conda install -c conda-forge cudnn=8.0 -y
 ```
 
+3. [protobuf] If you encounter the TypeError: Descriptors cannot not be created directly. Please downgrade protobuf by running the following command:
+```
+pip install protobuf==3.20.0
+```
+
 #### Headless rendering
 1. This work runs the 3D habitat simulator on a headless GPU server. [Here](https://github.com/donggehan/eidf-epcc-cluster/blob/troubleshooting/troubleshooting-guides/headless_rendering_EGL_trouble_shoot.md) is an issue and its solution related to the installation. For more issues and troubleshoot guides please refer to the official [Habitat Simulator Repo](https://github.com/facebookresearch/habitat-sim).
 
