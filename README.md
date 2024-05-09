@@ -9,7 +9,7 @@ This repo contains the implementation of our paper (under submission to IROS 202
 ## Installation
 
 ### Conda Installation
-Clone this repo, and follow the installation instruction from the [Housekeep Benchmark](https://github.com/yashkant/housekeep).
+Clone this repo, and follow the installation instruction from the [Housekeep Benchmark](https://github.com/yashkant/housekeep). Note that the Housekeep code is within the root of this repo, so please follow the Housekeep installation instruction and install within this repo, no need to clone the original Housekeep repo again.
 
 The above installation is sufficient to run a human demonstration agent.
 In addition, this work uses OpenAI GPT-3.5-Turbo. Therefore, to train and run an LLM-based agent using OpenAI GPT's, please setup an OpenAI account, and additionally install the python module:
@@ -24,7 +24,17 @@ docker pull apple90gege/housekeepdocker:latest
 ```
 And follow [installation guide](https://github.com/donggehan/habitatDockerBuilder/blob/master/installationGuides/housekeep_installation_guide_with_manual_habitat_docker.md) from [this repo](https://github.com/donggehan/habitatDockerBuilder).
 
-### Troubleshoot headless rendering
+
+### Troubleshooting 
+
+#### Installation
+You may need to install additionally the following packages in the conda environment before habitat-lab setup if the setup code reports errors.
+```
+pip install cython
+pip install pkgconfig
+``` 
+
+#### Headless rendering
 This work runs the 3D habitat simulator on a headless GPU server. [Here](https://github.com/donggehan/eidf-epcc-cluster/blob/troubleshooting/troubleshooting-guides/headless_rendering_EGL_trouble_shoot.md) is an issue and its solution related to the installation. For more issues and troubleshoot guides please refer to the official [Habitat Simulator Repo](https://github.com/facebookresearch/habitat-sim).
 
 ## Running the code
