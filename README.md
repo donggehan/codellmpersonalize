@@ -1,6 +1,6 @@
 # LLM-Personalize: Aligning LLM Planners with Human Preferences via Reinforced Self-Training for Housekeeping Robots
 
-This repo contains the implementation of our paper (under submission to IROS 2024) [LLM-Personalize: Aligning LLM Planners with Human Preferences via Reinforced Self-Training for Housekeeping Robots](https://donggehan.github.io/projectllmpersonalize/).
+This repo contains the implementation of our paper [LLM-Personalize: Aligning LLM Planners with Human Preferences via Reinforced Self-Training for Housekeeping Robots](https://donggehan.github.io/projectllmpersonalize/).
 
 ![Demo Animation](images/iros_demo.gif)
 
